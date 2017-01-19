@@ -10,11 +10,11 @@ using Android.Views;
 namespace NetConnect
 {
     [Activity(Label = "NetConnect", MainLauncher = true, Icon = "@drawable/icon")]
-    public class OverviewActivity : BaseActivity, IOverviewController
+    public class OverviewActivity : BaseActivity<IOverviewController,OverviewController>, IOverviewController
     {
         //private OverviewController _controller;
         //public OverviewController Controller { get { return _controller; } set { this._controller = value; } }
-        public new void ItemClicked()
+        public void someButton(String s)
         {
             DataContext.ImagePathMap.Add(1, "Catering/Hallo.jpg");
             var x = Toast.MakeText(this,DataContext.ImagePath(this,1),ToastLength.Short);
@@ -27,11 +27,32 @@ namespace NetConnect
             SetContentView(Resource.Layout.ActivityNavigationLayout);
             setUpUI();
             SetUpNavigationMenu();
-            this.Controller = new NavigationController(this);
+            this.NavController = new NavigationController(this);
+            this.Controller = new OverviewController(this);
+            SetUpFragmentManager();
+            OnClick(FindViewById<Button>(Resource.Id.Button), () =>
+            {
+                this.Controller.action("ICH BIN ANONYM");
+            });
+        }
+
+        private void SetUpFragmentManager()
+        {
             var frag = OverViewFragment.NewInstance();
             var fm = this.FragmentManager.BeginTransaction();
             fm.Replace(Resource.Id.content_frame, frag);
             fm.Commit();
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            if(isLoggedIn)
+            {
+                MenuInflater infl = MenuInflater;
+                infl.Inflate(Resource.Menu.LoggedInProfileMenu,menu);
+                return true;
+            }
+            return base.OnCreateOptionsMenu(menu);
         }
 
         internal class OverViewFragment : DynamicFragment

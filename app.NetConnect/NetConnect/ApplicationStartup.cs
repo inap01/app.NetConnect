@@ -12,8 +12,8 @@ using Android.Widget;
 
 namespace NetConnect
 {
-    public class ApplicationStartup : Application
+    public class ApplicationStartup
     {
-        
+        int a = 1;
     }
 }

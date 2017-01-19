@@ -19,25 +19,39 @@ using NetConnect.Activities;
 
 namespace NetConnect
 {
-    public interface IBaseActivity
+    
+    public abstract class BaseActivity<T,Z> : FragmentActivity,  NavigationAdapter.OnItemClickListener, INavigationController
+        where T : IBaseViewController where Z : BaseViewController<T>
     {
-        Boolean OnClick(View view, Action func);
 
-    }
-    public abstract class BaseActivity : FragmentActivity, IBaseActivity, NavigationAdapter.OnItemClickListener, INavigationController
-    {
+        #region Navigation Properties
         protected DrawerLayout mDrawerLayout;
         protected RecyclerView mDrawerList;
         protected Android.Support.V7.App.ActionBarDrawerToggle mDrawerToggle;
+        #endregion
+        #region Shared Properties
+        protected String NavTitle { get; set; }
+        protected Boolean isLoggedIn { get; set; } = true;
         protected Dictionary<string, Type> nameMap;
-        private NavigationController _controller;
-        protected NavigationController Controller
+        private NavigationController _navController;
+        protected NavigationController NavController
         {
+            get { return _navController; }
+            set { _navController = value; }
+        }
+
+        private Z _controller;
+        protected Z Controller {
             get { return _controller; }
+
             set { _controller = value; }
         }
+
         protected String[] Entries { get; set; } = { "Eintrag1", "Eintrag2", "Eintrag3", "Eintrag4" };
-        public Boolean OnClick(View view, Action func)
+
+        #endregion
+
+        public virtual Boolean OnClick(View view, Action func)
         {
             if (view != null)
             {
@@ -46,13 +60,23 @@ namespace NetConnect
             }
             else
                 return false;
+        }       
+        public void ListItemClicked(int id)
+        {
+            string key = Entries[id];
+            Type t = nameMap[key];
+            StartActivity(typeof(OverviewActivity));
+            Intent i = new Intent(this, t);
+            StartActivity(i);
         }
+
+        #region Navigation Methods and Setup
         protected void SetUpNavigationMenu()
         {
             mDrawerList = new RecyclerView(this);
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             mDrawerList = FindViewById<RecyclerView>(Resource.Id.left_drawer);
-            Title = "'Nickname' Vorname";
+            Title = NavTitle;
             mDrawerList.HasFixedSize = true;
             mDrawerList.SetLayoutManager(new LinearLayoutManager(this));
 
@@ -63,6 +87,12 @@ namespace NetConnect
                 Resource.String.drawerOpen,
                 Resource.String.drawerClosed);
             mDrawerLayout.AddDrawerListener(mDrawerToggle);
+        }
+        protected void setUpBeforeNavigation(String[] entries, String navigationTitle)
+        {
+            this.Entries = entries;
+            this.NavTitle = navigationTitle;
+
         }
         protected void setUpUI()
         {
@@ -77,9 +107,11 @@ namespace NetConnect
         {
             switch (item.ItemId)
             {
-
                 case Resource.Id.home:
                     NavBarOpenClose();
+                    break;
+                case Resource.Menu.LoggedInProfileMenu:
+
                     break;
                 default:
                     NavBarOpenClose();
@@ -111,27 +143,17 @@ namespace NetConnect
 
         void NavigationAdapter.OnItemClickListener.OnClick(View view, int position)
         {
-            this.Controller.ListItemClicked(position);
-        }
-        public void ListItemClicked(int id)
-        {
-            string key = Entries[id];
-            Type t = nameMap[key];
-            StartActivity(typeof(OverviewActivity));
-            Intent i = new Intent(this, t);
-            StartActivity(i);
+            this.NavController.ListItemClicked(position);
         }
 
-        public void ItemClicked()
-        {
-            throw new NotImplementedException();
-        }
+        #endregion
+
 
         internal class MyActionBarDrawerToggle : Android.Support.V7.App.ActionBarDrawerToggle
         {
-            NavigationActivity owner;
+            OverviewActivity owner;
 
-            public MyActionBarDrawerToggle(NavigationActivity activity, DrawerLayout layout, int imgRes, int openRes, int closeRes)
+            public MyActionBarDrawerToggle(OverviewActivity activity, DrawerLayout layout, int imgRes, int openRes, int closeRes)
                 : base(activity, layout, openRes, closeRes)
             {
                 owner = activity;

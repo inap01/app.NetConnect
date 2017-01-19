@@ -16,7 +16,7 @@ namespace MonoNetConnect.Controller
     {
         void ListItemClicked(int id);
     }
-    public class NavigationController : BaseViewController<INavigationController>, INavigationController
+    public class NavigationController : BaseViewController<INavigationController>
     {
         public NavigationController(INavigationController viewController)
             :base(viewController)

@@ -13,7 +13,6 @@
         android:id="@+id/Button"
         android:text="Hallo"
         android:layout_weight="10"
-        android:layout_alignParentTop="true"/>
-  </RelativeLayout>
+        android:layout_alignParentTop="true"/>  </RelativeLayout>
   
 </LinearLayout>

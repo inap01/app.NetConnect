@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    app:layout_heightPercent="20%"
+    >
+  <ImageView
+    android:layout_height="match_parent"
+    app:layout_widthPercent="25%"
+    android:src ="#231234"
+    />
+<ImageView
+    android:layout_height="match_parent"
+    app:layout_widthPercent="25%"
+    android:src ="#784582"
+    />
+<ImageView
+    android:layout_height="match_parent"
+    app:layout_widthPercent="25%"
+    android:src ="#371582"
+    />
+<ImageView
+    android:layout_height="match_parent"
+    app:layout_widthPercent="25%"
+    android:src ="#987752"
+    />
+</TableRow>
