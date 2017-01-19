@@ -23,7 +23,6 @@ namespace NetConnect
     public abstract class BaseActivity<T,Z> : FragmentActivity,  NavigationAdapter.OnItemClickListener, INavigationController
         where T : IBaseViewController where Z : BaseViewController<T>
     {
-
         #region Navigation Properties
         protected DrawerLayout mDrawerLayout;
         protected RecyclerView mDrawerList;
@@ -46,8 +45,18 @@ namespace NetConnect
 
             set { _controller = value; }
         }
-
-        protected String[] Entries { get; set; } = { "Eintrag1", "Eintrag2", "Eintrag3", "Eintrag4" };
+        private String[] _entries;
+        protected List<String> Entries
+        {
+            get
+            {
+                return new List<String>(_entries);
+            }
+            set
+            {
+                _entries = value.ToArray();
+            }
+        }
 
         #endregion
 
@@ -80,7 +89,7 @@ namespace NetConnect
             mDrawerList.HasFixedSize = true;
             mDrawerList.SetLayoutManager(new LinearLayoutManager(this));
 
-            mDrawerList.SetAdapter(new NavigationAdapter(Entries, this));
+            mDrawerList.SetAdapter(new NavigationAdapter(_entries, this));
             this.ActionBar.SetDisplayHomeAsUpEnabled(true);
             this.ActionBar.SetHomeButtonEnabled(true);
             mDrawerToggle = new Android.Support.V7.App.ActionBarDrawerToggle(this, mDrawerLayout,
@@ -90,7 +99,7 @@ namespace NetConnect
         }
         protected void setUpBeforeNavigation(String[] entries, String navigationTitle)
         {
-            this.Entries = entries;
+            this.Entries = new List<String>(entries);
             this.NavTitle = navigationTitle;
 
         }
@@ -98,11 +107,12 @@ namespace NetConnect
         {
             nameMap = new Dictionary<string, Type>();
             Type t = typeof(OverviewActivity);
-            nameMap.Add(Entries[0], t);
+            nameMap.Add(Entries[0], typeof(CateringActivity));
             nameMap.Add(Entries[1], t);
             nameMap.Add(Entries[2], t);
             nameMap.Add(Entries[3], t);
         }
+        protected abstract void SetUpFragmentManager();
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
@@ -110,8 +120,7 @@ namespace NetConnect
                 case Resource.Id.home:
                     NavBarOpenClose();
                     break;
-                case Resource.Menu.LoggedInProfileMenu:
-
+                case Resource.Id.openProfile:
                     break;
                 default:
                     NavBarOpenClose();
@@ -145,9 +154,13 @@ namespace NetConnect
         {
             this.NavController.ListItemClicked(position);
         }
-
+        public static void InitViewClick<Y>(View frag, int id, Action func)
+                where Y : View
+        {
+            var v = frag.FindViewById<Y>(id);
+            v.Click += (o, e) => { func(); };
+        }
         #endregion
-
 
         internal class MyActionBarDrawerToggle : Android.Support.V7.App.ActionBarDrawerToggle
         {
@@ -177,11 +190,11 @@ namespace NetConnect
             {
 
             }
-            public abstract override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);            
+            public abstract override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);  
+            
+            
         }
-    }
-
-    
+    }    
     public class NavigationAdapter : RecyclerView.Adapter
     {
         private static String[] entries;

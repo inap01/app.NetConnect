@@ -3,16 +3,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#234245">
-      <Button
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/Button"
-        android:text="Hallo"
-        android:layout_weight="10"
-        android:layout_alignParentTop="true"/>  </RelativeLayout>
-  
+        android:background="#234245">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Button"
+            android:text="Hallo"
+            android:layout_weight="10"/>
+    </RelativeLayout>
 </LinearLayout>
