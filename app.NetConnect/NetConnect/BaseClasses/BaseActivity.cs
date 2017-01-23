@@ -18,6 +18,7 @@ using Fragment = Android.App.Fragment;
 using System.Collections.Generic;
 using Android.Support.V4.App;
 using NetConnect.Activities;
+using static Android.App.ActionBar;
 
 namespace NetConnect
 {
@@ -50,7 +51,7 @@ namespace NetConnect
         protected List<String> Entries
         {
             get; set;
-        } = new List<string>(new String[] { "Catering", "Eintrag2", "Eintrag3", "Eintrag4" });
+        } = new List<string>(new String[] { "Catering", "Eintrag2", "Sponsoren", "Kontakt" });
 
         #endregion
 
@@ -106,8 +107,8 @@ namespace NetConnect
             Type t = typeof(OverviewActivity);
             nameMap.Add(Entries[0], typeof(CateringActivity));
             nameMap.Add(Entries[1], t);
-            nameMap.Add(Entries[2], t);
-            nameMap.Add(Entries[3], t);
+            nameMap.Add(Entries[2], typeof(SponsoringActivity));
+            nameMap.Add(Entries[3], typeof(ContactActivity));
         }
         protected abstract void SetUpFragmentManager();
         public override bool OnOptionsItemSelected(IMenuItem item)
@@ -167,6 +168,7 @@ namespace NetConnect
                 : base(activity, layout, openRes, closeRes)
             {
                 owner = activity;
+                
             }
 
             public override void OnDrawerClosed(View drawerView)

@@ -35,6 +35,18 @@ namespace NetConnect.Activities
             fm.Replace(Resource.Id.content_frame, Frag);
             fm.Commit();
         }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            if (isLoggedIn)
+            {
+                MenuInflater infl = MenuInflater;
+                infl.Inflate(Resource.Menu.LoggedInProfileMenu, menu);
+                return true;
+            }
+            return base.OnCreateOptionsMenu(menu);
+        }
+
         internal class CateringFrament : DynamicFragment
         {
             String[] entries;

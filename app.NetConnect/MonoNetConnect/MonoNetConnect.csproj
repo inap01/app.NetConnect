@@ -47,11 +47,14 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Controller\BaseViewController.cs" />
     <Compile Include="Controller\CateringController.cs" />
+    <Compile Include="Controller\SponsoringController.cs" />
+    <Compile Include="Controller\ContactController.cs" />
     <Compile Include="Controller\NavigationController.cs" />
     <Compile Include="Controller\OverviewController.cs" />
     <Compile Include="DatabaseModels\BaseModel.cs" />
     <Compile Include="DatabaseModels\Product.cs" />
     <Compile Include="DatabaseModels\StatusModel.cs" />
+    <Compile Include="InternalModels\Sponsor.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -61,9 +64,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="InternalModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

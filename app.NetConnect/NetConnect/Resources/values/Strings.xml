@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">NetConnect</string>
+  <string name="Hello">Hello World, Click Me!</string>
+  <string name="ApplicationName">NetConnect</string>
   <string name="drawerOpen">Open</string>
   <string name="drawerClosed">Closed</string>
-
+  
+  <!-- IMPRESSUM -->
+  <string name="netcon_Impressum_Angaben_Title">Anschrift</string>
+  <string name="netcon_Impressum_Angaben_Content">Net.Connect e. V.\nDoverheide 71\n41836 Hückelhoven</string>
+  <string name="netcon_Impressum_Vertretung_Title">Vertreten durch</string>
+  <string name="netcon_Impressum_Vertretung_Content">Vorstand des Net.Connect e.V</string>
+  <string name="netcon_Impressum_Emails_Title">Kontakt</string>
+  <string name="netcon_Impressum_Emails_Content_Info">Info:\ninfo@lan-netconnect.de\n</string>
+  <string name="netcon_Impressum_Emails_Content_Sponsoring">Sponsoring:\nsponsoring@lan-netconnect.de\n</string>
+  <string name="netcon_Impressum_Emails_Content_Webmaster">Webmaster:\nwebmaster@lan-netconnect.de\n</string>
 </resources>
