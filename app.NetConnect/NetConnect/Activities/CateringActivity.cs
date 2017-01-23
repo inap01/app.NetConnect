@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using MonoNetConnect.Controller;
 
+using Color = Android.Graphics.Color;
 namespace NetConnect.Activities
 {
     [Activity(Label = "CateringActivity")]
@@ -49,15 +50,45 @@ namespace NetConnect.Activities
                 for (int i = 0; i < entries.Length; i++)
                     entries[i] = $"Eintrag Nr{i}";
                 View rootView = inflater.Inflate(Resource.Layout.CateringLayout, container, false);
+                rootView.SetBackgroundColor(Color.Transparent);
+                var x = rootView.FindViewById<LinearLayout>(Resource.Id.CateringRoot);
+                populateView(x);
                 return rootView;
             }
 
-            private void populateView()
+            private void populateView(LinearLayout root)
             {
-                for(int i = 0; i< ((int)entries.Length/3);i++)
-                {
+                LinearLayout ll = root;
+                TableLayout tl = root.FindViewById<TableLayout>(Resource.Id.tableLayout1);
+                //tl.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
+
                     TableRow tr = new TableRow(Activity);
-                }
+                    var x = new TableRow.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.WrapContent);
+                    tr.LayoutParameters = x;
+
+                        ImageView iv = new ImageView(Activity);
+                        var y = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.WrapContent);
+                        iv.LayoutParameters = y;
+                tr.AddView(iv);
+                tl.AddView(tr,1);
+                //for (int i = 0; i< 1;i++)
+                //{
+                    
+                //    for(int j = 0;j<1;j++)
+                //    {
+                        
+                //        if (j == 0)
+                //        {
+                //            iv.SetImageResource(Resource.Drawable.icon);
+                //            iv.SetScaleType(ImageView.ScaleType.FitXy);
+                //        }                    
+                //        //if(j == 1)
+                //        //    iv.SetBackgroundColor(Android.Graphics.Color.Red);
+                //        //if(j==2)
+                //        //    iv.SetBackgroundColor(Android.Graphics.Color.LawnGreen);
+                //        //tr.AddView(iv);
+                //    }
+                //}
             }
         }
     }

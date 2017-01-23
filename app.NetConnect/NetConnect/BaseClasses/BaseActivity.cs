@@ -12,7 +12,9 @@ using Android.Support.V4.Widget;
 using Android.Support.V7.Widget;
 using MonoNetConnect.Controller;
 using Android.Support.V7.App;
+
 using Fragment = Android.App.Fragment;
+
 using System.Collections.Generic;
 using Android.Support.V4.App;
 using NetConnect.Activities;
@@ -45,23 +47,17 @@ namespace NetConnect
 
             set { _controller = value; }
         }
-        private String[] _entries;
         protected List<String> Entries
         {
-            get
-            {
-                return new List<String>(_entries);
-            }
-            set
-            {
-                _entries = value.ToArray();
-            }
-        }
+            get; set;
+        } = new List<string>(new String[] { "Catering", "Eintrag2", "Eintrag3", "Eintrag4" });
 
         #endregion
 
-        public virtual Boolean OnClick(View view, Action func)
+        public virtual Boolean OnClick<T1>(int id, Action func)
+            where T1 : View
         {
+            View view = FindViewById<T1>(id);
             if (view != null)
             {
                 view.Click += (o, e) => { func(); };
@@ -80,6 +76,7 @@ namespace NetConnect
         }
 
         #region Navigation Methods and Setup
+
         protected void SetUpNavigationMenu()
         {
             mDrawerList = new RecyclerView(this);
@@ -89,7 +86,7 @@ namespace NetConnect
             mDrawerList.HasFixedSize = true;
             mDrawerList.SetLayoutManager(new LinearLayoutManager(this));
 
-            mDrawerList.SetAdapter(new NavigationAdapter(_entries, this));
+            mDrawerList.SetAdapter(new NavigationAdapter(Entries.ToArray(), this));
             this.ActionBar.SetDisplayHomeAsUpEnabled(true);
             this.ActionBar.SetHomeButtonEnabled(true);
             mDrawerToggle = new Android.Support.V7.App.ActionBarDrawerToggle(this, mDrawerLayout,
