@@ -1291,6 +1291,18 @@ namespace NetConnect
 			// aapt resource value: 0x7f050002
 			public const int item_touch_helper_swipe_escape_velocity = 2131034114;
 			
+			// aapt resource value: 0x7f050056
+			public const int netcon_listView_Content_Text = 2131034198;
+			
+			// aapt resource value: 0x7f050054
+			public const int netcon_listView_Header_Height = 2131034196;
+			
+			// aapt resource value: 0x7f050055
+			public const int netcon_listView_Header_Text = 2131034197;
+			
+			// aapt resource value: 0x7f050053
+			public const int netcon_listView_LayoutItem_Padding = 2131034195;
+			
 			// aapt resource value: 0x7f050050
 			public const int notification_large_icon_height = 2131034192;
 			
@@ -1563,16 +1575,25 @@ namespace NetConnect
 			public const int abc_vector_test = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int ic_drawer = 2130837587;
+			public const int divider = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int icon = 2130837588;
-			
-			// aapt resource value: 0x7f020056
-			public const int notification_template_icon_bg = 2130837590;
+			public const int ic_drawer = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int OpenProfilIcon = 2130837589;
+			public const int icon = 2130837589;
+			
+			// aapt resource value: 0x7f020056
+			public const int logo = 2130837590;
+			
+			// aapt resource value: 0x7f020059
+			public const int notification_template_icon_bg = 2130837593;
+			
+			// aapt resource value: 0x7f020057
+			public const int OpenProfilIcon = 2130837591;
+			
+			// aapt resource value: 0x7f020058
+			public const int speedlink = 2130837592;
 			
 			static Drawable()
 			{
@@ -1587,17 +1608,35 @@ namespace NetConnect
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f06005e
-			public const int Button = 2131099742;
+			// aapt resource value: 0x7f06005f
+			public const int Button = 2131099743;
 			
 			// aapt resource value: 0x7f060058
 			public const int CateringRoot = 2131099736;
 			
 			// aapt resource value: 0x7f06005d
-			public const int TexField = 2131099741;
+			public const int ContactRoot = 2131099741;
 			
-			// aapt resource value: 0x7f06005f
-			public const int action0 = 2131099743;
+			// aapt resource value: 0x7f06006f
+			public const int SponsoringDivider = 2131099759;
+			
+			// aapt resource value: 0x7f060070
+			public const int SponsoringImage1 = 2131099760;
+			
+			// aapt resource value: 0x7f060071
+			public const int SponsoringImage2 = 2131099761;
+			
+			// aapt resource value: 0x7f06006e
+			public const int SponsoringListView = 2131099758;
+			
+			// aapt resource value: 0x7f06006d
+			public const int SponsoringRoot = 2131099757;
+			
+			// aapt resource value: 0x7f06005e
+			public const int TexField = 2131099742;
+			
+			// aapt resource value: 0x7f060060
+			public const int action0 = 2131099744;
 			
 			// aapt resource value: 0x7f060046
 			public const int action_bar = 2131099718;
@@ -1623,8 +1662,8 @@ namespace NetConnect
 			// aapt resource value: 0x7f060047
 			public const int action_context_bar = 2131099719;
 			
-			// aapt resource value: 0x7f060063
-			public const int action_divider = 2131099747;
+			// aapt resource value: 0x7f060064
+			public const int action_divider = 2131099748;
 			
 			// aapt resource value: 0x7f060003
 			public const int action_menu_divider = 2131099651;
@@ -1665,14 +1704,14 @@ namespace NetConnect
 			// aapt resource value: 0x7f06002f
 			public const int buttonPanel = 2131099695;
 			
-			// aapt resource value: 0x7f060060
-			public const int cancel_action = 2131099744;
+			// aapt resource value: 0x7f060061
+			public const int cancel_action = 2131099745;
 			
 			// aapt resource value: 0x7f06003d
 			public const int checkbox = 2131099709;
 			
-			// aapt resource value: 0x7f060066
-			public const int chronometer = 2131099750;
+			// aapt resource value: 0x7f060067
+			public const int chronometer = 2131099751;
 			
 			// aapt resource value: 0x7f06001f
 			public const int collapseActionView = 2131099679;
@@ -1707,8 +1746,8 @@ namespace NetConnect
 			// aapt resource value: 0x7f06001c
 			public const int end = 2131099676;
 			
-			// aapt resource value: 0x7f06006b
-			public const int end_padder = 2131099755;
+			// aapt resource value: 0x7f06006c
+			public const int end_padder = 2131099756;
 			
 			// aapt resource value: 0x7f060029
 			public const int expand_activities_button = 2131099689;
@@ -1731,8 +1770,8 @@ namespace NetConnect
 			// aapt resource value: 0x7f06002a
 			public const int image = 2131099690;
 			
-			// aapt resource value: 0x7f06006a
-			public const int info = 2131099754;
+			// aapt resource value: 0x7f06006b
+			public const int info = 2131099755;
 			
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
@@ -1740,11 +1779,11 @@ namespace NetConnect
 			// aapt resource value: 0x7f060057
 			public const int left_drawer = 2131099735;
 			
-			// aapt resource value: 0x7f060064
-			public const int line1 = 2131099748;
+			// aapt resource value: 0x7f060065
+			public const int line1 = 2131099749;
 			
-			// aapt resource value: 0x7f060068
-			public const int line3 = 2131099752;
+			// aapt resource value: 0x7f060069
+			public const int line3 = 2131099753;
 			
 			// aapt resource value: 0x7f06000a
 			public const int listMode = 2131099658;
@@ -1752,8 +1791,8 @@ namespace NetConnect
 			// aapt resource value: 0x7f06002c
 			public const int list_item = 2131099692;
 			
-			// aapt resource value: 0x7f060062
-			public const int media_actions = 2131099746;
+			// aapt resource value: 0x7f060063
+			public const int media_actions = 2131099747;
 			
 			// aapt resource value: 0x7f06001d
 			public const int middle = 2131099677;
@@ -1770,8 +1809,8 @@ namespace NetConnect
 			// aapt resource value: 0x7f06000b
 			public const int normal = 2131099659;
 			
-			// aapt resource value: 0x7f06006c
-			public const int openProfile = 2131099756;
+			// aapt resource value: 0x7f060073
+			public const int openProfile = 2131099763;
 			
 			// aapt resource value: 0x7f060031
 			public const int parentPanel = 2131099697;
@@ -1830,6 +1869,9 @@ namespace NetConnect
 			// aapt resource value: 0x7f060054
 			public const int select_dialog_listview = 2131099732;
 			
+			// aapt resource value: 0x7f060072
+			public const int separator = 2131099762;
+			
 			// aapt resource value: 0x7f06003e
 			public const int shortcut = 2131099710;
 			
@@ -1857,8 +1899,8 @@ namespace NetConnect
 			// aapt resource value: 0x7f060019
 			public const int src_over = 2131099673;
 			
-			// aapt resource value: 0x7f060061
-			public const int status_bar_latest_event_content = 2131099745;
+			// aapt resource value: 0x7f060062
+			public const int status_bar_latest_event_content = 2131099746;
 			
 			// aapt resource value: 0x7f060040
 			public const int submenuarrow = 2131099712;
@@ -1875,11 +1917,11 @@ namespace NetConnect
 			// aapt resource value: 0x7f06005a
 			public const int tableRow1 = 2131099738;
 			
-			// aapt resource value: 0x7f060069
-			public const int text = 2131099753;
+			// aapt resource value: 0x7f06006a
+			public const int text = 2131099754;
 			
-			// aapt resource value: 0x7f060067
-			public const int text2 = 2131099751;
+			// aapt resource value: 0x7f060068
+			public const int text2 = 2131099752;
 			
 			// aapt resource value: 0x7f060038
 			public const int textSpacerNoButtons = 2131099704;
@@ -1887,8 +1929,8 @@ namespace NetConnect
 			// aapt resource value: 0x7f06005b
 			public const int textView1 = 2131099739;
 			
-			// aapt resource value: 0x7f060065
-			public const int time = 2131099749;
+			// aapt resource value: 0x7f060066
+			public const int time = 2131099750;
 			
 			// aapt resource value: 0x7f06002e
 			public const int title = 2131099694;
@@ -2037,46 +2079,55 @@ namespace NetConnect
 			public const int CateringLayout = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int DrawerListItem = 2130903068;
+			public const int ContactLayout = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int Main = 2130903069;
+			public const int DrawerListItem = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int notification_media_action = 2130903070;
+			public const int Main = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int notification_media_cancel_action = 2130903071;
+			public const int notification_media_action = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int notification_template_big_media = 2130903072;
+			public const int notification_media_cancel_action = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int notification_template_big_media_narrow = 2130903073;
+			public const int notification_template_big_media = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int notification_template_lines = 2130903074;
+			public const int notification_template_big_media_narrow = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int notification_template_media = 2130903075;
+			public const int notification_template_lines = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int notification_template_part_chronometer = 2130903076;
+			public const int notification_template_media = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int notification_template_part_time = 2130903077;
+			public const int notification_template_part_chronometer = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int select_dialog_item_material = 2130903078;
+			public const int notification_template_part_time = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int select_dialog_multichoice_material = 2130903079;
+			public const int select_dialog_item_material = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int select_dialog_singlechoice_material = 2130903080;
+			public const int select_dialog_multichoice_material = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int support_simple_spinner_dropdown_item = 2130903081;
+			public const int select_dialog_singlechoice_material = 2130903081;
+			
+			// aapt resource value: 0x7f03002a
+			public const int SponsoringLayout = 2130903082;
+			
+			// aapt resource value: 0x7f03002b
+			public const int SponsoringListViewItem = 2130903083;
+			
+			// aapt resource value: 0x7f03002c
+			public const int support_simple_spinner_dropdown_item = 2130903084;
 			
 			static Layout()
 			{
@@ -2211,6 +2262,30 @@ namespace NetConnect
 			
 			// aapt resource value: 0x7f070023
 			public const int drawerOpen = 2131165219;
+			
+			// aapt resource value: 0x7f070026
+			public const int netcon_Impressum_Angaben_Content = 2131165222;
+			
+			// aapt resource value: 0x7f070025
+			public const int netcon_Impressum_Angaben_Title = 2131165221;
+			
+			// aapt resource value: 0x7f07002a
+			public const int netcon_Impressum_Emails_Content_Info = 2131165226;
+			
+			// aapt resource value: 0x7f07002b
+			public const int netcon_Impressum_Emails_Content_Sponsoring = 2131165227;
+			
+			// aapt resource value: 0x7f07002c
+			public const int netcon_Impressum_Emails_Content_Webmaster = 2131165228;
+			
+			// aapt resource value: 0x7f070029
+			public const int netcon_Impressum_Emails_Title = 2131165225;
+			
+			// aapt resource value: 0x7f070028
+			public const int netcon_Impressum_Vertretung_Content = 2131165224;
+			
+			// aapt resource value: 0x7f070027
+			public const int netcon_Impressum_Vertretung_Title = 2131165223;
 			
 			// aapt resource value: 0x7f070013
 			public const int search_menu_title = 2131165203;

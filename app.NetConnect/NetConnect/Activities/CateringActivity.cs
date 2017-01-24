@@ -17,11 +17,12 @@ namespace NetConnect.Activities
     [Activity(Label = "CateringActivity")]
     public class CateringActivity : BaseActivity<ICateringController, CateringController>, ICateringController
     {
-
+        FrameLayout content;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ActivityNavigationLayout);
+            content = FindViewById<FrameLayout>(Resource.Id.content_frame);
             setUpUI();
             SetUpNavigationMenu();
             this.NavController = new NavigationController(this);
@@ -46,6 +47,32 @@ namespace NetConnect.Activities
             }
             return base.OnCreateOptionsMenu(menu);
         }
+        public override void SetContentView(int layoutResID)
+        {
+            if(content != null)
+            {
+                LayoutInflater inf = (LayoutInflater)this.GetSystemService(LayoutInflaterService);
+                ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MatchParent,
+                    ViewGroup.LayoutParams.MatchParent);
+                View _content = inf.Inflate(layoutResID, content, false);
+                content.AddView(_content);
+            }
+
+        }
+        public override void SetContentView(View view)
+        {
+            if(content != null)
+            {
+
+            }
+        }
+
+        public override void SetContentView(View view, ViewGroup.LayoutParams @params)
+        {
+            base.SetContentView(view, @params);
+        }
+
 
         internal class CateringFrament : DynamicFragment
         {

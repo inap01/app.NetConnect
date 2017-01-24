@@ -31,20 +31,25 @@ namespace NetConnect.Activities
             this.NavController = new NavigationController(this);
             this.Controller = new SponsoringController(this);
             SetUpFragmentManager();
-            list = FindViewById<ListView>(Resource.Id.SponsoringListView);
-            List<Sponsor> l = new List<Sponsor>() { new Sponsor() { Content = "Content", Image = "ImagePath", Link = "LinkText", Name = "NameText" } };
-            adapter = new SponsoringAdapter(this, l);
-            list.Adapter = adapter;
 
             //list.SetOnClickListener(new View.IOnClickListener()
             //{
 
             //});
         }
+        
+        private void SetUpListAdapter(ListView list)
+        {
+            this.list = list;
+            List<Sponsor> l = new List<Sponsor>() { new Sponsor() { Content = "Content", Image = "ImagePath", Link = "LinkText", Name = "NameText" } };
+            adapter = new SponsoringAdapter(this, l);
+            this.list.Adapter = adapter;
+            
+        }
 
         protected override void SetUpFragmentManager()
         {
-            var Frag = SponsoringFrament.NewInstance();
+            var Frag = SponsoringFrament.NewInstance((ListView x) => { SetUpListAdapter(x); });
             var fm = this.FragmentManager.BeginTransaction();
             fm.Replace(Resource.Id.content_frame, Frag);
             fm.Commit();
@@ -108,10 +113,12 @@ namespace NetConnect.Activities
 
         internal class SponsoringFrament : DynamicFragment
         {
-            public static Fragment NewInstance()
+            static Action<ListView> AdapterSetUp;
+            public static Fragment NewInstance(Action<ListView> AdapterSetUp)
             {
                 Fragment fragment = new SponsoringFrament();
                 Bundle args = new Bundle();
+                SponsoringFrament.AdapterSetUp = AdapterSetUp;
                 return fragment;
             }
 
@@ -120,13 +127,14 @@ namespace NetConnect.Activities
                 View rootView = inflater.Inflate(Resource.Layout.SponsoringLayout, container, false);
                 rootView.SetBackgroundColor(Color.Transparent);
                 var x = rootView.FindViewById<LinearLayout>(Resource.Id.SponsoringRoot);
-                populateView();
+                populateView(x);
                 return rootView;
             }
 
-            private void populateView()
+            private void populateView(View Root)
             {
-
+                ListView list = Root.FindViewById<ListView>(Resource.Id.SponsoringListView);
+                AdapterSetUp(list);
             }
         }
         

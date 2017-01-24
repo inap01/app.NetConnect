@@ -98,6 +98,7 @@
     <Compile Include="Activities\OverviewActivity.cs" />
     <Compile Include="Activities\SponsoringActivity.cs" />
     <Compile Include="ApplicationStartup.cs" />
+    <Compile Include="BaseClasses\AppBaseActivity.cs" />
     <Compile Include="BaseClasses\BaseActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
