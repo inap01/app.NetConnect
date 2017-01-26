@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace MonoNetConnect.Cache
 {
+    [Serializable]
     public partial class DataContext
     {
         private Boolean _isInitialLoad { get; set; } = true;
