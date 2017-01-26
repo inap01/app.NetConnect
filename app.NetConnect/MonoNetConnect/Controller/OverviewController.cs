@@ -14,13 +14,18 @@ namespace MonoNetConnect.Controller
 {
     public interface IOverviewController : IBaseViewController
     {
+        void someButton(String s);
     }
-    public class OverviewController :BaseViewController<IOverviewController>, IOverviewController
+    public class OverviewController :BaseViewController<IOverviewController> 
     {
         public OverviewController(IOverviewController viewController)
             :base(viewController)
         {
 
+        }
+        public void action(string a)
+        {
+            this._viewController.someButton(a);
         }
     }
 }

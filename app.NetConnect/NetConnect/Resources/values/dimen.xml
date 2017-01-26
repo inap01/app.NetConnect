@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <!-- ListView -->
+  <dimen name="netcon_listView_LayoutItem_Padding">15dp</dimen>
+  <dimen name="netcon_listView_Header_Height">32dp</dimen>
+  <dimen name="netcon_listView_Header_Text">22dp</dimen>
+  <dimen name="netcon_listView_Content_Text">14dp</dimen>
+</resources>

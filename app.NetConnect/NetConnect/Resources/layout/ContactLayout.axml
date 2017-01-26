@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ContactRoot"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/netcon_listView_LayoutItem_Padding">
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/netcon_listView_Header_Height"
+      android:text="@string/netcon_Impressum_Angaben_Title"
+      android:textSize="@dimen/netcon_listView_Header_Text"/>
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/netcon_Impressum_Angaben_Content"
+      android:textSize="@dimen/netcon_listView_Content_Text"/>
+  </LinearLayout>
+  
+  <include layout="@drawable/divider"/>
+  
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/netcon_listView_LayoutItem_Padding">
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/netcon_listView_Header_Height"
+      android:text="@string/netcon_Impressum_Vertretung_Title"
+      android:textSize="@dimen/netcon_listView_Header_Text"/>
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/netcon_Impressum_Vertretung_Content"
+      android:textSize="@dimen/netcon_listView_Content_Text"/>
+  </LinearLayout>
+  
+  <include layout="@drawable/divider"/>
+  
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/netcon_listView_LayoutItem_Padding">
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/netcon_listView_Header_Height"
+      android:text="@string/netcon_Impressum_Emails_Title"
+      android:textSize="@dimen/netcon_listView_Header_Text"/>
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/netcon_Impressum_Emails_Content_Info"
+      android:textSize="@dimen/netcon_listView_Content_Text"/>
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/netcon_Impressum_Emails_Content_Sponsoring"
+      android:textSize="@dimen/netcon_listView_Content_Text"/>
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/netcon_Impressum_Emails_Content_Webmaster"
+      android:textSize="@dimen/netcon_listView_Content_Text"/>
+  </LinearLayout>
+</LinearLayout>

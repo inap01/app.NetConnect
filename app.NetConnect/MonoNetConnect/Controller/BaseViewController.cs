@@ -14,9 +14,8 @@ namespace MonoNetConnect.Controller
 {
     public interface IBaseViewController
     {
-        void ItemClicked();
     }
-    public abstract class BaseViewController<T> : IBaseViewController
+    public abstract class BaseViewController<T>
         where T : IBaseViewController
     {
         protected T _viewController { get; set; }
@@ -24,11 +23,6 @@ namespace MonoNetConnect.Controller
         protected BaseViewController(T viewController)
         {
             this._viewController = viewController;
-        }
-
-        public void ItemClicked()
-        {
-            this._viewController.ItemClicked();
         }
     }
 }

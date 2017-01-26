@@ -16,7 +16,7 @@ namespace MonoNetConnect.Controller
     {
 
     }
-    class CateringController : BaseViewController<ICateringController>, ICateringController
+    public class CateringController : BaseViewController<ICateringController>
     {
         public CateringController(ICateringController viewController)
             :base(viewController)
