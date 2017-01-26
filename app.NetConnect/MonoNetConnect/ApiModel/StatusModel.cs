@@ -12,13 +12,13 @@ using Android.Widget;
 
 namespace MonoNetConnect.DatabaseModels
 {
-    public class BaseProperties
+
+    public class StatusModel
     {
-        Int32 ID { get; set; }
-    }
-    public class BaseModel<T>
-    {
-        T Model { get; set; }
-        StatusModel Status { get; set; }
+        protected enum Status { Success, Warning, Danger, Info}
+
+        protected Status state { get; set; }
+        protected String Message { get; set; }
+
     }
 }

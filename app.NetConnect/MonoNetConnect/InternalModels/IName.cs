@@ -10,15 +10,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace MonoNetConnect.DatabaseModels
+namespace MonoNetConnect.InternalModels
 {
-    
-    class StatusModel
+    public interface IApiPath
     {
-        protected enum Status { Success, Warning, Danger, Info}
-
-        protected Status state { get; set; }
-        protected String Message { get; set; }
-
+        String ApiPath();
     }
 }

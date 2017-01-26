@@ -23,12 +23,12 @@ using static Android.App.ActionBar;
 namespace NetConnect
 {
     
-    public abstract class BaseActivity<T,Z> : FragmentActivity,  NavigationAdapter.OnItemClickListener, INavigationController
+    public abstract class BaseActivity<T,Z> : FragmentActivity, INavigationController
         where T : IBaseViewController where Z : BaseViewController<T>
     {
         #region Navigation Properties
+        List<TextView> NavEntries { get; set; } = new List<TextView>();
         protected DrawerLayout mDrawerLayout;
-        protected RecyclerView mDrawerList;
         protected Android.Support.V7.App.ActionBarDrawerToggle mDrawerToggle;
         #endregion
         #region Shared Properties
@@ -53,20 +53,11 @@ namespace NetConnect
             get; set;
         } = new List<string>(new String[] { "Catering", "Eintrag2", "Sponsoren", "Kontakt" });
 
-        #endregion
-
-        public virtual Boolean OnClick<T1>(int id, Action func)
-            where T1 : View
+        #endregion        
+        protected override void OnCreate(Bundle savedInstanceState)
         {
-            View view = FindViewById<T1>(id);
-            if (view != null)
-            {
-                view.Click += (o, e) => { func(); };
-                return true;
-            }
-            else
-                return false;
-        }       
+            base.OnCreate(savedInstanceState);
+        }
         public void ListItemClicked(int id)
         {
             string key = Entries[id];
@@ -75,19 +66,17 @@ namespace NetConnect
             Intent i = new Intent(this, t);
             StartActivity(i);
         }
-
+        protected void SetUpMethod()
+        {
+            setUpUI();
+            SetUpNavigationMenu();
+        }
         #region Navigation Methods and Setup
 
-        protected void SetUpNavigationMenu()
+        private void SetUpNavigationMenu()
         {
-            mDrawerList = new RecyclerView(this);
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            mDrawerList = FindViewById<RecyclerView>(Resource.Id.left_drawer);
-            Title = NavTitle;
-            mDrawerList.HasFixedSize = true;
-            mDrawerList.SetLayoutManager(new LinearLayoutManager(this));
-
-            mDrawerList.SetAdapter(new NavigationAdapter(Entries.ToArray(), this));
+            Title = NavTitle;            
             this.ActionBar.SetDisplayHomeAsUpEnabled(true);
             this.ActionBar.SetHomeButtonEnabled(true);
             mDrawerToggle = new Android.Support.V7.App.ActionBarDrawerToggle(this, mDrawerLayout,
@@ -95,22 +84,45 @@ namespace NetConnect
                 Resource.String.drawerClosed);
             mDrawerLayout.AddDrawerListener(mDrawerToggle);
         }
-        protected void setUpBeforeNavigation(String[] entries, String navigationTitle)
+        protected void SetInnerLayout(int id)
         {
-            this.Entries = new List<String>(entries);
-            this.NavTitle = navigationTitle;
-
+            LayoutInflater inflater = (LayoutInflater)GetSystemService(LayoutInflaterService);
+            ViewGroup vg = FindViewById<FrameLayout>(Resource.Id.content_frame);
+            var ll = inflater.Inflate(id, vg);
         }
-        protected void setUpUI()
+        private void setUpUI()
+        {
+            NavEntries.Add(FindViewById<TextView>(Resource.Id.NavigationMenuNavEntry1));
+            NavEntries.Add(FindViewById<TextView>(Resource.Id.NavigationMenuNavEntry2));
+            NavEntries.Add(FindViewById<TextView>(Resource.Id.NavigationMenuNavEntry3));
+            NavEntries.Add(FindViewById<TextView>(Resource.Id.NavigationMenuNavEntry4));
+            populateNameMap();
+            SetUpNavClick();
+        }
+
+        private void populateNameMap()
         {
             nameMap = new Dictionary<string, Type>();
             Type t = typeof(OverviewActivity);
             nameMap.Add(Entries[0], typeof(CateringActivity));
-            nameMap.Add(Entries[1], t);
+            nameMap.Add(Entries[1], typeof(OverviewActivity));
             nameMap.Add(Entries[2], typeof(SponsoringActivity));
             nameMap.Add(Entries[3], typeof(ContactActivity));
         }
-        protected abstract void SetUpFragmentManager();
+
+        protected void SetUpNavClick()
+        {
+            for (int i = 0; i < (Math.Min(nameMap.Count-1, NavEntries.Count-1)); i++)
+            {
+                NavEntries[i].Text = Entries[i];
+                InitViewClick(NavEntries[i], () => { StartActivityWrapper(nameMap[Entries[i]]); });
+            }
+        }
+        protected void StartActivityWrapper(Type t)
+        {
+            Intent i = new Intent(this, t);
+            StartActivity(i);
+        }
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
@@ -124,7 +136,6 @@ namespace NetConnect
                     NavBarOpenClose();
                     break;
             }
-
             return true;
         }
 
@@ -141,25 +152,27 @@ namespace NetConnect
             base.OnPostCreate(savedInstanceState);
             mDrawerToggle.SyncState();
         }
-
+        protected override void OnResume()
+        {
+            base.OnResume();
+            mDrawerLayout.CloseDrawer((int)GravityFlags.Left);
+        }
         public override void OnConfigurationChanged(Configuration newConfig)
         {
             base.OnConfigurationChanged(newConfig);
             mDrawerToggle.OnConfigurationChanged(newConfig);
         }
-
-        void NavigationAdapter.OnItemClickListener.OnClick(View view, int position)
+        
+        public static void InitViewClick(View v, Action func)                
         {
-            this.NavController.ListItemClicked(position);
-        }
-        public static void InitViewClick<Y>(View frag, int id, Action func)
-                where Y : View
-        {
-            var v = frag.FindViewById<Y>(id);
             v.Click += (o, e) => { func(); };
         }
         #endregion
-
+        public override void OnBackPressed()
+        {
+            mDrawerLayout.CloseDrawer((int)GravityFlags.Left);
+            Finish();
+        }
         internal class MyActionBarDrawerToggle : Android.Support.V7.App.ActionBarDrawerToggle
         {
             OverviewActivity owner;
@@ -167,8 +180,7 @@ namespace NetConnect
             public MyActionBarDrawerToggle(OverviewActivity activity, DrawerLayout layout, int imgRes, int openRes, int closeRes)
                 : base(activity, layout, openRes, closeRes)
             {
-                owner = activity;
-                
+                owner = activity;                
             }
 
             public override void OnDrawerClosed(View drawerView)
@@ -182,66 +194,6 @@ namespace NetConnect
                 owner.ActionBar.Title = owner.Title;
                 owner.InvalidateOptionsMenu();
             }
-        }
-        internal abstract class DynamicFragment : Fragment
-        {
-            public DynamicFragment()
-            {
-
-            }
-            public abstract override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);  
-            
-            
-        }
-    }    
-    public class NavigationAdapter : RecyclerView.Adapter
-    {
-        private static String[] entries;
-        private OnItemClickListener mListener;
-
-        public override int ItemCount
-        {
-            get
-            {
-                return entries.Length;
-            }
-        }
-
-        public class ViewHolder : RecyclerView.ViewHolder
-        {
-            public readonly TextView textView;
-            public ViewHolder(TextView v) : base(v)
-            {
-                textView = v;
-            }
-        }
-        public interface OnItemClickListener
-        {
-            void OnClick(View view, int position);
-        }
-        public NavigationAdapter(String[] entries, OnItemClickListener listener)
-        {
-            NavigationAdapter.entries = entries;
-            this.mListener = listener;
-        }
-        public override void OnBindViewHolder(RecyclerView.ViewHolder rawHolder, int position)
-        {
-            var holder = (ViewHolder)rawHolder;
-            holder.textView.Text = entries[position];
-            holder.textView.Click += (o, e) => {
-                mListener.OnClick((View)o, position);
-            };
-        }
-        public static String GetEntry(int id)
-        {
-            return entries[id];
-        }
-        public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
-        {
-            var vi = LayoutInflater.From(parent.Context);
-            var v = vi.Inflate(Resource.Layout.DrawerListItem, parent, false);
-            var tv = v.FindViewById<TextView>(Resource.Id.TexField);
-            return new ViewHolder(tv);
         }
     }
 }

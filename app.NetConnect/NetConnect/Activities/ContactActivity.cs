@@ -20,21 +20,10 @@ namespace NetConnect.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             SetContentView(Resource.Layout.ActivityNavigationLayout);
-            setUpUI();
-            SetUpNavigationMenu();
             this.NavController = new NavigationController(this);
             this.Controller = new ContactController(this);
-            SetUpFragmentManager();
-        }
-
-        protected override void SetUpFragmentManager()
-        {
-            var Frag = ContactFrament.NewInstance();
-            var fm = this.FragmentManager.BeginTransaction();
-            fm.Replace(Resource.Id.content_frame, Frag);
-            fm.Commit();
+            SetUpMethod();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -46,34 +35,6 @@ namespace NetConnect.Activities
                 return true;
             }
             return base.OnCreateOptionsMenu(menu);
-        }
-
-        internal class ContactFrament : DynamicFragment
-        {
-            private static String[] entries;
-            public static Fragment NewInstance()
-            {
-                Fragment fragment = new ContactFrament();
-                Bundle args = new Bundle();
-                return fragment;
-            }
-
-            public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-            {
-                entries = new String[12];
-                for (int i = 0; i < entries.Length; i++)
-                    entries[i] = $"Eintrag Nr{i}";
-                View rootView = inflater.Inflate(Resource.Layout.ContactLayout, container, false);
-                rootView.SetBackgroundColor(Color.Transparent);
-                var x = rootView.FindViewById<LinearLayout>(Resource.Id.ContactRoot);
-                populateView();
-                return rootView;
-            }
-
-            private void populateView()
-            {
-
-            }
         }
     }
 }

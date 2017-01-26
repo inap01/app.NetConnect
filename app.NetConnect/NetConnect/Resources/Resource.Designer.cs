@@ -26,8 +26,1706 @@ namespace NetConnect
 		
 		public static void UpdateIdValues()
 		{
+			global::MonoNetConnect.Resource.Animation.abc_fade_in = global::NetConnect.Resource.Animation.abc_fade_in;
+			global::MonoNetConnect.Resource.Animation.abc_fade_out = global::NetConnect.Resource.Animation.abc_fade_out;
+			global::MonoNetConnect.Resource.Animation.abc_grow_fade_in_from_bottom = global::NetConnect.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::MonoNetConnect.Resource.Animation.abc_popup_enter = global::NetConnect.Resource.Animation.abc_popup_enter;
+			global::MonoNetConnect.Resource.Animation.abc_popup_exit = global::NetConnect.Resource.Animation.abc_popup_exit;
+			global::MonoNetConnect.Resource.Animation.abc_shrink_fade_out_from_bottom = global::NetConnect.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::MonoNetConnect.Resource.Animation.abc_slide_in_bottom = global::NetConnect.Resource.Animation.abc_slide_in_bottom;
+			global::MonoNetConnect.Resource.Animation.abc_slide_in_top = global::NetConnect.Resource.Animation.abc_slide_in_top;
+			global::MonoNetConnect.Resource.Animation.abc_slide_out_bottom = global::NetConnect.Resource.Animation.abc_slide_out_bottom;
+			global::MonoNetConnect.Resource.Animation.abc_slide_out_top = global::NetConnect.Resource.Animation.abc_slide_out_top;
+			global::MonoNetConnect.Resource.Animation.design_appbar_state_list_animator = global::NetConnect.Resource.Animation.design_appbar_state_list_animator;
+			global::MonoNetConnect.Resource.Animation.design_bottom_sheet_slide_in = global::NetConnect.Resource.Animation.design_bottom_sheet_slide_in;
+			global::MonoNetConnect.Resource.Animation.design_bottom_sheet_slide_out = global::NetConnect.Resource.Animation.design_bottom_sheet_slide_out;
+			global::MonoNetConnect.Resource.Animation.design_fab_in = global::NetConnect.Resource.Animation.design_fab_in;
+			global::MonoNetConnect.Resource.Animation.design_fab_out = global::NetConnect.Resource.Animation.design_fab_out;
+			global::MonoNetConnect.Resource.Animation.design_snackbar_in = global::NetConnect.Resource.Animation.design_snackbar_in;
+			global::MonoNetConnect.Resource.Animation.design_snackbar_out = global::NetConnect.Resource.Animation.design_snackbar_out;
+			global::MonoNetConnect.Resource.Attribute.actionBarDivider = global::NetConnect.Resource.Attribute.actionBarDivider;
+			global::MonoNetConnect.Resource.Attribute.actionBarItemBackground = global::NetConnect.Resource.Attribute.actionBarItemBackground;
+			global::MonoNetConnect.Resource.Attribute.actionBarPopupTheme = global::NetConnect.Resource.Attribute.actionBarPopupTheme;
+			global::MonoNetConnect.Resource.Attribute.actionBarSize = global::NetConnect.Resource.Attribute.actionBarSize;
+			global::MonoNetConnect.Resource.Attribute.actionBarSplitStyle = global::NetConnect.Resource.Attribute.actionBarSplitStyle;
+			global::MonoNetConnect.Resource.Attribute.actionBarStyle = global::NetConnect.Resource.Attribute.actionBarStyle;
+			global::MonoNetConnect.Resource.Attribute.actionBarTabBarStyle = global::NetConnect.Resource.Attribute.actionBarTabBarStyle;
+			global::MonoNetConnect.Resource.Attribute.actionBarTabStyle = global::NetConnect.Resource.Attribute.actionBarTabStyle;
+			global::MonoNetConnect.Resource.Attribute.actionBarTabTextStyle = global::NetConnect.Resource.Attribute.actionBarTabTextStyle;
+			global::MonoNetConnect.Resource.Attribute.actionBarTheme = global::NetConnect.Resource.Attribute.actionBarTheme;
+			global::MonoNetConnect.Resource.Attribute.actionBarWidgetTheme = global::NetConnect.Resource.Attribute.actionBarWidgetTheme;
+			global::MonoNetConnect.Resource.Attribute.actionButtonStyle = global::NetConnect.Resource.Attribute.actionButtonStyle;
+			global::MonoNetConnect.Resource.Attribute.actionDropDownStyle = global::NetConnect.Resource.Attribute.actionDropDownStyle;
+			global::MonoNetConnect.Resource.Attribute.actionLayout = global::NetConnect.Resource.Attribute.actionLayout;
+			global::MonoNetConnect.Resource.Attribute.actionMenuTextAppearance = global::NetConnect.Resource.Attribute.actionMenuTextAppearance;
+			global::MonoNetConnect.Resource.Attribute.actionMenuTextColor = global::NetConnect.Resource.Attribute.actionMenuTextColor;
+			global::MonoNetConnect.Resource.Attribute.actionModeBackground = global::NetConnect.Resource.Attribute.actionModeBackground;
+			global::MonoNetConnect.Resource.Attribute.actionModeCloseButtonStyle = global::NetConnect.Resource.Attribute.actionModeCloseButtonStyle;
+			global::MonoNetConnect.Resource.Attribute.actionModeCloseDrawable = global::NetConnect.Resource.Attribute.actionModeCloseDrawable;
+			global::MonoNetConnect.Resource.Attribute.actionModeCopyDrawable = global::NetConnect.Resource.Attribute.actionModeCopyDrawable;
+			global::MonoNetConnect.Resource.Attribute.actionModeCutDrawable = global::NetConnect.Resource.Attribute.actionModeCutDrawable;
+			global::MonoNetConnect.Resource.Attribute.actionModeFindDrawable = global::NetConnect.Resource.Attribute.actionModeFindDrawable;
+			global::MonoNetConnect.Resource.Attribute.actionModePasteDrawable = global::NetConnect.Resource.Attribute.actionModePasteDrawable;
+			global::MonoNetConnect.Resource.Attribute.actionModePopupWindowStyle = global::NetConnect.Resource.Attribute.actionModePopupWindowStyle;
+			global::MonoNetConnect.Resource.Attribute.actionModeSelectAllDrawable = global::NetConnect.Resource.Attribute.actionModeSelectAllDrawable;
+			global::MonoNetConnect.Resource.Attribute.actionModeShareDrawable = global::NetConnect.Resource.Attribute.actionModeShareDrawable;
+			global::MonoNetConnect.Resource.Attribute.actionModeSplitBackground = global::NetConnect.Resource.Attribute.actionModeSplitBackground;
+			global::MonoNetConnect.Resource.Attribute.actionModeStyle = global::NetConnect.Resource.Attribute.actionModeStyle;
+			global::MonoNetConnect.Resource.Attribute.actionModeWebSearchDrawable = global::NetConnect.Resource.Attribute.actionModeWebSearchDrawable;
+			global::MonoNetConnect.Resource.Attribute.actionOverflowButtonStyle = global::NetConnect.Resource.Attribute.actionOverflowButtonStyle;
+			global::MonoNetConnect.Resource.Attribute.actionOverflowMenuStyle = global::NetConnect.Resource.Attribute.actionOverflowMenuStyle;
+			global::MonoNetConnect.Resource.Attribute.actionProviderClass = global::NetConnect.Resource.Attribute.actionProviderClass;
+			global::MonoNetConnect.Resource.Attribute.actionViewClass = global::NetConnect.Resource.Attribute.actionViewClass;
+			global::MonoNetConnect.Resource.Attribute.activityChooserViewStyle = global::NetConnect.Resource.Attribute.activityChooserViewStyle;
+			global::MonoNetConnect.Resource.Attribute.alertDialogButtonGroupStyle = global::NetConnect.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::MonoNetConnect.Resource.Attribute.alertDialogCenterButtons = global::NetConnect.Resource.Attribute.alertDialogCenterButtons;
+			global::MonoNetConnect.Resource.Attribute.alertDialogStyle = global::NetConnect.Resource.Attribute.alertDialogStyle;
+			global::MonoNetConnect.Resource.Attribute.alertDialogTheme = global::NetConnect.Resource.Attribute.alertDialogTheme;
+			global::MonoNetConnect.Resource.Attribute.allowStacking = global::NetConnect.Resource.Attribute.allowStacking;
+			global::MonoNetConnect.Resource.Attribute.alpha = global::NetConnect.Resource.Attribute.alpha;
+			global::MonoNetConnect.Resource.Attribute.arrowHeadLength = global::NetConnect.Resource.Attribute.arrowHeadLength;
+			global::MonoNetConnect.Resource.Attribute.arrowShaftLength = global::NetConnect.Resource.Attribute.arrowShaftLength;
+			global::MonoNetConnect.Resource.Attribute.autoCompleteTextViewStyle = global::NetConnect.Resource.Attribute.autoCompleteTextViewStyle;
+			global::MonoNetConnect.Resource.Attribute.background = global::NetConnect.Resource.Attribute.background;
+			global::MonoNetConnect.Resource.Attribute.backgroundSplit = global::NetConnect.Resource.Attribute.backgroundSplit;
+			global::MonoNetConnect.Resource.Attribute.backgroundStacked = global::NetConnect.Resource.Attribute.backgroundStacked;
+			global::MonoNetConnect.Resource.Attribute.backgroundTint = global::NetConnect.Resource.Attribute.backgroundTint;
+			global::MonoNetConnect.Resource.Attribute.backgroundTintMode = global::NetConnect.Resource.Attribute.backgroundTintMode;
+			global::MonoNetConnect.Resource.Attribute.barLength = global::NetConnect.Resource.Attribute.barLength;
+			global::MonoNetConnect.Resource.Attribute.behavior_autoHide = global::NetConnect.Resource.Attribute.behavior_autoHide;
+			global::MonoNetConnect.Resource.Attribute.behavior_hideable = global::NetConnect.Resource.Attribute.behavior_hideable;
+			global::MonoNetConnect.Resource.Attribute.behavior_overlapTop = global::NetConnect.Resource.Attribute.behavior_overlapTop;
+			global::MonoNetConnect.Resource.Attribute.behavior_peekHeight = global::NetConnect.Resource.Attribute.behavior_peekHeight;
+			global::MonoNetConnect.Resource.Attribute.behavior_skipCollapsed = global::NetConnect.Resource.Attribute.behavior_skipCollapsed;
+			global::MonoNetConnect.Resource.Attribute.borderWidth = global::NetConnect.Resource.Attribute.borderWidth;
+			global::MonoNetConnect.Resource.Attribute.borderlessButtonStyle = global::NetConnect.Resource.Attribute.borderlessButtonStyle;
+			global::MonoNetConnect.Resource.Attribute.bottomSheetDialogTheme = global::NetConnect.Resource.Attribute.bottomSheetDialogTheme;
+			global::MonoNetConnect.Resource.Attribute.bottomSheetStyle = global::NetConnect.Resource.Attribute.bottomSheetStyle;
+			global::MonoNetConnect.Resource.Attribute.buttonBarButtonStyle = global::NetConnect.Resource.Attribute.buttonBarButtonStyle;
+			global::MonoNetConnect.Resource.Attribute.buttonBarNegativeButtonStyle = global::NetConnect.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::MonoNetConnect.Resource.Attribute.buttonBarNeutralButtonStyle = global::NetConnect.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::MonoNetConnect.Resource.Attribute.buttonBarPositiveButtonStyle = global::NetConnect.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::MonoNetConnect.Resource.Attribute.buttonBarStyle = global::NetConnect.Resource.Attribute.buttonBarStyle;
+			global::MonoNetConnect.Resource.Attribute.buttonGravity = global::NetConnect.Resource.Attribute.buttonGravity;
+			global::MonoNetConnect.Resource.Attribute.buttonPanelSideLayout = global::NetConnect.Resource.Attribute.buttonPanelSideLayout;
+			global::MonoNetConnect.Resource.Attribute.buttonStyle = global::NetConnect.Resource.Attribute.buttonStyle;
+			global::MonoNetConnect.Resource.Attribute.buttonStyleSmall = global::NetConnect.Resource.Attribute.buttonStyleSmall;
+			global::MonoNetConnect.Resource.Attribute.buttonTint = global::NetConnect.Resource.Attribute.buttonTint;
+			global::MonoNetConnect.Resource.Attribute.buttonTintMode = global::NetConnect.Resource.Attribute.buttonTintMode;
+			global::MonoNetConnect.Resource.Attribute.checkboxStyle = global::NetConnect.Resource.Attribute.checkboxStyle;
+			global::MonoNetConnect.Resource.Attribute.checkedTextViewStyle = global::NetConnect.Resource.Attribute.checkedTextViewStyle;
+			global::MonoNetConnect.Resource.Attribute.closeIcon = global::NetConnect.Resource.Attribute.closeIcon;
+			global::MonoNetConnect.Resource.Attribute.closeItemLayout = global::NetConnect.Resource.Attribute.closeItemLayout;
+			global::MonoNetConnect.Resource.Attribute.collapseContentDescription = global::NetConnect.Resource.Attribute.collapseContentDescription;
+			global::MonoNetConnect.Resource.Attribute.collapseIcon = global::NetConnect.Resource.Attribute.collapseIcon;
+			global::MonoNetConnect.Resource.Attribute.collapsedTitleGravity = global::NetConnect.Resource.Attribute.collapsedTitleGravity;
+			global::MonoNetConnect.Resource.Attribute.collapsedTitleTextAppearance = global::NetConnect.Resource.Attribute.collapsedTitleTextAppearance;
+			global::MonoNetConnect.Resource.Attribute.color = global::NetConnect.Resource.Attribute.color;
+			global::MonoNetConnect.Resource.Attribute.colorAccent = global::NetConnect.Resource.Attribute.colorAccent;
+			global::MonoNetConnect.Resource.Attribute.colorBackgroundFloating = global::NetConnect.Resource.Attribute.colorBackgroundFloating;
+			global::MonoNetConnect.Resource.Attribute.colorButtonNormal = global::NetConnect.Resource.Attribute.colorButtonNormal;
+			global::MonoNetConnect.Resource.Attribute.colorControlActivated = global::NetConnect.Resource.Attribute.colorControlActivated;
+			global::MonoNetConnect.Resource.Attribute.colorControlHighlight = global::NetConnect.Resource.Attribute.colorControlHighlight;
+			global::MonoNetConnect.Resource.Attribute.colorControlNormal = global::NetConnect.Resource.Attribute.colorControlNormal;
+			global::MonoNetConnect.Resource.Attribute.colorPrimary = global::NetConnect.Resource.Attribute.colorPrimary;
+			global::MonoNetConnect.Resource.Attribute.colorPrimaryDark = global::NetConnect.Resource.Attribute.colorPrimaryDark;
+			global::MonoNetConnect.Resource.Attribute.colorSwitchThumbNormal = global::NetConnect.Resource.Attribute.colorSwitchThumbNormal;
+			global::MonoNetConnect.Resource.Attribute.commitIcon = global::NetConnect.Resource.Attribute.commitIcon;
+			global::MonoNetConnect.Resource.Attribute.contentInsetEnd = global::NetConnect.Resource.Attribute.contentInsetEnd;
+			global::MonoNetConnect.Resource.Attribute.contentInsetEndWithActions = global::NetConnect.Resource.Attribute.contentInsetEndWithActions;
+			global::MonoNetConnect.Resource.Attribute.contentInsetLeft = global::NetConnect.Resource.Attribute.contentInsetLeft;
+			global::MonoNetConnect.Resource.Attribute.contentInsetRight = global::NetConnect.Resource.Attribute.contentInsetRight;
+			global::MonoNetConnect.Resource.Attribute.contentInsetStart = global::NetConnect.Resource.Attribute.contentInsetStart;
+			global::MonoNetConnect.Resource.Attribute.contentInsetStartWithNavigation = global::NetConnect.Resource.Attribute.contentInsetStartWithNavigation;
+			global::MonoNetConnect.Resource.Attribute.contentScrim = global::NetConnect.Resource.Attribute.contentScrim;
+			global::MonoNetConnect.Resource.Attribute.controlBackground = global::NetConnect.Resource.Attribute.controlBackground;
+			global::MonoNetConnect.Resource.Attribute.counterEnabled = global::NetConnect.Resource.Attribute.counterEnabled;
+			global::MonoNetConnect.Resource.Attribute.counterMaxLength = global::NetConnect.Resource.Attribute.counterMaxLength;
+			global::MonoNetConnect.Resource.Attribute.counterOverflowTextAppearance = global::NetConnect.Resource.Attribute.counterOverflowTextAppearance;
+			global::MonoNetConnect.Resource.Attribute.counterTextAppearance = global::NetConnect.Resource.Attribute.counterTextAppearance;
+			global::MonoNetConnect.Resource.Attribute.customNavigationLayout = global::NetConnect.Resource.Attribute.customNavigationLayout;
+			global::MonoNetConnect.Resource.Attribute.defaultQueryHint = global::NetConnect.Resource.Attribute.defaultQueryHint;
+			global::MonoNetConnect.Resource.Attribute.dialogPreferredPadding = global::NetConnect.Resource.Attribute.dialogPreferredPadding;
+			global::MonoNetConnect.Resource.Attribute.dialogTheme = global::NetConnect.Resource.Attribute.dialogTheme;
+			global::MonoNetConnect.Resource.Attribute.displayOptions = global::NetConnect.Resource.Attribute.displayOptions;
+			global::MonoNetConnect.Resource.Attribute.divider = global::NetConnect.Resource.Attribute.divider;
+			global::MonoNetConnect.Resource.Attribute.dividerHorizontal = global::NetConnect.Resource.Attribute.dividerHorizontal;
+			global::MonoNetConnect.Resource.Attribute.dividerPadding = global::NetConnect.Resource.Attribute.dividerPadding;
+			global::MonoNetConnect.Resource.Attribute.dividerVertical = global::NetConnect.Resource.Attribute.dividerVertical;
+			global::MonoNetConnect.Resource.Attribute.drawableSize = global::NetConnect.Resource.Attribute.drawableSize;
+			global::MonoNetConnect.Resource.Attribute.drawerArrowStyle = global::NetConnect.Resource.Attribute.drawerArrowStyle;
+			global::MonoNetConnect.Resource.Attribute.dropDownListViewStyle = global::NetConnect.Resource.Attribute.dropDownListViewStyle;
+			global::MonoNetConnect.Resource.Attribute.dropdownListPreferredItemHeight = global::NetConnect.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::MonoNetConnect.Resource.Attribute.editTextBackground = global::NetConnect.Resource.Attribute.editTextBackground;
+			global::MonoNetConnect.Resource.Attribute.editTextColor = global::NetConnect.Resource.Attribute.editTextColor;
+			global::MonoNetConnect.Resource.Attribute.editTextStyle = global::NetConnect.Resource.Attribute.editTextStyle;
+			global::MonoNetConnect.Resource.Attribute.elevation = global::NetConnect.Resource.Attribute.elevation;
+			global::MonoNetConnect.Resource.Attribute.errorEnabled = global::NetConnect.Resource.Attribute.errorEnabled;
+			global::MonoNetConnect.Resource.Attribute.errorTextAppearance = global::NetConnect.Resource.Attribute.errorTextAppearance;
+			global::MonoNetConnect.Resource.Attribute.expandActivityOverflowButtonDrawable = global::NetConnect.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::MonoNetConnect.Resource.Attribute.expanded = global::NetConnect.Resource.Attribute.expanded;
+			global::MonoNetConnect.Resource.Attribute.expandedTitleGravity = global::NetConnect.Resource.Attribute.expandedTitleGravity;
+			global::MonoNetConnect.Resource.Attribute.expandedTitleMargin = global::NetConnect.Resource.Attribute.expandedTitleMargin;
+			global::MonoNetConnect.Resource.Attribute.expandedTitleMarginBottom = global::NetConnect.Resource.Attribute.expandedTitleMarginBottom;
+			global::MonoNetConnect.Resource.Attribute.expandedTitleMarginEnd = global::NetConnect.Resource.Attribute.expandedTitleMarginEnd;
+			global::MonoNetConnect.Resource.Attribute.expandedTitleMarginStart = global::NetConnect.Resource.Attribute.expandedTitleMarginStart;
+			global::MonoNetConnect.Resource.Attribute.expandedTitleMarginTop = global::NetConnect.Resource.Attribute.expandedTitleMarginTop;
+			global::MonoNetConnect.Resource.Attribute.expandedTitleTextAppearance = global::NetConnect.Resource.Attribute.expandedTitleTextAppearance;
+			global::MonoNetConnect.Resource.Attribute.fabSize = global::NetConnect.Resource.Attribute.fabSize;
+			global::MonoNetConnect.Resource.Attribute.foregroundInsidePadding = global::NetConnect.Resource.Attribute.foregroundInsidePadding;
+			global::MonoNetConnect.Resource.Attribute.gapBetweenBars = global::NetConnect.Resource.Attribute.gapBetweenBars;
+			global::MonoNetConnect.Resource.Attribute.goIcon = global::NetConnect.Resource.Attribute.goIcon;
+			global::MonoNetConnect.Resource.Attribute.headerLayout = global::NetConnect.Resource.Attribute.headerLayout;
+			global::MonoNetConnect.Resource.Attribute.height = global::NetConnect.Resource.Attribute.height;
+			global::MonoNetConnect.Resource.Attribute.hideOnContentScroll = global::NetConnect.Resource.Attribute.hideOnContentScroll;
+			global::MonoNetConnect.Resource.Attribute.hintAnimationEnabled = global::NetConnect.Resource.Attribute.hintAnimationEnabled;
+			global::MonoNetConnect.Resource.Attribute.hintEnabled = global::NetConnect.Resource.Attribute.hintEnabled;
+			global::MonoNetConnect.Resource.Attribute.hintTextAppearance = global::NetConnect.Resource.Attribute.hintTextAppearance;
+			global::MonoNetConnect.Resource.Attribute.homeAsUpIndicator = global::NetConnect.Resource.Attribute.homeAsUpIndicator;
+			global::MonoNetConnect.Resource.Attribute.homeLayout = global::NetConnect.Resource.Attribute.homeLayout;
+			global::MonoNetConnect.Resource.Attribute.icon = global::NetConnect.Resource.Attribute.icon;
+			global::MonoNetConnect.Resource.Attribute.iconifiedByDefault = global::NetConnect.Resource.Attribute.iconifiedByDefault;
+			global::MonoNetConnect.Resource.Attribute.imageButtonStyle = global::NetConnect.Resource.Attribute.imageButtonStyle;
+			global::MonoNetConnect.Resource.Attribute.indeterminateProgressStyle = global::NetConnect.Resource.Attribute.indeterminateProgressStyle;
+			global::MonoNetConnect.Resource.Attribute.initialActivityCount = global::NetConnect.Resource.Attribute.initialActivityCount;
+			global::MonoNetConnect.Resource.Attribute.insetForeground = global::NetConnect.Resource.Attribute.insetForeground;
+			global::MonoNetConnect.Resource.Attribute.isLightTheme = global::NetConnect.Resource.Attribute.isLightTheme;
+			global::MonoNetConnect.Resource.Attribute.itemBackground = global::NetConnect.Resource.Attribute.itemBackground;
+			global::MonoNetConnect.Resource.Attribute.itemIconTint = global::NetConnect.Resource.Attribute.itemIconTint;
+			global::MonoNetConnect.Resource.Attribute.itemPadding = global::NetConnect.Resource.Attribute.itemPadding;
+			global::MonoNetConnect.Resource.Attribute.itemTextAppearance = global::NetConnect.Resource.Attribute.itemTextAppearance;
+			global::MonoNetConnect.Resource.Attribute.itemTextColor = global::NetConnect.Resource.Attribute.itemTextColor;
+			global::MonoNetConnect.Resource.Attribute.keylines = global::NetConnect.Resource.Attribute.keylines;
+			global::MonoNetConnect.Resource.Attribute.layout = global::NetConnect.Resource.Attribute.layout;
+			global::MonoNetConnect.Resource.Attribute.layoutManager = global::NetConnect.Resource.Attribute.layoutManager;
+			global::MonoNetConnect.Resource.Attribute.layout_anchor = global::NetConnect.Resource.Attribute.layout_anchor;
+			global::MonoNetConnect.Resource.Attribute.layout_anchorGravity = global::NetConnect.Resource.Attribute.layout_anchorGravity;
+			global::MonoNetConnect.Resource.Attribute.layout_behavior = global::NetConnect.Resource.Attribute.layout_behavior;
+			global::MonoNetConnect.Resource.Attribute.layout_collapseMode = global::NetConnect.Resource.Attribute.layout_collapseMode;
+			global::MonoNetConnect.Resource.Attribute.layout_collapseParallaxMultiplier = global::NetConnect.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::MonoNetConnect.Resource.Attribute.layout_dodgeInsetEdges = global::NetConnect.Resource.Attribute.layout_dodgeInsetEdges;
+			global::MonoNetConnect.Resource.Attribute.layout_insetEdge = global::NetConnect.Resource.Attribute.layout_insetEdge;
+			global::MonoNetConnect.Resource.Attribute.layout_keyline = global::NetConnect.Resource.Attribute.layout_keyline;
+			global::MonoNetConnect.Resource.Attribute.layout_scrollFlags = global::NetConnect.Resource.Attribute.layout_scrollFlags;
+			global::MonoNetConnect.Resource.Attribute.layout_scrollInterpolator = global::NetConnect.Resource.Attribute.layout_scrollInterpolator;
+			global::MonoNetConnect.Resource.Attribute.listChoiceBackgroundIndicator = global::NetConnect.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::MonoNetConnect.Resource.Attribute.listDividerAlertDialog = global::NetConnect.Resource.Attribute.listDividerAlertDialog;
+			global::MonoNetConnect.Resource.Attribute.listItemLayout = global::NetConnect.Resource.Attribute.listItemLayout;
+			global::MonoNetConnect.Resource.Attribute.listLayout = global::NetConnect.Resource.Attribute.listLayout;
+			global::MonoNetConnect.Resource.Attribute.listMenuViewStyle = global::NetConnect.Resource.Attribute.listMenuViewStyle;
+			global::MonoNetConnect.Resource.Attribute.listPopupWindowStyle = global::NetConnect.Resource.Attribute.listPopupWindowStyle;
+			global::MonoNetConnect.Resource.Attribute.listPreferredItemHeight = global::NetConnect.Resource.Attribute.listPreferredItemHeight;
+			global::MonoNetConnect.Resource.Attribute.listPreferredItemHeightLarge = global::NetConnect.Resource.Attribute.listPreferredItemHeightLarge;
+			global::MonoNetConnect.Resource.Attribute.listPreferredItemHeightSmall = global::NetConnect.Resource.Attribute.listPreferredItemHeightSmall;
+			global::MonoNetConnect.Resource.Attribute.listPreferredItemPaddingLeft = global::NetConnect.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::MonoNetConnect.Resource.Attribute.listPreferredItemPaddingRight = global::NetConnect.Resource.Attribute.listPreferredItemPaddingRight;
+			global::MonoNetConnect.Resource.Attribute.logo = global::NetConnect.Resource.Attribute.logo;
+			global::MonoNetConnect.Resource.Attribute.logoDescription = global::NetConnect.Resource.Attribute.logoDescription;
+			global::MonoNetConnect.Resource.Attribute.maxActionInlineWidth = global::NetConnect.Resource.Attribute.maxActionInlineWidth;
+			global::MonoNetConnect.Resource.Attribute.maxButtonHeight = global::NetConnect.Resource.Attribute.maxButtonHeight;
+			global::MonoNetConnect.Resource.Attribute.measureWithLargestChild = global::NetConnect.Resource.Attribute.measureWithLargestChild;
+			global::MonoNetConnect.Resource.Attribute.menu = global::NetConnect.Resource.Attribute.menu;
+			global::MonoNetConnect.Resource.Attribute.multiChoiceItemLayout = global::NetConnect.Resource.Attribute.multiChoiceItemLayout;
+			global::MonoNetConnect.Resource.Attribute.navigationContentDescription = global::NetConnect.Resource.Attribute.navigationContentDescription;
+			global::MonoNetConnect.Resource.Attribute.navigationIcon = global::NetConnect.Resource.Attribute.navigationIcon;
+			global::MonoNetConnect.Resource.Attribute.navigationMode = global::NetConnect.Resource.Attribute.navigationMode;
+			global::MonoNetConnect.Resource.Attribute.overlapAnchor = global::NetConnect.Resource.Attribute.overlapAnchor;
+			global::MonoNetConnect.Resource.Attribute.paddingEnd = global::NetConnect.Resource.Attribute.paddingEnd;
+			global::MonoNetConnect.Resource.Attribute.paddingStart = global::NetConnect.Resource.Attribute.paddingStart;
+			global::MonoNetConnect.Resource.Attribute.panelBackground = global::NetConnect.Resource.Attribute.panelBackground;
+			global::MonoNetConnect.Resource.Attribute.panelMenuListTheme = global::NetConnect.Resource.Attribute.panelMenuListTheme;
+			global::MonoNetConnect.Resource.Attribute.panelMenuListWidth = global::NetConnect.Resource.Attribute.panelMenuListWidth;
+			global::MonoNetConnect.Resource.Attribute.passwordToggleContentDescription = global::NetConnect.Resource.Attribute.passwordToggleContentDescription;
+			global::MonoNetConnect.Resource.Attribute.passwordToggleDrawable = global::NetConnect.Resource.Attribute.passwordToggleDrawable;
+			global::MonoNetConnect.Resource.Attribute.passwordToggleEnabled = global::NetConnect.Resource.Attribute.passwordToggleEnabled;
+			global::MonoNetConnect.Resource.Attribute.passwordToggleTint = global::NetConnect.Resource.Attribute.passwordToggleTint;
+			global::MonoNetConnect.Resource.Attribute.passwordToggleTintMode = global::NetConnect.Resource.Attribute.passwordToggleTintMode;
+			global::MonoNetConnect.Resource.Attribute.popupMenuStyle = global::NetConnect.Resource.Attribute.popupMenuStyle;
+			global::MonoNetConnect.Resource.Attribute.popupTheme = global::NetConnect.Resource.Attribute.popupTheme;
+			global::MonoNetConnect.Resource.Attribute.popupWindowStyle = global::NetConnect.Resource.Attribute.popupWindowStyle;
+			global::MonoNetConnect.Resource.Attribute.preserveIconSpacing = global::NetConnect.Resource.Attribute.preserveIconSpacing;
+			global::MonoNetConnect.Resource.Attribute.pressedTranslationZ = global::NetConnect.Resource.Attribute.pressedTranslationZ;
+			global::MonoNetConnect.Resource.Attribute.progressBarPadding = global::NetConnect.Resource.Attribute.progressBarPadding;
+			global::MonoNetConnect.Resource.Attribute.progressBarStyle = global::NetConnect.Resource.Attribute.progressBarStyle;
+			global::MonoNetConnect.Resource.Attribute.queryBackground = global::NetConnect.Resource.Attribute.queryBackground;
+			global::MonoNetConnect.Resource.Attribute.queryHint = global::NetConnect.Resource.Attribute.queryHint;
+			global::MonoNetConnect.Resource.Attribute.radioButtonStyle = global::NetConnect.Resource.Attribute.radioButtonStyle;
+			global::MonoNetConnect.Resource.Attribute.ratingBarStyle = global::NetConnect.Resource.Attribute.ratingBarStyle;
+			global::MonoNetConnect.Resource.Attribute.ratingBarStyleIndicator = global::NetConnect.Resource.Attribute.ratingBarStyleIndicator;
+			global::MonoNetConnect.Resource.Attribute.ratingBarStyleSmall = global::NetConnect.Resource.Attribute.ratingBarStyleSmall;
+			global::MonoNetConnect.Resource.Attribute.reverseLayout = global::NetConnect.Resource.Attribute.reverseLayout;
+			global::MonoNetConnect.Resource.Attribute.rippleColor = global::NetConnect.Resource.Attribute.rippleColor;
+			global::MonoNetConnect.Resource.Attribute.scrimAnimationDuration = global::NetConnect.Resource.Attribute.scrimAnimationDuration;
+			global::MonoNetConnect.Resource.Attribute.scrimVisibleHeightTrigger = global::NetConnect.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::MonoNetConnect.Resource.Attribute.searchHintIcon = global::NetConnect.Resource.Attribute.searchHintIcon;
+			global::MonoNetConnect.Resource.Attribute.searchIcon = global::NetConnect.Resource.Attribute.searchIcon;
+			global::MonoNetConnect.Resource.Attribute.searchViewStyle = global::NetConnect.Resource.Attribute.searchViewStyle;
+			global::MonoNetConnect.Resource.Attribute.seekBarStyle = global::NetConnect.Resource.Attribute.seekBarStyle;
+			global::MonoNetConnect.Resource.Attribute.selectableItemBackground = global::NetConnect.Resource.Attribute.selectableItemBackground;
+			global::MonoNetConnect.Resource.Attribute.selectableItemBackgroundBorderless = global::NetConnect.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::MonoNetConnect.Resource.Attribute.showAsAction = global::NetConnect.Resource.Attribute.showAsAction;
+			global::MonoNetConnect.Resource.Attribute.showDividers = global::NetConnect.Resource.Attribute.showDividers;
+			global::MonoNetConnect.Resource.Attribute.showText = global::NetConnect.Resource.Attribute.showText;
+			global::MonoNetConnect.Resource.Attribute.singleChoiceItemLayout = global::NetConnect.Resource.Attribute.singleChoiceItemLayout;
+			global::MonoNetConnect.Resource.Attribute.spanCount = global::NetConnect.Resource.Attribute.spanCount;
+			global::MonoNetConnect.Resource.Attribute.spinBars = global::NetConnect.Resource.Attribute.spinBars;
+			global::MonoNetConnect.Resource.Attribute.spinnerDropDownItemStyle = global::NetConnect.Resource.Attribute.spinnerDropDownItemStyle;
+			global::MonoNetConnect.Resource.Attribute.spinnerStyle = global::NetConnect.Resource.Attribute.spinnerStyle;
+			global::MonoNetConnect.Resource.Attribute.splitTrack = global::NetConnect.Resource.Attribute.splitTrack;
+			global::MonoNetConnect.Resource.Attribute.srcCompat = global::NetConnect.Resource.Attribute.srcCompat;
+			global::MonoNetConnect.Resource.Attribute.stackFromEnd = global::NetConnect.Resource.Attribute.stackFromEnd;
+			global::MonoNetConnect.Resource.Attribute.state_above_anchor = global::NetConnect.Resource.Attribute.state_above_anchor;
+			global::MonoNetConnect.Resource.Attribute.state_collapsed = global::NetConnect.Resource.Attribute.state_collapsed;
+			global::MonoNetConnect.Resource.Attribute.state_collapsible = global::NetConnect.Resource.Attribute.state_collapsible;
+			global::MonoNetConnect.Resource.Attribute.statusBarBackground = global::NetConnect.Resource.Attribute.statusBarBackground;
+			global::MonoNetConnect.Resource.Attribute.statusBarScrim = global::NetConnect.Resource.Attribute.statusBarScrim;
+			global::MonoNetConnect.Resource.Attribute.subMenuArrow = global::NetConnect.Resource.Attribute.subMenuArrow;
+			global::MonoNetConnect.Resource.Attribute.submitBackground = global::NetConnect.Resource.Attribute.submitBackground;
+			global::MonoNetConnect.Resource.Attribute.subtitle = global::NetConnect.Resource.Attribute.subtitle;
+			global::MonoNetConnect.Resource.Attribute.subtitleTextAppearance = global::NetConnect.Resource.Attribute.subtitleTextAppearance;
+			global::MonoNetConnect.Resource.Attribute.subtitleTextColor = global::NetConnect.Resource.Attribute.subtitleTextColor;
+			global::MonoNetConnect.Resource.Attribute.subtitleTextStyle = global::NetConnect.Resource.Attribute.subtitleTextStyle;
+			global::MonoNetConnect.Resource.Attribute.suggestionRowLayout = global::NetConnect.Resource.Attribute.suggestionRowLayout;
+			global::MonoNetConnect.Resource.Attribute.switchMinWidth = global::NetConnect.Resource.Attribute.switchMinWidth;
+			global::MonoNetConnect.Resource.Attribute.switchPadding = global::NetConnect.Resource.Attribute.switchPadding;
+			global::MonoNetConnect.Resource.Attribute.switchStyle = global::NetConnect.Resource.Attribute.switchStyle;
+			global::MonoNetConnect.Resource.Attribute.switchTextAppearance = global::NetConnect.Resource.Attribute.switchTextAppearance;
+			global::MonoNetConnect.Resource.Attribute.tabBackground = global::NetConnect.Resource.Attribute.tabBackground;
+			global::MonoNetConnect.Resource.Attribute.tabContentStart = global::NetConnect.Resource.Attribute.tabContentStart;
+			global::MonoNetConnect.Resource.Attribute.tabGravity = global::NetConnect.Resource.Attribute.tabGravity;
+			global::MonoNetConnect.Resource.Attribute.tabIndicatorColor = global::NetConnect.Resource.Attribute.tabIndicatorColor;
+			global::MonoNetConnect.Resource.Attribute.tabIndicatorHeight = global::NetConnect.Resource.Attribute.tabIndicatorHeight;
+			global::MonoNetConnect.Resource.Attribute.tabMaxWidth = global::NetConnect.Resource.Attribute.tabMaxWidth;
+			global::MonoNetConnect.Resource.Attribute.tabMinWidth = global::NetConnect.Resource.Attribute.tabMinWidth;
+			global::MonoNetConnect.Resource.Attribute.tabMode = global::NetConnect.Resource.Attribute.tabMode;
+			global::MonoNetConnect.Resource.Attribute.tabPadding = global::NetConnect.Resource.Attribute.tabPadding;
+			global::MonoNetConnect.Resource.Attribute.tabPaddingBottom = global::NetConnect.Resource.Attribute.tabPaddingBottom;
+			global::MonoNetConnect.Resource.Attribute.tabPaddingEnd = global::NetConnect.Resource.Attribute.tabPaddingEnd;
+			global::MonoNetConnect.Resource.Attribute.tabPaddingStart = global::NetConnect.Resource.Attribute.tabPaddingStart;
+			global::MonoNetConnect.Resource.Attribute.tabPaddingTop = global::NetConnect.Resource.Attribute.tabPaddingTop;
+			global::MonoNetConnect.Resource.Attribute.tabSelectedTextColor = global::NetConnect.Resource.Attribute.tabSelectedTextColor;
+			global::MonoNetConnect.Resource.Attribute.tabTextAppearance = global::NetConnect.Resource.Attribute.tabTextAppearance;
+			global::MonoNetConnect.Resource.Attribute.tabTextColor = global::NetConnect.Resource.Attribute.tabTextColor;
+			global::MonoNetConnect.Resource.Attribute.textAllCaps = global::NetConnect.Resource.Attribute.textAllCaps;
+			global::MonoNetConnect.Resource.Attribute.textAppearanceLargePopupMenu = global::NetConnect.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::MonoNetConnect.Resource.Attribute.textAppearanceListItem = global::NetConnect.Resource.Attribute.textAppearanceListItem;
+			global::MonoNetConnect.Resource.Attribute.textAppearanceListItemSmall = global::NetConnect.Resource.Attribute.textAppearanceListItemSmall;
+			global::MonoNetConnect.Resource.Attribute.textAppearancePopupMenuHeader = global::NetConnect.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::MonoNetConnect.Resource.Attribute.textAppearanceSearchResultSubtitle = global::NetConnect.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::MonoNetConnect.Resource.Attribute.textAppearanceSearchResultTitle = global::NetConnect.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::MonoNetConnect.Resource.Attribute.textAppearanceSmallPopupMenu = global::NetConnect.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::MonoNetConnect.Resource.Attribute.textColorAlertDialogListItem = global::NetConnect.Resource.Attribute.textColorAlertDialogListItem;
+			global::MonoNetConnect.Resource.Attribute.textColorError = global::NetConnect.Resource.Attribute.textColorError;
+			global::MonoNetConnect.Resource.Attribute.textColorSearchUrl = global::NetConnect.Resource.Attribute.textColorSearchUrl;
+			global::MonoNetConnect.Resource.Attribute.theme = global::NetConnect.Resource.Attribute.theme;
+			global::MonoNetConnect.Resource.Attribute.thickness = global::NetConnect.Resource.Attribute.thickness;
+			global::MonoNetConnect.Resource.Attribute.thumbTextPadding = global::NetConnect.Resource.Attribute.thumbTextPadding;
+			global::MonoNetConnect.Resource.Attribute.thumbTint = global::NetConnect.Resource.Attribute.thumbTint;
+			global::MonoNetConnect.Resource.Attribute.thumbTintMode = global::NetConnect.Resource.Attribute.thumbTintMode;
+			global::MonoNetConnect.Resource.Attribute.tickMark = global::NetConnect.Resource.Attribute.tickMark;
+			global::MonoNetConnect.Resource.Attribute.tickMarkTint = global::NetConnect.Resource.Attribute.tickMarkTint;
+			global::MonoNetConnect.Resource.Attribute.tickMarkTintMode = global::NetConnect.Resource.Attribute.tickMarkTintMode;
+			global::MonoNetConnect.Resource.Attribute.title = global::NetConnect.Resource.Attribute.title;
+			global::MonoNetConnect.Resource.Attribute.titleEnabled = global::NetConnect.Resource.Attribute.titleEnabled;
+			global::MonoNetConnect.Resource.Attribute.titleMargin = global::NetConnect.Resource.Attribute.titleMargin;
+			global::MonoNetConnect.Resource.Attribute.titleMarginBottom = global::NetConnect.Resource.Attribute.titleMarginBottom;
+			global::MonoNetConnect.Resource.Attribute.titleMarginEnd = global::NetConnect.Resource.Attribute.titleMarginEnd;
+			global::MonoNetConnect.Resource.Attribute.titleMarginStart = global::NetConnect.Resource.Attribute.titleMarginStart;
+			global::MonoNetConnect.Resource.Attribute.titleMarginTop = global::NetConnect.Resource.Attribute.titleMarginTop;
+			global::MonoNetConnect.Resource.Attribute.titleMargins = global::NetConnect.Resource.Attribute.titleMargins;
+			global::MonoNetConnect.Resource.Attribute.titleTextAppearance = global::NetConnect.Resource.Attribute.titleTextAppearance;
+			global::MonoNetConnect.Resource.Attribute.titleTextColor = global::NetConnect.Resource.Attribute.titleTextColor;
+			global::MonoNetConnect.Resource.Attribute.titleTextStyle = global::NetConnect.Resource.Attribute.titleTextStyle;
+			global::MonoNetConnect.Resource.Attribute.toolbarId = global::NetConnect.Resource.Attribute.toolbarId;
+			global::MonoNetConnect.Resource.Attribute.toolbarNavigationButtonStyle = global::NetConnect.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::MonoNetConnect.Resource.Attribute.toolbarStyle = global::NetConnect.Resource.Attribute.toolbarStyle;
+			global::MonoNetConnect.Resource.Attribute.track = global::NetConnect.Resource.Attribute.track;
+			global::MonoNetConnect.Resource.Attribute.trackTint = global::NetConnect.Resource.Attribute.trackTint;
+			global::MonoNetConnect.Resource.Attribute.trackTintMode = global::NetConnect.Resource.Attribute.trackTintMode;
+			global::MonoNetConnect.Resource.Attribute.useCompatPadding = global::NetConnect.Resource.Attribute.useCompatPadding;
+			global::MonoNetConnect.Resource.Attribute.voiceIcon = global::NetConnect.Resource.Attribute.voiceIcon;
+			global::MonoNetConnect.Resource.Attribute.windowActionBar = global::NetConnect.Resource.Attribute.windowActionBar;
+			global::MonoNetConnect.Resource.Attribute.windowActionBarOverlay = global::NetConnect.Resource.Attribute.windowActionBarOverlay;
+			global::MonoNetConnect.Resource.Attribute.windowActionModeOverlay = global::NetConnect.Resource.Attribute.windowActionModeOverlay;
+			global::MonoNetConnect.Resource.Attribute.windowFixedHeightMajor = global::NetConnect.Resource.Attribute.windowFixedHeightMajor;
+			global::MonoNetConnect.Resource.Attribute.windowFixedHeightMinor = global::NetConnect.Resource.Attribute.windowFixedHeightMinor;
+			global::MonoNetConnect.Resource.Attribute.windowFixedWidthMajor = global::NetConnect.Resource.Attribute.windowFixedWidthMajor;
+			global::MonoNetConnect.Resource.Attribute.windowFixedWidthMinor = global::NetConnect.Resource.Attribute.windowFixedWidthMinor;
+			global::MonoNetConnect.Resource.Attribute.windowMinWidthMajor = global::NetConnect.Resource.Attribute.windowMinWidthMajor;
+			global::MonoNetConnect.Resource.Attribute.windowMinWidthMinor = global::NetConnect.Resource.Attribute.windowMinWidthMinor;
+			global::MonoNetConnect.Resource.Attribute.windowNoTitle = global::NetConnect.Resource.Attribute.windowNoTitle;
+			global::MonoNetConnect.Resource.Boolean.abc_action_bar_embed_tabs = global::NetConnect.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::MonoNetConnect.Resource.Boolean.abc_allow_stacked_button_bar = global::NetConnect.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::MonoNetConnect.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::NetConnect.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::MonoNetConnect.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::NetConnect.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::MonoNetConnect.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::NetConnect.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::MonoNetConnect.Resource.Color.abc_background_cache_hint_selector_material_dark = global::NetConnect.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::MonoNetConnect.Resource.Color.abc_background_cache_hint_selector_material_light = global::NetConnect.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::MonoNetConnect.Resource.Color.abc_btn_colored_borderless_text_material = global::NetConnect.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::MonoNetConnect.Resource.Color.abc_color_highlight_material = global::NetConnect.Resource.Color.abc_color_highlight_material;
+			global::MonoNetConnect.Resource.Color.abc_input_method_navigation_guard = global::NetConnect.Resource.Color.abc_input_method_navigation_guard;
+			global::MonoNetConnect.Resource.Color.abc_primary_text_disable_only_material_dark = global::NetConnect.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::MonoNetConnect.Resource.Color.abc_primary_text_disable_only_material_light = global::NetConnect.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::MonoNetConnect.Resource.Color.abc_primary_text_material_dark = global::NetConnect.Resource.Color.abc_primary_text_material_dark;
+			global::MonoNetConnect.Resource.Color.abc_primary_text_material_light = global::NetConnect.Resource.Color.abc_primary_text_material_light;
+			global::MonoNetConnect.Resource.Color.abc_search_url_text = global::NetConnect.Resource.Color.abc_search_url_text;
+			global::MonoNetConnect.Resource.Color.abc_search_url_text_normal = global::NetConnect.Resource.Color.abc_search_url_text_normal;
+			global::MonoNetConnect.Resource.Color.abc_search_url_text_pressed = global::NetConnect.Resource.Color.abc_search_url_text_pressed;
+			global::MonoNetConnect.Resource.Color.abc_search_url_text_selected = global::NetConnect.Resource.Color.abc_search_url_text_selected;
+			global::MonoNetConnect.Resource.Color.abc_secondary_text_material_dark = global::NetConnect.Resource.Color.abc_secondary_text_material_dark;
+			global::MonoNetConnect.Resource.Color.abc_secondary_text_material_light = global::NetConnect.Resource.Color.abc_secondary_text_material_light;
+			global::MonoNetConnect.Resource.Color.abc_tint_btn_checkable = global::NetConnect.Resource.Color.abc_tint_btn_checkable;
+			global::MonoNetConnect.Resource.Color.abc_tint_default = global::NetConnect.Resource.Color.abc_tint_default;
+			global::MonoNetConnect.Resource.Color.abc_tint_edittext = global::NetConnect.Resource.Color.abc_tint_edittext;
+			global::MonoNetConnect.Resource.Color.abc_tint_seek_thumb = global::NetConnect.Resource.Color.abc_tint_seek_thumb;
+			global::MonoNetConnect.Resource.Color.abc_tint_spinner = global::NetConnect.Resource.Color.abc_tint_spinner;
+			global::MonoNetConnect.Resource.Color.abc_tint_switch_thumb = global::NetConnect.Resource.Color.abc_tint_switch_thumb;
+			global::MonoNetConnect.Resource.Color.abc_tint_switch_track = global::NetConnect.Resource.Color.abc_tint_switch_track;
+			global::MonoNetConnect.Resource.Color.accent_material_dark = global::NetConnect.Resource.Color.accent_material_dark;
+			global::MonoNetConnect.Resource.Color.accent_material_light = global::NetConnect.Resource.Color.accent_material_light;
+			global::MonoNetConnect.Resource.Color.background_floating_material_dark = global::NetConnect.Resource.Color.background_floating_material_dark;
+			global::MonoNetConnect.Resource.Color.background_floating_material_light = global::NetConnect.Resource.Color.background_floating_material_light;
+			global::MonoNetConnect.Resource.Color.background_material_dark = global::NetConnect.Resource.Color.background_material_dark;
+			global::MonoNetConnect.Resource.Color.background_material_light = global::NetConnect.Resource.Color.background_material_light;
+			global::MonoNetConnect.Resource.Color.bright_foreground_disabled_material_dark = global::NetConnect.Resource.Color.bright_foreground_disabled_material_dark;
+			global::MonoNetConnect.Resource.Color.bright_foreground_disabled_material_light = global::NetConnect.Resource.Color.bright_foreground_disabled_material_light;
+			global::MonoNetConnect.Resource.Color.bright_foreground_inverse_material_dark = global::NetConnect.Resource.Color.bright_foreground_inverse_material_dark;
+			global::MonoNetConnect.Resource.Color.bright_foreground_inverse_material_light = global::NetConnect.Resource.Color.bright_foreground_inverse_material_light;
+			global::MonoNetConnect.Resource.Color.bright_foreground_material_dark = global::NetConnect.Resource.Color.bright_foreground_material_dark;
+			global::MonoNetConnect.Resource.Color.bright_foreground_material_light = global::NetConnect.Resource.Color.bright_foreground_material_light;
+			global::MonoNetConnect.Resource.Color.button_material_dark = global::NetConnect.Resource.Color.button_material_dark;
+			global::MonoNetConnect.Resource.Color.button_material_light = global::NetConnect.Resource.Color.button_material_light;
+			global::MonoNetConnect.Resource.Color.design_error = global::NetConnect.Resource.Color.design_error;
+			global::MonoNetConnect.Resource.Color.design_fab_shadow_end_color = global::NetConnect.Resource.Color.design_fab_shadow_end_color;
+			global::MonoNetConnect.Resource.Color.design_fab_shadow_mid_color = global::NetConnect.Resource.Color.design_fab_shadow_mid_color;
+			global::MonoNetConnect.Resource.Color.design_fab_shadow_start_color = global::NetConnect.Resource.Color.design_fab_shadow_start_color;
+			global::MonoNetConnect.Resource.Color.design_fab_stroke_end_inner_color = global::NetConnect.Resource.Color.design_fab_stroke_end_inner_color;
+			global::MonoNetConnect.Resource.Color.design_fab_stroke_end_outer_color = global::NetConnect.Resource.Color.design_fab_stroke_end_outer_color;
+			global::MonoNetConnect.Resource.Color.design_fab_stroke_top_inner_color = global::NetConnect.Resource.Color.design_fab_stroke_top_inner_color;
+			global::MonoNetConnect.Resource.Color.design_fab_stroke_top_outer_color = global::NetConnect.Resource.Color.design_fab_stroke_top_outer_color;
+			global::MonoNetConnect.Resource.Color.design_snackbar_background_color = global::NetConnect.Resource.Color.design_snackbar_background_color;
+			global::MonoNetConnect.Resource.Color.design_textinput_error_color_dark = global::NetConnect.Resource.Color.design_textinput_error_color_dark;
+			global::MonoNetConnect.Resource.Color.design_textinput_error_color_light = global::NetConnect.Resource.Color.design_textinput_error_color_light;
+			global::MonoNetConnect.Resource.Color.design_tint_password_toggle = global::NetConnect.Resource.Color.design_tint_password_toggle;
+			global::MonoNetConnect.Resource.Color.dim_foreground_disabled_material_dark = global::NetConnect.Resource.Color.dim_foreground_disabled_material_dark;
+			global::MonoNetConnect.Resource.Color.dim_foreground_disabled_material_light = global::NetConnect.Resource.Color.dim_foreground_disabled_material_light;
+			global::MonoNetConnect.Resource.Color.dim_foreground_material_dark = global::NetConnect.Resource.Color.dim_foreground_material_dark;
+			global::MonoNetConnect.Resource.Color.dim_foreground_material_light = global::NetConnect.Resource.Color.dim_foreground_material_light;
+			global::MonoNetConnect.Resource.Color.foreground_material_dark = global::NetConnect.Resource.Color.foreground_material_dark;
+			global::MonoNetConnect.Resource.Color.foreground_material_light = global::NetConnect.Resource.Color.foreground_material_light;
+			global::MonoNetConnect.Resource.Color.highlighted_text_material_dark = global::NetConnect.Resource.Color.highlighted_text_material_dark;
+			global::MonoNetConnect.Resource.Color.highlighted_text_material_light = global::NetConnect.Resource.Color.highlighted_text_material_light;
+			global::MonoNetConnect.Resource.Color.hint_foreground_material_dark = global::NetConnect.Resource.Color.hint_foreground_material_dark;
+			global::MonoNetConnect.Resource.Color.hint_foreground_material_light = global::NetConnect.Resource.Color.hint_foreground_material_light;
+			global::MonoNetConnect.Resource.Color.material_blue_grey_800 = global::NetConnect.Resource.Color.material_blue_grey_800;
+			global::MonoNetConnect.Resource.Color.material_blue_grey_900 = global::NetConnect.Resource.Color.material_blue_grey_900;
+			global::MonoNetConnect.Resource.Color.material_blue_grey_950 = global::NetConnect.Resource.Color.material_blue_grey_950;
+			global::MonoNetConnect.Resource.Color.material_deep_teal_200 = global::NetConnect.Resource.Color.material_deep_teal_200;
+			global::MonoNetConnect.Resource.Color.material_deep_teal_500 = global::NetConnect.Resource.Color.material_deep_teal_500;
+			global::MonoNetConnect.Resource.Color.material_grey_100 = global::NetConnect.Resource.Color.material_grey_100;
+			global::MonoNetConnect.Resource.Color.material_grey_300 = global::NetConnect.Resource.Color.material_grey_300;
+			global::MonoNetConnect.Resource.Color.material_grey_50 = global::NetConnect.Resource.Color.material_grey_50;
+			global::MonoNetConnect.Resource.Color.material_grey_600 = global::NetConnect.Resource.Color.material_grey_600;
+			global::MonoNetConnect.Resource.Color.material_grey_800 = global::NetConnect.Resource.Color.material_grey_800;
+			global::MonoNetConnect.Resource.Color.material_grey_850 = global::NetConnect.Resource.Color.material_grey_850;
+			global::MonoNetConnect.Resource.Color.material_grey_900 = global::NetConnect.Resource.Color.material_grey_900;
+			global::MonoNetConnect.Resource.Color.primary_dark_material_dark = global::NetConnect.Resource.Color.primary_dark_material_dark;
+			global::MonoNetConnect.Resource.Color.primary_dark_material_light = global::NetConnect.Resource.Color.primary_dark_material_light;
+			global::MonoNetConnect.Resource.Color.primary_material_dark = global::NetConnect.Resource.Color.primary_material_dark;
+			global::MonoNetConnect.Resource.Color.primary_material_light = global::NetConnect.Resource.Color.primary_material_light;
+			global::MonoNetConnect.Resource.Color.primary_text_default_material_dark = global::NetConnect.Resource.Color.primary_text_default_material_dark;
+			global::MonoNetConnect.Resource.Color.primary_text_default_material_light = global::NetConnect.Resource.Color.primary_text_default_material_light;
+			global::MonoNetConnect.Resource.Color.primary_text_disabled_material_dark = global::NetConnect.Resource.Color.primary_text_disabled_material_dark;
+			global::MonoNetConnect.Resource.Color.primary_text_disabled_material_light = global::NetConnect.Resource.Color.primary_text_disabled_material_light;
+			global::MonoNetConnect.Resource.Color.ripple_material_dark = global::NetConnect.Resource.Color.ripple_material_dark;
+			global::MonoNetConnect.Resource.Color.ripple_material_light = global::NetConnect.Resource.Color.ripple_material_light;
+			global::MonoNetConnect.Resource.Color.secondary_text_default_material_dark = global::NetConnect.Resource.Color.secondary_text_default_material_dark;
+			global::MonoNetConnect.Resource.Color.secondary_text_default_material_light = global::NetConnect.Resource.Color.secondary_text_default_material_light;
+			global::MonoNetConnect.Resource.Color.secondary_text_disabled_material_dark = global::NetConnect.Resource.Color.secondary_text_disabled_material_dark;
+			global::MonoNetConnect.Resource.Color.secondary_text_disabled_material_light = global::NetConnect.Resource.Color.secondary_text_disabled_material_light;
+			global::MonoNetConnect.Resource.Color.switch_thumb_disabled_material_dark = global::NetConnect.Resource.Color.switch_thumb_disabled_material_dark;
+			global::MonoNetConnect.Resource.Color.switch_thumb_disabled_material_light = global::NetConnect.Resource.Color.switch_thumb_disabled_material_light;
+			global::MonoNetConnect.Resource.Color.switch_thumb_material_dark = global::NetConnect.Resource.Color.switch_thumb_material_dark;
+			global::MonoNetConnect.Resource.Color.switch_thumb_material_light = global::NetConnect.Resource.Color.switch_thumb_material_light;
+			global::MonoNetConnect.Resource.Color.switch_thumb_normal_material_dark = global::NetConnect.Resource.Color.switch_thumb_normal_material_dark;
+			global::MonoNetConnect.Resource.Color.switch_thumb_normal_material_light = global::NetConnect.Resource.Color.switch_thumb_normal_material_light;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_content_inset_material = global::NetConnect.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::NetConnect.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_default_height_material = global::NetConnect.Resource.Dimension.abc_action_bar_default_height_material;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_default_padding_end_material = global::NetConnect.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_default_padding_start_material = global::NetConnect.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_elevation_material = global::NetConnect.Resource.Dimension.abc_action_bar_elevation_material;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::NetConnect.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::NetConnect.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::NetConnect.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_progress_bar_size = global::NetConnect.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_stacked_max_height = global::NetConnect.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::NetConnect.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::NetConnect.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::MonoNetConnect.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::NetConnect.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::MonoNetConnect.Resource.Dimension.abc_action_button_min_height_material = global::NetConnect.Resource.Dimension.abc_action_button_min_height_material;
+			global::MonoNetConnect.Resource.Dimension.abc_action_button_min_width_material = global::NetConnect.Resource.Dimension.abc_action_button_min_width_material;
+			global::MonoNetConnect.Resource.Dimension.abc_action_button_min_width_overflow_material = global::NetConnect.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::MonoNetConnect.Resource.Dimension.abc_alert_dialog_button_bar_height = global::NetConnect.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::MonoNetConnect.Resource.Dimension.abc_button_inset_horizontal_material = global::NetConnect.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::MonoNetConnect.Resource.Dimension.abc_button_inset_vertical_material = global::NetConnect.Resource.Dimension.abc_button_inset_vertical_material;
+			global::MonoNetConnect.Resource.Dimension.abc_button_padding_horizontal_material = global::NetConnect.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::MonoNetConnect.Resource.Dimension.abc_button_padding_vertical_material = global::NetConnect.Resource.Dimension.abc_button_padding_vertical_material;
+			global::MonoNetConnect.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::NetConnect.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::MonoNetConnect.Resource.Dimension.abc_config_prefDialogWidth = global::NetConnect.Resource.Dimension.abc_config_prefDialogWidth;
+			global::MonoNetConnect.Resource.Dimension.abc_control_corner_material = global::NetConnect.Resource.Dimension.abc_control_corner_material;
+			global::MonoNetConnect.Resource.Dimension.abc_control_inset_material = global::NetConnect.Resource.Dimension.abc_control_inset_material;
+			global::MonoNetConnect.Resource.Dimension.abc_control_padding_material = global::NetConnect.Resource.Dimension.abc_control_padding_material;
+			global::MonoNetConnect.Resource.Dimension.abc_dialog_fixed_height_major = global::NetConnect.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::MonoNetConnect.Resource.Dimension.abc_dialog_fixed_height_minor = global::NetConnect.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::MonoNetConnect.Resource.Dimension.abc_dialog_fixed_width_major = global::NetConnect.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::MonoNetConnect.Resource.Dimension.abc_dialog_fixed_width_minor = global::NetConnect.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::MonoNetConnect.Resource.Dimension.abc_dialog_list_padding_vertical_material = global::NetConnect.Resource.Dimension.abc_dialog_list_padding_vertical_material;
+			global::MonoNetConnect.Resource.Dimension.abc_dialog_min_width_major = global::NetConnect.Resource.Dimension.abc_dialog_min_width_major;
+			global::MonoNetConnect.Resource.Dimension.abc_dialog_min_width_minor = global::NetConnect.Resource.Dimension.abc_dialog_min_width_minor;
+			global::MonoNetConnect.Resource.Dimension.abc_dialog_padding_material = global::NetConnect.Resource.Dimension.abc_dialog_padding_material;
+			global::MonoNetConnect.Resource.Dimension.abc_dialog_padding_top_material = global::NetConnect.Resource.Dimension.abc_dialog_padding_top_material;
+			global::MonoNetConnect.Resource.Dimension.abc_disabled_alpha_material_dark = global::NetConnect.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::MonoNetConnect.Resource.Dimension.abc_disabled_alpha_material_light = global::NetConnect.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::MonoNetConnect.Resource.Dimension.abc_dropdownitem_icon_width = global::NetConnect.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::MonoNetConnect.Resource.Dimension.abc_dropdownitem_text_padding_left = global::NetConnect.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::MonoNetConnect.Resource.Dimension.abc_dropdownitem_text_padding_right = global::NetConnect.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::MonoNetConnect.Resource.Dimension.abc_edit_text_inset_bottom_material = global::NetConnect.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::MonoNetConnect.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::NetConnect.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::MonoNetConnect.Resource.Dimension.abc_edit_text_inset_top_material = global::NetConnect.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::MonoNetConnect.Resource.Dimension.abc_floating_window_z = global::NetConnect.Resource.Dimension.abc_floating_window_z;
+			global::MonoNetConnect.Resource.Dimension.abc_list_item_padding_horizontal_material = global::NetConnect.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::MonoNetConnect.Resource.Dimension.abc_panel_menu_list_width = global::NetConnect.Resource.Dimension.abc_panel_menu_list_width;
+			global::MonoNetConnect.Resource.Dimension.abc_progress_bar_height_material = global::NetConnect.Resource.Dimension.abc_progress_bar_height_material;
+			global::MonoNetConnect.Resource.Dimension.abc_search_view_preferred_height = global::NetConnect.Resource.Dimension.abc_search_view_preferred_height;
+			global::MonoNetConnect.Resource.Dimension.abc_search_view_preferred_width = global::NetConnect.Resource.Dimension.abc_search_view_preferred_width;
+			global::MonoNetConnect.Resource.Dimension.abc_seekbar_track_background_height_material = global::NetConnect.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::MonoNetConnect.Resource.Dimension.abc_seekbar_track_progress_height_material = global::NetConnect.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::MonoNetConnect.Resource.Dimension.abc_select_dialog_padding_start_material = global::NetConnect.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::MonoNetConnect.Resource.Dimension.abc_switch_padding = global::NetConnect.Resource.Dimension.abc_switch_padding;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_body_1_material = global::NetConnect.Resource.Dimension.abc_text_size_body_1_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_body_2_material = global::NetConnect.Resource.Dimension.abc_text_size_body_2_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_button_material = global::NetConnect.Resource.Dimension.abc_text_size_button_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_caption_material = global::NetConnect.Resource.Dimension.abc_text_size_caption_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_display_1_material = global::NetConnect.Resource.Dimension.abc_text_size_display_1_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_display_2_material = global::NetConnect.Resource.Dimension.abc_text_size_display_2_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_display_3_material = global::NetConnect.Resource.Dimension.abc_text_size_display_3_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_display_4_material = global::NetConnect.Resource.Dimension.abc_text_size_display_4_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_headline_material = global::NetConnect.Resource.Dimension.abc_text_size_headline_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_large_material = global::NetConnect.Resource.Dimension.abc_text_size_large_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_medium_material = global::NetConnect.Resource.Dimension.abc_text_size_medium_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_menu_header_material = global::NetConnect.Resource.Dimension.abc_text_size_menu_header_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_menu_material = global::NetConnect.Resource.Dimension.abc_text_size_menu_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_small_material = global::NetConnect.Resource.Dimension.abc_text_size_small_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_subhead_material = global::NetConnect.Resource.Dimension.abc_text_size_subhead_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::NetConnect.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_title_material = global::NetConnect.Resource.Dimension.abc_text_size_title_material;
+			global::MonoNetConnect.Resource.Dimension.abc_text_size_title_material_toolbar = global::NetConnect.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::MonoNetConnect.Resource.Dimension.design_appbar_elevation = global::NetConnect.Resource.Dimension.design_appbar_elevation;
+			global::MonoNetConnect.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::NetConnect.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::MonoNetConnect.Resource.Dimension.design_bottom_navigation_active_text_size = global::NetConnect.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::MonoNetConnect.Resource.Dimension.design_bottom_navigation_height = global::NetConnect.Resource.Dimension.design_bottom_navigation_height;
+			global::MonoNetConnect.Resource.Dimension.design_bottom_navigation_item_max_width = global::NetConnect.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::MonoNetConnect.Resource.Dimension.design_bottom_navigation_margin = global::NetConnect.Resource.Dimension.design_bottom_navigation_margin;
+			global::MonoNetConnect.Resource.Dimension.design_bottom_navigation_text_size = global::NetConnect.Resource.Dimension.design_bottom_navigation_text_size;
+			global::MonoNetConnect.Resource.Dimension.design_bottom_sheet_modal_elevation = global::NetConnect.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::MonoNetConnect.Resource.Dimension.design_bottom_sheet_peek_height_min = global::NetConnect.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::MonoNetConnect.Resource.Dimension.design_fab_border_width = global::NetConnect.Resource.Dimension.design_fab_border_width;
+			global::MonoNetConnect.Resource.Dimension.design_fab_elevation = global::NetConnect.Resource.Dimension.design_fab_elevation;
+			global::MonoNetConnect.Resource.Dimension.design_fab_image_size = global::NetConnect.Resource.Dimension.design_fab_image_size;
+			global::MonoNetConnect.Resource.Dimension.design_fab_size_mini = global::NetConnect.Resource.Dimension.design_fab_size_mini;
+			global::MonoNetConnect.Resource.Dimension.design_fab_size_normal = global::NetConnect.Resource.Dimension.design_fab_size_normal;
+			global::MonoNetConnect.Resource.Dimension.design_fab_translation_z_pressed = global::NetConnect.Resource.Dimension.design_fab_translation_z_pressed;
+			global::MonoNetConnect.Resource.Dimension.design_navigation_elevation = global::NetConnect.Resource.Dimension.design_navigation_elevation;
+			global::MonoNetConnect.Resource.Dimension.design_navigation_icon_padding = global::NetConnect.Resource.Dimension.design_navigation_icon_padding;
+			global::MonoNetConnect.Resource.Dimension.design_navigation_icon_size = global::NetConnect.Resource.Dimension.design_navigation_icon_size;
+			global::MonoNetConnect.Resource.Dimension.design_navigation_max_width = global::NetConnect.Resource.Dimension.design_navigation_max_width;
+			global::MonoNetConnect.Resource.Dimension.design_navigation_padding_bottom = global::NetConnect.Resource.Dimension.design_navigation_padding_bottom;
+			global::MonoNetConnect.Resource.Dimension.design_navigation_separator_vertical_padding = global::NetConnect.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::MonoNetConnect.Resource.Dimension.design_snackbar_action_inline_max_width = global::NetConnect.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::MonoNetConnect.Resource.Dimension.design_snackbar_background_corner_radius = global::NetConnect.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::MonoNetConnect.Resource.Dimension.design_snackbar_elevation = global::NetConnect.Resource.Dimension.design_snackbar_elevation;
+			global::MonoNetConnect.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::NetConnect.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::MonoNetConnect.Resource.Dimension.design_snackbar_max_width = global::NetConnect.Resource.Dimension.design_snackbar_max_width;
+			global::MonoNetConnect.Resource.Dimension.design_snackbar_min_width = global::NetConnect.Resource.Dimension.design_snackbar_min_width;
+			global::MonoNetConnect.Resource.Dimension.design_snackbar_padding_horizontal = global::NetConnect.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::MonoNetConnect.Resource.Dimension.design_snackbar_padding_vertical = global::NetConnect.Resource.Dimension.design_snackbar_padding_vertical;
+			global::MonoNetConnect.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::NetConnect.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::MonoNetConnect.Resource.Dimension.design_snackbar_text_size = global::NetConnect.Resource.Dimension.design_snackbar_text_size;
+			global::MonoNetConnect.Resource.Dimension.design_tab_max_width = global::NetConnect.Resource.Dimension.design_tab_max_width;
+			global::MonoNetConnect.Resource.Dimension.design_tab_scrollable_min_width = global::NetConnect.Resource.Dimension.design_tab_scrollable_min_width;
+			global::MonoNetConnect.Resource.Dimension.design_tab_text_size = global::NetConnect.Resource.Dimension.design_tab_text_size;
+			global::MonoNetConnect.Resource.Dimension.design_tab_text_size_2line = global::NetConnect.Resource.Dimension.design_tab_text_size_2line;
+			global::MonoNetConnect.Resource.Dimension.disabled_alpha_material_dark = global::NetConnect.Resource.Dimension.disabled_alpha_material_dark;
+			global::MonoNetConnect.Resource.Dimension.disabled_alpha_material_light = global::NetConnect.Resource.Dimension.disabled_alpha_material_light;
+			global::MonoNetConnect.Resource.Dimension.highlight_alpha_material_colored = global::NetConnect.Resource.Dimension.highlight_alpha_material_colored;
+			global::MonoNetConnect.Resource.Dimension.highlight_alpha_material_dark = global::NetConnect.Resource.Dimension.highlight_alpha_material_dark;
+			global::MonoNetConnect.Resource.Dimension.highlight_alpha_material_light = global::NetConnect.Resource.Dimension.highlight_alpha_material_light;
+			global::MonoNetConnect.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::NetConnect.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::MonoNetConnect.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::NetConnect.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::MonoNetConnect.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::NetConnect.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::MonoNetConnect.Resource.Dimension.notification_large_icon_height = global::NetConnect.Resource.Dimension.notification_large_icon_height;
+			global::MonoNetConnect.Resource.Dimension.notification_large_icon_width = global::NetConnect.Resource.Dimension.notification_large_icon_width;
+			global::MonoNetConnect.Resource.Dimension.notification_subtext_size = global::NetConnect.Resource.Dimension.notification_subtext_size;
+			global::MonoNetConnect.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_action_bar_item_background_material = global::NetConnect.Resource.Drawable.abc_action_bar_item_background_material;
+			global::MonoNetConnect.Resource.Drawable.abc_btn_borderless_material = global::NetConnect.Resource.Drawable.abc_btn_borderless_material;
+			global::MonoNetConnect.Resource.Drawable.abc_btn_check_material = global::NetConnect.Resource.Drawable.abc_btn_check_material;
+			global::MonoNetConnect.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::NetConnect.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::MonoNetConnect.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::NetConnect.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::MonoNetConnect.Resource.Drawable.abc_btn_colored_material = global::NetConnect.Resource.Drawable.abc_btn_colored_material;
+			global::MonoNetConnect.Resource.Drawable.abc_btn_default_mtrl_shape = global::NetConnect.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::MonoNetConnect.Resource.Drawable.abc_btn_radio_material = global::NetConnect.Resource.Drawable.abc_btn_radio_material;
+			global::MonoNetConnect.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::NetConnect.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::MonoNetConnect.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::NetConnect.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::MonoNetConnect.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::NetConnect.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::MonoNetConnect.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::NetConnect.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::MonoNetConnect.Resource.Drawable.abc_cab_background_internal_bg = global::NetConnect.Resource.Drawable.abc_cab_background_internal_bg;
+			global::MonoNetConnect.Resource.Drawable.abc_cab_background_top_material = global::NetConnect.Resource.Drawable.abc_cab_background_top_material;
+			global::MonoNetConnect.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_control_background_material = global::NetConnect.Resource.Drawable.abc_control_background_material;
+			global::MonoNetConnect.Resource.Drawable.abc_dialog_material_background = global::NetConnect.Resource.Drawable.abc_dialog_material_background;
+			global::MonoNetConnect.Resource.Drawable.abc_edit_text_material = global::NetConnect.Resource.Drawable.abc_edit_text_material;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_ab_back_material = global::NetConnect.Resource.Drawable.abc_ic_ab_back_material;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::NetConnect.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_clear_material = global::NetConnect.Resource.Drawable.abc_ic_clear_material;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_go_search_api_material = global::NetConnect.Resource.Drawable.abc_ic_go_search_api_material;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::NetConnect.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_menu_overflow_material = global::NetConnect.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::NetConnect.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_search_api_material = global::NetConnect.Resource.Drawable.abc_ic_search_api_material;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_star_black_16dp = global::NetConnect.Resource.Drawable.abc_ic_star_black_16dp;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_star_black_36dp = global::NetConnect.Resource.Drawable.abc_ic_star_black_36dp;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_star_black_48dp = global::NetConnect.Resource.Drawable.abc_ic_star_black_48dp;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_star_half_black_16dp = global::NetConnect.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_star_half_black_36dp = global::NetConnect.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_star_half_black_48dp = global::NetConnect.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::MonoNetConnect.Resource.Drawable.abc_ic_voice_search_api_material = global::NetConnect.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::MonoNetConnect.Resource.Drawable.abc_item_background_holo_dark = global::NetConnect.Resource.Drawable.abc_item_background_holo_dark;
+			global::MonoNetConnect.Resource.Drawable.abc_item_background_holo_light = global::NetConnect.Resource.Drawable.abc_item_background_holo_light;
+			global::MonoNetConnect.Resource.Drawable.abc_list_divider_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_list_focused_holo = global::NetConnect.Resource.Drawable.abc_list_focused_holo;
+			global::MonoNetConnect.Resource.Drawable.abc_list_longpressed_holo = global::NetConnect.Resource.Drawable.abc_list_longpressed_holo;
+			global::MonoNetConnect.Resource.Drawable.abc_list_pressed_holo_dark = global::NetConnect.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::MonoNetConnect.Resource.Drawable.abc_list_pressed_holo_light = global::NetConnect.Resource.Drawable.abc_list_pressed_holo_light;
+			global::MonoNetConnect.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::NetConnect.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::MonoNetConnect.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::NetConnect.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::MonoNetConnect.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::NetConnect.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::MonoNetConnect.Resource.Drawable.abc_list_selector_disabled_holo_light = global::NetConnect.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::MonoNetConnect.Resource.Drawable.abc_list_selector_holo_dark = global::NetConnect.Resource.Drawable.abc_list_selector_holo_dark;
+			global::MonoNetConnect.Resource.Drawable.abc_list_selector_holo_light = global::NetConnect.Resource.Drawable.abc_list_selector_holo_light;
+			global::MonoNetConnect.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::NetConnect.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::MonoNetConnect.Resource.Drawable.abc_popup_background_mtrl_mult = global::NetConnect.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::MonoNetConnect.Resource.Drawable.abc_ratingbar_indicator_material = global::NetConnect.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::MonoNetConnect.Resource.Drawable.abc_ratingbar_material = global::NetConnect.Resource.Drawable.abc_ratingbar_material;
+			global::MonoNetConnect.Resource.Drawable.abc_ratingbar_small_material = global::NetConnect.Resource.Drawable.abc_ratingbar_small_material;
+			global::MonoNetConnect.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::NetConnect.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::MonoNetConnect.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::NetConnect.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::MonoNetConnect.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_seekbar_thumb_material = global::NetConnect.Resource.Drawable.abc_seekbar_thumb_material;
+			global::MonoNetConnect.Resource.Drawable.abc_seekbar_tick_mark_material = global::NetConnect.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::MonoNetConnect.Resource.Drawable.abc_seekbar_track_material = global::NetConnect.Resource.Drawable.abc_seekbar_track_material;
+			global::MonoNetConnect.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::NetConnect.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_spinner_textfield_background_material = global::NetConnect.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::MonoNetConnect.Resource.Drawable.abc_switch_thumb_material = global::NetConnect.Resource.Drawable.abc_switch_thumb_material;
+			global::MonoNetConnect.Resource.Drawable.abc_switch_track_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_tab_indicator_material = global::NetConnect.Resource.Drawable.abc_tab_indicator_material;
+			global::MonoNetConnect.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_text_cursor_material = global::NetConnect.Resource.Drawable.abc_text_cursor_material;
+			global::MonoNetConnect.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::NetConnect.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::MonoNetConnect.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::NetConnect.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::MonoNetConnect.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::NetConnect.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::MonoNetConnect.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::NetConnect.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::MonoNetConnect.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::NetConnect.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::MonoNetConnect.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::NetConnect.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::MonoNetConnect.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::NetConnect.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::MonoNetConnect.Resource.Drawable.abc_textfield_search_material = global::NetConnect.Resource.Drawable.abc_textfield_search_material;
+			global::MonoNetConnect.Resource.Drawable.abc_vector_test = global::NetConnect.Resource.Drawable.abc_vector_test;
+			global::MonoNetConnect.Resource.Drawable.design_fab_background = global::NetConnect.Resource.Drawable.design_fab_background;
+			global::MonoNetConnect.Resource.Drawable.design_ic_visibility = global::NetConnect.Resource.Drawable.design_ic_visibility;
+			global::MonoNetConnect.Resource.Drawable.design_snackbar_background = global::NetConnect.Resource.Drawable.design_snackbar_background;
+			global::MonoNetConnect.Resource.Drawable.navigation_empty_icon = global::NetConnect.Resource.Drawable.navigation_empty_icon;
+			global::MonoNetConnect.Resource.Drawable.notification_template_icon_bg = global::NetConnect.Resource.Drawable.notification_template_icon_bg;
+			global::MonoNetConnect.Resource.Id.action0 = global::NetConnect.Resource.Id.action0;
+			global::MonoNetConnect.Resource.Id.action_bar = global::NetConnect.Resource.Id.action_bar;
+			global::MonoNetConnect.Resource.Id.action_bar_activity_content = global::NetConnect.Resource.Id.action_bar_activity_content;
+			global::MonoNetConnect.Resource.Id.action_bar_container = global::NetConnect.Resource.Id.action_bar_container;
+			global::MonoNetConnect.Resource.Id.action_bar_root = global::NetConnect.Resource.Id.action_bar_root;
+			global::MonoNetConnect.Resource.Id.action_bar_spinner = global::NetConnect.Resource.Id.action_bar_spinner;
+			global::MonoNetConnect.Resource.Id.action_bar_subtitle = global::NetConnect.Resource.Id.action_bar_subtitle;
+			global::MonoNetConnect.Resource.Id.action_bar_title = global::NetConnect.Resource.Id.action_bar_title;
+			global::MonoNetConnect.Resource.Id.action_context_bar = global::NetConnect.Resource.Id.action_context_bar;
+			global::MonoNetConnect.Resource.Id.action_divider = global::NetConnect.Resource.Id.action_divider;
+			global::MonoNetConnect.Resource.Id.action_menu_divider = global::NetConnect.Resource.Id.action_menu_divider;
+			global::MonoNetConnect.Resource.Id.action_menu_presenter = global::NetConnect.Resource.Id.action_menu_presenter;
+			global::MonoNetConnect.Resource.Id.action_mode_bar = global::NetConnect.Resource.Id.action_mode_bar;
+			global::MonoNetConnect.Resource.Id.action_mode_bar_stub = global::NetConnect.Resource.Id.action_mode_bar_stub;
+			global::MonoNetConnect.Resource.Id.action_mode_close_button = global::NetConnect.Resource.Id.action_mode_close_button;
+			global::MonoNetConnect.Resource.Id.activity_chooser_view_content = global::NetConnect.Resource.Id.activity_chooser_view_content;
+			global::MonoNetConnect.Resource.Id.add = global::NetConnect.Resource.Id.add;
+			global::MonoNetConnect.Resource.Id.alertTitle = global::NetConnect.Resource.Id.alertTitle;
+			global::MonoNetConnect.Resource.Id.all = global::NetConnect.Resource.Id.all;
+			global::MonoNetConnect.Resource.Id.always = global::NetConnect.Resource.Id.always;
+			global::MonoNetConnect.Resource.Id.auto = global::NetConnect.Resource.Id.auto;
+			global::MonoNetConnect.Resource.Id.beginning = global::NetConnect.Resource.Id.beginning;
+			global::MonoNetConnect.Resource.Id.bottom = global::NetConnect.Resource.Id.bottom;
+			global::MonoNetConnect.Resource.Id.buttonPanel = global::NetConnect.Resource.Id.buttonPanel;
+			global::MonoNetConnect.Resource.Id.cancel_action = global::NetConnect.Resource.Id.cancel_action;
+			global::MonoNetConnect.Resource.Id.center = global::NetConnect.Resource.Id.center;
+			global::MonoNetConnect.Resource.Id.center_horizontal = global::NetConnect.Resource.Id.center_horizontal;
+			global::MonoNetConnect.Resource.Id.center_vertical = global::NetConnect.Resource.Id.center_vertical;
+			global::MonoNetConnect.Resource.Id.checkbox = global::NetConnect.Resource.Id.checkbox;
+			global::MonoNetConnect.Resource.Id.chronometer = global::NetConnect.Resource.Id.chronometer;
+			global::MonoNetConnect.Resource.Id.clip_horizontal = global::NetConnect.Resource.Id.clip_horizontal;
+			global::MonoNetConnect.Resource.Id.clip_vertical = global::NetConnect.Resource.Id.clip_vertical;
+			global::MonoNetConnect.Resource.Id.collapseActionView = global::NetConnect.Resource.Id.collapseActionView;
+			global::MonoNetConnect.Resource.Id.contentPanel = global::NetConnect.Resource.Id.contentPanel;
+			global::MonoNetConnect.Resource.Id.custom = global::NetConnect.Resource.Id.custom;
+			global::MonoNetConnect.Resource.Id.customPanel = global::NetConnect.Resource.Id.customPanel;
+			global::MonoNetConnect.Resource.Id.decor_content_parent = global::NetConnect.Resource.Id.decor_content_parent;
+			global::MonoNetConnect.Resource.Id.default_activity_button = global::NetConnect.Resource.Id.default_activity_button;
+			global::MonoNetConnect.Resource.Id.design_bottom_sheet = global::NetConnect.Resource.Id.design_bottom_sheet;
+			global::MonoNetConnect.Resource.Id.design_menu_item_action_area = global::NetConnect.Resource.Id.design_menu_item_action_area;
+			global::MonoNetConnect.Resource.Id.design_menu_item_action_area_stub = global::NetConnect.Resource.Id.design_menu_item_action_area_stub;
+			global::MonoNetConnect.Resource.Id.design_menu_item_text = global::NetConnect.Resource.Id.design_menu_item_text;
+			global::MonoNetConnect.Resource.Id.design_navigation_view = global::NetConnect.Resource.Id.design_navigation_view;
+			global::MonoNetConnect.Resource.Id.disableHome = global::NetConnect.Resource.Id.disableHome;
+			global::MonoNetConnect.Resource.Id.edit_query = global::NetConnect.Resource.Id.edit_query;
+			global::MonoNetConnect.Resource.Id.end = global::NetConnect.Resource.Id.end;
+			global::MonoNetConnect.Resource.Id.end_padder = global::NetConnect.Resource.Id.end_padder;
+			global::MonoNetConnect.Resource.Id.enterAlways = global::NetConnect.Resource.Id.enterAlways;
+			global::MonoNetConnect.Resource.Id.enterAlwaysCollapsed = global::NetConnect.Resource.Id.enterAlwaysCollapsed;
+			global::MonoNetConnect.Resource.Id.exitUntilCollapsed = global::NetConnect.Resource.Id.exitUntilCollapsed;
+			global::MonoNetConnect.Resource.Id.expand_activities_button = global::NetConnect.Resource.Id.expand_activities_button;
+			global::MonoNetConnect.Resource.Id.expanded_menu = global::NetConnect.Resource.Id.expanded_menu;
+			global::MonoNetConnect.Resource.Id.fill = global::NetConnect.Resource.Id.fill;
+			global::MonoNetConnect.Resource.Id.fill_horizontal = global::NetConnect.Resource.Id.fill_horizontal;
+			global::MonoNetConnect.Resource.Id.fill_vertical = global::NetConnect.Resource.Id.fill_vertical;
+			global::MonoNetConnect.Resource.Id.@fixed = global::NetConnect.Resource.Id.@fixed;
+			global::MonoNetConnect.Resource.Id.home = global::NetConnect.Resource.Id.home;
+			global::MonoNetConnect.Resource.Id.homeAsUp = global::NetConnect.Resource.Id.homeAsUp;
+			global::MonoNetConnect.Resource.Id.icon = global::NetConnect.Resource.Id.icon;
+			global::MonoNetConnect.Resource.Id.ifRoom = global::NetConnect.Resource.Id.ifRoom;
+			global::MonoNetConnect.Resource.Id.image = global::NetConnect.Resource.Id.image;
+			global::MonoNetConnect.Resource.Id.info = global::NetConnect.Resource.Id.info;
+			global::MonoNetConnect.Resource.Id.item_touch_helper_previous_elevation = global::NetConnect.Resource.Id.item_touch_helper_previous_elevation;
+			global::MonoNetConnect.Resource.Id.left = global::NetConnect.Resource.Id.left;
+			global::MonoNetConnect.Resource.Id.line1 = global::NetConnect.Resource.Id.line1;
+			global::MonoNetConnect.Resource.Id.line3 = global::NetConnect.Resource.Id.line3;
+			global::MonoNetConnect.Resource.Id.listMode = global::NetConnect.Resource.Id.listMode;
+			global::MonoNetConnect.Resource.Id.list_item = global::NetConnect.Resource.Id.list_item;
+			global::MonoNetConnect.Resource.Id.media_actions = global::NetConnect.Resource.Id.media_actions;
+			global::MonoNetConnect.Resource.Id.middle = global::NetConnect.Resource.Id.middle;
+			global::MonoNetConnect.Resource.Id.mini = global::NetConnect.Resource.Id.mini;
+			global::MonoNetConnect.Resource.Id.multiply = global::NetConnect.Resource.Id.multiply;
+			global::MonoNetConnect.Resource.Id.navigation_header_container = global::NetConnect.Resource.Id.navigation_header_container;
+			global::MonoNetConnect.Resource.Id.never = global::NetConnect.Resource.Id.never;
+			global::MonoNetConnect.Resource.Id.none = global::NetConnect.Resource.Id.none;
+			global::MonoNetConnect.Resource.Id.normal = global::NetConnect.Resource.Id.normal;
+			global::MonoNetConnect.Resource.Id.parallax = global::NetConnect.Resource.Id.parallax;
+			global::MonoNetConnect.Resource.Id.parentPanel = global::NetConnect.Resource.Id.parentPanel;
+			global::MonoNetConnect.Resource.Id.pin = global::NetConnect.Resource.Id.pin;
+			global::MonoNetConnect.Resource.Id.progress_circular = global::NetConnect.Resource.Id.progress_circular;
+			global::MonoNetConnect.Resource.Id.progress_horizontal = global::NetConnect.Resource.Id.progress_horizontal;
+			global::MonoNetConnect.Resource.Id.radio = global::NetConnect.Resource.Id.radio;
+			global::MonoNetConnect.Resource.Id.right = global::NetConnect.Resource.Id.right;
+			global::MonoNetConnect.Resource.Id.screen = global::NetConnect.Resource.Id.screen;
+			global::MonoNetConnect.Resource.Id.scroll = global::NetConnect.Resource.Id.scroll;
+			global::MonoNetConnect.Resource.Id.scrollIndicatorDown = global::NetConnect.Resource.Id.scrollIndicatorDown;
+			global::MonoNetConnect.Resource.Id.scrollIndicatorUp = global::NetConnect.Resource.Id.scrollIndicatorUp;
+			global::MonoNetConnect.Resource.Id.scrollView = global::NetConnect.Resource.Id.scrollView;
+			global::MonoNetConnect.Resource.Id.scrollable = global::NetConnect.Resource.Id.scrollable;
+			global::MonoNetConnect.Resource.Id.search_badge = global::NetConnect.Resource.Id.search_badge;
+			global::MonoNetConnect.Resource.Id.search_bar = global::NetConnect.Resource.Id.search_bar;
+			global::MonoNetConnect.Resource.Id.search_button = global::NetConnect.Resource.Id.search_button;
+			global::MonoNetConnect.Resource.Id.search_close_btn = global::NetConnect.Resource.Id.search_close_btn;
+			global::MonoNetConnect.Resource.Id.search_edit_frame = global::NetConnect.Resource.Id.search_edit_frame;
+			global::MonoNetConnect.Resource.Id.search_go_btn = global::NetConnect.Resource.Id.search_go_btn;
+			global::MonoNetConnect.Resource.Id.search_mag_icon = global::NetConnect.Resource.Id.search_mag_icon;
+			global::MonoNetConnect.Resource.Id.search_plate = global::NetConnect.Resource.Id.search_plate;
+			global::MonoNetConnect.Resource.Id.search_src_text = global::NetConnect.Resource.Id.search_src_text;
+			global::MonoNetConnect.Resource.Id.search_voice_btn = global::NetConnect.Resource.Id.search_voice_btn;
+			global::MonoNetConnect.Resource.Id.select_dialog_listview = global::NetConnect.Resource.Id.select_dialog_listview;
+			global::MonoNetConnect.Resource.Id.shortcut = global::NetConnect.Resource.Id.shortcut;
+			global::MonoNetConnect.Resource.Id.showCustom = global::NetConnect.Resource.Id.showCustom;
+			global::MonoNetConnect.Resource.Id.showHome = global::NetConnect.Resource.Id.showHome;
+			global::MonoNetConnect.Resource.Id.showTitle = global::NetConnect.Resource.Id.showTitle;
+			global::MonoNetConnect.Resource.Id.snackbar_action = global::NetConnect.Resource.Id.snackbar_action;
+			global::MonoNetConnect.Resource.Id.snackbar_text = global::NetConnect.Resource.Id.snackbar_text;
+			global::MonoNetConnect.Resource.Id.snap = global::NetConnect.Resource.Id.snap;
+			global::MonoNetConnect.Resource.Id.spacer = global::NetConnect.Resource.Id.spacer;
+			global::MonoNetConnect.Resource.Id.split_action_bar = global::NetConnect.Resource.Id.split_action_bar;
+			global::MonoNetConnect.Resource.Id.src_atop = global::NetConnect.Resource.Id.src_atop;
+			global::MonoNetConnect.Resource.Id.src_in = global::NetConnect.Resource.Id.src_in;
+			global::MonoNetConnect.Resource.Id.src_over = global::NetConnect.Resource.Id.src_over;
+			global::MonoNetConnect.Resource.Id.start = global::NetConnect.Resource.Id.start;
+			global::MonoNetConnect.Resource.Id.status_bar_latest_event_content = global::NetConnect.Resource.Id.status_bar_latest_event_content;
+			global::MonoNetConnect.Resource.Id.submenuarrow = global::NetConnect.Resource.Id.submenuarrow;
+			global::MonoNetConnect.Resource.Id.submit_area = global::NetConnect.Resource.Id.submit_area;
+			global::MonoNetConnect.Resource.Id.tabMode = global::NetConnect.Resource.Id.tabMode;
+			global::MonoNetConnect.Resource.Id.text = global::NetConnect.Resource.Id.text;
+			global::MonoNetConnect.Resource.Id.text2 = global::NetConnect.Resource.Id.text2;
+			global::MonoNetConnect.Resource.Id.textSpacerNoButtons = global::NetConnect.Resource.Id.textSpacerNoButtons;
+			global::MonoNetConnect.Resource.Id.text_input_password_toggle = global::NetConnect.Resource.Id.text_input_password_toggle;
+			global::MonoNetConnect.Resource.Id.time = global::NetConnect.Resource.Id.time;
+			global::MonoNetConnect.Resource.Id.title = global::NetConnect.Resource.Id.title;
+			global::MonoNetConnect.Resource.Id.title_template = global::NetConnect.Resource.Id.title_template;
+			global::MonoNetConnect.Resource.Id.top = global::NetConnect.Resource.Id.top;
+			global::MonoNetConnect.Resource.Id.topPanel = global::NetConnect.Resource.Id.topPanel;
+			global::MonoNetConnect.Resource.Id.touch_outside = global::NetConnect.Resource.Id.touch_outside;
+			global::MonoNetConnect.Resource.Id.up = global::NetConnect.Resource.Id.up;
+			global::MonoNetConnect.Resource.Id.useLogo = global::NetConnect.Resource.Id.useLogo;
+			global::MonoNetConnect.Resource.Id.view_offset_helper = global::NetConnect.Resource.Id.view_offset_helper;
+			global::MonoNetConnect.Resource.Id.withText = global::NetConnect.Resource.Id.withText;
+			global::MonoNetConnect.Resource.Id.wrap_content = global::NetConnect.Resource.Id.wrap_content;
+			global::MonoNetConnect.Resource.Integer.abc_config_activityDefaultDur = global::NetConnect.Resource.Integer.abc_config_activityDefaultDur;
+			global::MonoNetConnect.Resource.Integer.abc_config_activityShortDur = global::NetConnect.Resource.Integer.abc_config_activityShortDur;
+			global::MonoNetConnect.Resource.Integer.app_bar_elevation_anim_duration = global::NetConnect.Resource.Integer.app_bar_elevation_anim_duration;
+			global::MonoNetConnect.Resource.Integer.bottom_sheet_slide_duration = global::NetConnect.Resource.Integer.bottom_sheet_slide_duration;
+			global::MonoNetConnect.Resource.Integer.cancel_button_image_alpha = global::NetConnect.Resource.Integer.cancel_button_image_alpha;
+			global::MonoNetConnect.Resource.Integer.design_snackbar_text_max_lines = global::NetConnect.Resource.Integer.design_snackbar_text_max_lines;
+			global::MonoNetConnect.Resource.Integer.status_bar_notification_info_maxnum = global::NetConnect.Resource.Integer.status_bar_notification_info_maxnum;
+			global::MonoNetConnect.Resource.Layout.abc_action_bar_title_item = global::NetConnect.Resource.Layout.abc_action_bar_title_item;
+			global::MonoNetConnect.Resource.Layout.abc_action_bar_up_container = global::NetConnect.Resource.Layout.abc_action_bar_up_container;
+			global::MonoNetConnect.Resource.Layout.abc_action_bar_view_list_nav_layout = global::NetConnect.Resource.Layout.abc_action_bar_view_list_nav_layout;
+			global::MonoNetConnect.Resource.Layout.abc_action_menu_item_layout = global::NetConnect.Resource.Layout.abc_action_menu_item_layout;
+			global::MonoNetConnect.Resource.Layout.abc_action_menu_layout = global::NetConnect.Resource.Layout.abc_action_menu_layout;
+			global::MonoNetConnect.Resource.Layout.abc_action_mode_bar = global::NetConnect.Resource.Layout.abc_action_mode_bar;
+			global::MonoNetConnect.Resource.Layout.abc_action_mode_close_item_material = global::NetConnect.Resource.Layout.abc_action_mode_close_item_material;
+			global::MonoNetConnect.Resource.Layout.abc_activity_chooser_view = global::NetConnect.Resource.Layout.abc_activity_chooser_view;
+			global::MonoNetConnect.Resource.Layout.abc_activity_chooser_view_list_item = global::NetConnect.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::MonoNetConnect.Resource.Layout.abc_alert_dialog_button_bar_material = global::NetConnect.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::MonoNetConnect.Resource.Layout.abc_alert_dialog_material = global::NetConnect.Resource.Layout.abc_alert_dialog_material;
+			global::MonoNetConnect.Resource.Layout.abc_dialog_title_material = global::NetConnect.Resource.Layout.abc_dialog_title_material;
+			global::MonoNetConnect.Resource.Layout.abc_expanded_menu_layout = global::NetConnect.Resource.Layout.abc_expanded_menu_layout;
+			global::MonoNetConnect.Resource.Layout.abc_list_menu_item_checkbox = global::NetConnect.Resource.Layout.abc_list_menu_item_checkbox;
+			global::MonoNetConnect.Resource.Layout.abc_list_menu_item_icon = global::NetConnect.Resource.Layout.abc_list_menu_item_icon;
+			global::MonoNetConnect.Resource.Layout.abc_list_menu_item_layout = global::NetConnect.Resource.Layout.abc_list_menu_item_layout;
+			global::MonoNetConnect.Resource.Layout.abc_list_menu_item_radio = global::NetConnect.Resource.Layout.abc_list_menu_item_radio;
+			global::MonoNetConnect.Resource.Layout.abc_popup_menu_header_item_layout = global::NetConnect.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::MonoNetConnect.Resource.Layout.abc_popup_menu_item_layout = global::NetConnect.Resource.Layout.abc_popup_menu_item_layout;
+			global::MonoNetConnect.Resource.Layout.abc_screen_content_include = global::NetConnect.Resource.Layout.abc_screen_content_include;
+			global::MonoNetConnect.Resource.Layout.abc_screen_simple = global::NetConnect.Resource.Layout.abc_screen_simple;
+			global::MonoNetConnect.Resource.Layout.abc_screen_simple_overlay_action_mode = global::NetConnect.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::MonoNetConnect.Resource.Layout.abc_screen_toolbar = global::NetConnect.Resource.Layout.abc_screen_toolbar;
+			global::MonoNetConnect.Resource.Layout.abc_search_dropdown_item_icons_2line = global::NetConnect.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::MonoNetConnect.Resource.Layout.abc_search_view = global::NetConnect.Resource.Layout.abc_search_view;
+			global::MonoNetConnect.Resource.Layout.abc_select_dialog_material = global::NetConnect.Resource.Layout.abc_select_dialog_material;
+			global::MonoNetConnect.Resource.Layout.design_bottom_sheet_dialog = global::NetConnect.Resource.Layout.design_bottom_sheet_dialog;
+			global::MonoNetConnect.Resource.Layout.design_layout_snackbar = global::NetConnect.Resource.Layout.design_layout_snackbar;
+			global::MonoNetConnect.Resource.Layout.design_layout_snackbar_include = global::NetConnect.Resource.Layout.design_layout_snackbar_include;
+			global::MonoNetConnect.Resource.Layout.design_layout_tab_icon = global::NetConnect.Resource.Layout.design_layout_tab_icon;
+			global::MonoNetConnect.Resource.Layout.design_layout_tab_text = global::NetConnect.Resource.Layout.design_layout_tab_text;
+			global::MonoNetConnect.Resource.Layout.design_menu_item_action_area = global::NetConnect.Resource.Layout.design_menu_item_action_area;
+			global::MonoNetConnect.Resource.Layout.design_navigation_item = global::NetConnect.Resource.Layout.design_navigation_item;
+			global::MonoNetConnect.Resource.Layout.design_navigation_item_header = global::NetConnect.Resource.Layout.design_navigation_item_header;
+			global::MonoNetConnect.Resource.Layout.design_navigation_item_separator = global::NetConnect.Resource.Layout.design_navigation_item_separator;
+			global::MonoNetConnect.Resource.Layout.design_navigation_item_subheader = global::NetConnect.Resource.Layout.design_navigation_item_subheader;
+			global::MonoNetConnect.Resource.Layout.design_navigation_menu = global::NetConnect.Resource.Layout.design_navigation_menu;
+			global::MonoNetConnect.Resource.Layout.design_navigation_menu_item = global::NetConnect.Resource.Layout.design_navigation_menu_item;
+			global::MonoNetConnect.Resource.Layout.design_text_input_password_icon = global::NetConnect.Resource.Layout.design_text_input_password_icon;
+			global::MonoNetConnect.Resource.Layout.notification_media_action = global::NetConnect.Resource.Layout.notification_media_action;
+			global::MonoNetConnect.Resource.Layout.notification_media_cancel_action = global::NetConnect.Resource.Layout.notification_media_cancel_action;
+			global::MonoNetConnect.Resource.Layout.notification_template_big_media = global::NetConnect.Resource.Layout.notification_template_big_media;
+			global::MonoNetConnect.Resource.Layout.notification_template_big_media_narrow = global::NetConnect.Resource.Layout.notification_template_big_media_narrow;
+			global::MonoNetConnect.Resource.Layout.notification_template_lines = global::NetConnect.Resource.Layout.notification_template_lines;
+			global::MonoNetConnect.Resource.Layout.notification_template_media = global::NetConnect.Resource.Layout.notification_template_media;
+			global::MonoNetConnect.Resource.Layout.notification_template_part_chronometer = global::NetConnect.Resource.Layout.notification_template_part_chronometer;
+			global::MonoNetConnect.Resource.Layout.notification_template_part_time = global::NetConnect.Resource.Layout.notification_template_part_time;
+			global::MonoNetConnect.Resource.Layout.select_dialog_item_material = global::NetConnect.Resource.Layout.select_dialog_item_material;
+			global::MonoNetConnect.Resource.Layout.select_dialog_multichoice_material = global::NetConnect.Resource.Layout.select_dialog_multichoice_material;
+			global::MonoNetConnect.Resource.Layout.select_dialog_singlechoice_material = global::NetConnect.Resource.Layout.select_dialog_singlechoice_material;
+			global::MonoNetConnect.Resource.Layout.support_simple_spinner_dropdown_item = global::NetConnect.Resource.Layout.support_simple_spinner_dropdown_item;
 			global::MonoNetConnect.Resource.String.ApplicationName = global::NetConnect.Resource.String.ApplicationName;
 			global::MonoNetConnect.Resource.String.Hello = global::NetConnect.Resource.String.Hello;
+			global::MonoNetConnect.Resource.String.abc_action_bar_home_description = global::NetConnect.Resource.String.abc_action_bar_home_description;
+			global::MonoNetConnect.Resource.String.abc_action_bar_home_description_format = global::NetConnect.Resource.String.abc_action_bar_home_description_format;
+			global::MonoNetConnect.Resource.String.abc_action_bar_home_subtitle_description_format = global::NetConnect.Resource.String.abc_action_bar_home_subtitle_description_format;
+			global::MonoNetConnect.Resource.String.abc_action_bar_up_description = global::NetConnect.Resource.String.abc_action_bar_up_description;
+			global::MonoNetConnect.Resource.String.abc_action_menu_overflow_description = global::NetConnect.Resource.String.abc_action_menu_overflow_description;
+			global::MonoNetConnect.Resource.String.abc_action_mode_done = global::NetConnect.Resource.String.abc_action_mode_done;
+			global::MonoNetConnect.Resource.String.abc_activity_chooser_view_see_all = global::NetConnect.Resource.String.abc_activity_chooser_view_see_all;
+			global::MonoNetConnect.Resource.String.abc_activitychooserview_choose_application = global::NetConnect.Resource.String.abc_activitychooserview_choose_application;
+			global::MonoNetConnect.Resource.String.abc_capital_off = global::NetConnect.Resource.String.abc_capital_off;
+			global::MonoNetConnect.Resource.String.abc_capital_on = global::NetConnect.Resource.String.abc_capital_on;
+			global::MonoNetConnect.Resource.String.abc_font_family_body_1_material = global::NetConnect.Resource.String.abc_font_family_body_1_material;
+			global::MonoNetConnect.Resource.String.abc_font_family_body_2_material = global::NetConnect.Resource.String.abc_font_family_body_2_material;
+			global::MonoNetConnect.Resource.String.abc_font_family_button_material = global::NetConnect.Resource.String.abc_font_family_button_material;
+			global::MonoNetConnect.Resource.String.abc_font_family_caption_material = global::NetConnect.Resource.String.abc_font_family_caption_material;
+			global::MonoNetConnect.Resource.String.abc_font_family_display_1_material = global::NetConnect.Resource.String.abc_font_family_display_1_material;
+			global::MonoNetConnect.Resource.String.abc_font_family_display_2_material = global::NetConnect.Resource.String.abc_font_family_display_2_material;
+			global::MonoNetConnect.Resource.String.abc_font_family_display_3_material = global::NetConnect.Resource.String.abc_font_family_display_3_material;
+			global::MonoNetConnect.Resource.String.abc_font_family_display_4_material = global::NetConnect.Resource.String.abc_font_family_display_4_material;
+			global::MonoNetConnect.Resource.String.abc_font_family_headline_material = global::NetConnect.Resource.String.abc_font_family_headline_material;
+			global::MonoNetConnect.Resource.String.abc_font_family_menu_material = global::NetConnect.Resource.String.abc_font_family_menu_material;
+			global::MonoNetConnect.Resource.String.abc_font_family_subhead_material = global::NetConnect.Resource.String.abc_font_family_subhead_material;
+			global::MonoNetConnect.Resource.String.abc_font_family_title_material = global::NetConnect.Resource.String.abc_font_family_title_material;
+			global::MonoNetConnect.Resource.String.abc_search_hint = global::NetConnect.Resource.String.abc_search_hint;
+			global::MonoNetConnect.Resource.String.abc_searchview_description_clear = global::NetConnect.Resource.String.abc_searchview_description_clear;
+			global::MonoNetConnect.Resource.String.abc_searchview_description_query = global::NetConnect.Resource.String.abc_searchview_description_query;
+			global::MonoNetConnect.Resource.String.abc_searchview_description_search = global::NetConnect.Resource.String.abc_searchview_description_search;
+			global::MonoNetConnect.Resource.String.abc_searchview_description_submit = global::NetConnect.Resource.String.abc_searchview_description_submit;
+			global::MonoNetConnect.Resource.String.abc_searchview_description_voice = global::NetConnect.Resource.String.abc_searchview_description_voice;
+			global::MonoNetConnect.Resource.String.abc_shareactionprovider_share_with = global::NetConnect.Resource.String.abc_shareactionprovider_share_with;
+			global::MonoNetConnect.Resource.String.abc_shareactionprovider_share_with_application = global::NetConnect.Resource.String.abc_shareactionprovider_share_with_application;
+			global::MonoNetConnect.Resource.String.abc_toolbar_collapse_description = global::NetConnect.Resource.String.abc_toolbar_collapse_description;
+			global::MonoNetConnect.Resource.String.appbar_scrolling_view_behavior = global::NetConnect.Resource.String.appbar_scrolling_view_behavior;
+			global::MonoNetConnect.Resource.String.bottom_sheet_behavior = global::NetConnect.Resource.String.bottom_sheet_behavior;
+			global::MonoNetConnect.Resource.String.character_counter_pattern = global::NetConnect.Resource.String.character_counter_pattern;
+			global::MonoNetConnect.Resource.String.search_menu_title = global::NetConnect.Resource.String.search_menu_title;
+			global::MonoNetConnect.Resource.String.status_bar_notification_info_overflow = global::NetConnect.Resource.String.status_bar_notification_info_overflow;
+			global::MonoNetConnect.Resource.Style.AlertDialog_AppCompat = global::NetConnect.Resource.Style.AlertDialog_AppCompat;
+			global::MonoNetConnect.Resource.Style.AlertDialog_AppCompat_Light = global::NetConnect.Resource.Style.AlertDialog_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Animation_AppCompat_Dialog = global::NetConnect.Resource.Style.Animation_AppCompat_Dialog;
+			global::MonoNetConnect.Resource.Style.Animation_AppCompat_DropDownUp = global::NetConnect.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::MonoNetConnect.Resource.Style.Animation_Design_BottomSheetDialog = global::NetConnect.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::MonoNetConnect.Resource.Style.Base_AlertDialog_AppCompat = global::NetConnect.Resource.Style.Base_AlertDialog_AppCompat;
+			global::MonoNetConnect.Resource.Style.Base_AlertDialog_AppCompat_Light = global::NetConnect.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Base_Animation_AppCompat_Dialog = global::NetConnect.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::NetConnect.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::MonoNetConnect.Resource.Style.Base_DialogWindowTitle_AppCompat = global::NetConnect.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::MonoNetConnect.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::NetConnect.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Button = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Large = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Small = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Title = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::NetConnect.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::NetConnect.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::NetConnect.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::MonoNetConnect.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::NetConnect.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat = global::NetConnect.Resource.Style.Base_Theme_AppCompat;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::NetConnect.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_Dialog = global::NetConnect.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::NetConnect.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::NetConnect.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::NetConnect.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::NetConnect.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_Light = global::NetConnect.Resource.Style.Base_Theme_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::NetConnect.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::NetConnect.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::NetConnect.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::NetConnect.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::NetConnect.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::MonoNetConnect.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::NetConnect.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::MonoNetConnect.Resource.Style.Base_ThemeOverlay_AppCompat = global::NetConnect.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::MonoNetConnect.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::NetConnect.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::MonoNetConnect.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::NetConnect.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::MonoNetConnect.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::NetConnect.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::MonoNetConnect.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::NetConnect.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::NetConnect.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::MonoNetConnect.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::NetConnect.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::NetConnect.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::NetConnect.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog = global::NetConnect.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::NetConnect.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::MonoNetConnect.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::NetConnect.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::MonoNetConnect.Resource.Style.Base_V21_Theme_AppCompat = global::NetConnect.Resource.Style.Base_V21_Theme_AppCompat;
+			global::MonoNetConnect.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::NetConnect.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_V21_Theme_AppCompat_Light = global::NetConnect.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::NetConnect.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::NetConnect.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_V22_Theme_AppCompat = global::NetConnect.Resource.Style.Base_V22_Theme_AppCompat;
+			global::MonoNetConnect.Resource.Style.Base_V22_Theme_AppCompat_Light = global::NetConnect.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Base_V23_Theme_AppCompat = global::NetConnect.Resource.Style.Base_V23_Theme_AppCompat;
+			global::MonoNetConnect.Resource.Style.Base_V23_Theme_AppCompat_Light = global::NetConnect.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Base_V7_Theme_AppCompat = global::NetConnect.Resource.Style.Base_V7_Theme_AppCompat;
+			global::MonoNetConnect.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::NetConnect.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_V7_Theme_AppCompat_Light = global::NetConnect.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::NetConnect.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::NetConnect.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::MonoNetConnect.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::NetConnect.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::MonoNetConnect.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::NetConnect.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ActionBar = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ActionButton = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ActionMode = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::NetConnect.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Button = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Button;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Button_Small = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::NetConnect.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::NetConnect.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::NetConnect.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::NetConnect.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::NetConnect.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::NetConnect.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_EditText = global::NetConnect.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ImageButton = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ListView = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::NetConnect.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::NetConnect.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::NetConnect.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::NetConnect.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_RatingBar = global::NetConnect.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::NetConnect.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::NetConnect.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_SearchView = global::NetConnect.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::NetConnect.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_SeekBar = global::NetConnect.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::NetConnect.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Spinner = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::NetConnect.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Toolbar = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::MonoNetConnect.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::NetConnect.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::MonoNetConnect.Resource.Style.Base_Widget_Design_AppBarLayout = global::NetConnect.Resource.Style.Base_Widget_Design_AppBarLayout;
+			global::MonoNetConnect.Resource.Style.Base_Widget_Design_TabLayout = global::NetConnect.Resource.Style.Base_Widget_Design_TabLayout;
+			global::MonoNetConnect.Resource.Style.Platform_AppCompat = global::NetConnect.Resource.Style.Platform_AppCompat;
+			global::MonoNetConnect.Resource.Style.Platform_AppCompat_Light = global::NetConnect.Resource.Style.Platform_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Platform_ThemeOverlay_AppCompat = global::NetConnect.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::MonoNetConnect.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::NetConnect.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::MonoNetConnect.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::NetConnect.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Platform_V11_AppCompat = global::NetConnect.Resource.Style.Platform_V11_AppCompat;
+			global::MonoNetConnect.Resource.Style.Platform_V11_AppCompat_Light = global::NetConnect.Resource.Style.Platform_V11_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Platform_V14_AppCompat = global::NetConnect.Resource.Style.Platform_V14_AppCompat;
+			global::MonoNetConnect.Resource.Style.Platform_V14_AppCompat_Light = global::NetConnect.Resource.Style.Platform_V14_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Platform_Widget_AppCompat_Spinner = global::NetConnect.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::MonoNetConnect.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::NetConnect.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::MonoNetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::NetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::MonoNetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::NetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::MonoNetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::NetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::MonoNetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::NetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::MonoNetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::NetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::MonoNetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::NetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::MonoNetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::NetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::MonoNetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::NetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::MonoNetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::NetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::MonoNetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::NetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::MonoNetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::NetConnect.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::MonoNetConnect.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::NetConnect.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::MonoNetConnect.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::NetConnect.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat = global::NetConnect.Resource.Style.TextAppearance_AppCompat;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Body1 = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Body2 = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Button = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Button;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Caption = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Display1 = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Display2 = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Display3 = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Display4 = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Headline = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Inverse = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Large = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Large;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Medium = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Menu = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::NetConnect.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::NetConnect.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Small = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Small;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Subhead = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Title = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Title;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::MonoNetConnect.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::NetConnect.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::MonoNetConnect.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::NetConnect.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::MonoNetConnect.Resource.Style.TextAppearance_Design_Counter = global::NetConnect.Resource.Style.TextAppearance_Design_Counter;
+			global::MonoNetConnect.Resource.Style.TextAppearance_Design_Counter_Overflow = global::NetConnect.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::MonoNetConnect.Resource.Style.TextAppearance_Design_Error = global::NetConnect.Resource.Style.TextAppearance_Design_Error;
+			global::MonoNetConnect.Resource.Style.TextAppearance_Design_Hint = global::NetConnect.Resource.Style.TextAppearance_Design_Hint;
+			global::MonoNetConnect.Resource.Style.TextAppearance_Design_Snackbar_Message = global::NetConnect.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::MonoNetConnect.Resource.Style.TextAppearance_Design_Tab = global::NetConnect.Resource.Style.TextAppearance_Design_Tab;
+			global::MonoNetConnect.Resource.Style.TextAppearance_StatusBar_EventContent = global::NetConnect.Resource.Style.TextAppearance_StatusBar_EventContent;
+			global::MonoNetConnect.Resource.Style.TextAppearance_StatusBar_EventContent_Info = global::NetConnect.Resource.Style.TextAppearance_StatusBar_EventContent_Info;
+			global::MonoNetConnect.Resource.Style.TextAppearance_StatusBar_EventContent_Line2 = global::NetConnect.Resource.Style.TextAppearance_StatusBar_EventContent_Line2;
+			global::MonoNetConnect.Resource.Style.TextAppearance_StatusBar_EventContent_Time = global::NetConnect.Resource.Style.TextAppearance_StatusBar_EventContent_Time;
+			global::MonoNetConnect.Resource.Style.TextAppearance_StatusBar_EventContent_Title = global::NetConnect.Resource.Style.TextAppearance_StatusBar_EventContent_Title;
+			global::MonoNetConnect.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::NetConnect.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::MonoNetConnect.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::NetConnect.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::MonoNetConnect.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::NetConnect.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat = global::NetConnect.Resource.Style.Theme_AppCompat;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_CompactMenu = global::NetConnect.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_DayNight = global::NetConnect.Resource.Style.Theme_AppCompat_DayNight;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::NetConnect.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::NetConnect.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::NetConnect.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::NetConnect.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::NetConnect.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::NetConnect.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_Dialog = global::NetConnect.Resource.Style.Theme_AppCompat_Dialog;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_Dialog_Alert = global::NetConnect.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::NetConnect.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::NetConnect.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_Light = global::NetConnect.Resource.Style.Theme_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::NetConnect.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_Light_Dialog = global::NetConnect.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::NetConnect.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::NetConnect.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::NetConnect.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::NetConnect.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::MonoNetConnect.Resource.Style.Theme_AppCompat_NoActionBar = global::NetConnect.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::MonoNetConnect.Resource.Style.Theme_Design = global::NetConnect.Resource.Style.Theme_Design;
+			global::MonoNetConnect.Resource.Style.Theme_Design_BottomSheetDialog = global::NetConnect.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::MonoNetConnect.Resource.Style.Theme_Design_Light = global::NetConnect.Resource.Style.Theme_Design_Light;
+			global::MonoNetConnect.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::NetConnect.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::MonoNetConnect.Resource.Style.Theme_Design_Light_NoActionBar = global::NetConnect.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::MonoNetConnect.Resource.Style.Theme_Design_NoActionBar = global::NetConnect.Resource.Style.Theme_Design_NoActionBar;
+			global::MonoNetConnect.Resource.Style.ThemeOverlay_AppCompat = global::NetConnect.Resource.Style.ThemeOverlay_AppCompat;
+			global::MonoNetConnect.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::NetConnect.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::MonoNetConnect.Resource.Style.ThemeOverlay_AppCompat_Dark = global::NetConnect.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::MonoNetConnect.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::NetConnect.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::MonoNetConnect.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::NetConnect.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::MonoNetConnect.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::NetConnect.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::MonoNetConnect.Resource.Style.ThemeOverlay_AppCompat_Light = global::NetConnect.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ActionBar = global::NetConnect.Resource.Style.Widget_AppCompat_ActionBar;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::NetConnect.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::NetConnect.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::NetConnect.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::NetConnect.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ActionButton = global::NetConnect.Resource.Style.Widget_AppCompat_ActionButton;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::NetConnect.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::NetConnect.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ActionMode = global::NetConnect.Resource.Style.Widget_AppCompat_ActionMode;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ActivityChooserView = global::NetConnect.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::NetConnect.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Button = global::NetConnect.Resource.Style.Widget_AppCompat_Button;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Button_Borderless = global::NetConnect.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::NetConnect.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::NetConnect.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Button_Colored = global::NetConnect.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Button_Small = global::NetConnect.Resource.Style.Widget_AppCompat_Button_Small;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ButtonBar = global::NetConnect.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::NetConnect.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::NetConnect.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::NetConnect.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::NetConnect.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::NetConnect.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::NetConnect.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_EditText = global::NetConnect.Resource.Style.Widget_AppCompat_EditText;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ImageButton = global::NetConnect.Resource.Style.Widget_AppCompat_ImageButton;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionButton = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::NetConnect.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::NetConnect.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::NetConnect.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::NetConnect.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::NetConnect.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_SearchView = global::NetConnect.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::NetConnect.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ListMenuView = global::NetConnect.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ListPopupWindow = global::NetConnect.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ListView = global::NetConnect.Resource.Style.Widget_AppCompat_ListView;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ListView_DropDown = global::NetConnect.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ListView_Menu = global::NetConnect.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_PopupMenu = global::NetConnect.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::NetConnect.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_PopupWindow = global::NetConnect.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ProgressBar = global::NetConnect.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::NetConnect.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_RatingBar = global::NetConnect.Resource.Style.Widget_AppCompat_RatingBar;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::NetConnect.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_RatingBar_Small = global::NetConnect.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_SearchView = global::NetConnect.Resource.Style.Widget_AppCompat_SearchView;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::NetConnect.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_SeekBar = global::NetConnect.Resource.Style.Widget_AppCompat_SeekBar;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::NetConnect.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Spinner = global::NetConnect.Resource.Style.Widget_AppCompat_Spinner;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::NetConnect.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::NetConnect.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::NetConnect.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::NetConnect.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Toolbar = global::NetConnect.Resource.Style.Widget_AppCompat_Toolbar;
+			global::MonoNetConnect.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::NetConnect.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::MonoNetConnect.Resource.Style.Widget_Design_AppBarLayout = global::NetConnect.Resource.Style.Widget_Design_AppBarLayout;
+			global::MonoNetConnect.Resource.Style.Widget_Design_BottomSheet_Modal = global::NetConnect.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::MonoNetConnect.Resource.Style.Widget_Design_CollapsingToolbar = global::NetConnect.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::MonoNetConnect.Resource.Style.Widget_Design_CoordinatorLayout = global::NetConnect.Resource.Style.Widget_Design_CoordinatorLayout;
+			global::MonoNetConnect.Resource.Style.Widget_Design_FloatingActionButton = global::NetConnect.Resource.Style.Widget_Design_FloatingActionButton;
+			global::MonoNetConnect.Resource.Style.Widget_Design_NavigationView = global::NetConnect.Resource.Style.Widget_Design_NavigationView;
+			global::MonoNetConnect.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::NetConnect.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::MonoNetConnect.Resource.Style.Widget_Design_Snackbar = global::NetConnect.Resource.Style.Widget_Design_Snackbar;
+			global::MonoNetConnect.Resource.Style.Widget_Design_TabLayout = global::NetConnect.Resource.Style.Widget_Design_TabLayout;
+			global::MonoNetConnect.Resource.Style.Widget_Design_TextInputLayout = global::NetConnect.Resource.Style.Widget_Design_TextInputLayout;
+			global::MonoNetConnect.Resource.Styleable.ActionBar = global::NetConnect.Resource.Styleable.ActionBar;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_background = global::NetConnect.Resource.Styleable.ActionBar_background;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_backgroundSplit = global::NetConnect.Resource.Styleable.ActionBar_backgroundSplit;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_backgroundStacked = global::NetConnect.Resource.Styleable.ActionBar_backgroundStacked;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_contentInsetEnd = global::NetConnect.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::NetConnect.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_contentInsetLeft = global::NetConnect.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_contentInsetRight = global::NetConnect.Resource.Styleable.ActionBar_contentInsetRight;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_contentInsetStart = global::NetConnect.Resource.Styleable.ActionBar_contentInsetStart;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::NetConnect.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_customNavigationLayout = global::NetConnect.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_displayOptions = global::NetConnect.Resource.Styleable.ActionBar_displayOptions;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_divider = global::NetConnect.Resource.Styleable.ActionBar_divider;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_elevation = global::NetConnect.Resource.Styleable.ActionBar_elevation;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_height = global::NetConnect.Resource.Styleable.ActionBar_height;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_hideOnContentScroll = global::NetConnect.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_homeAsUpIndicator = global::NetConnect.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_homeLayout = global::NetConnect.Resource.Styleable.ActionBar_homeLayout;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_icon = global::NetConnect.Resource.Styleable.ActionBar_icon;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::NetConnect.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_itemPadding = global::NetConnect.Resource.Styleable.ActionBar_itemPadding;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_logo = global::NetConnect.Resource.Styleable.ActionBar_logo;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_navigationMode = global::NetConnect.Resource.Styleable.ActionBar_navigationMode;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_popupTheme = global::NetConnect.Resource.Styleable.ActionBar_popupTheme;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_progressBarPadding = global::NetConnect.Resource.Styleable.ActionBar_progressBarPadding;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_progressBarStyle = global::NetConnect.Resource.Styleable.ActionBar_progressBarStyle;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_subtitle = global::NetConnect.Resource.Styleable.ActionBar_subtitle;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_subtitleTextStyle = global::NetConnect.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_title = global::NetConnect.Resource.Styleable.ActionBar_title;
+			global::MonoNetConnect.Resource.Styleable.ActionBar_titleTextStyle = global::NetConnect.Resource.Styleable.ActionBar_titleTextStyle;
+			global::MonoNetConnect.Resource.Styleable.ActionBarLayout = global::NetConnect.Resource.Styleable.ActionBarLayout;
+			global::MonoNetConnect.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::NetConnect.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::MonoNetConnect.Resource.Styleable.ActionMenuItemView = global::NetConnect.Resource.Styleable.ActionMenuItemView;
+			global::MonoNetConnect.Resource.Styleable.ActionMenuItemView_android_minWidth = global::NetConnect.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::MonoNetConnect.Resource.Styleable.ActionMenuView = global::NetConnect.Resource.Styleable.ActionMenuView;
+			global::MonoNetConnect.Resource.Styleable.ActionMode = global::NetConnect.Resource.Styleable.ActionMode;
+			global::MonoNetConnect.Resource.Styleable.ActionMode_background = global::NetConnect.Resource.Styleable.ActionMode_background;
+			global::MonoNetConnect.Resource.Styleable.ActionMode_backgroundSplit = global::NetConnect.Resource.Styleable.ActionMode_backgroundSplit;
+			global::MonoNetConnect.Resource.Styleable.ActionMode_closeItemLayout = global::NetConnect.Resource.Styleable.ActionMode_closeItemLayout;
+			global::MonoNetConnect.Resource.Styleable.ActionMode_height = global::NetConnect.Resource.Styleable.ActionMode_height;
+			global::MonoNetConnect.Resource.Styleable.ActionMode_subtitleTextStyle = global::NetConnect.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::MonoNetConnect.Resource.Styleable.ActionMode_titleTextStyle = global::NetConnect.Resource.Styleable.ActionMode_titleTextStyle;
+			global::MonoNetConnect.Resource.Styleable.ActivityChooserView = global::NetConnect.Resource.Styleable.ActivityChooserView;
+			global::MonoNetConnect.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::NetConnect.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::MonoNetConnect.Resource.Styleable.ActivityChooserView_initialActivityCount = global::NetConnect.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::MonoNetConnect.Resource.Styleable.AlertDialog = global::NetConnect.Resource.Styleable.AlertDialog;
+			global::MonoNetConnect.Resource.Styleable.AlertDialog_android_layout = global::NetConnect.Resource.Styleable.AlertDialog_android_layout;
+			global::MonoNetConnect.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::NetConnect.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::MonoNetConnect.Resource.Styleable.AlertDialog_listItemLayout = global::NetConnect.Resource.Styleable.AlertDialog_listItemLayout;
+			global::MonoNetConnect.Resource.Styleable.AlertDialog_listLayout = global::NetConnect.Resource.Styleable.AlertDialog_listLayout;
+			global::MonoNetConnect.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::NetConnect.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::MonoNetConnect.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::NetConnect.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::MonoNetConnect.Resource.Styleable.AppBarLayout = global::NetConnect.Resource.Styleable.AppBarLayout;
+			global::MonoNetConnect.Resource.Styleable.AppBarLayout_android_background = global::NetConnect.Resource.Styleable.AppBarLayout_android_background;
+			global::MonoNetConnect.Resource.Styleable.AppBarLayout_elevation = global::NetConnect.Resource.Styleable.AppBarLayout_elevation;
+			global::MonoNetConnect.Resource.Styleable.AppBarLayout_expanded = global::NetConnect.Resource.Styleable.AppBarLayout_expanded;
+			global::MonoNetConnect.Resource.Styleable.AppBarLayoutStates = global::NetConnect.Resource.Styleable.AppBarLayoutStates;
+			global::MonoNetConnect.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::NetConnect.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::MonoNetConnect.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::NetConnect.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::MonoNetConnect.Resource.Styleable.AppBarLayout_Layout = global::NetConnect.Resource.Styleable.AppBarLayout_Layout;
+			global::MonoNetConnect.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::NetConnect.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::MonoNetConnect.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::NetConnect.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::MonoNetConnect.Resource.Styleable.AppCompatImageView = global::NetConnect.Resource.Styleable.AppCompatImageView;
+			global::MonoNetConnect.Resource.Styleable.AppCompatImageView_android_src = global::NetConnect.Resource.Styleable.AppCompatImageView_android_src;
+			global::MonoNetConnect.Resource.Styleable.AppCompatImageView_srcCompat = global::NetConnect.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::MonoNetConnect.Resource.Styleable.AppCompatSeekBar = global::NetConnect.Resource.Styleable.AppCompatSeekBar;
+			global::MonoNetConnect.Resource.Styleable.AppCompatSeekBar_android_thumb = global::NetConnect.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::MonoNetConnect.Resource.Styleable.AppCompatSeekBar_tickMark = global::NetConnect.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::MonoNetConnect.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::NetConnect.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::MonoNetConnect.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::NetConnect.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTextHelper = global::NetConnect.Resource.Styleable.AppCompatTextHelper;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::NetConnect.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::NetConnect.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::NetConnect.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::NetConnect.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::NetConnect.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::NetConnect.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::NetConnect.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTextView = global::NetConnect.Resource.Styleable.AppCompatTextView;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTextView_android_textAppearance = global::NetConnect.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTextView_textAllCaps = global::NetConnect.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme = global::NetConnect.Resource.Styleable.AppCompatTheme;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionBarDivider = global::NetConnect.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::NetConnect.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::NetConnect.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionBarSize = global::NetConnect.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionBarStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionBarTheme = global::NetConnect.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::NetConnect.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::NetConnect.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::NetConnect.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModeBackground = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModeStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::NetConnect.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::NetConnect.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::NetConnect.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::NetConnect.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_buttonStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::NetConnect.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_checkboxStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_colorAccent = global::NetConnect.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::NetConnect.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::NetConnect.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_colorControlActivated = global::NetConnect.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::NetConnect.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_colorControlNormal = global::NetConnect.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_colorPrimary = global::NetConnect.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::NetConnect.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::NetConnect.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_controlBackground = global::NetConnect.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::NetConnect.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_dialogTheme = global::NetConnect.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::NetConnect.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_dividerVertical = global::NetConnect.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::NetConnect.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_editTextBackground = global::NetConnect.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_editTextColor = global::NetConnect.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_editTextStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::NetConnect.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::NetConnect.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::NetConnect.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::NetConnect.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::NetConnect.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::NetConnect.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::NetConnect.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::NetConnect.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_panelBackground = global::NetConnect.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::NetConnect.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::NetConnect.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::NetConnect.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::NetConnect.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_searchViewStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_seekBarStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::NetConnect.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::NetConnect.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_spinnerStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_switchStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::NetConnect.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::NetConnect.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::NetConnect.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::NetConnect.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::NetConnect.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::NetConnect.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::NetConnect.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::NetConnect.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::NetConnect.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_toolbarStyle = global::NetConnect.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_windowActionBar = global::NetConnect.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::NetConnect.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::NetConnect.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::NetConnect.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::NetConnect.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::NetConnect.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::NetConnect.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::NetConnect.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::NetConnect.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::MonoNetConnect.Resource.Styleable.AppCompatTheme_windowNoTitle = global::NetConnect.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::MonoNetConnect.Resource.Styleable.BottomSheetBehavior_Layout = global::NetConnect.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::MonoNetConnect.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::NetConnect.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::MonoNetConnect.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::NetConnect.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::MonoNetConnect.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::NetConnect.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::MonoNetConnect.Resource.Styleable.ButtonBarLayout = global::NetConnect.Resource.Styleable.ButtonBarLayout;
+			global::MonoNetConnect.Resource.Styleable.ButtonBarLayout_allowStacking = global::NetConnect.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_title = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_Layout = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::MonoNetConnect.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::NetConnect.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::MonoNetConnect.Resource.Styleable.ColorStateListItem = global::NetConnect.Resource.Styleable.ColorStateListItem;
+			global::MonoNetConnect.Resource.Styleable.ColorStateListItem_alpha = global::NetConnect.Resource.Styleable.ColorStateListItem_alpha;
+			global::MonoNetConnect.Resource.Styleable.ColorStateListItem_android_alpha = global::NetConnect.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::MonoNetConnect.Resource.Styleable.ColorStateListItem_android_color = global::NetConnect.Resource.Styleable.ColorStateListItem_android_color;
+			global::MonoNetConnect.Resource.Styleable.CompoundButton = global::NetConnect.Resource.Styleable.CompoundButton;
+			global::MonoNetConnect.Resource.Styleable.CompoundButton_android_button = global::NetConnect.Resource.Styleable.CompoundButton_android_button;
+			global::MonoNetConnect.Resource.Styleable.CompoundButton_buttonTint = global::NetConnect.Resource.Styleable.CompoundButton_buttonTint;
+			global::MonoNetConnect.Resource.Styleable.CompoundButton_buttonTintMode = global::NetConnect.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::MonoNetConnect.Resource.Styleable.CoordinatorLayout = global::NetConnect.Resource.Styleable.CoordinatorLayout;
+			global::MonoNetConnect.Resource.Styleable.CoordinatorLayout_keylines = global::NetConnect.Resource.Styleable.CoordinatorLayout_keylines;
+			global::MonoNetConnect.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::NetConnect.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::MonoNetConnect.Resource.Styleable.CoordinatorLayout_Layout = global::NetConnect.Resource.Styleable.CoordinatorLayout_Layout;
+			global::MonoNetConnect.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::NetConnect.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::MonoNetConnect.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::NetConnect.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::MonoNetConnect.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::NetConnect.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::MonoNetConnect.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::NetConnect.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::MonoNetConnect.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::NetConnect.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::MonoNetConnect.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::NetConnect.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::MonoNetConnect.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::NetConnect.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::MonoNetConnect.Resource.Styleable.DesignTheme = global::NetConnect.Resource.Styleable.DesignTheme;
+			global::MonoNetConnect.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::NetConnect.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::MonoNetConnect.Resource.Styleable.DesignTheme_bottomSheetStyle = global::NetConnect.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::MonoNetConnect.Resource.Styleable.DesignTheme_textColorError = global::NetConnect.Resource.Styleable.DesignTheme_textColorError;
+			global::MonoNetConnect.Resource.Styleable.DrawerArrowToggle = global::NetConnect.Resource.Styleable.DrawerArrowToggle;
+			global::MonoNetConnect.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::NetConnect.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::MonoNetConnect.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::NetConnect.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::MonoNetConnect.Resource.Styleable.DrawerArrowToggle_barLength = global::NetConnect.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::MonoNetConnect.Resource.Styleable.DrawerArrowToggle_color = global::NetConnect.Resource.Styleable.DrawerArrowToggle_color;
+			global::MonoNetConnect.Resource.Styleable.DrawerArrowToggle_drawableSize = global::NetConnect.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::MonoNetConnect.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::NetConnect.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::MonoNetConnect.Resource.Styleable.DrawerArrowToggle_spinBars = global::NetConnect.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::MonoNetConnect.Resource.Styleable.DrawerArrowToggle_thickness = global::NetConnect.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::MonoNetConnect.Resource.Styleable.FloatingActionButton = global::NetConnect.Resource.Styleable.FloatingActionButton;
+			global::MonoNetConnect.Resource.Styleable.FloatingActionButton_backgroundTint = global::NetConnect.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::MonoNetConnect.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::NetConnect.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::MonoNetConnect.Resource.Styleable.FloatingActionButton_borderWidth = global::NetConnect.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::MonoNetConnect.Resource.Styleable.FloatingActionButton_elevation = global::NetConnect.Resource.Styleable.FloatingActionButton_elevation;
+			global::MonoNetConnect.Resource.Styleable.FloatingActionButton_fabSize = global::NetConnect.Resource.Styleable.FloatingActionButton_fabSize;
+			global::MonoNetConnect.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::NetConnect.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::MonoNetConnect.Resource.Styleable.FloatingActionButton_rippleColor = global::NetConnect.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::MonoNetConnect.Resource.Styleable.FloatingActionButton_useCompatPadding = global::NetConnect.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::MonoNetConnect.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::NetConnect.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::MonoNetConnect.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::NetConnect.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::MonoNetConnect.Resource.Styleable.ForegroundLinearLayout = global::NetConnect.Resource.Styleable.ForegroundLinearLayout;
+			global::MonoNetConnect.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::NetConnect.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::MonoNetConnect.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::NetConnect.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::MonoNetConnect.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::NetConnect.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat = global::NetConnect.Resource.Styleable.LinearLayoutCompat;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::NetConnect.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::NetConnect.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_android_gravity = global::NetConnect.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_android_orientation = global::NetConnect.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::NetConnect.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_divider = global::NetConnect.Resource.Styleable.LinearLayoutCompat_divider;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::NetConnect.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::NetConnect.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_showDividers = global::NetConnect.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_Layout = global::NetConnect.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::NetConnect.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::NetConnect.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::NetConnect.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::MonoNetConnect.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::NetConnect.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::MonoNetConnect.Resource.Styleable.ListPopupWindow = global::NetConnect.Resource.Styleable.ListPopupWindow;
+			global::MonoNetConnect.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::NetConnect.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::MonoNetConnect.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::NetConnect.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::MonoNetConnect.Resource.Styleable.MenuGroup = global::NetConnect.Resource.Styleable.MenuGroup;
+			global::MonoNetConnect.Resource.Styleable.MenuGroup_android_checkableBehavior = global::NetConnect.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::MonoNetConnect.Resource.Styleable.MenuGroup_android_enabled = global::NetConnect.Resource.Styleable.MenuGroup_android_enabled;
+			global::MonoNetConnect.Resource.Styleable.MenuGroup_android_id = global::NetConnect.Resource.Styleable.MenuGroup_android_id;
+			global::MonoNetConnect.Resource.Styleable.MenuGroup_android_menuCategory = global::NetConnect.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::MonoNetConnect.Resource.Styleable.MenuGroup_android_orderInCategory = global::NetConnect.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::MonoNetConnect.Resource.Styleable.MenuGroup_android_visible = global::NetConnect.Resource.Styleable.MenuGroup_android_visible;
+			global::MonoNetConnect.Resource.Styleable.MenuItem = global::NetConnect.Resource.Styleable.MenuItem;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_actionLayout = global::NetConnect.Resource.Styleable.MenuItem_actionLayout;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_actionProviderClass = global::NetConnect.Resource.Styleable.MenuItem_actionProviderClass;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_actionViewClass = global::NetConnect.Resource.Styleable.MenuItem_actionViewClass;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::NetConnect.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_checkable = global::NetConnect.Resource.Styleable.MenuItem_android_checkable;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_checked = global::NetConnect.Resource.Styleable.MenuItem_android_checked;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_enabled = global::NetConnect.Resource.Styleable.MenuItem_android_enabled;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_icon = global::NetConnect.Resource.Styleable.MenuItem_android_icon;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_id = global::NetConnect.Resource.Styleable.MenuItem_android_id;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_menuCategory = global::NetConnect.Resource.Styleable.MenuItem_android_menuCategory;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_numericShortcut = global::NetConnect.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_onClick = global::NetConnect.Resource.Styleable.MenuItem_android_onClick;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_orderInCategory = global::NetConnect.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_title = global::NetConnect.Resource.Styleable.MenuItem_android_title;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_titleCondensed = global::NetConnect.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_android_visible = global::NetConnect.Resource.Styleable.MenuItem_android_visible;
+			global::MonoNetConnect.Resource.Styleable.MenuItem_showAsAction = global::NetConnect.Resource.Styleable.MenuItem_showAsAction;
+			global::MonoNetConnect.Resource.Styleable.MenuView = global::NetConnect.Resource.Styleable.MenuView;
+			global::MonoNetConnect.Resource.Styleable.MenuView_android_headerBackground = global::NetConnect.Resource.Styleable.MenuView_android_headerBackground;
+			global::MonoNetConnect.Resource.Styleable.MenuView_android_horizontalDivider = global::NetConnect.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::MonoNetConnect.Resource.Styleable.MenuView_android_itemBackground = global::NetConnect.Resource.Styleable.MenuView_android_itemBackground;
+			global::MonoNetConnect.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::NetConnect.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::MonoNetConnect.Resource.Styleable.MenuView_android_itemTextAppearance = global::NetConnect.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.MenuView_android_verticalDivider = global::NetConnect.Resource.Styleable.MenuView_android_verticalDivider;
+			global::MonoNetConnect.Resource.Styleable.MenuView_android_windowAnimationStyle = global::NetConnect.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::MonoNetConnect.Resource.Styleable.MenuView_preserveIconSpacing = global::NetConnect.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::MonoNetConnect.Resource.Styleable.MenuView_subMenuArrow = global::NetConnect.Resource.Styleable.MenuView_subMenuArrow;
+			global::MonoNetConnect.Resource.Styleable.NavigationView = global::NetConnect.Resource.Styleable.NavigationView;
+			global::MonoNetConnect.Resource.Styleable.NavigationView_android_background = global::NetConnect.Resource.Styleable.NavigationView_android_background;
+			global::MonoNetConnect.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::NetConnect.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::MonoNetConnect.Resource.Styleable.NavigationView_android_maxWidth = global::NetConnect.Resource.Styleable.NavigationView_android_maxWidth;
+			global::MonoNetConnect.Resource.Styleable.NavigationView_elevation = global::NetConnect.Resource.Styleable.NavigationView_elevation;
+			global::MonoNetConnect.Resource.Styleable.NavigationView_headerLayout = global::NetConnect.Resource.Styleable.NavigationView_headerLayout;
+			global::MonoNetConnect.Resource.Styleable.NavigationView_itemBackground = global::NetConnect.Resource.Styleable.NavigationView_itemBackground;
+			global::MonoNetConnect.Resource.Styleable.NavigationView_itemIconTint = global::NetConnect.Resource.Styleable.NavigationView_itemIconTint;
+			global::MonoNetConnect.Resource.Styleable.NavigationView_itemTextAppearance = global::NetConnect.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.NavigationView_itemTextColor = global::NetConnect.Resource.Styleable.NavigationView_itemTextColor;
+			global::MonoNetConnect.Resource.Styleable.NavigationView_menu = global::NetConnect.Resource.Styleable.NavigationView_menu;
+			global::MonoNetConnect.Resource.Styleable.PopupWindow = global::NetConnect.Resource.Styleable.PopupWindow;
+			global::MonoNetConnect.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::NetConnect.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::MonoNetConnect.Resource.Styleable.PopupWindow_android_popupBackground = global::NetConnect.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::MonoNetConnect.Resource.Styleable.PopupWindow_overlapAnchor = global::NetConnect.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::MonoNetConnect.Resource.Styleable.PopupWindowBackgroundState = global::NetConnect.Resource.Styleable.PopupWindowBackgroundState;
+			global::MonoNetConnect.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::NetConnect.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::MonoNetConnect.Resource.Styleable.RecyclerView = global::NetConnect.Resource.Styleable.RecyclerView;
+			global::MonoNetConnect.Resource.Styleable.RecyclerView_android_descendantFocusability = global::NetConnect.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::MonoNetConnect.Resource.Styleable.RecyclerView_android_orientation = global::NetConnect.Resource.Styleable.RecyclerView_android_orientation;
+			global::MonoNetConnect.Resource.Styleable.RecyclerView_layoutManager = global::NetConnect.Resource.Styleable.RecyclerView_layoutManager;
+			global::MonoNetConnect.Resource.Styleable.RecyclerView_reverseLayout = global::NetConnect.Resource.Styleable.RecyclerView_reverseLayout;
+			global::MonoNetConnect.Resource.Styleable.RecyclerView_spanCount = global::NetConnect.Resource.Styleable.RecyclerView_spanCount;
+			global::MonoNetConnect.Resource.Styleable.RecyclerView_stackFromEnd = global::NetConnect.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::MonoNetConnect.Resource.Styleable.ScrimInsetsFrameLayout = global::NetConnect.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::MonoNetConnect.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::NetConnect.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::MonoNetConnect.Resource.Styleable.ScrollingViewBehavior_Layout = global::NetConnect.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::MonoNetConnect.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::NetConnect.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::MonoNetConnect.Resource.Styleable.SearchView = global::NetConnect.Resource.Styleable.SearchView;
+			global::MonoNetConnect.Resource.Styleable.SearchView_android_focusable = global::NetConnect.Resource.Styleable.SearchView_android_focusable;
+			global::MonoNetConnect.Resource.Styleable.SearchView_android_imeOptions = global::NetConnect.Resource.Styleable.SearchView_android_imeOptions;
+			global::MonoNetConnect.Resource.Styleable.SearchView_android_inputType = global::NetConnect.Resource.Styleable.SearchView_android_inputType;
+			global::MonoNetConnect.Resource.Styleable.SearchView_android_maxWidth = global::NetConnect.Resource.Styleable.SearchView_android_maxWidth;
+			global::MonoNetConnect.Resource.Styleable.SearchView_closeIcon = global::NetConnect.Resource.Styleable.SearchView_closeIcon;
+			global::MonoNetConnect.Resource.Styleable.SearchView_commitIcon = global::NetConnect.Resource.Styleable.SearchView_commitIcon;
+			global::MonoNetConnect.Resource.Styleable.SearchView_defaultQueryHint = global::NetConnect.Resource.Styleable.SearchView_defaultQueryHint;
+			global::MonoNetConnect.Resource.Styleable.SearchView_goIcon = global::NetConnect.Resource.Styleable.SearchView_goIcon;
+			global::MonoNetConnect.Resource.Styleable.SearchView_iconifiedByDefault = global::NetConnect.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::MonoNetConnect.Resource.Styleable.SearchView_layout = global::NetConnect.Resource.Styleable.SearchView_layout;
+			global::MonoNetConnect.Resource.Styleable.SearchView_queryBackground = global::NetConnect.Resource.Styleable.SearchView_queryBackground;
+			global::MonoNetConnect.Resource.Styleable.SearchView_queryHint = global::NetConnect.Resource.Styleable.SearchView_queryHint;
+			global::MonoNetConnect.Resource.Styleable.SearchView_searchHintIcon = global::NetConnect.Resource.Styleable.SearchView_searchHintIcon;
+			global::MonoNetConnect.Resource.Styleable.SearchView_searchIcon = global::NetConnect.Resource.Styleable.SearchView_searchIcon;
+			global::MonoNetConnect.Resource.Styleable.SearchView_submitBackground = global::NetConnect.Resource.Styleable.SearchView_submitBackground;
+			global::MonoNetConnect.Resource.Styleable.SearchView_suggestionRowLayout = global::NetConnect.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::MonoNetConnect.Resource.Styleable.SearchView_voiceIcon = global::NetConnect.Resource.Styleable.SearchView_voiceIcon;
+			global::MonoNetConnect.Resource.Styleable.SnackbarLayout = global::NetConnect.Resource.Styleable.SnackbarLayout;
+			global::MonoNetConnect.Resource.Styleable.SnackbarLayout_android_maxWidth = global::NetConnect.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::MonoNetConnect.Resource.Styleable.SnackbarLayout_elevation = global::NetConnect.Resource.Styleable.SnackbarLayout_elevation;
+			global::MonoNetConnect.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::NetConnect.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::MonoNetConnect.Resource.Styleable.Spinner = global::NetConnect.Resource.Styleable.Spinner;
+			global::MonoNetConnect.Resource.Styleable.Spinner_android_dropDownWidth = global::NetConnect.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::MonoNetConnect.Resource.Styleable.Spinner_android_entries = global::NetConnect.Resource.Styleable.Spinner_android_entries;
+			global::MonoNetConnect.Resource.Styleable.Spinner_android_popupBackground = global::NetConnect.Resource.Styleable.Spinner_android_popupBackground;
+			global::MonoNetConnect.Resource.Styleable.Spinner_android_prompt = global::NetConnect.Resource.Styleable.Spinner_android_prompt;
+			global::MonoNetConnect.Resource.Styleable.Spinner_popupTheme = global::NetConnect.Resource.Styleable.Spinner_popupTheme;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat = global::NetConnect.Resource.Styleable.SwitchCompat;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_android_textOff = global::NetConnect.Resource.Styleable.SwitchCompat_android_textOff;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_android_textOn = global::NetConnect.Resource.Styleable.SwitchCompat_android_textOn;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_android_thumb = global::NetConnect.Resource.Styleable.SwitchCompat_android_thumb;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_showText = global::NetConnect.Resource.Styleable.SwitchCompat_showText;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_splitTrack = global::NetConnect.Resource.Styleable.SwitchCompat_splitTrack;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_switchMinWidth = global::NetConnect.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_switchPadding = global::NetConnect.Resource.Styleable.SwitchCompat_switchPadding;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_switchTextAppearance = global::NetConnect.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_thumbTextPadding = global::NetConnect.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_thumbTint = global::NetConnect.Resource.Styleable.SwitchCompat_thumbTint;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_thumbTintMode = global::NetConnect.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_track = global::NetConnect.Resource.Styleable.SwitchCompat_track;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_trackTint = global::NetConnect.Resource.Styleable.SwitchCompat_trackTint;
+			global::MonoNetConnect.Resource.Styleable.SwitchCompat_trackTintMode = global::NetConnect.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::MonoNetConnect.Resource.Styleable.TabItem = global::NetConnect.Resource.Styleable.TabItem;
+			global::MonoNetConnect.Resource.Styleable.TabItem_android_icon = global::NetConnect.Resource.Styleable.TabItem_android_icon;
+			global::MonoNetConnect.Resource.Styleable.TabItem_android_layout = global::NetConnect.Resource.Styleable.TabItem_android_layout;
+			global::MonoNetConnect.Resource.Styleable.TabItem_android_text = global::NetConnect.Resource.Styleable.TabItem_android_text;
+			global::MonoNetConnect.Resource.Styleable.TabLayout = global::NetConnect.Resource.Styleable.TabLayout;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabBackground = global::NetConnect.Resource.Styleable.TabLayout_tabBackground;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabContentStart = global::NetConnect.Resource.Styleable.TabLayout_tabContentStart;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabGravity = global::NetConnect.Resource.Styleable.TabLayout_tabGravity;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabIndicatorColor = global::NetConnect.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabIndicatorHeight = global::NetConnect.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabMaxWidth = global::NetConnect.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabMinWidth = global::NetConnect.Resource.Styleable.TabLayout_tabMinWidth;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabMode = global::NetConnect.Resource.Styleable.TabLayout_tabMode;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabPadding = global::NetConnect.Resource.Styleable.TabLayout_tabPadding;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabPaddingBottom = global::NetConnect.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabPaddingEnd = global::NetConnect.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabPaddingStart = global::NetConnect.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabPaddingTop = global::NetConnect.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabSelectedTextColor = global::NetConnect.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabTextAppearance = global::NetConnect.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.TabLayout_tabTextColor = global::NetConnect.Resource.Styleable.TabLayout_tabTextColor;
+			global::MonoNetConnect.Resource.Styleable.TextAppearance = global::NetConnect.Resource.Styleable.TextAppearance;
+			global::MonoNetConnect.Resource.Styleable.TextAppearance_android_shadowColor = global::NetConnect.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::MonoNetConnect.Resource.Styleable.TextAppearance_android_shadowDx = global::NetConnect.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::MonoNetConnect.Resource.Styleable.TextAppearance_android_shadowDy = global::NetConnect.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::MonoNetConnect.Resource.Styleable.TextAppearance_android_shadowRadius = global::NetConnect.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::MonoNetConnect.Resource.Styleable.TextAppearance_android_textColor = global::NetConnect.Resource.Styleable.TextAppearance_android_textColor;
+			global::MonoNetConnect.Resource.Styleable.TextAppearance_android_textSize = global::NetConnect.Resource.Styleable.TextAppearance_android_textSize;
+			global::MonoNetConnect.Resource.Styleable.TextAppearance_android_textStyle = global::NetConnect.Resource.Styleable.TextAppearance_android_textStyle;
+			global::MonoNetConnect.Resource.Styleable.TextAppearance_android_typeface = global::NetConnect.Resource.Styleable.TextAppearance_android_typeface;
+			global::MonoNetConnect.Resource.Styleable.TextAppearance_textAllCaps = global::NetConnect.Resource.Styleable.TextAppearance_textAllCaps;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout = global::NetConnect.Resource.Styleable.TextInputLayout;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_android_hint = global::NetConnect.Resource.Styleable.TextInputLayout_android_hint;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_android_textColorHint = global::NetConnect.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_counterEnabled = global::NetConnect.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_counterMaxLength = global::NetConnect.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::NetConnect.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_counterTextAppearance = global::NetConnect.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_errorEnabled = global::NetConnect.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_errorTextAppearance = global::NetConnect.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::NetConnect.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_hintEnabled = global::NetConnect.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_hintTextAppearance = global::NetConnect.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::NetConnect.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::NetConnect.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::NetConnect.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_passwordToggleTint = global::NetConnect.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::MonoNetConnect.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::NetConnect.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::MonoNetConnect.Resource.Styleable.Toolbar = global::NetConnect.Resource.Styleable.Toolbar;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_android_gravity = global::NetConnect.Resource.Styleable.Toolbar_android_gravity;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_android_minHeight = global::NetConnect.Resource.Styleable.Toolbar_android_minHeight;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_buttonGravity = global::NetConnect.Resource.Styleable.Toolbar_buttonGravity;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_collapseContentDescription = global::NetConnect.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_collapseIcon = global::NetConnect.Resource.Styleable.Toolbar_collapseIcon;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_contentInsetEnd = global::NetConnect.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::NetConnect.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_contentInsetLeft = global::NetConnect.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_contentInsetRight = global::NetConnect.Resource.Styleable.Toolbar_contentInsetRight;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_contentInsetStart = global::NetConnect.Resource.Styleable.Toolbar_contentInsetStart;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::NetConnect.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_logo = global::NetConnect.Resource.Styleable.Toolbar_logo;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_logoDescription = global::NetConnect.Resource.Styleable.Toolbar_logoDescription;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_maxButtonHeight = global::NetConnect.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_navigationContentDescription = global::NetConnect.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_navigationIcon = global::NetConnect.Resource.Styleable.Toolbar_navigationIcon;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_popupTheme = global::NetConnect.Resource.Styleable.Toolbar_popupTheme;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_subtitle = global::NetConnect.Resource.Styleable.Toolbar_subtitle;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_subtitleTextAppearance = global::NetConnect.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_subtitleTextColor = global::NetConnect.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_title = global::NetConnect.Resource.Styleable.Toolbar_title;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_titleMargin = global::NetConnect.Resource.Styleable.Toolbar_titleMargin;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_titleMarginBottom = global::NetConnect.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_titleMarginEnd = global::NetConnect.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_titleMarginStart = global::NetConnect.Resource.Styleable.Toolbar_titleMarginStart;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_titleMarginTop = global::NetConnect.Resource.Styleable.Toolbar_titleMarginTop;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_titleMargins = global::NetConnect.Resource.Styleable.Toolbar_titleMargins;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_titleTextAppearance = global::NetConnect.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::MonoNetConnect.Resource.Styleable.Toolbar_titleTextColor = global::NetConnect.Resource.Styleable.Toolbar_titleTextColor;
+			global::MonoNetConnect.Resource.Styleable.View = global::NetConnect.Resource.Styleable.View;
+			global::MonoNetConnect.Resource.Styleable.View_android_focusable = global::NetConnect.Resource.Styleable.View_android_focusable;
+			global::MonoNetConnect.Resource.Styleable.View_android_theme = global::NetConnect.Resource.Styleable.View_android_theme;
+			global::MonoNetConnect.Resource.Styleable.View_paddingEnd = global::NetConnect.Resource.Styleable.View_paddingEnd;
+			global::MonoNetConnect.Resource.Styleable.View_paddingStart = global::NetConnect.Resource.Styleable.View_paddingStart;
+			global::MonoNetConnect.Resource.Styleable.View_theme = global::NetConnect.Resource.Styleable.View_theme;
+			global::MonoNetConnect.Resource.Styleable.ViewBackgroundHelper = global::NetConnect.Resource.Styleable.ViewBackgroundHelper;
+			global::MonoNetConnect.Resource.Styleable.ViewBackgroundHelper_android_background = global::NetConnect.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::MonoNetConnect.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::NetConnect.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::MonoNetConnect.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::NetConnect.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::MonoNetConnect.Resource.Styleable.ViewStubCompat = global::NetConnect.Resource.Styleable.ViewStubCompat;
+			global::MonoNetConnect.Resource.Styleable.ViewStubCompat_android_id = global::NetConnect.Resource.Styleable.ViewStubCompat_android_id;
+			global::MonoNetConnect.Resource.Styleable.ViewStubCompat_android_inflatedId = global::NetConnect.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::MonoNetConnect.Resource.Styleable.ViewStubCompat_android_layout = global::NetConnect.Resource.Styleable.ViewStubCompat_android_layout;
 		}
 		
 		public partial class Animation
@@ -62,6 +1760,27 @@ namespace NetConnect
 			
 			// aapt resource value: 0x7f040009
 			public const int abc_slide_out_top = 2130968585;
+			
+			// aapt resource value: 0x7f04000a
+			public const int design_appbar_state_list_animator = 2130968586;
+			
+			// aapt resource value: 0x7f04000b
+			public const int design_bottom_sheet_slide_in = 2130968587;
+			
+			// aapt resource value: 0x7f04000c
+			public const int design_bottom_sheet_slide_out = 2130968588;
+			
+			// aapt resource value: 0x7f04000d
+			public const int design_fab_in = 2130968589;
+			
+			// aapt resource value: 0x7f04000e
+			public const int design_fab_out = 2130968590;
+			
+			// aapt resource value: 0x7f04000f
+			public const int design_snackbar_in = 2130968591;
+			
+			// aapt resource value: 0x7f040010
+			public const int design_snackbar_out = 2130968592;
 			
 			static Animation()
 			{
@@ -223,8 +1942,32 @@ namespace NetConnect
 			// aapt resource value: 0x7f0100aa
 			public const int barLength = 2130772138;
 			
+			// aapt resource value: 0x7f01010e
+			public const int behavior_autoHide = 2130772238;
+			
+			// aapt resource value: 0x7f0100eb
+			public const int behavior_hideable = 2130772203;
+			
+			// aapt resource value: 0x7f010117
+			public const int behavior_overlapTop = 2130772247;
+			
+			// aapt resource value: 0x7f0100ea
+			public const int behavior_peekHeight = 2130772202;
+			
+			// aapt resource value: 0x7f0100ec
+			public const int behavior_skipCollapsed = 2130772204;
+			
+			// aapt resource value: 0x7f01010c
+			public const int borderWidth = 2130772236;
+			
 			// aapt resource value: 0x7f010064
 			public const int borderlessButtonStyle = 2130772068;
+			
+			// aapt resource value: 0x7f010106
+			public const int bottomSheetDialogTheme = 2130772230;
+			
+			// aapt resource value: 0x7f010107
+			public const int bottomSheetStyle = 2130772231;
 			
 			// aapt resource value: 0x7f010061
 			public const int buttonBarButtonStyle = 2130772065;
@@ -277,6 +2020,12 @@ namespace NetConnect
 			// aapt resource value: 0x7f0100d9
 			public const int collapseIcon = 2130772185;
 			
+			// aapt resource value: 0x7f0100f9
+			public const int collapsedTitleGravity = 2130772217;
+			
+			// aapt resource value: 0x7f0100f3
+			public const int collapsedTitleTextAppearance = 2130772211;
+			
 			// aapt resource value: 0x7f0100a4
 			public const int color = 2130772132;
 			
@@ -328,8 +2077,23 @@ namespace NetConnect
 			// aapt resource value: 0x7f01001e
 			public const int contentInsetStartWithNavigation = 2130771998;
 			
+			// aapt resource value: 0x7f0100f4
+			public const int contentScrim = 2130772212;
+			
 			// aapt resource value: 0x7f010088
 			public const int controlBackground = 2130772104;
+			
+			// aapt resource value: 0x7f01012d
+			public const int counterEnabled = 2130772269;
+			
+			// aapt resource value: 0x7f01012e
+			public const int counterMaxLength = 2130772270;
+			
+			// aapt resource value: 0x7f010130
+			public const int counterOverflowTextAppearance = 2130772272;
+			
+			// aapt resource value: 0x7f01012f
+			public const int counterTextAppearance = 2130772271;
 			
 			// aapt resource value: 0x7f010013
 			public const int customNavigationLayout = 2130771987;
@@ -382,8 +2146,44 @@ namespace NetConnect
 			// aapt resource value: 0x7f010020
 			public const int elevation = 2130772000;
 			
+			// aapt resource value: 0x7f01012b
+			public const int errorEnabled = 2130772267;
+			
+			// aapt resource value: 0x7f01012c
+			public const int errorTextAppearance = 2130772268;
+			
 			// aapt resource value: 0x7f010024
 			public const int expandActivityOverflowButtonDrawable = 2130772004;
+			
+			// aapt resource value: 0x7f0100e5
+			public const int expanded = 2130772197;
+			
+			// aapt resource value: 0x7f0100fa
+			public const int expandedTitleGravity = 2130772218;
+			
+			// aapt resource value: 0x7f0100ed
+			public const int expandedTitleMargin = 2130772205;
+			
+			// aapt resource value: 0x7f0100f1
+			public const int expandedTitleMarginBottom = 2130772209;
+			
+			// aapt resource value: 0x7f0100f0
+			public const int expandedTitleMarginEnd = 2130772208;
+			
+			// aapt resource value: 0x7f0100ee
+			public const int expandedTitleMarginStart = 2130772206;
+			
+			// aapt resource value: 0x7f0100ef
+			public const int expandedTitleMarginTop = 2130772207;
+			
+			// aapt resource value: 0x7f0100f2
+			public const int expandedTitleTextAppearance = 2130772210;
+			
+			// aapt resource value: 0x7f01010a
+			public const int fabSize = 2130772234;
+			
+			// aapt resource value: 0x7f01010f
+			public const int foregroundInsidePadding = 2130772239;
 			
 			// aapt resource value: 0x7f0100a7
 			public const int gapBetweenBars = 2130772135;
@@ -391,11 +2191,23 @@ namespace NetConnect
 			// aapt resource value: 0x7f0100bc
 			public const int goIcon = 2130772156;
 			
+			// aapt resource value: 0x7f010115
+			public const int headerLayout = 2130772245;
+			
 			// aapt resource value: 0x7f010005
 			public const int height = 2130771973;
 			
 			// aapt resource value: 0x7f010019
 			public const int hideOnContentScroll = 2130771993;
+			
+			// aapt resource value: 0x7f010131
+			public const int hintAnimationEnabled = 2130772273;
+			
+			// aapt resource value: 0x7f01012a
+			public const int hintEnabled = 2130772266;
+			
+			// aapt resource value: 0x7f010129
+			public const int hintTextAppearance = 2130772265;
 			
 			// aapt resource value: 0x7f01005e
 			public const int homeAsUpIndicator = 2130772062;
@@ -418,17 +2230,65 @@ namespace NetConnect
 			// aapt resource value: 0x7f010023
 			public const int initialActivityCount = 2130772003;
 			
+			// aapt resource value: 0x7f010116
+			public const int insetForeground = 2130772246;
+			
 			// aapt resource value: 0x7f010006
 			public const int isLightTheme = 2130771974;
 			
+			// aapt resource value: 0x7f010113
+			public const int itemBackground = 2130772243;
+			
+			// aapt resource value: 0x7f010111
+			public const int itemIconTint = 2130772241;
+			
 			// aapt resource value: 0x7f010018
 			public const int itemPadding = 2130771992;
+			
+			// aapt resource value: 0x7f010114
+			public const int itemTextAppearance = 2130772244;
+			
+			// aapt resource value: 0x7f010112
+			public const int itemTextColor = 2130772242;
+			
+			// aapt resource value: 0x7f0100fe
+			public const int keylines = 2130772222;
 			
 			// aapt resource value: 0x7f0100b7
 			public const int layout = 2130772151;
 			
 			// aapt resource value: 0x7f010000
 			public const int layoutManager = 2130771968;
+			
+			// aapt resource value: 0x7f010101
+			public const int layout_anchor = 2130772225;
+			
+			// aapt resource value: 0x7f010103
+			public const int layout_anchorGravity = 2130772227;
+			
+			// aapt resource value: 0x7f010100
+			public const int layout_behavior = 2130772224;
+			
+			// aapt resource value: 0x7f0100fc
+			public const int layout_collapseMode = 2130772220;
+			
+			// aapt resource value: 0x7f0100fd
+			public const int layout_collapseParallaxMultiplier = 2130772221;
+			
+			// aapt resource value: 0x7f010105
+			public const int layout_dodgeInsetEdges = 2130772229;
+			
+			// aapt resource value: 0x7f010104
+			public const int layout_insetEdge = 2130772228;
+			
+			// aapt resource value: 0x7f010102
+			public const int layout_keyline = 2130772226;
+			
+			// aapt resource value: 0x7f0100e8
+			public const int layout_scrollFlags = 2130772200;
+			
+			// aapt resource value: 0x7f0100e9
+			public const int layout_scrollInterpolator = 2130772201;
 			
 			// aapt resource value: 0x7f01007f
 			public const int listChoiceBackgroundIndicator = 2130772095;
@@ -469,11 +2329,17 @@ namespace NetConnect
 			// aapt resource value: 0x7f0100dd
 			public const int logoDescription = 2130772189;
 			
+			// aapt resource value: 0x7f010118
+			public const int maxActionInlineWidth = 2130772248;
+			
 			// aapt resource value: 0x7f0100d7
 			public const int maxButtonHeight = 2130772183;
 			
 			// aapt resource value: 0x7f0100ac
 			public const int measureWithLargestChild = 2130772140;
+			
+			// aapt resource value: 0x7f010110
+			public const int menu = 2130772240;
 			
 			// aapt resource value: 0x7f010027
 			public const int multiChoiceItemLayout = 2130772007;
@@ -505,6 +2371,21 @@ namespace NetConnect
 			// aapt resource value: 0x7f01007d
 			public const int panelMenuListWidth = 2130772093;
 			
+			// aapt resource value: 0x7f010134
+			public const int passwordToggleContentDescription = 2130772276;
+			
+			// aapt resource value: 0x7f010133
+			public const int passwordToggleDrawable = 2130772275;
+			
+			// aapt resource value: 0x7f010132
+			public const int passwordToggleEnabled = 2130772274;
+			
+			// aapt resource value: 0x7f010135
+			public const int passwordToggleTint = 2130772277;
+			
+			// aapt resource value: 0x7f010136
+			public const int passwordToggleTintMode = 2130772278;
+			
 			// aapt resource value: 0x7f01006a
 			public const int popupMenuStyle = 2130772074;
 			
@@ -516,6 +2397,9 @@ namespace NetConnect
 			
 			// aapt resource value: 0x7f0100b3
 			public const int preserveIconSpacing = 2130772147;
+			
+			// aapt resource value: 0x7f01010b
+			public const int pressedTranslationZ = 2130772235;
 			
 			// aapt resource value: 0x7f010017
 			public const int progressBarPadding = 2130771991;
@@ -543,6 +2427,15 @@ namespace NetConnect
 			
 			// aapt resource value: 0x7f010002
 			public const int reverseLayout = 2130771970;
+			
+			// aapt resource value: 0x7f010109
+			public const int rippleColor = 2130772233;
+			
+			// aapt resource value: 0x7f0100f8
+			public const int scrimAnimationDuration = 2130772216;
+			
+			// aapt resource value: 0x7f0100f7
+			public const int scrimVisibleHeightTrigger = 2130772215;
 			
 			// aapt resource value: 0x7f0100be
 			public const int searchHintIcon = 2130772158;
@@ -598,6 +2491,18 @@ namespace NetConnect
 			// aapt resource value: 0x7f0100b6
 			public const int state_above_anchor = 2130772150;
 			
+			// aapt resource value: 0x7f0100e6
+			public const int state_collapsed = 2130772198;
+			
+			// aapt resource value: 0x7f0100e7
+			public const int state_collapsible = 2130772199;
+			
+			// aapt resource value: 0x7f0100ff
+			public const int statusBarBackground = 2130772223;
+			
+			// aapt resource value: 0x7f0100f5
+			public const int statusBarScrim = 2130772213;
+			
 			// aapt resource value: 0x7f0100b4
 			public const int subMenuArrow = 2130772148;
 			
@@ -631,6 +2536,54 @@ namespace NetConnect
 			// aapt resource value: 0x7f0100ca
 			public const int switchTextAppearance = 2130772170;
 			
+			// aapt resource value: 0x7f01011c
+			public const int tabBackground = 2130772252;
+			
+			// aapt resource value: 0x7f01011b
+			public const int tabContentStart = 2130772251;
+			
+			// aapt resource value: 0x7f01011e
+			public const int tabGravity = 2130772254;
+			
+			// aapt resource value: 0x7f010119
+			public const int tabIndicatorColor = 2130772249;
+			
+			// aapt resource value: 0x7f01011a
+			public const int tabIndicatorHeight = 2130772250;
+			
+			// aapt resource value: 0x7f010120
+			public const int tabMaxWidth = 2130772256;
+			
+			// aapt resource value: 0x7f01011f
+			public const int tabMinWidth = 2130772255;
+			
+			// aapt resource value: 0x7f01011d
+			public const int tabMode = 2130772253;
+			
+			// aapt resource value: 0x7f010128
+			public const int tabPadding = 2130772264;
+			
+			// aapt resource value: 0x7f010127
+			public const int tabPaddingBottom = 2130772263;
+			
+			// aapt resource value: 0x7f010126
+			public const int tabPaddingEnd = 2130772262;
+			
+			// aapt resource value: 0x7f010124
+			public const int tabPaddingStart = 2130772260;
+			
+			// aapt resource value: 0x7f010125
+			public const int tabPaddingTop = 2130772261;
+			
+			// aapt resource value: 0x7f010123
+			public const int tabSelectedTextColor = 2130772259;
+			
+			// aapt resource value: 0x7f010121
+			public const int tabTextAppearance = 2130772257;
+			
+			// aapt resource value: 0x7f010122
+			public const int tabTextColor = 2130772258;
+			
 			// aapt resource value: 0x7f01002e
 			public const int textAllCaps = 2130772014;
 			
@@ -657,6 +2610,9 @@ namespace NetConnect
 			
 			// aapt resource value: 0x7f01008e
 			public const int textColorAlertDialogListItem = 2130772110;
+			
+			// aapt resource value: 0x7f010108
+			public const int textColorError = 2130772232;
 			
 			// aapt resource value: 0x7f010071
 			public const int textColorSearchUrl = 2130772081;
@@ -688,6 +2644,9 @@ namespace NetConnect
 			// aapt resource value: 0x7f010007
 			public const int title = 2130771975;
 			
+			// aapt resource value: 0x7f0100fb
+			public const int titleEnabled = 2130772219;
+			
 			// aapt resource value: 0x7f0100d1
 			public const int titleMargin = 2130772177;
 			
@@ -715,6 +2674,9 @@ namespace NetConnect
 			// aapt resource value: 0x7f01000b
 			public const int titleTextStyle = 2130771979;
 			
+			// aapt resource value: 0x7f0100f6
+			public const int toolbarId = 2130772214;
+			
 			// aapt resource value: 0x7f010069
 			public const int toolbarNavigationButtonStyle = 2130772073;
 			
@@ -729,6 +2691,9 @@ namespace NetConnect
 			
 			// aapt resource value: 0x7f0100c8
 			public const int trackTintMode = 2130772168;
+			
+			// aapt resource value: 0x7f01010d
+			public const int useCompatPadding = 2130772237;
 			
 			// aapt resource value: 0x7f0100bf
 			public const int voiceIcon = 2130772159;
@@ -804,35 +2769,35 @@ namespace NetConnect
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0a003a
-			public const int abc_background_cache_hint_selector_material_dark = 2131361850;
+			// aapt resource value: 0x7f0a0044
+			public const int abc_background_cache_hint_selector_material_dark = 2131361860;
 			
-			// aapt resource value: 0x7f0a003b
-			public const int abc_background_cache_hint_selector_material_light = 2131361851;
+			// aapt resource value: 0x7f0a0045
+			public const int abc_background_cache_hint_selector_material_light = 2131361861;
 			
-			// aapt resource value: 0x7f0a003c
-			public const int abc_btn_colored_borderless_text_material = 2131361852;
+			// aapt resource value: 0x7f0a0046
+			public const int abc_btn_colored_borderless_text_material = 2131361862;
 			
-			// aapt resource value: 0x7f0a003d
-			public const int abc_color_highlight_material = 2131361853;
+			// aapt resource value: 0x7f0a0047
+			public const int abc_color_highlight_material = 2131361863;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int abc_input_method_navigation_guard = 2131361792;
 			
-			// aapt resource value: 0x7f0a003e
-			public const int abc_primary_text_disable_only_material_dark = 2131361854;
+			// aapt resource value: 0x7f0a0048
+			public const int abc_primary_text_disable_only_material_dark = 2131361864;
 			
-			// aapt resource value: 0x7f0a003f
-			public const int abc_primary_text_disable_only_material_light = 2131361855;
+			// aapt resource value: 0x7f0a0049
+			public const int abc_primary_text_disable_only_material_light = 2131361865;
 			
-			// aapt resource value: 0x7f0a0040
-			public const int abc_primary_text_material_dark = 2131361856;
+			// aapt resource value: 0x7f0a004a
+			public const int abc_primary_text_material_dark = 2131361866;
 			
-			// aapt resource value: 0x7f0a0041
-			public const int abc_primary_text_material_light = 2131361857;
+			// aapt resource value: 0x7f0a004b
+			public const int abc_primary_text_material_light = 2131361867;
 			
-			// aapt resource value: 0x7f0a0042
-			public const int abc_search_url_text = 2131361858;
+			// aapt resource value: 0x7f0a004c
+			public const int abc_search_url_text = 2131361868;
 			
 			// aapt resource value: 0x7f0a0001
 			public const int abc_search_url_text_normal = 2131361793;
@@ -843,32 +2808,32 @@ namespace NetConnect
 			// aapt resource value: 0x7f0a0003
 			public const int abc_search_url_text_selected = 2131361795;
 			
-			// aapt resource value: 0x7f0a0043
-			public const int abc_secondary_text_material_dark = 2131361859;
+			// aapt resource value: 0x7f0a004d
+			public const int abc_secondary_text_material_dark = 2131361869;
 			
-			// aapt resource value: 0x7f0a0044
-			public const int abc_secondary_text_material_light = 2131361860;
+			// aapt resource value: 0x7f0a004e
+			public const int abc_secondary_text_material_light = 2131361870;
 			
-			// aapt resource value: 0x7f0a0045
-			public const int abc_tint_btn_checkable = 2131361861;
+			// aapt resource value: 0x7f0a004f
+			public const int abc_tint_btn_checkable = 2131361871;
 			
-			// aapt resource value: 0x7f0a0046
-			public const int abc_tint_default = 2131361862;
+			// aapt resource value: 0x7f0a0050
+			public const int abc_tint_default = 2131361872;
 			
-			// aapt resource value: 0x7f0a0047
-			public const int abc_tint_edittext = 2131361863;
+			// aapt resource value: 0x7f0a0051
+			public const int abc_tint_edittext = 2131361873;
 			
-			// aapt resource value: 0x7f0a0048
-			public const int abc_tint_seek_thumb = 2131361864;
+			// aapt resource value: 0x7f0a0052
+			public const int abc_tint_seek_thumb = 2131361874;
 			
-			// aapt resource value: 0x7f0a0049
-			public const int abc_tint_spinner = 2131361865;
+			// aapt resource value: 0x7f0a0053
+			public const int abc_tint_spinner = 2131361875;
 			
-			// aapt resource value: 0x7f0a004a
-			public const int abc_tint_switch_thumb = 2131361866;
+			// aapt resource value: 0x7f0a0054
+			public const int abc_tint_switch_thumb = 2131361876;
 			
-			// aapt resource value: 0x7f0a004b
-			public const int abc_tint_switch_track = 2131361867;
+			// aapt resource value: 0x7f0a0055
+			public const int abc_tint_switch_track = 2131361877;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int accent_material_dark = 2131361796;
@@ -911,6 +2876,42 @@ namespace NetConnect
 			
 			// aapt resource value: 0x7f0a0011
 			public const int button_material_light = 2131361809;
+			
+			// aapt resource value: 0x7f0a0056
+			public const int design_error = 2131361878;
+			
+			// aapt resource value: 0x7f0a003a
+			public const int design_fab_shadow_end_color = 2131361850;
+			
+			// aapt resource value: 0x7f0a003b
+			public const int design_fab_shadow_mid_color = 2131361851;
+			
+			// aapt resource value: 0x7f0a003c
+			public const int design_fab_shadow_start_color = 2131361852;
+			
+			// aapt resource value: 0x7f0a003d
+			public const int design_fab_stroke_end_inner_color = 2131361853;
+			
+			// aapt resource value: 0x7f0a003e
+			public const int design_fab_stroke_end_outer_color = 2131361854;
+			
+			// aapt resource value: 0x7f0a003f
+			public const int design_fab_stroke_top_inner_color = 2131361855;
+			
+			// aapt resource value: 0x7f0a0040
+			public const int design_fab_stroke_top_outer_color = 2131361856;
+			
+			// aapt resource value: 0x7f0a0041
+			public const int design_snackbar_background_color = 2131361857;
+			
+			// aapt resource value: 0x7f0a0042
+			public const int design_textinput_error_color_dark = 2131361858;
+			
+			// aapt resource value: 0x7f0a0043
+			public const int design_textinput_error_color_light = 2131361859;
+			
+			// aapt resource value: 0x7f0a0057
+			public const int design_tint_password_toggle = 2131361879;
 			
 			// aapt resource value: 0x7f0a0012
 			public const int dim_foreground_disabled_material_dark = 2131361810;
@@ -1026,11 +3027,11 @@ namespace NetConnect
 			// aapt resource value: 0x7f0a0037
 			public const int switch_thumb_disabled_material_light = 2131361847;
 			
-			// aapt resource value: 0x7f0a004c
-			public const int switch_thumb_material_dark = 2131361868;
+			// aapt resource value: 0x7f0a0058
+			public const int switch_thumb_material_dark = 2131361880;
 			
-			// aapt resource value: 0x7f0a004d
-			public const int switch_thumb_material_light = 2131361869;
+			// aapt resource value: 0x7f0a0059
+			public const int switch_thumb_material_light = 2131361881;
 			
 			// aapt resource value: 0x7f0a0038
 			public const int switch_thumb_normal_material_dark = 2131361848;
@@ -1267,6 +3268,111 @@ namespace NetConnect
 			// aapt resource value: 0x7f050007
 			public const int abc_text_size_title_material_toolbar = 2131034119;
 			
+			// aapt resource value: 0x7f05005b
+			public const int design_appbar_elevation = 2131034203;
+			
+			// aapt resource value: 0x7f05005c
+			public const int design_bottom_navigation_active_item_max_width = 2131034204;
+			
+			// aapt resource value: 0x7f05005d
+			public const int design_bottom_navigation_active_text_size = 2131034205;
+			
+			// aapt resource value: 0x7f05005e
+			public const int design_bottom_navigation_height = 2131034206;
+			
+			// aapt resource value: 0x7f05005f
+			public const int design_bottom_navigation_item_max_width = 2131034207;
+			
+			// aapt resource value: 0x7f050060
+			public const int design_bottom_navigation_margin = 2131034208;
+			
+			// aapt resource value: 0x7f050061
+			public const int design_bottom_navigation_text_size = 2131034209;
+			
+			// aapt resource value: 0x7f050062
+			public const int design_bottom_sheet_modal_elevation = 2131034210;
+			
+			// aapt resource value: 0x7f050063
+			public const int design_bottom_sheet_peek_height_min = 2131034211;
+			
+			// aapt resource value: 0x7f050064
+			public const int design_fab_border_width = 2131034212;
+			
+			// aapt resource value: 0x7f050065
+			public const int design_fab_elevation = 2131034213;
+			
+			// aapt resource value: 0x7f050066
+			public const int design_fab_image_size = 2131034214;
+			
+			// aapt resource value: 0x7f050067
+			public const int design_fab_size_mini = 2131034215;
+			
+			// aapt resource value: 0x7f050068
+			public const int design_fab_size_normal = 2131034216;
+			
+			// aapt resource value: 0x7f050069
+			public const int design_fab_translation_z_pressed = 2131034217;
+			
+			// aapt resource value: 0x7f05006a
+			public const int design_navigation_elevation = 2131034218;
+			
+			// aapt resource value: 0x7f05006b
+			public const int design_navigation_icon_padding = 2131034219;
+			
+			// aapt resource value: 0x7f05006c
+			public const int design_navigation_icon_size = 2131034220;
+			
+			// aapt resource value: 0x7f050053
+			public const int design_navigation_max_width = 2131034195;
+			
+			// aapt resource value: 0x7f05006d
+			public const int design_navigation_padding_bottom = 2131034221;
+			
+			// aapt resource value: 0x7f05006e
+			public const int design_navigation_separator_vertical_padding = 2131034222;
+			
+			// aapt resource value: 0x7f050054
+			public const int design_snackbar_action_inline_max_width = 2131034196;
+			
+			// aapt resource value: 0x7f050055
+			public const int design_snackbar_background_corner_radius = 2131034197;
+			
+			// aapt resource value: 0x7f05006f
+			public const int design_snackbar_elevation = 2131034223;
+			
+			// aapt resource value: 0x7f050056
+			public const int design_snackbar_extra_spacing_horizontal = 2131034198;
+			
+			// aapt resource value: 0x7f050057
+			public const int design_snackbar_max_width = 2131034199;
+			
+			// aapt resource value: 0x7f050058
+			public const int design_snackbar_min_width = 2131034200;
+			
+			// aapt resource value: 0x7f050070
+			public const int design_snackbar_padding_horizontal = 2131034224;
+			
+			// aapt resource value: 0x7f050071
+			public const int design_snackbar_padding_vertical = 2131034225;
+			
+			// aapt resource value: 0x7f050059
+			public const int design_snackbar_padding_vertical_2lines = 2131034201;
+			
+			// aapt resource value: 0x7f050072
+			public const int design_snackbar_text_size = 2131034226;
+			
+			// aapt resource value: 0x7f050073
+			public const int design_tab_max_width = 2131034227;
+			
+			// aapt resource value: 0x7f05005a
+			public const int design_tab_scrollable_min_width = 2131034202;
+			
+			// aapt resource value: 0x7f050074
+			public const int design_tab_text_size = 2131034228;
+			
+			// aapt resource value: 0x7f050075
+			public const int design_tab_text_size_2line = 2131034229;
+			
 			// aapt resource value: 0x7f05004b
 			public const int disabled_alpha_material_dark = 2131034187;
 			
@@ -1291,17 +3397,17 @@ namespace NetConnect
 			// aapt resource value: 0x7f050002
 			public const int item_touch_helper_swipe_escape_velocity = 2131034114;
 			
-			// aapt resource value: 0x7f050056
-			public const int netcon_listView_Content_Text = 2131034198;
+			// aapt resource value: 0x7f050079
+			public const int netcon_listView_Content_Text = 2131034233;
 			
-			// aapt resource value: 0x7f050054
-			public const int netcon_listView_Header_Height = 2131034196;
+			// aapt resource value: 0x7f050077
+			public const int netcon_listView_Header_Height = 2131034231;
 			
-			// aapt resource value: 0x7f050055
-			public const int netcon_listView_Header_Text = 2131034197;
+			// aapt resource value: 0x7f050078
+			public const int netcon_listView_Header_Text = 2131034232;
 			
-			// aapt resource value: 0x7f050053
-			public const int netcon_listView_LayoutItem_Padding = 2131034195;
+			// aapt resource value: 0x7f050076
+			public const int netcon_listView_LayoutItem_Padding = 2131034230;
 			
 			// aapt resource value: 0x7f050050
 			public const int notification_large_icon_height = 2131034192;
@@ -1575,25 +3681,37 @@ namespace NetConnect
 			public const int abc_vector_test = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int divider = 2130837587;
+			public const int design_fab_background = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int ic_drawer = 2130837588;
+			public const int design_ic_visibility = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int icon = 2130837589;
+			public const int design_snackbar_background = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int logo = 2130837590;
-			
-			// aapt resource value: 0x7f020059
-			public const int notification_template_icon_bg = 2130837593;
+			public const int divider = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int OpenProfilIcon = 2130837591;
+			public const int ic_drawer = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int speedlink = 2130837592;
+			public const int icon = 2130837592;
+			
+			// aapt resource value: 0x7f020059
+			public const int logo = 2130837593;
+			
+			// aapt resource value: 0x7f02005a
+			public const int navigation_empty_icon = 2130837594;
+			
+			// aapt resource value: 0x7f02005d
+			public const int notification_template_icon_bg = 2130837597;
+			
+			// aapt resource value: 0x7f02005b
+			public const int OpenProfilIcon = 2130837595;
+			
+			// aapt resource value: 0x7f02005c
+			public const int speedlink = 2130837596;
 			
 			static Drawable()
 			{
@@ -1608,62 +3726,80 @@ namespace NetConnect
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f06005f
-			public const int Button = 2131099743;
-			
-			// aapt resource value: 0x7f060058
-			public const int CateringRoot = 2131099736;
-			
-			// aapt resource value: 0x7f06005d
-			public const int ContactRoot = 2131099741;
+			// aapt resource value: 0x7f060082
+			public const int Button = 2131099778;
 			
 			// aapt resource value: 0x7f06006f
-			public const int SponsoringDivider = 2131099759;
+			public const int CateringRoot = 2131099759;
 			
-			// aapt resource value: 0x7f060070
-			public const int SponsoringImage1 = 2131099760;
+			// aapt resource value: 0x7f060074
+			public const int ContactRoot = 2131099764;
 			
-			// aapt resource value: 0x7f060071
-			public const int SponsoringImage2 = 2131099761;
+			// aapt resource value: 0x7f060085
+			public const int NavigationMenuLowerContainer = 2131099781;
 			
-			// aapt resource value: 0x7f06006e
-			public const int SponsoringListView = 2131099758;
+			// aapt resource value: 0x7f060086
+			public const int NavigationMenuNavEntry1 = 2131099782;
 			
-			// aapt resource value: 0x7f06006d
-			public const int SponsoringRoot = 2131099757;
+			// aapt resource value: 0x7f060087
+			public const int NavigationMenuNavEntry2 = 2131099783;
+			
+			// aapt resource value: 0x7f060088
+			public const int NavigationMenuNavEntry3 = 2131099784;
+			
+			// aapt resource value: 0x7f060089
+			public const int NavigationMenuNavEntry4 = 2131099785;
+			
+			// aapt resource value: 0x7f060084
+			public const int NavigationMenuUpperContainer = 2131099780;
+			
+			// aapt resource value: 0x7f060099
+			public const int SponsoringDivider = 2131099801;
+			
+			// aapt resource value: 0x7f06009a
+			public const int SponsoringImage1 = 2131099802;
+			
+			// aapt resource value: 0x7f06009b
+			public const int SponsoringImage2 = 2131099803;
+			
+			// aapt resource value: 0x7f060098
+			public const int SponsoringListView = 2131099800;
+			
+			// aapt resource value: 0x7f060097
+			public const int SponsoringRoot = 2131099799;
+			
+			// aapt resource value: 0x7f06007f
+			public const int TexField = 2131099775;
+			
+			// aapt resource value: 0x7f06008a
+			public const int action0 = 2131099786;
 			
 			// aapt resource value: 0x7f06005e
-			public const int TexField = 2131099742;
-			
-			// aapt resource value: 0x7f060060
-			public const int action0 = 2131099744;
-			
-			// aapt resource value: 0x7f060046
-			public const int action_bar = 2131099718;
+			public const int action_bar = 2131099742;
 			
 			// aapt resource value: 0x7f060001
 			public const int action_bar_activity_content = 2131099649;
 			
-			// aapt resource value: 0x7f060045
-			public const int action_bar_container = 2131099717;
+			// aapt resource value: 0x7f06005d
+			public const int action_bar_container = 2131099741;
 			
-			// aapt resource value: 0x7f060041
-			public const int action_bar_root = 2131099713;
+			// aapt resource value: 0x7f060059
+			public const int action_bar_root = 2131099737;
 			
 			// aapt resource value: 0x7f060002
 			public const int action_bar_spinner = 2131099650;
 			
-			// aapt resource value: 0x7f060026
-			public const int action_bar_subtitle = 2131099686;
+			// aapt resource value: 0x7f06003e
+			public const int action_bar_subtitle = 2131099710;
 			
-			// aapt resource value: 0x7f060025
-			public const int action_bar_title = 2131099685;
+			// aapt resource value: 0x7f06003d
+			public const int action_bar_title = 2131099709;
 			
-			// aapt resource value: 0x7f060047
-			public const int action_context_bar = 2131099719;
+			// aapt resource value: 0x7f06005f
+			public const int action_context_bar = 2131099743;
 			
-			// aapt resource value: 0x7f060064
-			public const int action_divider = 2131099748;
+			// aapt resource value: 0x7f06008e
+			public const int action_divider = 2131099790;
 			
 			// aapt resource value: 0x7f060003
 			public const int action_menu_divider = 2131099651;
@@ -1671,149 +3807,224 @@ namespace NetConnect
 			// aapt resource value: 0x7f060004
 			public const int action_menu_presenter = 2131099652;
 			
-			// aapt resource value: 0x7f060043
-			public const int action_mode_bar = 2131099715;
+			// aapt resource value: 0x7f06005b
+			public const int action_mode_bar = 2131099739;
 			
-			// aapt resource value: 0x7f060042
-			public const int action_mode_bar_stub = 2131099714;
+			// aapt resource value: 0x7f06005a
+			public const int action_mode_bar_stub = 2131099738;
 			
-			// aapt resource value: 0x7f060027
-			public const int action_mode_close_button = 2131099687;
+			// aapt resource value: 0x7f06003f
+			public const int action_mode_close_button = 2131099711;
 			
-			// aapt resource value: 0x7f060028
-			public const int activity_chooser_view_content = 2131099688;
+			// aapt resource value: 0x7f060040
+			public const int activity_chooser_view_content = 2131099712;
 			
-			// aapt resource value: 0x7f060014
-			public const int add = 2131099668;
+			// aapt resource value: 0x7f060015
+			public const int add = 2131099669;
 			
-			// aapt resource value: 0x7f060034
-			public const int alertTitle = 2131099700;
+			// aapt resource value: 0x7f06004c
+			public const int alertTitle = 2131099724;
 			
-			// aapt resource value: 0x7f06001e
-			public const int always = 2131099678;
-			
-			// aapt resource value: 0x7f06001b
-			public const int beginning = 2131099675;
-			
-			// aapt resource value: 0x7f060023
-			public const int bottom = 2131099683;
-			
-			// aapt resource value: 0x7f06005c
-			public const int button1 = 2131099740;
-			
-			// aapt resource value: 0x7f06002f
-			public const int buttonPanel = 2131099695;
-			
-			// aapt resource value: 0x7f060061
-			public const int cancel_action = 2131099745;
-			
-			// aapt resource value: 0x7f06003d
-			public const int checkbox = 2131099709;
-			
-			// aapt resource value: 0x7f060067
-			public const int chronometer = 2131099751;
+			// aapt resource value: 0x7f060039
+			public const int all = 2131099705;
 			
 			// aapt resource value: 0x7f06001f
-			public const int collapseActionView = 2131099679;
-			
-			// aapt resource value: 0x7f060035
-			public const int contentPanel = 2131099701;
-			
-			// aapt resource value: 0x7f060056
-			public const int content_frame = 2131099734;
-			
-			// aapt resource value: 0x7f06003b
-			public const int custom = 2131099707;
-			
-			// aapt resource value: 0x7f06003a
-			public const int customPanel = 2131099706;
-			
-			// aapt resource value: 0x7f060044
-			public const int decor_content_parent = 2131099716;
+			public const int always = 2131099679;
 			
 			// aapt resource value: 0x7f06002b
-			public const int default_activity_button = 2131099691;
-			
-			// aapt resource value: 0x7f06000d
-			public const int disableHome = 2131099661;
-			
-			// aapt resource value: 0x7f060055
-			public const int drawer_layout = 2131099733;
-			
-			// aapt resource value: 0x7f060048
-			public const int edit_query = 2131099720;
+			public const int auto = 2131099691;
 			
 			// aapt resource value: 0x7f06001c
-			public const int end = 2131099676;
+			public const int beginning = 2131099676;
 			
-			// aapt resource value: 0x7f06006c
-			public const int end_padder = 2131099756;
+			// aapt resource value: 0x7f060024
+			public const int bottom = 2131099684;
 			
-			// aapt resource value: 0x7f060029
-			public const int expand_activities_button = 2131099689;
+			// aapt resource value: 0x7f060073
+			public const int button1 = 2131099763;
 			
-			// aapt resource value: 0x7f06003c
-			public const int expanded_menu = 2131099708;
+			// aapt resource value: 0x7f060047
+			public const int buttonPanel = 2131099719;
+			
+			// aapt resource value: 0x7f06008b
+			public const int cancel_action = 2131099787;
+			
+			// aapt resource value: 0x7f06002c
+			public const int center = 2131099692;
+			
+			// aapt resource value: 0x7f06002d
+			public const int center_horizontal = 2131099693;
+			
+			// aapt resource value: 0x7f06002e
+			public const int center_vertical = 2131099694;
+			
+			// aapt resource value: 0x7f060055
+			public const int checkbox = 2131099733;
+			
+			// aapt resource value: 0x7f060091
+			public const int chronometer = 2131099793;
+			
+			// aapt resource value: 0x7f060035
+			public const int clip_horizontal = 2131099701;
+			
+			// aapt resource value: 0x7f060036
+			public const int clip_vertical = 2131099702;
+			
+			// aapt resource value: 0x7f060020
+			public const int collapseActionView = 2131099680;
+			
+			// aapt resource value: 0x7f06004d
+			public const int contentPanel = 2131099725;
+			
+			// aapt resource value: 0x7f06006e
+			public const int content_frame = 2131099758;
+			
+			// aapt resource value: 0x7f060053
+			public const int custom = 2131099731;
+			
+			// aapt resource value: 0x7f060052
+			public const int customPanel = 2131099730;
+			
+			// aapt resource value: 0x7f06005c
+			public const int decor_content_parent = 2131099740;
+			
+			// aapt resource value: 0x7f060043
+			public const int default_activity_button = 2131099715;
+			
+			// aapt resource value: 0x7f060076
+			public const int design_bottom_sheet = 2131099766;
+			
+			// aapt resource value: 0x7f06007d
+			public const int design_menu_item_action_area = 2131099773;
+			
+			// aapt resource value: 0x7f06007c
+			public const int design_menu_item_action_area_stub = 2131099772;
+			
+			// aapt resource value: 0x7f06007b
+			public const int design_menu_item_text = 2131099771;
+			
+			// aapt resource value: 0x7f06007a
+			public const int design_navigation_view = 2131099770;
+			
+			// aapt resource value: 0x7f06000e
+			public const int disableHome = 2131099662;
+			
+			// aapt resource value: 0x7f06006d
+			public const int drawer_layout = 2131099757;
+			
+			// aapt resource value: 0x7f060060
+			public const int edit_query = 2131099744;
+			
+			// aapt resource value: 0x7f06001d
+			public const int end = 2131099677;
+			
+			// aapt resource value: 0x7f060096
+			public const int end_padder = 2131099798;
+			
+			// aapt resource value: 0x7f060026
+			public const int enterAlways = 2131099686;
+			
+			// aapt resource value: 0x7f060027
+			public const int enterAlwaysCollapsed = 2131099687;
+			
+			// aapt resource value: 0x7f060028
+			public const int exitUntilCollapsed = 2131099688;
+			
+			// aapt resource value: 0x7f060041
+			public const int expand_activities_button = 2131099713;
+			
+			// aapt resource value: 0x7f060054
+			public const int expanded_menu = 2131099732;
+			
+			// aapt resource value: 0x7f060037
+			public const int fill = 2131099703;
+			
+			// aapt resource value: 0x7f060038
+			public const int fill_horizontal = 2131099704;
+			
+			// aapt resource value: 0x7f06002f
+			public const int fill_vertical = 2131099695;
+			
+			// aapt resource value: 0x7f06003b
+			public const int @fixed = 2131099707;
 			
 			// aapt resource value: 0x7f060005
 			public const int home = 2131099653;
 			
-			// aapt resource value: 0x7f06000e
-			public const int homeAsUp = 2131099662;
+			// aapt resource value: 0x7f06000f
+			public const int homeAsUp = 2131099663;
 			
-			// aapt resource value: 0x7f06002d
-			public const int icon = 2131099693;
+			// aapt resource value: 0x7f060045
+			public const int icon = 2131099717;
 			
-			// aapt resource value: 0x7f060020
-			public const int ifRoom = 2131099680;
+			// aapt resource value: 0x7f060021
+			public const int ifRoom = 2131099681;
 			
-			// aapt resource value: 0x7f06002a
-			public const int image = 2131099690;
+			// aapt resource value: 0x7f060042
+			public const int image = 2131099714;
 			
-			// aapt resource value: 0x7f06006b
-			public const int info = 2131099755;
+			// aapt resource value: 0x7f060095
+			public const int info = 2131099797;
 			
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
 			
-			// aapt resource value: 0x7f060057
-			public const int left_drawer = 2131099735;
+			// aapt resource value: 0x7f060030
+			public const int left = 2131099696;
 			
-			// aapt resource value: 0x7f060065
-			public const int line1 = 2131099749;
+			// aapt resource value: 0x7f06008f
+			public const int line1 = 2131099791;
 			
-			// aapt resource value: 0x7f060069
-			public const int line3 = 2131099753;
+			// aapt resource value: 0x7f060093
+			public const int line3 = 2131099795;
 			
-			// aapt resource value: 0x7f06000a
-			public const int listMode = 2131099658;
-			
-			// aapt resource value: 0x7f06002c
-			public const int list_item = 2131099692;
-			
-			// aapt resource value: 0x7f060063
-			public const int media_actions = 2131099747;
-			
-			// aapt resource value: 0x7f06001d
-			public const int middle = 2131099677;
-			
-			// aapt resource value: 0x7f060015
-			public const int multiply = 2131099669;
-			
-			// aapt resource value: 0x7f060021
-			public const int never = 2131099681;
-			
-			// aapt resource value: 0x7f06000f
-			public const int none = 2131099663;
+			// aapt resource value: 0x7f060083
+			public const int listMenuItemView1 = 2131099779;
 			
 			// aapt resource value: 0x7f06000b
-			public const int normal = 2131099659;
+			public const int listMode = 2131099659;
 			
-			// aapt resource value: 0x7f060073
-			public const int openProfile = 2131099763;
+			// aapt resource value: 0x7f060044
+			public const int list_item = 2131099716;
 			
-			// aapt resource value: 0x7f060031
-			public const int parentPanel = 2131099697;
+			// aapt resource value: 0x7f06008d
+			public const int media_actions = 2131099789;
+			
+			// aapt resource value: 0x7f06001e
+			public const int middle = 2131099678;
+			
+			// aapt resource value: 0x7f06003a
+			public const int mini = 2131099706;
+			
+			// aapt resource value: 0x7f060016
+			public const int multiply = 2131099670;
+			
+			// aapt resource value: 0x7f060079
+			public const int navigation_header_container = 2131099769;
+			
+			// aapt resource value: 0x7f060081
+			public const int navigation_view = 2131099777;
+			
+			// aapt resource value: 0x7f060022
+			public const int never = 2131099682;
+			
+			// aapt resource value: 0x7f060010
+			public const int none = 2131099664;
+			
+			// aapt resource value: 0x7f06000c
+			public const int normal = 2131099660;
+			
+			// aapt resource value: 0x7f06009d
+			public const int openProfile = 2131099805;
+			
+			// aapt resource value: 0x7f060033
+			public const int parallax = 2131099699;
+			
+			// aapt resource value: 0x7f060049
+			public const int parentPanel = 2131099721;
+			
+			// aapt resource value: 0x7f060034
+			public const int pin = 2131099700;
 			
 			// aapt resource value: 0x7f060006
 			public const int progress_circular = 2131099654;
@@ -1821,140 +4032,173 @@ namespace NetConnect
 			// aapt resource value: 0x7f060007
 			public const int progress_horizontal = 2131099655;
 			
-			// aapt resource value: 0x7f06003f
-			public const int radio = 2131099711;
+			// aapt resource value: 0x7f060057
+			public const int radio = 2131099735;
 			
-			// aapt resource value: 0x7f060016
-			public const int screen = 2131099670;
+			// aapt resource value: 0x7f060031
+			public const int right = 2131099697;
 			
-			// aapt resource value: 0x7f060039
-			public const int scrollIndicatorDown = 2131099705;
+			// aapt resource value: 0x7f060017
+			public const int screen = 2131099671;
 			
-			// aapt resource value: 0x7f060036
-			public const int scrollIndicatorUp = 2131099702;
+			// aapt resource value: 0x7f060029
+			public const int scroll = 2131099689;
 			
-			// aapt resource value: 0x7f060037
-			public const int scrollView = 2131099703;
-			
-			// aapt resource value: 0x7f06004a
-			public const int search_badge = 2131099722;
-			
-			// aapt resource value: 0x7f060049
-			public const int search_bar = 2131099721;
-			
-			// aapt resource value: 0x7f06004b
-			public const int search_button = 2131099723;
-			
-			// aapt resource value: 0x7f060050
-			public const int search_close_btn = 2131099728;
-			
-			// aapt resource value: 0x7f06004c
-			public const int search_edit_frame = 2131099724;
-			
-			// aapt resource value: 0x7f060052
-			public const int search_go_btn = 2131099730;
-			
-			// aapt resource value: 0x7f06004d
-			public const int search_mag_icon = 2131099725;
+			// aapt resource value: 0x7f060051
+			public const int scrollIndicatorDown = 2131099729;
 			
 			// aapt resource value: 0x7f06004e
-			public const int search_plate = 2131099726;
+			public const int scrollIndicatorUp = 2131099726;
 			
 			// aapt resource value: 0x7f06004f
-			public const int search_src_text = 2131099727;
+			public const int scrollView = 2131099727;
 			
-			// aapt resource value: 0x7f060053
-			public const int search_voice_btn = 2131099731;
+			// aapt resource value: 0x7f06003c
+			public const int scrollable = 2131099708;
 			
-			// aapt resource value: 0x7f060054
-			public const int select_dialog_listview = 2131099732;
+			// aapt resource value: 0x7f060062
+			public const int search_badge = 2131099746;
 			
-			// aapt resource value: 0x7f060072
-			public const int separator = 2131099762;
+			// aapt resource value: 0x7f060061
+			public const int search_bar = 2131099745;
 			
-			// aapt resource value: 0x7f06003e
-			public const int shortcut = 2131099710;
+			// aapt resource value: 0x7f060063
+			public const int search_button = 2131099747;
 			
-			// aapt resource value: 0x7f060010
-			public const int showCustom = 2131099664;
+			// aapt resource value: 0x7f060068
+			public const int search_close_btn = 2131099752;
+			
+			// aapt resource value: 0x7f060064
+			public const int search_edit_frame = 2131099748;
+			
+			// aapt resource value: 0x7f06006a
+			public const int search_go_btn = 2131099754;
+			
+			// aapt resource value: 0x7f060065
+			public const int search_mag_icon = 2131099749;
+			
+			// aapt resource value: 0x7f060066
+			public const int search_plate = 2131099750;
+			
+			// aapt resource value: 0x7f060067
+			public const int search_src_text = 2131099751;
+			
+			// aapt resource value: 0x7f06006b
+			public const int search_voice_btn = 2131099755;
+			
+			// aapt resource value: 0x7f06006c
+			public const int select_dialog_listview = 2131099756;
+			
+			// aapt resource value: 0x7f06009c
+			public const int separator = 2131099804;
+			
+			// aapt resource value: 0x7f060056
+			public const int shortcut = 2131099734;
 			
 			// aapt resource value: 0x7f060011
-			public const int showHome = 2131099665;
+			public const int showCustom = 2131099665;
 			
 			// aapt resource value: 0x7f060012
-			public const int showTitle = 2131099666;
+			public const int showHome = 2131099666;
 			
-			// aapt resource value: 0x7f060030
-			public const int spacer = 2131099696;
+			// aapt resource value: 0x7f060013
+			public const int showTitle = 2131099667;
+			
+			// aapt resource value: 0x7f060078
+			public const int snackbar_action = 2131099768;
+			
+			// aapt resource value: 0x7f060077
+			public const int snackbar_text = 2131099767;
+			
+			// aapt resource value: 0x7f06002a
+			public const int snap = 2131099690;
+			
+			// aapt resource value: 0x7f060048
+			public const int spacer = 2131099720;
 			
 			// aapt resource value: 0x7f060008
 			public const int split_action_bar = 2131099656;
 			
-			// aapt resource value: 0x7f060017
-			public const int src_atop = 2131099671;
-			
 			// aapt resource value: 0x7f060018
-			public const int src_in = 2131099672;
+			public const int src_atop = 2131099672;
 			
 			// aapt resource value: 0x7f060019
-			public const int src_over = 2131099673;
+			public const int src_in = 2131099673;
 			
-			// aapt resource value: 0x7f060062
-			public const int status_bar_latest_event_content = 2131099746;
-			
-			// aapt resource value: 0x7f060040
-			public const int submenuarrow = 2131099712;
-			
-			// aapt resource value: 0x7f060051
-			public const int submit_area = 2131099729;
-			
-			// aapt resource value: 0x7f06000c
-			public const int tabMode = 2131099660;
-			
-			// aapt resource value: 0x7f060059
-			public const int tableLayout1 = 2131099737;
-			
-			// aapt resource value: 0x7f06005a
-			public const int tableRow1 = 2131099738;
-			
-			// aapt resource value: 0x7f06006a
-			public const int text = 2131099754;
-			
-			// aapt resource value: 0x7f060068
-			public const int text2 = 2131099752;
-			
-			// aapt resource value: 0x7f060038
-			public const int textSpacerNoButtons = 2131099704;
-			
-			// aapt resource value: 0x7f06005b
-			public const int textView1 = 2131099739;
-			
-			// aapt resource value: 0x7f060066
-			public const int time = 2131099750;
-			
-			// aapt resource value: 0x7f06002e
-			public const int title = 2131099694;
-			
-			// aapt resource value: 0x7f060033
-			public const int title_template = 2131099699;
-			
-			// aapt resource value: 0x7f060024
-			public const int top = 2131099684;
+			// aapt resource value: 0x7f06001a
+			public const int src_over = 2131099674;
 			
 			// aapt resource value: 0x7f060032
-			public const int topPanel = 2131099698;
+			public const int start = 2131099698;
+			
+			// aapt resource value: 0x7f06008c
+			public const int status_bar_latest_event_content = 2131099788;
+			
+			// aapt resource value: 0x7f060058
+			public const int submenuarrow = 2131099736;
+			
+			// aapt resource value: 0x7f060069
+			public const int submit_area = 2131099753;
+			
+			// aapt resource value: 0x7f06000d
+			public const int tabMode = 2131099661;
+			
+			// aapt resource value: 0x7f060070
+			public const int tableLayout1 = 2131099760;
+			
+			// aapt resource value: 0x7f060071
+			public const int tableRow1 = 2131099761;
+			
+			// aapt resource value: 0x7f060094
+			public const int text = 2131099796;
+			
+			// aapt resource value: 0x7f060092
+			public const int text2 = 2131099794;
+			
+			// aapt resource value: 0x7f060050
+			public const int textSpacerNoButtons = 2131099728;
+			
+			// aapt resource value: 0x7f060072
+			public const int textView1 = 2131099762;
+			
+			// aapt resource value: 0x7f06007e
+			public const int text_input_password_toggle = 2131099774;
+			
+			// aapt resource value: 0x7f060090
+			public const int time = 2131099792;
+			
+			// aapt resource value: 0x7f060046
+			public const int title = 2131099718;
+			
+			// aapt resource value: 0x7f06004b
+			public const int title_template = 2131099723;
+			
+			// aapt resource value: 0x7f060025
+			public const int top = 2131099685;
+			
+			// aapt resource value: 0x7f06004a
+			public const int topPanel = 2131099722;
+			
+			// aapt resource value: 0x7f060075
+			public const int touch_outside = 2131099765;
 			
 			// aapt resource value: 0x7f060009
 			public const int up = 2131099657;
 			
-			// aapt resource value: 0x7f060013
-			public const int useLogo = 2131099667;
+			// aapt resource value: 0x7f060014
+			public const int useLogo = 2131099668;
 			
-			// aapt resource value: 0x7f060022
-			public const int withText = 2131099682;
+			// aapt resource value: 0x7f06000a
+			public const int view_offset_helper = 2131099658;
 			
-			// aapt resource value: 0x7f06001a
-			public const int wrap_content = 2131099674;
+			// aapt resource value: 0x7f060080
+			public const int view_stub = 2131099776;
+			
+			// aapt resource value: 0x7f060023
+			public const int withText = 2131099683;
+			
+			// aapt resource value: 0x7f06001b
+			public const int wrap_content = 2131099675;
 			
 			static Id()
 			{
@@ -1975,8 +4219,17 @@ namespace NetConnect
 			// aapt resource value: 0x7f0b0001
 			public const int abc_config_activityShortDur = 2131427329;
 			
+			// aapt resource value: 0x7f0b0005
+			public const int app_bar_elevation_anim_duration = 2131427333;
+			
+			// aapt resource value: 0x7f0b0006
+			public const int bottom_sheet_slide_duration = 2131427334;
+			
 			// aapt resource value: 0x7f0b0002
 			public const int cancel_button_image_alpha = 2131427330;
+			
+			// aapt resource value: 0x7f0b0004
+			public const int design_snackbar_text_max_lines = 2131427332;
 			
 			// aapt resource value: 0x7f0b0003
 			public const int status_bar_notification_info_maxnum = 2131427331;
@@ -2082,52 +4335,97 @@ namespace NetConnect
 			public const int ContactLayout = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int DrawerListItem = 2130903069;
+			public const int design_bottom_sheet_dialog = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int Main = 2130903070;
+			public const int design_layout_snackbar = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int notification_media_action = 2130903071;
+			public const int design_layout_snackbar_include = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int notification_media_cancel_action = 2130903072;
+			public const int design_layout_tab_icon = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int notification_template_big_media = 2130903073;
+			public const int design_layout_tab_text = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int notification_template_big_media_narrow = 2130903074;
+			public const int design_menu_item_action_area = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int notification_template_lines = 2130903075;
+			public const int design_navigation_item = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int notification_template_media = 2130903076;
+			public const int design_navigation_item_header = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int notification_template_part_chronometer = 2130903077;
+			public const int design_navigation_item_separator = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int notification_template_part_time = 2130903078;
+			public const int design_navigation_item_subheader = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int select_dialog_item_material = 2130903079;
+			public const int design_navigation_menu = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int select_dialog_multichoice_material = 2130903080;
+			public const int design_navigation_menu_item = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int select_dialog_singlechoice_material = 2130903081;
+			public const int design_text_input_password_icon = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int SponsoringLayout = 2130903082;
+			public const int DrawerListItem = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int SponsoringListViewItem = 2130903083;
+			public const int LayoutBase = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int support_simple_spinner_dropdown_item = 2130903084;
+			public const int Main = 2130903084;
+			
+			// aapt resource value: 0x7f03002d
+			public const int NavigationMenu = 2130903085;
+			
+			// aapt resource value: 0x7f03002e
+			public const int notification_media_action = 2130903086;
+			
+			// aapt resource value: 0x7f03002f
+			public const int notification_media_cancel_action = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int notification_template_big_media = 2130903088;
+			
+			// aapt resource value: 0x7f030031
+			public const int notification_template_big_media_narrow = 2130903089;
+			
+			// aapt resource value: 0x7f030032
+			public const int notification_template_lines = 2130903090;
+			
+			// aapt resource value: 0x7f030033
+			public const int notification_template_media = 2130903091;
+			
+			// aapt resource value: 0x7f030034
+			public const int notification_template_part_chronometer = 2130903092;
+			
+			// aapt resource value: 0x7f030035
+			public const int notification_template_part_time = 2130903093;
+			
+			// aapt resource value: 0x7f030036
+			public const int select_dialog_item_material = 2130903094;
+			
+			// aapt resource value: 0x7f030037
+			public const int select_dialog_multichoice_material = 2130903095;
+			
+			// aapt resource value: 0x7f030038
+			public const int select_dialog_singlechoice_material = 2130903096;
+			
+			// aapt resource value: 0x7f030039
+			public const int SponsoringLayout = 2130903097;
+			
+			// aapt resource value: 0x7f03003a
+			public const int SponsoringListViewItem = 2130903098;
+			
+			// aapt resource value: 0x7f03003b
+			public const int support_simple_spinner_dropdown_item = 2130903099;
 			
 			static Layout()
 			{
@@ -2158,11 +4456,11 @@ namespace NetConnect
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070022
-			public const int ApplicationName = 2131165218;
+			// aapt resource value: 0x7f070025
+			public const int ApplicationName = 2131165221;
 			
-			// aapt resource value: 0x7f070021
-			public const int Hello = 2131165217;
+			// aapt resource value: 0x7f070024
+			public const int Hello = 2131165220;
 			
 			// aapt resource value: 0x7f070000
 			public const int abc_action_bar_home_description = 2131165184;
@@ -2257,35 +4555,44 @@ namespace NetConnect
 			// aapt resource value: 0x7f070012
 			public const int abc_toolbar_collapse_description = 2131165202;
 			
-			// aapt resource value: 0x7f070024
-			public const int drawerClosed = 2131165220;
+			// aapt resource value: 0x7f070021
+			public const int appbar_scrolling_view_behavior = 2131165217;
+			
+			// aapt resource value: 0x7f070022
+			public const int bottom_sheet_behavior = 2131165218;
 			
 			// aapt resource value: 0x7f070023
-			public const int drawerOpen = 2131165219;
-			
-			// aapt resource value: 0x7f070026
-			public const int netcon_Impressum_Angaben_Content = 2131165222;
-			
-			// aapt resource value: 0x7f070025
-			public const int netcon_Impressum_Angaben_Title = 2131165221;
-			
-			// aapt resource value: 0x7f07002a
-			public const int netcon_Impressum_Emails_Content_Info = 2131165226;
-			
-			// aapt resource value: 0x7f07002b
-			public const int netcon_Impressum_Emails_Content_Sponsoring = 2131165227;
-			
-			// aapt resource value: 0x7f07002c
-			public const int netcon_Impressum_Emails_Content_Webmaster = 2131165228;
-			
-			// aapt resource value: 0x7f070029
-			public const int netcon_Impressum_Emails_Title = 2131165225;
-			
-			// aapt resource value: 0x7f070028
-			public const int netcon_Impressum_Vertretung_Content = 2131165224;
+			public const int character_counter_pattern = 2131165219;
 			
 			// aapt resource value: 0x7f070027
-			public const int netcon_Impressum_Vertretung_Title = 2131165223;
+			public const int drawerClosed = 2131165223;
+			
+			// aapt resource value: 0x7f070026
+			public const int drawerOpen = 2131165222;
+			
+			// aapt resource value: 0x7f070029
+			public const int netcon_Impressum_Angaben_Content = 2131165225;
+			
+			// aapt resource value: 0x7f070028
+			public const int netcon_Impressum_Angaben_Title = 2131165224;
+			
+			// aapt resource value: 0x7f07002d
+			public const int netcon_Impressum_Emails_Content_Info = 2131165229;
+			
+			// aapt resource value: 0x7f07002e
+			public const int netcon_Impressum_Emails_Content_Sponsoring = 2131165230;
+			
+			// aapt resource value: 0x7f07002f
+			public const int netcon_Impressum_Emails_Content_Webmaster = 2131165231;
+			
+			// aapt resource value: 0x7f07002c
+			public const int netcon_Impressum_Emails_Title = 2131165228;
+			
+			// aapt resource value: 0x7f07002b
+			public const int netcon_Impressum_Vertretung_Content = 2131165227;
+			
+			// aapt resource value: 0x7f07002a
+			public const int netcon_Impressum_Vertretung_Title = 2131165226;
 			
 			// aapt resource value: 0x7f070013
 			public const int search_menu_title = 2131165203;
@@ -2317,6 +4624,9 @@ namespace NetConnect
 			
 			// aapt resource value: 0x7f08008d
 			public const int Animation_AppCompat_DropDownUp = 2131230861;
+			
+			// aapt resource value: 0x7f08014d
+			public const int Animation_Design_BottomSheetDialog = 2131231053;
 			
 			// aapt resource value: 0x7f08008e
 			public const int Base_AlertDialog_AppCompat = 2131230862;
@@ -2768,6 +5078,12 @@ namespace NetConnect
 			// aapt resource value: 0x7f08007d
 			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131230845;
 			
+			// aapt resource value: 0x7f08014e
+			public const int Base_Widget_Design_AppBarLayout = 2131231054;
+			
+			// aapt resource value: 0x7f08014f
+			public const int Base_Widget_Design_TabLayout = 2131231055;
+			
 			// aapt resource value: 0x7f080019
 			public const int Platform_AppCompat = 2131230745;
 			
@@ -2975,6 +5291,27 @@ namespace NetConnect
 			// aapt resource value: 0x7f0800ea
 			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131230954;
 			
+			// aapt resource value: 0x7f080150
+			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131231056;
+			
+			// aapt resource value: 0x7f080151
+			public const int TextAppearance_Design_Counter = 2131231057;
+			
+			// aapt resource value: 0x7f080152
+			public const int TextAppearance_Design_Counter_Overflow = 2131231058;
+			
+			// aapt resource value: 0x7f080153
+			public const int TextAppearance_Design_Error = 2131231059;
+			
+			// aapt resource value: 0x7f080154
+			public const int TextAppearance_Design_Hint = 2131231060;
+			
+			// aapt resource value: 0x7f080155
+			public const int TextAppearance_Design_Snackbar_Message = 2131231061;
+			
+			// aapt resource value: 0x7f080156
+			public const int TextAppearance_Design_Tab = 2131231062;
+			
 			// aapt resource value: 0x7f080025
 			public const int TextAppearance_StatusBar_EventContent = 2131230757;
 			
@@ -3061,6 +5398,24 @@ namespace NetConnect
 			
 			// aapt resource value: 0x7f0800fb
 			public const int Theme_AppCompat_NoActionBar = 2131230971;
+			
+			// aapt resource value: 0x7f080157
+			public const int Theme_Design = 2131231063;
+			
+			// aapt resource value: 0x7f080158
+			public const int Theme_Design_BottomSheetDialog = 2131231064;
+			
+			// aapt resource value: 0x7f080159
+			public const int Theme_Design_Light = 2131231065;
+			
+			// aapt resource value: 0x7f08015a
+			public const int Theme_Design_Light_BottomSheetDialog = 2131231066;
+			
+			// aapt resource value: 0x7f08015b
+			public const int Theme_Design_Light_NoActionBar = 2131231067;
+			
+			// aapt resource value: 0x7f08015c
+			public const int Theme_Design_NoActionBar = 2131231068;
 			
 			// aapt resource value: 0x7f0800fc
 			public const int ThemeOverlay_AppCompat = 2131230972;
@@ -3299,6 +5654,36 @@ namespace NetConnect
 			// aapt resource value: 0x7f08014a
 			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131231050;
 			
+			// aapt resource value: 0x7f08014c
+			public const int Widget_Design_AppBarLayout = 2131231052;
+			
+			// aapt resource value: 0x7f08015d
+			public const int Widget_Design_BottomSheet_Modal = 2131231069;
+			
+			// aapt resource value: 0x7f08015e
+			public const int Widget_Design_CollapsingToolbar = 2131231070;
+			
+			// aapt resource value: 0x7f08015f
+			public const int Widget_Design_CoordinatorLayout = 2131231071;
+			
+			// aapt resource value: 0x7f080160
+			public const int Widget_Design_FloatingActionButton = 2131231072;
+			
+			// aapt resource value: 0x7f080161
+			public const int Widget_Design_NavigationView = 2131231073;
+			
+			// aapt resource value: 0x7f080162
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131231074;
+			
+			// aapt resource value: 0x7f080163
+			public const int Widget_Design_Snackbar = 2131231075;
+			
+			// aapt resource value: 0x7f08014b
+			public const int Widget_Design_TabLayout = 2131231051;
+			
+			// aapt resource value: 0x7f080164
+			public const int Widget_Design_TextInputLayout = 2131231076;
+			
 			static Style()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -3505,6 +5890,40 @@ namespace NetConnect
 			
 			// aapt resource value: 4
 			public const int AlertDialog_singleChoiceItemLayout = 4;
+			
+			public static int[] AppBarLayout = new int[] {
+					16842964,
+					2130772000,
+					2130772197};
+			
+			// aapt resource value: 0
+			public const int AppBarLayout_android_background = 0;
+			
+			// aapt resource value: 1
+			public const int AppBarLayout_elevation = 1;
+			
+			// aapt resource value: 2
+			public const int AppBarLayout_expanded = 2;
+			
+			public static int[] AppBarLayoutStates = new int[] {
+					2130772198,
+					2130772199};
+			
+			// aapt resource value: 0
+			public const int AppBarLayoutStates_state_collapsed = 0;
+			
+			// aapt resource value: 1
+			public const int AppBarLayoutStates_state_collapsible = 1;
+			
+			public static int[] AppBarLayout_Layout = new int[] {
+					2130772200,
+					2130772201};
+			
+			// aapt resource value: 0
+			public const int AppBarLayout_Layout_layout_scrollFlags = 0;
+			
+			// aapt resource value: 1
+			public const int AppBarLayout_Layout_layout_scrollInterpolator = 1;
 			
 			public static int[] AppCompatImageView = new int[] {
 					16843033,
@@ -4036,11 +6455,101 @@ namespace NetConnect
 			// aapt resource value: 3
 			public const int AppCompatTheme_windowNoTitle = 3;
 			
+			public static int[] BottomSheetBehavior_Layout = new int[] {
+					2130772202,
+					2130772203,
+					2130772204};
+			
+			// aapt resource value: 1
+			public const int BottomSheetBehavior_Layout_behavior_hideable = 1;
+			
+			// aapt resource value: 0
+			public const int BottomSheetBehavior_Layout_behavior_peekHeight = 0;
+			
+			// aapt resource value: 2
+			public const int BottomSheetBehavior_Layout_behavior_skipCollapsed = 2;
+			
 			public static int[] ButtonBarLayout = new int[] {
 					2130772128};
 			
 			// aapt resource value: 0
 			public const int ButtonBarLayout_allowStacking = 0;
+			
+			public static int[] CollapsingToolbarLayout = new int[] {
+					2130771975,
+					2130772205,
+					2130772206,
+					2130772207,
+					2130772208,
+					2130772209,
+					2130772210,
+					2130772211,
+					2130772212,
+					2130772213,
+					2130772214,
+					2130772215,
+					2130772216,
+					2130772217,
+					2130772218,
+					2130772219};
+			
+			// aapt resource value: 13
+			public const int CollapsingToolbarLayout_collapsedTitleGravity = 13;
+			
+			// aapt resource value: 7
+			public const int CollapsingToolbarLayout_collapsedTitleTextAppearance = 7;
+			
+			// aapt resource value: 8
+			public const int CollapsingToolbarLayout_contentScrim = 8;
+			
+			// aapt resource value: 14
+			public const int CollapsingToolbarLayout_expandedTitleGravity = 14;
+			
+			// aapt resource value: 1
+			public const int CollapsingToolbarLayout_expandedTitleMargin = 1;
+			
+			// aapt resource value: 5
+			public const int CollapsingToolbarLayout_expandedTitleMarginBottom = 5;
+			
+			// aapt resource value: 4
+			public const int CollapsingToolbarLayout_expandedTitleMarginEnd = 4;
+			
+			// aapt resource value: 2
+			public const int CollapsingToolbarLayout_expandedTitleMarginStart = 2;
+			
+			// aapt resource value: 3
+			public const int CollapsingToolbarLayout_expandedTitleMarginTop = 3;
+			
+			// aapt resource value: 6
+			public const int CollapsingToolbarLayout_expandedTitleTextAppearance = 6;
+			
+			// aapt resource value: 12
+			public const int CollapsingToolbarLayout_scrimAnimationDuration = 12;
+			
+			// aapt resource value: 11
+			public const int CollapsingToolbarLayout_scrimVisibleHeightTrigger = 11;
+			
+			// aapt resource value: 9
+			public const int CollapsingToolbarLayout_statusBarScrim = 9;
+			
+			// aapt resource value: 0
+			public const int CollapsingToolbarLayout_title = 0;
+			
+			// aapt resource value: 15
+			public const int CollapsingToolbarLayout_titleEnabled = 15;
+			
+			// aapt resource value: 10
+			public const int CollapsingToolbarLayout_toolbarId = 10;
+			
+			public static int[] CollapsingToolbarLayout_Layout = new int[] {
+					2130772220,
+					2130772221};
+			
+			// aapt resource value: 0
+			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 0;
+			
+			// aapt resource value: 1
+			public const int CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = 1;
 			
 			public static int[] ColorStateListItem = new int[] {
 					16843173,
@@ -4069,6 +6578,60 @@ namespace NetConnect
 			
 			// aapt resource value: 2
 			public const int CompoundButton_buttonTintMode = 2;
+			
+			public static int[] CoordinatorLayout = new int[] {
+					2130772222,
+					2130772223};
+			
+			// aapt resource value: 0
+			public const int CoordinatorLayout_keylines = 0;
+			
+			// aapt resource value: 1
+			public const int CoordinatorLayout_statusBarBackground = 1;
+			
+			public static int[] CoordinatorLayout_Layout = new int[] {
+					16842931,
+					2130772224,
+					2130772225,
+					2130772226,
+					2130772227,
+					2130772228,
+					2130772229};
+			
+			// aapt resource value: 0
+			public const int CoordinatorLayout_Layout_android_layout_gravity = 0;
+			
+			// aapt resource value: 2
+			public const int CoordinatorLayout_Layout_layout_anchor = 2;
+			
+			// aapt resource value: 4
+			public const int CoordinatorLayout_Layout_layout_anchorGravity = 4;
+			
+			// aapt resource value: 1
+			public const int CoordinatorLayout_Layout_layout_behavior = 1;
+			
+			// aapt resource value: 6
+			public const int CoordinatorLayout_Layout_layout_dodgeInsetEdges = 6;
+			
+			// aapt resource value: 5
+			public const int CoordinatorLayout_Layout_layout_insetEdge = 5;
+			
+			// aapt resource value: 3
+			public const int CoordinatorLayout_Layout_layout_keyline = 3;
+			
+			public static int[] DesignTheme = new int[] {
+					2130772230,
+					2130772231,
+					2130772232};
+			
+			// aapt resource value: 0
+			public const int DesignTheme_bottomSheetDialogTheme = 0;
+			
+			// aapt resource value: 1
+			public const int DesignTheme_bottomSheetStyle = 1;
+			
+			// aapt resource value: 2
+			public const int DesignTheme_textColorError = 2;
 			
 			public static int[] DrawerArrowToggle = new int[] {
 					2130772132,
@@ -4103,6 +6666,60 @@ namespace NetConnect
 			
 			// aapt resource value: 7
 			public const int DrawerArrowToggle_thickness = 7;
+			
+			public static int[] FloatingActionButton = new int[] {
+					2130772000,
+					2130772195,
+					2130772196,
+					2130772233,
+					2130772234,
+					2130772235,
+					2130772236,
+					2130772237};
+			
+			// aapt resource value: 1
+			public const int FloatingActionButton_backgroundTint = 1;
+			
+			// aapt resource value: 2
+			public const int FloatingActionButton_backgroundTintMode = 2;
+			
+			// aapt resource value: 6
+			public const int FloatingActionButton_borderWidth = 6;
+			
+			// aapt resource value: 0
+			public const int FloatingActionButton_elevation = 0;
+			
+			// aapt resource value: 4
+			public const int FloatingActionButton_fabSize = 4;
+			
+			// aapt resource value: 5
+			public const int FloatingActionButton_pressedTranslationZ = 5;
+			
+			// aapt resource value: 3
+			public const int FloatingActionButton_rippleColor = 3;
+			
+			// aapt resource value: 7
+			public const int FloatingActionButton_useCompatPadding = 7;
+			
+			public static int[] FloatingActionButton_Behavior_Layout = new int[] {
+					2130772238};
+			
+			// aapt resource value: 0
+			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 0;
+			
+			public static int[] ForegroundLinearLayout = new int[] {
+					16843017,
+					16843264,
+					2130772239};
+			
+			// aapt resource value: 0
+			public const int ForegroundLinearLayout_android_foreground = 0;
+			
+			// aapt resource value: 1
+			public const int ForegroundLinearLayout_android_foregroundGravity = 1;
+			
+			// aapt resource value: 2
+			public const int ForegroundLinearLayout_foregroundInsidePadding = 2;
 			
 			public static int[] LinearLayoutCompat = new int[] {
 					16842927,
@@ -4304,6 +6921,48 @@ namespace NetConnect
 			// aapt resource value: 8
 			public const int MenuView_subMenuArrow = 8;
 			
+			public static int[] NavigationView = new int[] {
+					16842964,
+					16842973,
+					16843039,
+					2130772000,
+					2130772240,
+					2130772241,
+					2130772242,
+					2130772243,
+					2130772244,
+					2130772245};
+			
+			// aapt resource value: 0
+			public const int NavigationView_android_background = 0;
+			
+			// aapt resource value: 1
+			public const int NavigationView_android_fitsSystemWindows = 1;
+			
+			// aapt resource value: 2
+			public const int NavigationView_android_maxWidth = 2;
+			
+			// aapt resource value: 3
+			public const int NavigationView_elevation = 3;
+			
+			// aapt resource value: 9
+			public const int NavigationView_headerLayout = 9;
+			
+			// aapt resource value: 7
+			public const int NavigationView_itemBackground = 7;
+			
+			// aapt resource value: 5
+			public const int NavigationView_itemIconTint = 5;
+			
+			// aapt resource value: 8
+			public const int NavigationView_itemTextAppearance = 8;
+			
+			// aapt resource value: 6
+			public const int NavigationView_itemTextColor = 6;
+			
+			// aapt resource value: 4
+			public const int NavigationView_menu = 4;
+			
 			public static int[] PopupWindow = new int[] {
 					16843126,
 					16843465,
@@ -4349,6 +7008,18 @@ namespace NetConnect
 			
 			// aapt resource value: 5
 			public const int RecyclerView_stackFromEnd = 5;
+			
+			public static int[] ScrimInsetsFrameLayout = new int[] {
+					2130772246};
+			
+			// aapt resource value: 0
+			public const int ScrimInsetsFrameLayout_insetForeground = 0;
+			
+			public static int[] ScrollingViewBehavior_Layout = new int[] {
+					2130772247};
+			
+			// aapt resource value: 0
+			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 0;
 			
 			public static int[] SearchView = new int[] {
 					16842970,
@@ -4419,6 +7090,20 @@ namespace NetConnect
 			
 			// aapt resource value: 12
 			public const int SearchView_voiceIcon = 12;
+			
+			public static int[] SnackbarLayout = new int[] {
+					16843039,
+					2130772000,
+					2130772248};
+			
+			// aapt resource value: 0
+			public const int SnackbarLayout_android_maxWidth = 0;
+			
+			// aapt resource value: 1
+			public const int SnackbarLayout_elevation = 1;
+			
+			// aapt resource value: 2
+			public const int SnackbarLayout_maxActionInlineWidth = 2;
 			
 			public static int[] Spinner = new int[] {
 					16842930,
@@ -4500,6 +7185,86 @@ namespace NetConnect
 			// aapt resource value: 7
 			public const int SwitchCompat_trackTintMode = 7;
 			
+			public static int[] TabItem = new int[] {
+					16842754,
+					16842994,
+					16843087};
+			
+			// aapt resource value: 0
+			public const int TabItem_android_icon = 0;
+			
+			// aapt resource value: 1
+			public const int TabItem_android_layout = 1;
+			
+			// aapt resource value: 2
+			public const int TabItem_android_text = 2;
+			
+			public static int[] TabLayout = new int[] {
+					2130772249,
+					2130772250,
+					2130772251,
+					2130772252,
+					2130772253,
+					2130772254,
+					2130772255,
+					2130772256,
+					2130772257,
+					2130772258,
+					2130772259,
+					2130772260,
+					2130772261,
+					2130772262,
+					2130772263,
+					2130772264};
+			
+			// aapt resource value: 3
+			public const int TabLayout_tabBackground = 3;
+			
+			// aapt resource value: 2
+			public const int TabLayout_tabContentStart = 2;
+			
+			// aapt resource value: 5
+			public const int TabLayout_tabGravity = 5;
+			
+			// aapt resource value: 0
+			public const int TabLayout_tabIndicatorColor = 0;
+			
+			// aapt resource value: 1
+			public const int TabLayout_tabIndicatorHeight = 1;
+			
+			// aapt resource value: 7
+			public const int TabLayout_tabMaxWidth = 7;
+			
+			// aapt resource value: 6
+			public const int TabLayout_tabMinWidth = 6;
+			
+			// aapt resource value: 4
+			public const int TabLayout_tabMode = 4;
+			
+			// aapt resource value: 15
+			public const int TabLayout_tabPadding = 15;
+			
+			// aapt resource value: 14
+			public const int TabLayout_tabPaddingBottom = 14;
+			
+			// aapt resource value: 13
+			public const int TabLayout_tabPaddingEnd = 13;
+			
+			// aapt resource value: 11
+			public const int TabLayout_tabPaddingStart = 11;
+			
+			// aapt resource value: 12
+			public const int TabLayout_tabPaddingTop = 12;
+			
+			// aapt resource value: 10
+			public const int TabLayout_tabSelectedTextColor = 10;
+			
+			// aapt resource value: 8
+			public const int TabLayout_tabTextAppearance = 8;
+			
+			// aapt resource value: 9
+			public const int TabLayout_tabTextColor = 9;
+			
 			public static int[] TextAppearance = new int[] {
 					16842901,
 					16842902,
@@ -4537,6 +7302,72 @@ namespace NetConnect
 			
 			// aapt resource value: 8
 			public const int TextAppearance_textAllCaps = 8;
+			
+			public static int[] TextInputLayout = new int[] {
+					16842906,
+					16843088,
+					2130772265,
+					2130772266,
+					2130772267,
+					2130772268,
+					2130772269,
+					2130772270,
+					2130772271,
+					2130772272,
+					2130772273,
+					2130772274,
+					2130772275,
+					2130772276,
+					2130772277,
+					2130772278};
+			
+			// aapt resource value: 1
+			public const int TextInputLayout_android_hint = 1;
+			
+			// aapt resource value: 0
+			public const int TextInputLayout_android_textColorHint = 0;
+			
+			// aapt resource value: 6
+			public const int TextInputLayout_counterEnabled = 6;
+			
+			// aapt resource value: 7
+			public const int TextInputLayout_counterMaxLength = 7;
+			
+			// aapt resource value: 9
+			public const int TextInputLayout_counterOverflowTextAppearance = 9;
+			
+			// aapt resource value: 8
+			public const int TextInputLayout_counterTextAppearance = 8;
+			
+			// aapt resource value: 4
+			public const int TextInputLayout_errorEnabled = 4;
+			
+			// aapt resource value: 5
+			public const int TextInputLayout_errorTextAppearance = 5;
+			
+			// aapt resource value: 10
+			public const int TextInputLayout_hintAnimationEnabled = 10;
+			
+			// aapt resource value: 3
+			public const int TextInputLayout_hintEnabled = 3;
+			
+			// aapt resource value: 2
+			public const int TextInputLayout_hintTextAppearance = 2;
+			
+			// aapt resource value: 13
+			public const int TextInputLayout_passwordToggleContentDescription = 13;
+			
+			// aapt resource value: 12
+			public const int TextInputLayout_passwordToggleDrawable = 12;
+			
+			// aapt resource value: 11
+			public const int TextInputLayout_passwordToggleEnabled = 11;
+			
+			// aapt resource value: 14
+			public const int TextInputLayout_passwordToggleTint = 14;
+			
+			// aapt resource value: 15
+			public const int TextInputLayout_passwordToggleTintMode = 15;
 			
 			public static int[] Toolbar = new int[] {
 					16842927,

@@ -7,5 +7,6 @@ namespace MonoNetConnect
 {
     public class Class1
     {
+        
     }
 }
