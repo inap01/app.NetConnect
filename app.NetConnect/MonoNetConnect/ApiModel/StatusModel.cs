@@ -9,16 +9,18 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using MonoNetConnect.Cache;
 
 namespace MonoNetConnect.DatabaseModels
 {
 
     public class StatusModel
     {
-        protected enum Status { Success, Warning, Danger, Info}
-
-        protected Status state { get; set; }
-        protected String Message { get; set; }
+        public enum Status { Success, Warning, Danger, Info }
+        [ApiPropertyName("")]
+        public Status State { get; set; }
+        [ApiPropertyName("")]
+        public String Message { get; set; }
 
     }
 }

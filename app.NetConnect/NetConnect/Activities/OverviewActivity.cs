@@ -10,7 +10,7 @@ using Android.Util;
 
 namespace NetConnect
 {
-    [Activity(Label = "NetConnect", MainLauncher = true, Icon = "@drawable/logo")]
+    [Activity(Label = "NetConnect", Icon = "@drawable/logo")]
     public class OverviewActivity : BaseActivity<IOverviewController,OverviewController>, IOverviewController
     {
         public void someButton(String s)

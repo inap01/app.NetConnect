@@ -10,16 +10,23 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MonoNetConnect.DatabaseModels;
+using MonoNetConnect.InternalModels;
 
 namespace MonoNetConnect
 {
-    public partial class BaseProperties
+    public abstract partial class BaseProperties
     {
         public Int32 ID { get; set; }
+        protected DateTime LatestChange { get; set; } = DateTime.Now;
+
+        public DateTime GetLatestChange()
+        {
+            return this.LatestChange;
+        }
     }
     public class BasicAPIModel<T>
     {
-        T Data { get; set; }
-        StatusModel Status { get; set; }
+        public T Data { get; set; }
+        public StatusModel Status { get; set; }
     }
 }

@@ -12,8 +12,10 @@ using Android.Widget;
 
 namespace MonoNetConnect.InternalModels
 {
-    public interface IApiPath
+    public interface IApiModels
     {
         String ApiPath();
+        String ImageDirectoryPath();
+        DateTime GetLatestChange();
     }
 }

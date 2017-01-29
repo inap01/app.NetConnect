@@ -20,34 +20,54 @@ namespace MonoNetConnect.Cache
     {
         
         private JsonSerializerSettings jsonSettings = new JsonSerializerSettings() { TypeNameHandling = TypeNameHandling.Auto };
-        private T ParseStringToModel<T>(String json)
+
+        private BasicAPIModel<T> ParseStringToModel<T>(String json)
         {
             try
             {
-                T newModel = JsonConvert.DeserializeObject<T>(json, jsonSettings);
+                BasicAPIModel<T> newModel = JsonConvert.DeserializeObject<BasicAPIModel<T>>(json);
                 return newModel;
             }
-            catch
-            (Exception ex)
+            catch (Exception ex)
             {
-                try
-                {
-                    return ParseObjectFromJson<T>(json);
-                }
-                catch(Exception innerEx)
-                {
+                // TODO Fully implement JsonParser
 
-                    return default(T);
-                }
-                // ParseErrorFromJson Custom Parsing
+                //try
+                //{
+                //    BasicAPIModel<T> newModel = ParseObjectFromJson<BasicAPIModel<T>>(json);
+                //    return newModel;
+                //}
+                //catch (Exception innerEx)
+                //{
+                //    return default(BasicAPIModel<T>);
+                //}
+                throw new Exception("JsonParseException",ex);
             }
         }
-        private T ParseObjectFromJson<T>(String Model)
+        private T ParseObjectFromJsonWrapper<T>(String json)
         {
             T model = (T)Activator.CreateInstance(typeof(T));
             foreach(var prop in model.GetType().GetProperties())
             {
-                prop.SetValue(prop.Name, PropertyFromJsonString<T>(prop, Model));
+                if(IsSimpleType(prop.PropertyType))
+                {
+                    prop.SetValue(prop.Name, PropertyFromJsonString<T>(prop, json));
+                }
+                else
+                {
+                    MethodInfo method = this.GetType().GetMethod(MethodBase.GetCurrentMethod().Name,BindingFlags.NonPublic);
+                    MethodInfo generic = method.MakeGenericMethod(prop.PropertyType);
+                    generic.Invoke(null, new object[] { json });
+                }
+            }
+            return model;
+        }
+        private T ParseObjectFromJson<T>(String json)
+        {
+            T model = (T)Activator.CreateInstance(typeof(T));
+            foreach(var prop in model.GetType().GetProperties())
+            {
+                prop.SetValue(prop.Name, PropertyFromJsonString<T>(prop, json));
             }
             return model;
         }
@@ -61,16 +81,24 @@ namespace MonoNetConnect.Cache
         private String ApiPropNameValue(PropertyInfo prop)
         {
             var attr = prop.GetCustomAttributes(false);
-            if (attr[0] is ApiPropertyName)
-                return (attr[0] as ApiPropertyName).Name;
+            if (attr.Any(x => x is ApiPropertyName))
+                return (attr.SingleOrDefault(x => x is ApiPropertyName) as ApiPropertyName).Name;
             return null;
         }
-        private String ApiPathNameValue(PropertyInfo prop)
+        private String ApiPathNameValue<T>(T model)
         {
-            var attr = prop.GetCustomAttributes(false);
+            var attr = typeof(T).GetCustomAttributes(false);
             if (attr[0] is ApiPathName)
                 return (attr[0] as ApiPathName).Name;
             return null;
+        }
+        private Boolean IsSimpleType(Type t)
+        {
+            if (t.IsPrimitive)
+                return true;
+            if (t.Module.ScopeName.Equals("CommonLanguageRuntimeLibrary"))
+                return true;
+            return false;
         }
     }
 

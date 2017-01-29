@@ -12,9 +12,9 @@ using Android.Widget;
 
 namespace MonoNetConnect.ApiModel
 {
-    public class ApiUpdated
+    public class ApiUpdate
     {
-        public Int32 ID { get; set; } = -1;
+        public Int32? ID { get; set; } = null;
         public String ObjectName { get; set; }
         public DateTime DateTime { get; set; }
     }

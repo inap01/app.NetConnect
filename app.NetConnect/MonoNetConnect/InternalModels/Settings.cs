@@ -9,42 +9,49 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using MonoNetConnect.Cache; 
+using MonoNetConnect.Cache;
+using Newtonsoft.Json;
+
 namespace MonoNetConnect.InternalModels
 {
-    public class Settings : BaseProperties,IApiPath
+    public class Settings : BaseProperties,IApiModels
     {
         private static String SettingsApiPath = @"app/Settings";
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public String Volume { get; set; }
 
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public String AdvancePayment { get; set; }
 
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public String BoxOffice { get; set; }
 
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public DateTime Start { get; set; }
 
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public DateTime End { get; set; }
 
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public Boolean ActiveBooking { get; set; }
 
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public Int32 DaysBooked { get; set; }
 
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public String IBan { get; set; }
 
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public String BIC { get; set; }
 
         public string ApiPath()
         {
             return SettingsApiPath;
+        }
+
+        public string ImageDirectoryPath()
+        {
+            throw new NotImplementedException();
         }
     }
 }

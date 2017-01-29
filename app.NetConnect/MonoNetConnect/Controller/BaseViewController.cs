@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using MonoNetConnect.Cache;
 
 namespace MonoNetConnect.Controller
 {
@@ -19,7 +20,7 @@ namespace MonoNetConnect.Controller
         where T : IBaseViewController
     {
         protected T _viewController { get; set; }
-
+        protected DataContext dataContext;
         protected BaseViewController(T viewController)
         {
             this._viewController = viewController;

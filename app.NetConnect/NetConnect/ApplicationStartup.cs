@@ -13,16 +13,22 @@ using MonoNetConnect.Cache;
 
 namespace NetConnect
 {
-    public class ApplicationStartup : Application, Application.IActivityLifecycleCallbacks
+    [Application]
+    class AppStart : Application, Application.IActivityLifecycleCallbacks
     {
-        int a = 1;
-        public ApplicationStartup()
+        private DataContext context;
+        public AppStart(IntPtr handle, JniHandleOwnership ownerShip)
+            : base(handle, ownerShip)
         {
-            DataContext data = DataContext.GetDataContext();
-            data.UpdateDataContext();
-            AppDomain domain = AppDomain.CurrentDomain;
 
         }
+
+        public override void OnCreate()
+        {
+            base.OnCreate();
+            DataContext d = DataContext.GetDataContext();
+        }
+
         void IActivityLifecycleCallbacks.OnActivityCreated(Activity activity, Bundle savedInstanceState)
         {
             throw new NotImplementedException();

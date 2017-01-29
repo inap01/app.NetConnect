@@ -10,38 +10,45 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MonoNetConnect.Cache;
+using Newtonsoft.Json;
 
 namespace MonoNetConnect.InternalModels
 {
-    public class Sponsor : BaseProperties, IApiPath
+    public class Sponsor : BaseProperties, IApiModels
     {
         private static String SponsorApiPath = @"app/Partner{/id}";
         private static String SponsorImagePath = @"Images/Sponsor";
 
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public String PartnerTitle { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public Boolean ShowPartner { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public Boolean ShowFrontsite { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public Boolean ShowTrikot { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public String Name { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public String Content { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public String Link { get; set; }
-        [ApiPropertyName("")]
+        [ApiPropertyName("Image")]
+        [JsonProperty("")]
         public String Image { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public Int32 PartnerPackID { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("")]
         public Boolean Active { get; set; }
 
         public string ApiPath()
         {
             return SponsorApiPath.Replace("{/id}", $"/{ID}");
+        }
+
+        public string ImageDirectoryPath()
+        {
+            return SponsorImagePath;
         }
     }
 }

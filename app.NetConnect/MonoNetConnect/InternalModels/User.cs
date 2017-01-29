@@ -10,29 +10,35 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MonoNetConnect.Cache;
+using Newtonsoft.Json;
 
 namespace MonoNetConnect.InternalModels
 {
-    public class User: BaseProperties, IApiPath
+    public class User: BaseProperties, IApiModels
     {        
         public static String UserApiPath = @"app/User{/id}";
 
-        [ApiPropertyName("")]
+        [JsonProperty("FirstName")]
         public String FirstName { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("Token")]
         public String Token { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("LastName")]
         public String LastName { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("Nickname")]
         public String NickName { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("SteamID")]
         public String SteamID { get; set; }
-        [ApiPropertyName("")]
+        [JsonProperty("BattleTag")]
         public String BattleTag { get; set; }
 
         public String ApiPath()
         {
             return UserApiPath.Replace("{/id}", $"/{ID}");
+        }
+
+        public string ImageDirectoryPath()
+        {
+            throw new NotImplementedException();
         }
     }
 }

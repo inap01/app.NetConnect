@@ -14,7 +14,7 @@ using MonoNetConnect.Controller;
 using Color = Android.Graphics.Color;
 namespace NetConnect.Activities
 {
-    [Activity(Label = "ContactActivity")]
+    [Activity(Label = "ContactActivity", MainLauncher = true)]
     public class ContactActivity : BaseActivity<IContactController, ContactController>, IContactController
     {
         protected override void OnCreate(Bundle savedInstanceState)

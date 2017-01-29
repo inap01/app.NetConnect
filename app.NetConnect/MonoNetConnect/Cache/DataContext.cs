@@ -18,39 +18,79 @@ namespace MonoNetConnect.Cache
     public partial class DataContext
     {
         private Boolean _isInitialLoad { get; set; } = true;
-
-        private static DataContext current = null;
         
-        public Tournament Tournament { get; set; }
-        public User User { get; set; }
-        public Settings Settings { get; set; }
-        public Data<Sponsor> Sponsors { get; set; }
-        public Data<Product> Products { get; set; }
+        private String DataContextFilePath { get; set; }
+        public static DataContext current = null;
+
+        public Tournament Tournament { get; set; } = new Tournament();
+        public User User { get; set; } = new User();
+        public Settings Settings { get; set; } = new Settings();
+        public Data<Sponsor> Sponsors { get; set; } = new Data<Sponsor>();
+        public Data<Product> Products { get; set; } = new Data<Product>();
 
         private DataContext()
         {            
         }
         public static DataContext GetDataContext()
         {
+            if (current == null)
+            {
+                current = new DataContext();
+                current.UpdateDataContext();
+            }
             return current;
         }
-        public void UpdateDataContext()
+        public async void UpdateDataContext()
         {
-            UpdateAsyncIfNeeded<User>();
-            UpdateAsyncIfNeeded<Settings>();
-            UpdateAsyncIfNeeded<Tournament>();
-            if (!_isInitialLoad)
+            List<Task> ImageTasks = new List<Task>();
+            Task[] UpdateTasks = new Task[]
             {
-                foreach (var sponsor in Sponsors)
-                    UpdateAsyncIfNeeded<Sponsor>(sponsor);
-                foreach (var product in Products)
-                    UpdateAsyncIfNeeded<Product>(product);
-            }
-            else
-            {
-                UpdateAsyncIfNeeded<Data<Sponsor>>();
-                UpdateAsyncIfNeeded<Data<Product>>();
-            }
+                new Task(async() =>
+                {
+                    await UpdateAsyncIfNeeded<User>()
+                    .ContinueWith((Task imageTask) =>
+                    {
+                        imageTask?.Start();
+                    });
+                }),
+                new Task(async() =>
+                {
+                    await UpdateAsyncIfNeeded<Settings>()
+                    .ContinueWith((Task imageTask) =>
+                    {
+                        imageTask?.Start();
+                    });
+                }),
+                new Task(async() =>
+                {
+                    await UpdateAsyncIfNeeded<Tournament>()
+                    .ContinueWith((Task imageTask) =>
+                    {
+                        imageTask?.Start();
+                    });
+                }),
+                new Task(async() =>
+                {
+                    await UpdateAsyncIfNeeded<Data<Sponsor>>()
+                    .ContinueWith((Task imageTask) =>
+                    {
+                        imageTask?.Start();
+                    });
+                }),
+                new Task(async() =>
+                {
+                    await UpdateAsyncIfNeeded<Data<Sponsor>>()
+                    .ContinueWith((Task imageTask) =>
+                    {
+                        imageTask?.Start();
+                    });
+                })
+            };
+            Task.WhenAll(UpdateTasks).ContinueWith(
+                (Task a) => {
+                    
+            });
+            
         }
     }
 }

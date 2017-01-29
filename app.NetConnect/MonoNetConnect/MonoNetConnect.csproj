@@ -37,6 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -93,6 +94,7 @@
   <ItemGroup>
     <Compile Include="ApiModel\ApiUpdated.cs" />
     <Compile Include="Cache\DataContext.cs" />
+    <Compile Include="Cache\DataContextFileSystemPersistence.cs" />
     <Compile Include="Cache\DataContextImages.cs" />
     <Compile Include="Cache\DataContextUpdate.cs" />
     <Compile Include="Cache\DataContextJSONExtension.cs" />
