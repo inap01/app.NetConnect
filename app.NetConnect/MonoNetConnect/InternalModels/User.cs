@@ -16,7 +16,7 @@ namespace MonoNetConnect.InternalModels
 {
     public class User: BaseProperties, IApiModels
     {        
-        public static String UserApiPath = @"app/User{/id}";
+        public static String UserApiPath = @"api.php/app/User{/id}";
 
         [JsonProperty("FirstName")]
         public String FirstName { get; set; }
@@ -39,6 +39,11 @@ namespace MonoNetConnect.InternalModels
         public string ImageDirectoryPath()
         {
             throw new NotImplementedException();
+        }
+
+        public bool IsClassWithImage()
+        {
+            return false;
         }
     }
 }

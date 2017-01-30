@@ -13,34 +13,57 @@ using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace MonoNetConnect.Cache
 {
     public partial class DataContext
     {
-        
-        private JsonSerializerSettings jsonSettings = new JsonSerializerSettings() { TypeNameHandling = TypeNameHandling.Auto };
+
+        public class BoolConverter : JsonConverter
+        {
+            
+            public override bool CanConvert(Type objectType)
+            {
+                return objectType == typeof(bool);
+            }
+
+            public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+            {
+                switch (reader.Value.ToString().ToLower().Trim())
+                {
+                    //case "true":
+                    //case "yes":
+                    //case "y":
+                    case "1":
+                        return true;
+                    //case "false":
+                    //case "no":
+                    //case "n":
+                    case "0":
+                        return false;
+                }
+                // If we reach here, we're pretty much going to throw an error so let's let Json.NET throw it's pretty-fied error message.
+                return new JsonSerializer().Deserialize(reader, objectType);
+            }
+            public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+            {
+            }
+        }
+
+        private JsonSerializerSettings jsonSettings = new JsonSerializerSettings() { TypeNameHandling = TypeNameHandling.Auto, MissingMemberHandling = MissingMemberHandling.Ignore, NullValueHandling = NullValueHandling.Ignore };
 
         private BasicAPIModel<T> ParseStringToModel<T>(String json)
         {
             try
             {
-                BasicAPIModel<T> newModel = JsonConvert.DeserializeObject<BasicAPIModel<T>>(json);
+                jsonSettings.Converters.Add(new BoolConverter());
+
+                BasicAPIModel<T> newModel = JsonConvert.DeserializeObject<BasicAPIModel<T>>(json, jsonSettings);
                 return newModel;
             }
             catch (Exception ex)
-            {
-                // TODO Fully implement JsonParser
-
-                //try
-                //{
-                //    BasicAPIModel<T> newModel = ParseObjectFromJson<BasicAPIModel<T>>(json);
-                //    return newModel;
-                //}
-                //catch (Exception innerEx)
-                //{
-                //    return default(BasicAPIModel<T>);
-                //}
+            {                
                 throw new Exception("JsonParseException",ex);
             }
         }

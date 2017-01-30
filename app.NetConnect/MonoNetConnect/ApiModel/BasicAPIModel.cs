@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using MonoNetConnect.DatabaseModels;
 using MonoNetConnect.InternalModels;
+using Newtonsoft.Json;
 
 namespace MonoNetConnect
 {
@@ -26,7 +27,9 @@ namespace MonoNetConnect
     }
     public class BasicAPIModel<T>
     {
+        [JsonProperty("data")]
         public T Data { get; set; }
+        [JsonProperty("status")]
         public StatusModel Status { get; set; }
     }
 }

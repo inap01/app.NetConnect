@@ -19,7 +19,7 @@ namespace MonoNetConnect.InternalModels
     public class Product : BaseProperties, IApiModels
     {
         private static String ProductImagePath = @"Images/Product";
-        private static String ProductApiPath = @"app/Product{/id}";
+        private static String ProductApiPath = @"api.php/app/Product{/id}";
 
         [JsonProperty("")]
         public String Name { get; set; }
@@ -41,6 +41,11 @@ namespace MonoNetConnect.InternalModels
         public string ImageDirectoryPath()
         {
             return ProductImagePath;
+        }
+
+        public bool IsClassWithImage()
+        {
+            return true;
         }
     }
 }

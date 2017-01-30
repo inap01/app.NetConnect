@@ -24,6 +24,7 @@ namespace MonoNetConnect.Controller
         protected BaseViewController(T viewController)
         {
             this._viewController = viewController;
+            dataContext = DataContext.GetDataContext();
         }
     }
 }

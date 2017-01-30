@@ -24,15 +24,14 @@ namespace MonoNetConnect.InternalModels
         {
             return this.Max(x => x.GetLatestChange());
         }
-
         public string ImageDirectoryPath()
         {
-            throw new NotImplementedException();
-        }
-
-        public string ImagePath()
-        {
             return ((T)Activator.CreateInstance(typeof(T))).ImageDirectoryPath();
+        }       
+
+        public bool IsClassWithImage()
+        {
+            return ((T)Activator.CreateInstance(typeof(T))).IsClassWithImage();
         }
     }
 }

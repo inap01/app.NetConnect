@@ -26,6 +26,7 @@ namespace NetConnect.Activities
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ActivityNavigationLayout);
+            SetInnerLayout(Resource.Layout.SponsoringLayout);
             this.NavController = new NavigationController(this);
             this.Controller = new SponsoringController(this);
             SetUpMethod();

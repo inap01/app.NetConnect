@@ -39,28 +39,29 @@ namespace MonoNetConnect.Cache
                 return Products.Select(x => String.Join("/", MyDirPath, new Product().ImageDirectoryPath(), x.ImageName));
             }
         }
-        private void DownloadImagesAsyncSponsorWrapper(Data<Sponsor> model)
-        {
-            foreach(var sp in model)
-                DownloadImageAsync<Sponsor>(sp.Image);
-        }
+        //private void DownloadImagesAsyncSponsorWrapper(Data<Sponsor> model)
+        //{
+        //    foreach(var sp in model)
+        //        DownloadImageAsync<Sponsor>(sp.Image);
+        //}
 
-        private void DownloadImagesAsyncProductWrapper(Data<Product> model)
-        {
-            foreach (var prod in model)
-                DownloadImageAsync<Product>(prod.ImageName);
-        }
-        private async Task DownloadImageAsync<T>(string image)
-            where T : IApiModels
-        {
-            Task.Run(() =>
-            {
-                DownloadImage<T>(image);
-            });
-        }
+        //private void DownloadImagesAsyncProductWrapper(Data<Product> model)
+        //{
+        //    foreach (var prod in model)
+        //        DownloadImageAsync<Product>(prod.ImageName);
+        //}
+        //private async Task DownloadImageAsync<T>(string image)
+        //    where T : IApiModels
+        //{
+        //    Task.Run(() =>
+        //    {
+        //        DownloadImage<T>(image);
+        //    });
+        //}
         private void DownloadImagesAsync<T>(Data<T> model) 
             where T : IApiModels           
         {
+            System.Diagnostics.Debug.WriteLine("IngenericInvoke");
             model.ForEach(x =>
             {
                 Task.Run(() =>
@@ -80,14 +81,14 @@ namespace MonoNetConnect.Cache
             where T : IApiModels
         {
             var model = ((T)Activator.CreateInstance(typeof(T)));
-            String _url = String.Join("/", BasicAPIPath, model.ApiPath(),fileName);
+            String _url = String.Join("/", BasicAPIPath, ApiImagesPath ,fileName);
             Uri url = new Uri(_url);
             using (WebClient client = new WebClient())
             {
                 byte[] result = null;
                 await Task.Run(() =>
                 {
-                    result = client.DownloadData(url.AbsolutePath);
+                    result = client.DownloadData(url.ToString());
                 }).ContinueWith((Task) =>
                 {
                     SaveImage(result, model.ImageDirectoryPath(),fileName);
@@ -98,16 +99,18 @@ namespace MonoNetConnect.Cache
         {
             try
             {
-                String fullPath = System.IO.Path.Combine(MyDirPath, path, fileName);
+                if (!Directory.Exists(System.IO.Path.Combine(MyDirPath, path)))
+                    Directory.CreateDirectory(System.IO.Path.Combine(MyDirPath, path));                    
+                String fullPath = System.IO.Path.Combine(MyDirPath, path, fileName.Split('/').Last());
                 using (Stream outStream = new FileStream(fullPath, FileMode.OpenOrCreate))
                 {
                     Bitmap bm = BitmapFactory.DecodeByteArray(data, 0, data.Length);
                     bm.Compress(Bitmap.CompressFormat.Jpeg, 100, outStream);
+                    bm.Dispose();
                 }
             }
             catch(Exception ex)
             {
-                MethodBase.GetCurrentMethod();
                 System.Diagnostics.Debug.WriteLine($"Exception in {MethodBase.GetCurrentMethod().Name} with {ExMessage(ex)}");
             }
             

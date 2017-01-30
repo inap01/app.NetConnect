@@ -19,17 +19,16 @@ namespace NetConnect.Activities
     public class CateringActivity : BaseActivity<ICateringController, CateringController>, ICateringController
     {
         FrameLayout content;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ActivityNavigationLayout);
-            
-            content = FindViewById<FrameLayout>(Resource.Id.content_frame);
+            SetInnerLayout(Resource.Layout.CateringLayout);
             this.NavController = new NavigationController(this);
             this.Controller = new CateringController(this);
             SetUpMethod();
         }
-
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             if (isLoggedIn)

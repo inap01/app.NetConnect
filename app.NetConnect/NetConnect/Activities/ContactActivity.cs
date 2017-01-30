@@ -21,6 +21,7 @@ namespace NetConnect.Activities
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ActivityNavigationLayout);
+            SetInnerLayout(Resource.Layout.ContactLayout);
             this.NavController = new NavigationController(this);
             this.Controller = new ContactController(this);
             SetUpMethod();

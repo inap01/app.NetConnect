@@ -16,39 +16,44 @@ namespace MonoNetConnect.InternalModels
 {
     public class Sponsor : BaseProperties, IApiModels
     {
-        private static String SponsorApiPath = @"app/Partner{/id}";
+        private static String SponsorApiPath = @"api.php/app/Partner";
         private static String SponsorImagePath = @"Images/Sponsor";
 
-        [JsonProperty("")]
+        [JsonProperty("partner_title")]
         public String PartnerTitle { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("show_partner")]
         public Boolean ShowPartner { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("show_frontsite")]
         public Boolean ShowFrontsite { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("show_trikot")]
         public Boolean ShowTrikot { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("name")]
         public String Name { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("content")]
         public String Content { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("link")]
         public String Link { get; set; }
         [ApiPropertyName("Image")]
-        [JsonProperty("")]
+        [JsonProperty("image")]
         public String Image { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("status")]
         public Int32 PartnerPackID { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("active")]
         public Boolean Active { get; set; }
 
         public string ApiPath()
         {
-            return SponsorApiPath.Replace("{/id}", $"/{ID}");
+            return SponsorApiPath;
         }
 
         public string ImageDirectoryPath()
         {
             return SponsorImagePath;
+        }
+
+        public bool IsClassWithImage()
+        {
+            return true;
         }
     }
 }

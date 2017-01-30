@@ -16,33 +16,35 @@ namespace MonoNetConnect.InternalModels
 {
     public class Settings : BaseProperties,IApiModels
     {
-        private static String SettingsApiPath = @"app/Settings";
-        [JsonProperty("")]
+        private static String SettingsApiPath = @"api.php";
+        [JsonProperty("colume")]
         public String Volume { get; set; }
 
-        [JsonProperty("")]
+        [JsonProperty("vorkasse")]
         public String AdvancePayment { get; set; }
 
-        [JsonProperty("")]
+        [JsonProperty("abendkasse")]
         public String BoxOffice { get; set; }
 
-        [JsonProperty("")]
+        [JsonProperty("start")]
         public DateTime Start { get; set; }
 
-        [JsonProperty("")]
+        [JsonProperty("ende")]
         public DateTime End { get; set; }
 
-        [JsonProperty("")]
+        [JsonProperty("active_reservierung")]
         public Boolean ActiveBooking { get; set; }
 
-        [JsonProperty("")]
+        [JsonProperty("kontocheck")]
         public Int32 DaysBooked { get; set; }
 
-        [JsonProperty("")]
+        [JsonProperty("iban")]
         public String IBan { get; set; }
 
-        [JsonProperty("")]
+        [JsonProperty("bic")]
         public String BIC { get; set; }
+        public String BLZ { private get; set; }
+        public String Kontonummer { private get; set; }
 
         public string ApiPath()
         {
@@ -52,6 +54,11 @@ namespace MonoNetConnect.InternalModels
         public string ImageDirectoryPath()
         {
             throw new NotImplementedException();
+        }
+
+        public bool IsClassWithImage()
+        {
+            return false;
         }
     }
 }

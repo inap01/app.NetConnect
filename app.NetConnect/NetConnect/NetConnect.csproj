@@ -29,9 +29,9 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
     <BundleAssemblies>False</BundleAssemblies>
     <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
     <Debugger>Xamarin</Debugger>
@@ -108,6 +108,7 @@
     <Compile Include="Activities\ContactActivity.cs" />
     <Compile Include="Activities\OverviewActivity.cs" />
     <Compile Include="Activities\SponsoringActivity.cs" />
+    <Compile Include="Activities\TournamentActivity.cs" />
     <Compile Include="ApplicationStartup.cs" />
     <Compile Include="BaseClasses\BaseActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

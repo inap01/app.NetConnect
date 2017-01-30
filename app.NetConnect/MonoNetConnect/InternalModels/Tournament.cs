@@ -16,41 +16,47 @@ namespace MonoNetConnect.InternalModels
 {
     public class Tournament : BaseProperties, IApiModels
     {
-        private static readonly String TournamentApiPath = @"app/Tournament";
+        private static readonly String TournamentApiPath = @"api.php/app/Tournament";
         private static readonly String IconPath = @"Images/Icons/Tournament";
-        [JsonProperty("")]
+        [JsonProperty("name")]
         public String Name { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("icon")]
         public String Icon { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("rules")]
         public String Rules { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("battletag")]
         public String BattleTag { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("steam")]
         public String Steam { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("lan_id")]
         public Int32 LanID { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("game_id")]
         public Int32 GameID { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("team")]
         public Int32 TeamSize { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("link")]
         public String Link { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("mode")]
         public String Mode { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("start")]
         public DateTime StartTime { get; set; }
-        [JsonProperty("")]
-        public List<Player> Players { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("teams")]
         public List<Team> Teams { get; set; }
+        [JsonProperty("player")]
+        public List<Team> player { get; set; }
 
 
         public class Player : BaseProperties, IApiModels
         {
+            [JsonProperty("user_id")]
             public Int32 UserID { get; set; }
+            [JsonProperty("turnier_id")]
+            public Int32 TunierID { get; set; }
+            [JsonProperty("tournament_id")]
             public Int32 TournamentID { get; set; }
+            [JsonProperty("team_id")]
             public Int32 TeamID { get; set; }
+            [JsonProperty("registered")]
             public Boolean Registered { get; set; }
 
             public string ApiPath()
@@ -62,12 +68,21 @@ namespace MonoNetConnect.InternalModels
             {
                 throw new NotImplementedException();
             }
+
+            public bool IsClassWithImage()
+            {
+                return false;
+            }
         }
         public class Team : BaseProperties, IApiModels
         {
+            [JsonProperty("name")]
             public String Name { get; set; }
+            [JsonProperty("turnier_id")]
             public Int32 TournamentID { get; set; }
+            [JsonProperty("password")]
             public String Password { get; set; }
+            [JsonProperty("player")]
             public List<Player> Player { get; set; }
 
             public string ApiPath()
@@ -79,6 +94,11 @@ namespace MonoNetConnect.InternalModels
             {
                 throw new NotImplementedException();
             }
+
+            public bool IsClassWithImage()
+            {
+                return false;
+            }
         }
 
         public string ApiPath()
@@ -89,6 +109,11 @@ namespace MonoNetConnect.InternalModels
         public string ImageDirectoryPath()
         {
             return IconPath;
+        }
+
+        public bool IsClassWithImage()
+        {
+            return new Player().IsClassWithImage() || new Team().IsClassWithImage();
         }
     }
     

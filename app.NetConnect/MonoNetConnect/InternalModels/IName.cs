@@ -17,5 +17,6 @@ namespace MonoNetConnect.InternalModels
         String ApiPath();
         String ImageDirectoryPath();
         DateTime GetLatestChange();
+        Boolean IsClassWithImage();
     }
 }

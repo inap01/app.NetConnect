@@ -10,23 +10,30 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MonoNetConnect.Cache;
+using MonoNetConnect.InternalModels;
 
 namespace NetConnect
 {
     [Application]
     class AppStart : Application, Application.IActivityLifecycleCallbacks
     {
-        private DataContext context;
+        DataContext context;
+        System.Threading.Timer timer;
         public AppStart(IntPtr handle, JniHandleOwnership ownerShip)
             : base(handle, ownerShip)
         {
-
+            DataContext.InitializeDataContext(this.ApplicationInfo.DataDir);
+            context = DataContext.GetDataContext();
+            timer = new System.Threading.Timer(
+                (e) =>
+                {
+                    context.UpdateSingleProperty<Data<Tournament>>("Tournaments", typeof(Tournament));
+                },null,0,(int)TimeSpan.FromMinutes(10).TotalMilliseconds);
         }
 
         public override void OnCreate()
-        {
-            base.OnCreate();
-            DataContext d = DataContext.GetDataContext();
+        {            
+            
         }
 
         void IActivityLifecycleCallbacks.OnActivityCreated(Activity activity, Bundle savedInstanceState)
