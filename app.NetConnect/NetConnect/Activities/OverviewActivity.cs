@@ -19,12 +19,11 @@ namespace NetConnect
         }        
         protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(bundle);
             SetContentView(Resource.Layout.ActivityNavigationLayout);
             SetInnerLayout(Resource.Layout.Main);
             this.NavController = new NavigationController(this);
             this.Controller = new OverviewController(this);
-            SetUpMethod();
+            base.OnCreate(bundle);
         }        
         public override bool OnCreateOptionsMenu(IMenu menu)
         {

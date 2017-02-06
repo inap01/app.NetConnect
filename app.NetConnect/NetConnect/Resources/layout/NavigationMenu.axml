@@ -13,12 +13,18 @@
             app:layout_heightPercent="25%"
             android:layout_width="match_parent"
             android:background="#ff0000" />
-        <LinearLayout
-            android:id="@+id/NavBarContentContainer"
-            app:layout_heightPercent="70%"
-            android:layout_width="match_parent"
-            android:background="#0000ff"
-            android:layout_below="@id/NavBarTopContainer" />
+      <LinearLayout
+          android:id="@+id/NavBarContentContainer"
+          app:layout_heightPercent="70%"
+          android:layout_width="match_parent"
+          android:background="#0000ff"
+          android:layout_below="@id/NavBarTopContainer">
+        <ListView
+          android:id="@+id/NavbarListView"
+          android:layout_height="match_parent"
+          android:layout_width="match_parent">
+        </ListView>      
+      </LinearLayout>
         <LinearLayout
             android:id="@+id/NavBarBotContainer"
             app:layout_heightPercent="5%"

@@ -30,14 +30,13 @@ namespace NetConnect.Activities
         Action CloseOrderDialog;
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ActivityNavigationLayout);
             SetInnerLayout(Resource.Layout.CateringLayout);
             this.NavController = new NavigationController(this);
             this.Controller = new CateringController(this);
-            SetUpMethod();
             grid = FindViewById<GridView>(Resource.Id.CateringGridLayout);
             root = FindViewById<RelativeLayout>(Resource.Id.CateringRoot);
+            base.OnCreate(savedInstanceState);
             Controller.setUpUI();
         }
 

@@ -19,12 +19,11 @@ namespace NetConnect.Activities
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ActivityNavigationLayout);
             SetInnerLayout(Resource.Layout.ContactLayout);
             this.NavController = new NavigationController(this);
             this.Controller = new ContactController(this);
-            SetUpMethod();
+            base.OnCreate(savedInstanceState);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

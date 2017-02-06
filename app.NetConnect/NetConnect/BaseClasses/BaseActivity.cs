@@ -1,5 +1,5 @@
 using System;
-
+using System.Linq;
 using Android.App;
 using Android.Content;
 using Android.Content.Res;
@@ -52,13 +52,14 @@ namespace NetConnect
         protected List<String> Entries
         {
             get; set;
-        } = new List<string>(new String[] { "Catering", "Eintrag2", "Sponsoren", "Kontakt" });
+        } = new List<string>(new String[] { "Home", "Catering", "Sponsoren", "Tournament", "Kontakt" });
 
         #endregion        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params");
             base.OnCreate(savedInstanceState);
+            SetUpMethod();
             DataContext d = DataContext.GetDataContext();
             d.Attach(this);
         }
@@ -76,7 +77,7 @@ namespace NetConnect
             d.Detach(this);
             base.OnDestroy();
         }
-        protected void SetUpMethod()
+        private void SetUpMethod()
         {
             setUpUI();
             SetUpNavigationMenu();
@@ -93,6 +94,9 @@ namespace NetConnect
                 Resource.String.drawerOpen,
                 Resource.String.drawerClosed);
             mDrawerLayout.AddDrawerListener(mDrawerToggle);
+            ListView list = FindViewById<ListView>(Resource.Id.NavbarListView);
+            NavAdapter adap = new NavAdapter(this,nameMap);
+            list.Adapter = adap;
         }
         protected void SetInnerLayout(int id)
         {
@@ -113,19 +117,16 @@ namespace NetConnect
         {
             nameMap = new Dictionary<string, Type>();
             Type t = typeof(OverviewActivity);
-            nameMap.Add(Entries[0], typeof(CateringActivity));
-            nameMap.Add(Entries[1], typeof(OverviewActivity));
+            nameMap.Add(Entries[0], typeof(OverviewActivity));
+            nameMap.Add(Entries[1], typeof(CateringActivity));
             nameMap.Add(Entries[2], typeof(SponsoringActivity));
-            nameMap.Add(Entries[3], typeof(ContactActivity));
+            nameMap.Add(Entries[3], typeof(TournamentActivity));
+            nameMap.Add(Entries[4], typeof(ContactActivity));
         }
 
         protected void SetUpNavClick()
         {
-            for (int i = 0; i < (Math.Min(nameMap.Count-1, NavEntries.Count-1)); i++)
-            {
-                NavEntries[i].Text = Entries[i];
-                InitViewClick(NavEntries[i], () => { StartActivityWrapper(nameMap[Entries[i]]); });
-            }
+            
         }
         protected void StartActivityWrapper(Type t)
         {
@@ -184,7 +185,44 @@ namespace NetConnect
         }
 
         public abstract void update();
+        public class NavAdapter : BaseAdapter<string>
+        {
+            Activity _context;
+            protected Dictionary<string, Type> _nameMap;
+            public NavAdapter(Activity context, Dictionary<string, Type> nameMap)
+            {
+                _nameMap = nameMap;
+                _context = context;
+            }
+            public override string this[int position]
+            {
+                get
+                {
+                    return _nameMap.Keys.ElementAt(position);
+                }
+            }
 
+            public override int Count
+            {
+                get
+                {
+                    return _nameMap.Count;
+                }
+            }
+
+            public override long GetItemId(int position)
+            {
+                return position;
+            }
+
+            public override View GetView(int position, View convertView, ViewGroup parent)
+            {
+                convertView = _context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1,parent,false);
+                ((TextView)convertView).SetText(this[position], TextView.BufferType.Normal);
+                convertView.Click += (o,e) => _context.StartActivity(_nameMap[this[position]]);
+                return convertView;
+            }
+        }
         internal class MyActionBarDrawerToggle : Android.Support.V7.App.ActionBarDrawerToggle
         {
             OverviewActivity owner;

@@ -27,12 +27,11 @@ namespace NetConnect.Activities
         SponsoringAdapter adapter;
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ActivityNavigationLayout);
             SetInnerLayout(Resource.Layout.SponsoringLayout);
             this.NavController = new NavigationController(this);
             this.Controller = new SponsoringController(this);
-            SetUpMethod();
+            base.OnCreate(savedInstanceState);
             this.Controller.ListItems();
         }
         public override bool OnCreateOptionsMenu(IMenu menu)

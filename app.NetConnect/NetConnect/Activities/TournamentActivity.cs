@@ -24,14 +24,13 @@ namespace NetConnect.Activities
 
         public void UpdateContentList(Data<Tournament> tournaments)
         {
-            throw new NotImplementedException();
+
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your application here
         }
     }
 }
