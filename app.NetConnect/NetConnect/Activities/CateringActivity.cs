@@ -25,7 +25,9 @@ namespace NetConnect.Activities
         GridView grid;
         CateringAdapter adapter;
         ViewGroup root;
-
+        RelativeLayout orderDialog;
+        System.Boolean orderDialogActive;
+        Action CloseOrderDialog;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -42,20 +44,31 @@ namespace NetConnect.Activities
         public void ShowOrderDialog(Product product)
         {
             View v = LayoutInflater.Inflate(Resource.Layout.CateringOrderFragmentDialog, root, false);
-            Button cancel = FindViewById<Button>(Resource.Id.CateringCancelButton);
-            Button ok = FindViewById<Button>(Resource.Id.CateringApproveButton);
-            cancel.SetBackgroundResource(Resource.Drawable.FadingGradient);
-            ok.SetBackgroundResource(Resource.Drawable.FadingGradient);
+            FrameLayout innerRoot = v.FindViewById<FrameLayout>(Resource.Id.CateringOrderRoot);
+            orderDialog = v.FindViewById<RelativeLayout>(Resource.Id.CateringOrderFragmentRelativeLayout);
+            Button cancel = v.FindViewById<Button>(Resource.Id.CateringCancelButton);
+            Button ok = v.FindViewById<Button>(Resource.Id.CateringApproveButton);
+            ListView list = v.FindViewById<ListView>(Resource.Id.CateringFragmentListView);
+            OrderAdapter adap = new OrderAdapter(this,product.Attributes);
 
-            SetUpClickTouchEvents(product, v, cancel, ok);
+            list.Adapter = adap;
+            SetUpClickTouchEvents(product, v, cancel, ok, innerRoot);
             root.AddView(v);
+            orderDialogActive = true;
+            adapter.OrderOpen = true;
         }
 
-        private void SetUpClickTouchEvents(Product product, View v, Button cancel, Button ok)
+        private void SetUpClickTouchEvents(Product product, View v, Button cancel, Button ok, FrameLayout innerRoot)
         {
-            cancel.Click += (o, e) =>
+            CloseOrderDialog = () =>
             {
                 root.RemoveView(v);
+                orderDialogActive = false;
+                adapter.OrderOpen = false;
+            };
+            cancel.Click += (o, e) =>
+            {
+                CloseOrderDialog();
             };
             ok.Click += async (o, e) =>
             {
@@ -63,10 +76,16 @@ namespace NetConnect.Activities
                 prod.Attributes = new List<string>();
                 var result = await Controller.OrderProduct(prod);
                 ShowToast(result, false, "Placeholder");
-                root.RemoveView(v);
+                CloseOrderDialog();
             };
         }
-
+        public override void OnBackPressed()
+        {
+            if (orderDialogActive)
+                CloseOrderDialog();
+            else
+                base.OnBackPressed();
+        }
         private void ShowToast(bool success, bool shortDur, string Message)
         {
             string NamePlaceholder = "";
@@ -83,13 +102,30 @@ namespace NetConnect.Activities
             }
             return base.OnCreateOptionsMenu(menu);
         }
-
+        public override bool DispatchTouchEvent(MotionEvent ev)
+        {
+            if(orderDialogActive)
+            {
+                int[] pos = new int[2];
+                orderDialog.GetLocationOnScreen(pos);
+                int x = pos[0];
+                int y = pos[1];
+                int owidth = orderDialog.Width;
+                int oheight = orderDialog.Height;
+                if( ev.GetY() < y ||
+                    ev.GetX() > (x+owidth) ||
+                    (ev.GetY() > (y+oheight)) ||
+                    (ev.GetX() < x))
+                {
+                    System.Diagnostics.Debug.WriteLine("Outside");
+                    return false;
+                }
+            }
+            return base.DispatchTouchEvent(ev);
+        }
         public override void update()
         {
-            RunOnUiThread(() =>
-            {
-                this.Controller.setUpUI();
-            });
+            this.Controller.setUpUI();
         }
 
         public void PopulateGridLayout(Data<Product> products)
@@ -105,9 +141,47 @@ namespace NetConnect.Activities
         }
     }
 
+    public class OrderAdapter : BaseAdapter<string>
+    {
+        private List<string> _attributes;
+        private Activity _context;
+        public OrderAdapter(Activity context, List<string> values)
+        {
+            _context = context;
+            _attributes = values;
+        }
+        public override string this[int position]
+        {
+            get
+            {
+                return _attributes[position];
+            }
+        }
+
+        public override int Count
+        {
+            get
+            {
+                return _attributes.Count;
+            }
+        }
+
+        public override long GetItemId(int position)
+        {
+            return 0;
+        }
+
+        public override View GetView(int position, View convertView, ViewGroup parent)
+        {
+            convertView = _context.LayoutInflater.Inflate(Resource.Layout.CateringOrderAttributeListItem, parent, false);
+            TextView tv = convertView.FindViewById<TextView>(Resource.Id.CateringOrderListAttributeName);       
+            return convertView;
+        }
+    }
 
     public class CateringAdapter : BaseAdapter<Product>
     {
+        public bool OrderOpen { get; set; }
         Activity _context;
         Action<Int32> OnProductClickCallback;
         private Data<Product> _products;
@@ -144,8 +218,9 @@ namespace NetConnect.Activities
             ImageViewScaling iv = convertView.FindViewById<ImageViewScaling>(Resource.Id.CateringImage);
             TextView tv = convertView.FindViewById<TextView>(Resource.Id.CateringListItemProductName);
             tv.SetText(_products[position].Name, TextView.BufferType.Normal);
+            tv.SetBackgroundResource(Resource.Drawable.FadingGradient);
             Picasso.With(_context).Load(Resource.Drawable.logo).Into(iv);
-            convertView.Click +=(o,e) =>  OnProductClickCallback(position);
+            convertView.Click += (o, e) => { if(!OrderOpen) OnProductClickCallback(position); };
             return convertView;
         }
     }

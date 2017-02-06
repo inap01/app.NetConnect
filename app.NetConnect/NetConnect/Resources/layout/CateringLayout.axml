@@ -12,6 +12,5 @@
         android:numColumns="2"
         android:stretchMode="columnWidth"
         android:gravity="center"
-        android:verticalSpacing="5px"
-        android:visibility="gone"/>
+        android:verticalSpacing="5px"/>
 </RelativeLayout>
