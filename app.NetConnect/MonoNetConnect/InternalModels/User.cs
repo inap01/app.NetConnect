@@ -36,7 +36,7 @@ namespace MonoNetConnect.InternalModels
             return UserApiPath.Replace("{/id}", $"/{ID}");
         }
 
-        public string ImageDirectoryPath()
+        public string GetImageDirectoryPath()
         {
             throw new NotImplementedException();
         }

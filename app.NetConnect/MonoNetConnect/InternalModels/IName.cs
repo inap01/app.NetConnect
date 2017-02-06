@@ -15,8 +15,17 @@ namespace MonoNetConnect.InternalModels
     public interface IApiModels
     {
         String ApiPath();
-        String ImageDirectoryPath();
+        String GetImageDirectoryPath();
         DateTime GetLatestChange();
         Boolean IsClassWithImage();
+    }
+
+    public interface IApiImageModel : IApiModels
+    {
+        HashSet<string> GetImages();
+    }
+    public interface IHasImage
+    {
+        string GetImage();
     }
 }

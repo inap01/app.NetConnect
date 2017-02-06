@@ -19,11 +19,12 @@ using System.Collections.Generic;
 using Android.Support.V4.App;
 using NetConnect.Activities;
 using static Android.App.ActionBar;
+using MonoNetConnect.Cache;
+using System.Reflection;
 
 namespace NetConnect
 {
-    
-    public abstract class BaseActivity<T,Z> : FragmentActivity, INavigationController
+    public abstract class BaseActivity<T,Z> : FragmentActivity, INavigationController, ISubscriber
         where T : IBaseViewController where Z : BaseViewController<T>
     {
         #region Navigation Properties
@@ -56,7 +57,10 @@ namespace NetConnect
         #endregion        
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params");
             base.OnCreate(savedInstanceState);
+            DataContext d = DataContext.GetDataContext();
+            d.Attach(this);
         }
         public void ListItemClicked(int id)
         {
@@ -65,6 +69,12 @@ namespace NetConnect
             StartActivity(typeof(OverviewActivity));
             Intent i = new Intent(this, t);
             StartActivity(i);
+        }
+        protected override void OnDestroy()
+        {
+            DataContext d = DataContext.GetDataContext();
+            d.Detach(this);
+            base.OnDestroy();
         }
         protected void SetUpMethod()
         {
@@ -92,14 +102,13 @@ namespace NetConnect
         }
         private void setUpUI()
         {
-            NavEntries.Add(FindViewById<TextView>(Resource.Id.NavigationMenuNavEntry1));
-            NavEntries.Add(FindViewById<TextView>(Resource.Id.NavigationMenuNavEntry2));
-            NavEntries.Add(FindViewById<TextView>(Resource.Id.NavigationMenuNavEntry3));
-            NavEntries.Add(FindViewById<TextView>(Resource.Id.NavigationMenuNavEntry4));
             populateNameMap();
             SetUpNavClick();
         }
-
+        public Z GetController()
+        {
+            return this._controller;
+        }
         private void populateNameMap()
         {
             nameMap = new Dictionary<string, Type>();
@@ -173,6 +182,9 @@ namespace NetConnect
             mDrawerLayout.CloseDrawer((int)GravityFlags.Left);
             Finish();
         }
+
+        public abstract void update();
+
         internal class MyActionBarDrawerToggle : Android.Support.V7.App.ActionBarDrawerToggle
         {
             OverviewActivity owner;

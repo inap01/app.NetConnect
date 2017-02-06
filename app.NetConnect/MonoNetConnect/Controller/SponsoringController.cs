@@ -9,12 +9,13 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using MonoNetConnect.InternalModels;
 
 namespace MonoNetConnect.Controller
 {
     public interface ISponsoringController : IBaseViewController
     {
-
+        void SetListItems(Data<Sponsor> sponsors);
     }
 
     public class SponsoringController : BaseViewController<ISponsoringController>
@@ -23,6 +24,10 @@ namespace MonoNetConnect.Controller
             : base (viewController)
         {
 
+        }
+        public void ListItems()
+        {
+            _viewController.SetListItems(dataContext.Sponsors);
         }
     }
 }

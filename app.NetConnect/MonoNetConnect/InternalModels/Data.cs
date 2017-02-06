@@ -12,23 +12,34 @@ using Android.Widget;
 
 namespace MonoNetConnect.InternalModels
 {
-    public class Data<T> : List<T>, IApiModels
+    public class Data<T> : List<T>, IApiImageModel
         where T : IApiModels
     {
         public string ApiPath()
         {
             return ((T)Activator.CreateInstance(typeof(T))).ApiPath().Replace("{/id}", "");
         }
-
+        public HashSet<string> GetImages()
+        {
+            if (typeof(IHasImage).IsAssignableFrom(typeof(T)))
+            {
+                HashSet<String> images = new HashSet<String>();
+                foreach(var x in this)
+                {
+                    images.Add(((IHasImage)x).GetImage());
+                }
+                return images;
+            }
+            return null;
+        }
         public DateTime GetLatestChange()
         {
-            return this.Max(x => x.GetLatestChange());
+            return this.Count > 0 ? this.Max(x => x.GetLatestChange()) : DateTime.MinValue;
         }
-        public string ImageDirectoryPath()
+        public string GetImageDirectoryPath()
         {
-            return ((T)Activator.CreateInstance(typeof(T))).ImageDirectoryPath();
+            return ((T)Activator.CreateInstance(typeof(T))).GetImageDirectoryPath();
         }       
-
         public bool IsClassWithImage()
         {
             return ((T)Activator.CreateInstance(typeof(T))).IsClassWithImage();

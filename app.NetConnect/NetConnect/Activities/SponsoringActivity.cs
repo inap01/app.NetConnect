@@ -14,11 +14,14 @@ using MonoNetConnect.Controller;
 
 using Color = Android.Graphics.Color;
 using MonoNetConnect.InternalModels;
+using Square.Picasso;
+using Java.IO;
+using System.Reflection;
 
 namespace NetConnect.Activities
 {
-    [Activity(Label = "Sponsoring")]
-    public class SponsoringActivity : BaseActivity<ISponsoringController, SponsoringController>, ISponsoringController 
+    [Activity(Label = "Sponsoring", MainLauncher = false)]
+    public class SponsoringActivity : BaseActivity<ISponsoringController, SponsoringController>, ISponsoringController
     {
         ListView list;
         SponsoringAdapter adapter;
@@ -30,16 +33,8 @@ namespace NetConnect.Activities
             this.NavController = new NavigationController(this);
             this.Controller = new SponsoringController(this);
             SetUpMethod();
+            this.Controller.ListItems();
         }
-        
-        private void SetUpListAdapter(ListView list)
-        {
-            this.list = list;
-            List<Sponsor> l = new List<Sponsor>() { new Sponsor() { Content = "Content", Image = "ImagePath", Link = "LinkText", Name = "NameText" } };
-            adapter = new SponsoringAdapter(this, l);
-            this.list.Adapter = adapter;
-        }
-
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             if (isLoggedIn)
@@ -50,34 +45,52 @@ namespace NetConnect.Activities
             }
             return base.OnCreateOptionsMenu(menu);
         }
+        public override void update()
+        {
+            this.Controller.ListItems();
+        }
+        public void SetListItems(Data<Sponsor> sponsors)
+        {
+            if(list == null)
+                list = FindViewById<ListView>(Resource.Id.SponsoringListView);
+            if(adapter == null)
+                adapter = new SponsoringAdapter(this);
+            if (list?.Adapter == null)
+                list.Adapter = adapter;
+            adapter.SetSponsors(sponsors);
+            this.RunOnUiThread(() => adapter.NotifyDataSetChanged());
+        }
 
         public class SponsoringAdapter : BaseAdapter<Sponsor>
         {
             Activity context;
-            List<Sponsor> sponsoren = new List<Sponsor>();
+            private Data<Sponsor> sponsors;
 
-            public SponsoringAdapter(Activity _context, List<Sponsor> _list)
+            public SponsoringAdapter(Activity _context)
                 : base()
             {
                 this.context = _context;
-                this.sponsoren = _list;
+                sponsors = new Data<Sponsor>();
+            }
+            public void SetSponsors(Data<Sponsor> spons)
+            {
+                sponsors.Clear();
+                sponsors.AddRange(spons);
             }
             public override Sponsor this[int position]
             {
                 get
                 {
-                    return sponsoren[position];
+                    return sponsors[position];
                 }
             }
-
             public override int Count
             {
                 get
                 {
-                    return (int)System.Math.Ceiling(sponsoren.Count / 2.0f);
+                    return sponsors.Count;
                 }
             }
-
             public override long GetItemId(int position)
             {
                 return position;
@@ -85,15 +98,23 @@ namespace NetConnect.Activities
 
             public override View GetView(int position, View convertView, ViewGroup parent)
             {
-                View view = context.LayoutInflater.Inflate(Resource.Layout.SponsoringListViewItem, parent);
-                var img1 = view.FindViewById<ImageView>(Resource.Id.SponsoringImage1);
-                var img2 = view.FindViewById<ImageView>(Resource.Id.SponsoringImage2);
-
-                img1.SetImageResource(Resource.Drawable.speedlink);
-                img2.SetImageResource(Resource.Drawable.speedlink);
-
-                return view;
+                System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} drawing image {sponsors[position].Image.Split('/').Last()}");
+                convertView = context.LayoutInflater.Inflate(Resource.Layout.SponsoringListViewItem, parent, false);
+                //if (position % 2 == 1)
+                //    convertView.SetBackgroundResource(Resource.Color.NetConnBlueWithAlpha);
+                //else
+                //    convertView.SetBackgroundResource(Resource.Color.NetConnYellowWithAlpha);
+                ImageView iv = convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1);
+                //TextView tv1 = convertView.FindViewById<TextView>(Resource.Id.SponsoringSponsorName);
+                //TextView tv2 = convertView.FindViewById<TextView>(Resource.Id.SponsoringSponsorType);
+                //tv1.Text = sponsors[position].Name;
+                //tv1.SetTextColor(Android.Graphics.Color.White);
+                //tv2.Text = "Art des Sponsors";
+                //tv2.SetTextColor(Android.Graphics.Color.White);
+                string path = System.String.Join("/", context.ApplicationInfo.DataDir, sponsors.GetImageDirectoryPath(), sponsors[position].Image.Split('/').Last());
+                Picasso.With(context).Load(new File(path)).Into(iv);
+                return convertView;
             }
-        }     
+        }
     }
 }

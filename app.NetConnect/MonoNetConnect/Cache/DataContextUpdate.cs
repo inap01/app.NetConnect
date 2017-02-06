@@ -12,32 +12,98 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Reflection;
+using Android.Util;
+using Java.Security;
 
 namespace MonoNetConnect.Cache
 {
 
     public partial class DataContext
     {
+        
+        
         private static String BasicAPIPath = @"http://lan-netconnect.de/_api";
         private String ExMessage(Exception ex) => String.Join("\n", ex.Message, ex.InnerException, ex.StackTrace);
-        private String MethodName () => System.Reflection.MethodBase.GetCurrentMethod().Name;
-        private async Task<Task> UpdateAsyncIfNeeded<T>(String PropertyName, Type GenericType)
+
+        private Z UpdatePostWithResult<T, Z>(T ModelToPost, String relativePath)
+            where T : IApiImageModel
+        {
+            Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {relativePath}");
+            Dictionary<string, DateTime> images = new Dictionary<string, DateTime>();
+            foreach (var x in ModelToPost.GetImages())
+            {
+                images.Add(x, ModelToPost.GetLatestChange());
+            }
+            var content = new StringContent(JsonConvert.SerializeObject(images), Encoding.UTF8, "application/json");
+            HttpClient client = new HttpClient();
+            
+            var response = client.PostAsync(String.Join("/",BasicAPIPath,relativePath), content);
+            var str = response.Result.Content.ReadAsStringAsync().Result;
+            return JsonConvert.DeserializeObject<Z>(str);
+        }
+        private void GenerateAndRunUpdateTasks()
+        {
+            Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params");
+            current.lastUpdated = DateTime.Now;
+            UpdateSingleProperty<ChangesRequestModel>("Changes", typeof(ChangesRequestModel));
+
+            if (Settings?.GetLatestChange().AddMinutes(2) <= Changes.Settings)
+            {
+
+                Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params");
+                UpdateSingleProperty<Settings>("Settings", typeof(Settings));
+            }
+
+            if (Tournaments?.GetLatestChange().AddMinutes(2) <= Changes.Tournaments)
+            {
+                Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params");
+                UpdateSingleProperty<Data<Tournament>>("Tournaments", typeof(Tournament));
+            }
+
+            if (Products?.GetLatestChange().AddMinutes(2) <= Changes.Products)
+            {
+                //Action imageTask = UpdateSingleProperty<Data<Product>>("Products", typeof(Product));
+                //Images
+
+                //Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params");
+                //UpdateImageOfSingleProperty<Data<Product>>(Products);
+                bool cont = UpdateSingleProperty<Data<Product>>("Products",typeof(Product));
+                if(cont)
+                {
+                    UpdateImageOfSingleProperty<Data<Product>>(Products);
+                    ResolveUnreferencedImages<Data<Product>>(Products);
+                }
+            }
+            if (Sponsors?.GetLatestChange().AddMinutes(2) <= Changes.Settings)
+            {
+
+                bool cont = UpdateSingleProperty<Data<Sponsor>>("Sponsors", typeof(Sponsor));
+                if (cont)
+                {
+                    UpdateImageOfSingleProperty<Data<Sponsor>>(Sponsors);
+                    ResolveUnreferencedImages<Data<Sponsor>>(Sponsors);
+                }
+            }
+        }
+        private Boolean UpdateAsyncIfNeeded<T>(String PropertyName, Type GenericType)
             where T : IApiModels
         {
+            Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {PropertyName}");
             try
             {
                 T t = (T)Activator.CreateInstance(typeof(T));
-                Task image = UpdateAsync<T>(t.ApiPath(), GenericType, PropertyName);
-                return image;           
+                return UpdateAsync<T>(t.ApiPath(), GenericType, PropertyName).Result;
             }
             catch(Exception ex)
             {
                 Debug.WriteLine($"Exception in {MethodBase.GetCurrentMethod().Name} with {ExMessage(ex)}");
-                return null;
+                return false;
             }
         }
         private T GetPropertyOfType<T>(Type t, String PropertyName)
         {
+
+            Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {PropertyName}");
             var props = this.GetType().GetProperties(System.Reflection.BindingFlags.Public | BindingFlags.Instance);
             var propertyOfTypeT = props.SingleOrDefault(x => x.Name == PropertyName);
             T value = (T)Activator.CreateInstance(t);
@@ -50,57 +116,42 @@ namespace MonoNetConnect.Cache
             var propertyOfTypeT = props.SingleOrDefault(x => x.Name == PropertyName);
             propertyOfTypeT.SetValue(this, model.Data);
         }
-        private Task UpdateAsync<T>(String Url, Type GenericType, String PropertyName)
+        private async Task<Boolean> UpdateAsync<T>(String Url, Type GenericType, String PropertyName)
             where T : IApiModels
         {
+
+            Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {PropertyName}");
             Uri path = new Uri(new Uri(BasicAPIPath), Url);
             String p = String.Join("/", BasicAPIPath, Url);
             try
             {
                 HttpWebRequest client = new HttpWebRequest(new Uri(p));
                 client.Method = "GET";
-                using (HttpWebResponse respone = (HttpWebResponse)client.GetResponse())
+                Task<WebResponse> responseTask = Task.Factory.FromAsync<WebResponse>(client.BeginGetResponse, client.EndGetResponse, null);
+                using (var responseStream = responseTask.Result.GetResponseStream())
                 {
-                    BasicAPIModel<T> mod = ModelFromResponse<T>(respone);
-                    Task ImageTask = null;
-                    if (mod?.Status.State == DatabaseModels.StatusModel.Status.Success)
+                    var reader = new StreamReader(responseStream);
+                    BasicAPIModel<T> mod = ParseStringToModel<T>(reader.ReadToEnd());
+                    if(mod.Status.State == ApiModel.StatusModel.Status.Success)
                     {
-                        SetPropertyOfType<T>(GenericType,PropertyName,mod);
-                        if (mod.Data.IsClassWithImage() && mod.Data.GetType().GetInterfaces().Where(x => x.Name == typeof(IList<>).Name).ToList().Count > 0)
-                        {
-                            ImageTask = CreateImageDownloadTask(GenericType, mod);
-                        }
+                        SetPropertyOfType(GenericType, PropertyName, mod);
+                        return true;
                     }
-                    return ImageTask;
                 }
             }
             catch(Exception ex)
             {
                 Debug.WriteLine($"Exception in {MethodBase.GetCurrentMethod().Name} with {ExMessage(ex)}");
+                return false;
             }
-            return null;
+            return false;
         }
-        private BasicAPIModel<T> ModelFromResponse<T>(HttpWebResponse respone) where T : IApiModels
+        private BasicAPIModel<T> ModelFromResponse<T>(HttpWebResponse response) where T : IApiModels
         {
-            StreamReader content = new StreamReader(respone.GetResponseStream(),true);
+            StreamReader content = new StreamReader(response.GetResponseStream(),true);
             String json = content.ReadToEnd();
             BasicAPIModel<T> mod = ParseStringToModel<T>(json);
             return mod;
-        }
-
-        private Task CreateImageDownloadTask<T>(Type InnerGenericType, BasicAPIModel<T> mod)
-            where T : IApiModels
-        {
-            Task ImageTask;
-            MethodInfo method = this.GetType().GetMethod("DownloadImagesAsync", BindingFlags.NonPublic | BindingFlags.Instance);
-            MethodInfo generic = method.MakeGenericMethod(InnerGenericType);
-            ImageTask = new Task(
-                () =>
-                {
-                    generic.Invoke(this, new object[] { mod.Data });
-                });
-            return ImageTask;
-        }
-
+        }        
     }
 }

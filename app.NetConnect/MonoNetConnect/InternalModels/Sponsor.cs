@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace MonoNetConnect.InternalModels
 {
-    public class Sponsor : BaseProperties, IApiModels
+    public class Sponsor : BaseProperties, IApiModels, IHasImage
     {
         private static String SponsorApiPath = @"api.php/app/Partner";
         private static String SponsorImagePath = @"Images/Sponsor";
@@ -46,7 +46,7 @@ namespace MonoNetConnect.InternalModels
             return SponsorApiPath;
         }
 
-        public string ImageDirectoryPath()
+        public string GetImageDirectoryPath()
         {
             return SponsorImagePath;
         }
@@ -54,6 +54,11 @@ namespace MonoNetConnect.InternalModels
         public bool IsClassWithImage()
         {
             return true;
+        }
+
+        public string GetImage()
+        {
+            return this.Image;
         }
     }
 }

@@ -11,7 +11,7 @@ using Android.Views;
 using Android.Widget;
 using MonoNetConnect.Cache;
 
-namespace MonoNetConnect.DatabaseModels
+namespace MonoNetConnect.ApiModel
 {
 
     public class StatusModel

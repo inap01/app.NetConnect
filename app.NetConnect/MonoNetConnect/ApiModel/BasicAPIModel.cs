@@ -9,16 +9,16 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using MonoNetConnect.DatabaseModels;
 using MonoNetConnect.InternalModels;
 using Newtonsoft.Json;
+using MonoNetConnect.ApiModel;
 
 namespace MonoNetConnect
 {
     public abstract partial class BaseProperties
     {
         public Int32 ID { get; set; }
-        protected DateTime LatestChange { get; set; } = DateTime.Now;
+        protected DateTime LatestChange { get; set; } = DateTime.MinValue;
 
         public DateTime GetLatestChange()
         {

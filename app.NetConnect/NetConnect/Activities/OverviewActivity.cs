@@ -35,7 +35,12 @@ namespace NetConnect
                 return true;
             }
             return base.OnCreateOptionsMenu(menu);
-        }        
+        }
+
+        public override void update()
+        {
+
+        }
     }
 }
 

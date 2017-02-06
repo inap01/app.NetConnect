@@ -64,7 +64,7 @@ namespace MonoNetConnect.InternalModels
                 return "";
             }
 
-            public string ImageDirectoryPath()
+            public string GetImageDirectoryPath()
             {
                 throw new NotImplementedException();
             }
@@ -90,7 +90,7 @@ namespace MonoNetConnect.InternalModels
                 return "";
             }
 
-            public string ImageDirectoryPath()
+            public string GetImageDirectoryPath()
             {
                 throw new NotImplementedException();
             }
@@ -106,7 +106,7 @@ namespace MonoNetConnect.InternalModels
             return TournamentApiPath;
         }
 
-        public string ImageDirectoryPath()
+        public string GetImageDirectoryPath()
         {
             return IconPath;
         }

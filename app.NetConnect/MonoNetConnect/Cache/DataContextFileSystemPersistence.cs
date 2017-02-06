@@ -15,10 +15,8 @@ using System.IO;
 
 namespace MonoNetConnect.Cache
 {
-    
     public partial class DataContext
     {
-        
         private void SaveDataContext()
         {
             DataContext copy = this;
@@ -27,12 +25,11 @@ namespace MonoNetConnect.Cache
             {
                 var data = new UTF8Encoding(true).GetBytes(json);
                 fs.WriteAsync(data, 0, data.Length);
-            }            
+            }
         }
         private void LoadDataContextFromFile()
         {
             current = JsonConvert.DeserializeObject<DataContext>(DataContextFilePath);
         }
-
     }
 }

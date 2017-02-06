@@ -22,15 +22,19 @@ namespace NetConnect
         public AppStart(IntPtr handle, JniHandleOwnership ownerShip)
             : base(handle, ownerShip)
         {
+            AndroidEnvironment.UnhandledExceptionRaiser += HandleUndhandledExcpetions;
             DataContext.InitializeDataContext(this.ApplicationInfo.DataDir);
-            context = DataContext.GetDataContext();
-            timer = new System.Threading.Timer(
-                (e) =>
-                {
-                    context.UpdateSingleProperty<Data<Tournament>>("Tournaments", typeof(Tournament));
-                },null,0,(int)TimeSpan.FromMinutes(10).TotalMilliseconds);
+            //timer = new System.Threading.Timer(
+            //    (e) =>
+            //    {
+            //        context.UpdateDataContext();
+            //    }, null, (int)TimeSpan.FromMinutes(1).TotalMilliseconds, (int)TimeSpan.FromMinutes(1).TotalMilliseconds);
+            // (int)TimeSpan.FromMinutes((DateTime.Now >= context.Settings.Start && DateTime.Now <= context.Settings.End) ? 60 : 1).TotalMilliseconds)
         }
-
+        void HandleUndhandledExcpetions(object sender, RaiseThrowableEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(e.Exception);
+        }
         public override void OnCreate()
         {            
             

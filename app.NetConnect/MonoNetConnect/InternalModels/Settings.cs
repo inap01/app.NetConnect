@@ -11,10 +11,11 @@ using Android.Views;
 using Android.Widget;
 using MonoNetConnect.Cache;
 using Newtonsoft.Json;
+using MonoNetConnect.Extensions;
 
 namespace MonoNetConnect.InternalModels
 {
-    public class Settings : BaseProperties,IApiModels
+    public class Settings : BaseProperties,IApiModels, IDeepCloneable<Settings>
     {
         private static String SettingsApiPath = @"api.php";
         [JsonProperty("colume")]
@@ -36,14 +37,19 @@ namespace MonoNetConnect.InternalModels
         public Boolean ActiveBooking { get; set; }
 
         [JsonProperty("kontocheck")]
-        public Int32 DaysBooked { get; set; }
+        public DateTime KontoChecked { get; set; }
+
+        [JsonProperty("tage_reservierung")]
+        public Int32 DaysReserved { get; set; }
 
         [JsonProperty("iban")]
         public String IBan { get; set; }
 
         [JsonProperty("bic")]
         public String BIC { get; set; }
+        [JsonProperty("blz")]
         public String BLZ { private get; set; }
+        [JsonProperty("kontonummer")]
         public String Kontonummer { private get; set; }
 
         public string ApiPath()
@@ -51,7 +57,7 @@ namespace MonoNetConnect.InternalModels
             return SettingsApiPath;
         }
 
-        public string ImageDirectoryPath()
+        public string GetImageDirectoryPath()
         {
             throw new NotImplementedException();
         }
@@ -59,6 +65,32 @@ namespace MonoNetConnect.InternalModels
         public bool IsClassWithImage()
         {
             return false;
+        }
+
+        public Settings DeepClone()
+        {
+            return new Settings()
+            {
+                ActiveBooking = this.ActiveBooking,
+                BIC = this.BIC,
+                BLZ = this.BLZ,
+                AdvancePayment = this.AdvancePayment,
+                BoxOffice = this.BoxOffice,
+                DaysReserved = this.DaysReserved,
+                End = new DateTime(this.End.Ticks),
+                Start = new DateTime(this.Start.Ticks),
+                ID = this.ID,
+                IBan = this.IBan,
+                KontoChecked = new DateTime(this.KontoChecked.Ticks),
+                Kontonummer = this.Kontonummer,
+                LatestChange = this.LatestChange,
+                Volume = this.Volume,
+            };
+        }
+
+        object IDeepCloneable.DeepClone()
+        {
+            return this.DeepClone();
         }
     }
 }

@@ -17,6 +17,11 @@ namespace NetConnect.Activities
     [Activity(Label = "TournamentActivity")]
     public class TournamentActivity : BaseActivity<ITournamentController, TournamentController>, ITournamentController 
     {
+        public override void update()
+        {
+
+        }
+
         public void UpdateContentList(Data<Tournament> tournaments)
         {
             throw new NotImplementedException();
