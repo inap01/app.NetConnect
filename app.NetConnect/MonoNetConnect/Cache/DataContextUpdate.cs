@@ -49,7 +49,6 @@ namespace MonoNetConnect.Cache
 
             if (Settings?.GetLatestChange().AddMinutes(2) <= Changes.Settings)
             {
-
                 Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params");
                 UpdateSingleProperty<Settings>("Settings", typeof(Settings));
             }
@@ -62,11 +61,6 @@ namespace MonoNetConnect.Cache
 
             if (Products?.GetLatestChange().AddMinutes(2) <= Changes.Products)
             {
-                //Action imageTask = UpdateSingleProperty<Data<Product>>("Products", typeof(Product));
-                //Images
-
-                //Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params");
-                //UpdateImageOfSingleProperty<Data<Product>>(Products);
                 bool cont = UpdateSingleProperty<Data<Product>>("Products",typeof(Product));
                 if(cont)
                 {
@@ -74,9 +68,9 @@ namespace MonoNetConnect.Cache
                     ResolveUnreferencedImages<Data<Product>>(Products);
                 }
             }
+
             if (Sponsors?.GetLatestChange().AddMinutes(2) <= Changes.Settings)
             {
-
                 bool cont = UpdateSingleProperty<Data<Sponsor>>("Sponsors", typeof(Sponsor));
                 if (cont)
                 {

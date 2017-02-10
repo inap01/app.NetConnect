@@ -19,24 +19,24 @@ namespace MonoNetConnect.InternalModels
     [Serializable]
     public class Product : BaseProperties, IApiModels, IHasImage, IDeepCloneable<Product>
     {
-        private static String ProductImagePath = @"Images/Product";
-        private static String ProductApiPath = @"api.php/app/Product{/id}";
+        private static String ProductImagePath = @"Images/Products";
+        private static String ProductApiPath = @"api.php/app/Products{/id}";
 
-        [JsonProperty("")]
+        [JsonProperty("name")]
         public String Name { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("description")]
         public String Description { get; set; } = "";
-        [JsonProperty("")]
+        [JsonProperty("price")]
         public Decimal Price { get; set; }
         [ApiPropertyName("Image")]
-        [JsonProperty("")]
+        [JsonProperty("image")]
         public String ImageName { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("attributes")]
         public List<String> Attributes { get; set; } = new List<string>();
 
         public string ApiPath()
         {            
-            return ProductApiPath.Replace("{/id}",$"/{ID}");
+            return ProductApiPath.Replace("{/id}",$"");
         }
 
         public string GetImageDirectoryPath()

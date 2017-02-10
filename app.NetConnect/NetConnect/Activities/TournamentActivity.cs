@@ -29,6 +29,7 @@ namespace NetConnect.Activities
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            SetContentView(Resource.Layout.ActivityNavigationLayout);
             base.OnCreate(savedInstanceState);
 
         }

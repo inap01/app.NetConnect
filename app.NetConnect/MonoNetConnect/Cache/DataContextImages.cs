@@ -67,7 +67,7 @@ namespace MonoNetConnect.Cache
                 {
                     using (Bitmap bm = BitmapFactory.DecodeByteArray(data, 0, data.Length))
                     {
-                        bm.Compress(Bitmap.CompressFormat.Jpeg, 70, outStream);
+                        bm.Compress(Bitmap.CompressFormat.Png, 70, outStream);
                     }
                 }
             }

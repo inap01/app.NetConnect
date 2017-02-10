@@ -42,12 +42,7 @@ namespace MonoNetConnect.Cache
         public User User { get; set; } = new User();
         public Settings Settings { get; set; } = new Settings();
         public Data<Sponsor> Sponsors { get; set; } = new Data<Sponsor>();
-        public Data<Product> Products { get; set; } = new Data<Product>()
-        {
-            new Product() {Attributes = new List<string>() {"1mayo","1Ketchup","1Remoulade" }, Description = "Was für 1 Pommes", ID = 1, ImageName="", Name = "Pommes", Price = 1.4m },
-            new Product() {Attributes = new List<string>() {"1mayo","1Ketchup","1Remoulade" }, Description = "Was für 1 Pommes", ID = 2, ImageName="", Name = "Semmop", Price = 1.4m },
-            new Product() {Attributes = new List<string>() {"1mayo","1Ketchup","1Remoulade" }, Description = "Was für 1 Pommes", ID = 3, ImageName="", Name = "Marius", Price = 1.4m }
-        };
+        public Data<Product> Products { get; set; } = new Data<Product>();
 
         private DataContext()
         {

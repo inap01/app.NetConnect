@@ -16,6 +16,7 @@ using MonoNetConnect.InternalModels;
 using Java.Lang;
 using NetConnect.CustomViews;
 using Square.Picasso;
+using Java.IO;
 
 namespace NetConnect.Activities
 {
@@ -48,8 +49,14 @@ namespace NetConnect.Activities
             Button cancel = v.FindViewById<Button>(Resource.Id.CateringCancelButton);
             Button ok = v.FindViewById<Button>(Resource.Id.CateringApproveButton);
             ListView list = v.FindViewById<ListView>(Resource.Id.CateringFragmentListView);
+            TextView tvName = v.FindViewById<TextView>(Resource.Id.OrderFragmentProductName);
+            TextView tvPrice = v.FindViewById<TextView>(Resource.Id.OrderFragmentProductPrice);
+            TextView tvDesc = v.FindViewById<TextView>(Resource.Id.OrderFragmentProductDesc);
+            tvName.Text = product.Name;
+            tvPrice.Text = product.Price.ToString();
+            tvDesc.Text = product.Description;
             OrderAdapter adap = new OrderAdapter(this,product.Attributes);
-
+            
             list.Adapter = adap;
             SetUpClickTouchEvents(product, v, cancel, ok, innerRoot);
             root.AddView(v);
@@ -136,7 +143,11 @@ namespace NetConnect.Activities
                 adapter = new CateringAdapter(this, products, (Int32 a) => Controller.OrderDialog(a));
                 grid.Adapter = adapter;
             }
-            adapter.NotifyDataSetChanged();
+            RunOnUiThread(() =>
+            {
+                adapter.SetItems(products);
+                adapter.NotifyDataSetChanged();
+            });
         }
     }
 
@@ -169,7 +180,18 @@ namespace NetConnect.Activities
         {
             return 0;
         }
-
+        private List<string> GetAttributes(ViewGroup parent)
+        {
+            List<string> attributes = new List<string>();
+            for(int i = 0; i < parent.ChildCount;i++)
+            {
+                if(parent.GetChildAt(i) is CheckBox)
+                {
+                    attributes.Add(this[i]);
+                }
+            }
+            return attributes;
+        }
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             convertView = _context.LayoutInflater.Inflate(Resource.Layout.CateringOrderAttributeListItem, parent, false);
@@ -190,6 +212,10 @@ namespace NetConnect.Activities
             _context = context;
             _products = prod;
             OnProductClickCallback = _delegate;
+        }
+        public void SetItems(Data<Product> products)
+        {
+            _products = products;
         }
         public override int Count
         {
@@ -218,7 +244,8 @@ namespace NetConnect.Activities
             TextView tv = convertView.FindViewById<TextView>(Resource.Id.CateringListItemProductName);
             tv.SetText(_products[position].Name, TextView.BufferType.Normal);
             tv.SetBackgroundResource(Resource.Drawable.FadingGradient);
-            Picasso.With(_context).Load(Resource.Drawable.logo).Into(iv);
+            string path = System.String.Join("/", _context.ApplicationInfo.DataDir, _products.GetImageDirectoryPath(), _products[position].ImageName.Split('/').Last());
+            Picasso.With(_context).Load(new File(path)).Into(iv);
             convertView.Click += (o, e) => { if(!OrderOpen) OnProductClickCallback(position); };
             return convertView;
         }

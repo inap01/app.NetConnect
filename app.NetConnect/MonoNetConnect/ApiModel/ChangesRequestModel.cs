@@ -25,7 +25,7 @@ namespace MonoNetConnect.ApiModel
         public DateTime Sponsors { get; set; }
         [JsonProperty("partner_packs")]
         public DateTime SponsorPacks { get; set; }
-        [JsonIgnore]
+        [JsonProperty("catering_products")]
         public DateTime Products { get; set; }
         [JsonProperty("tournaments")]
         public DateTime Tournaments { get; set; }

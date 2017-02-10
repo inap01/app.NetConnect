@@ -4,5 +4,5 @@
   <gradient android:type="radial"
       android:gradientRadius="360"
       android:startColor="@color/NetConnBlue"
-       android:endColor="#64128781"/>
+       android:endColor="#10128781"/>
 </shape>
