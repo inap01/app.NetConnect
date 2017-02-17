@@ -36,6 +36,9 @@ namespace MonoNetConnect.Cache
         private String ApiImageUpdateRequest = "api.php/app/ImageUpdates";
         private String DataContextFilePath { get; set; }
         private static DataContext current = null;
+
+        internal Order CurrentOrder { get; set; } = new Order();
+
         
         public ChangesRequestModel Changes { get; set; }
         public Data<Tournament> Tournaments { get; set; } = new Data<Tournament>();
@@ -116,7 +119,7 @@ namespace MonoNetConnect.Cache
         public void UpdateImageOfSingleProperty<T>(T ModelToPost)
             where T : IApiImageModel
         {
-            var images = UpdatePostWithResult<T, List<String>>(ModelToPost, ApiImageUpdateRequest);
+            var images = UpdateImagesPost<T, List<String>>(ModelToPost, ApiImageUpdateRequest);
             DownloadImagesAsync<T>(images);
         }
 

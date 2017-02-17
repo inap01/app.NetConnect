@@ -35,6 +35,10 @@ namespace NetConnect
         #region Shared Properties
         protected String NavTitle { get; set; }
         protected Boolean isLoggedIn { get; set; } = true;
+        public Action TopRightIconAction = () =>
+        {
+
+        };
         protected Dictionary<string, Type> nameMap;
         private NavigationController _navController;
         protected NavigationController NavController
@@ -141,6 +145,7 @@ namespace NetConnect
                     NavBarOpenClose();
                     break;
                 case Resource.Id.openProfile:
+                    TopRightIconAction();
                     break;
                 default:
                     NavBarOpenClose();

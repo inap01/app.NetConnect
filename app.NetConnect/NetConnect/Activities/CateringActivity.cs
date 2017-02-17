@@ -25,10 +25,14 @@ namespace NetConnect.Activities
     {
         GridView grid;
         CateringAdapter adapter;
+        OrderAdapter OrderAdapter;
+        ListView AttributeList;
         ViewGroup root;
         RelativeLayout orderDialog;
-        System.Boolean orderDialogActive;
+        bool orderd = false;
+        bool orderDialogActive;
         Action CloseOrderDialog;
+        Action ConfirmOrder;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             SetContentView(Resource.Layout.ActivityNavigationLayout);
@@ -39,6 +43,11 @@ namespace NetConnect.Activities
             root = FindViewById<RelativeLayout>(Resource.Id.CateringRoot);
             base.OnCreate(savedInstanceState);
             Controller.setUpUI();
+            var TopOrderBag = FindViewById<View>(Resource.Id.openProfile);
+            this.TopRightIconAction = () =>
+            {
+                StartActivity(typeof(OrderActivity));
+            };
         }
 
         public void ShowOrderDialog(Product product)
@@ -48,24 +57,23 @@ namespace NetConnect.Activities
             orderDialog = v.FindViewById<RelativeLayout>(Resource.Id.CateringOrderFragmentRelativeLayout);
             Button cancel = v.FindViewById<Button>(Resource.Id.CateringCancelButton);
             Button ok = v.FindViewById<Button>(Resource.Id.CateringApproveButton);
-            ListView list = v.FindViewById<ListView>(Resource.Id.CateringFragmentListView);
+            AttributeList = v.FindViewById<ListView>(Resource.Id.CateringFragmentListView);
             TextView tvName = v.FindViewById<TextView>(Resource.Id.OrderFragmentProductName);
             TextView tvPrice = v.FindViewById<TextView>(Resource.Id.OrderFragmentProductPrice);
             TextView tvDesc = v.FindViewById<TextView>(Resource.Id.OrderFragmentProductDesc);
             tvName.Text = product.Name;
             tvPrice.Text = product.Price.ToString();
-            tvDesc.Text = product.Description;
-            OrderAdapter adap = new OrderAdapter(this,product.Attributes);
-            
-            list.Adapter = adap;
+            tvDesc.Text = product.Description;            
             SetUpClickTouchEvents(product, v, cancel, ok, innerRoot);
+            OrderAdapter = new OrderAdapter(this, product.Attributes);
+            AttributeList.Adapter = OrderAdapter;
             root.AddView(v);
             orderDialogActive = true;
             adapter.OrderOpen = true;
         }
 
         private void SetUpClickTouchEvents(Product product, View v, Button cancel, Button ok, FrameLayout innerRoot)
-        {
+        {            
             CloseOrderDialog = () =>
             {
                 root.RemoveView(v);
@@ -76,14 +84,19 @@ namespace NetConnect.Activities
             {
                 CloseOrderDialog();
             };
-            ok.Click += async (o, e) =>
+            ok.Click += (o,e) =>
             {
-                var prod = product.DeepClone();
-                prod.Attributes = new List<string>();
-                var result = await Controller.OrderProduct(prod);
-                ShowToast(result, false, "Placeholder");
-                CloseOrderDialog();
+                if(!orderd)
+                {
+                    orderd = true;
+                    var prod = product.DeepClone();
+                    prod.Attributes = OrderAdapter.GetAttributes(AttributeList);
+                    Controller.AddProductToOrder(prod);
+                    CloseOrderDialog();
+                    orderd = false;
+                }
             };
+
         }
         public override void OnBackPressed()
         {
@@ -136,6 +149,7 @@ namespace NetConnect.Activities
 
         public void PopulateGridLayout(Data<Product> products)
         {
+
             if (grid == null)
                 grid = FindViewById<GridView>(Resource.Id.CateringGridLayout);
             if (adapter == null)
@@ -154,11 +168,13 @@ namespace NetConnect.Activities
     public class OrderAdapter : BaseAdapter<string>
     {
         private List<string> _attributes;
+        public List<string> _setAttributes;
         private Activity _context;
         public OrderAdapter(Activity context, List<string> values)
         {
             _context = context;
             _attributes = values;
+            _setAttributes = new List<string>();
         }
         public override string this[int position]
         {
@@ -180,18 +196,26 @@ namespace NetConnect.Activities
         {
             return 0;
         }
-        private List<string> GetAttributes(ViewGroup parent)
+        public List<string> GetAttributes(ViewGroup root)
         {
-            List<string> attributes = new List<string>();
+            Attributes(root);
+            return _setAttributes;
+        }
+        private void Attributes(ViewGroup parent)
+        {            
             for(int i = 0; i < parent.ChildCount;i++)
             {
+                if(parent.GetChildAt(i) is ViewGroup)
+                    if (((ViewGroup)parent.GetChildAt(i)).ChildCount > 0)
+                        Attributes((ViewGroup)parent.GetChildAt(i));             
                 if(parent.GetChildAt(i) is CheckBox)
                 {
-                    attributes.Add(this[i]);
+                    if(((CheckBox)(parent.GetChildAt(i))).Checked)
+                        _setAttributes.Add(this[i]);
                 }
             }
-            return attributes;
         }
+
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             convertView = _context.LayoutInflater.Inflate(Resource.Layout.CateringOrderAttributeListItem, parent, false);
@@ -246,7 +270,10 @@ namespace NetConnect.Activities
             tv.SetBackgroundResource(Resource.Drawable.FadingGradient);
             string path = System.String.Join("/", _context.ApplicationInfo.DataDir, _products.GetImageDirectoryPath(), _products[position].ImageName.Split('/').Last());
             Picasso.With(_context).Load(new File(path)).Into(iv);
-            convertView.Click += (o, e) => { if(!OrderOpen) OnProductClickCallback(position); };
+            convertView.Click += (o, e) =>
+            {
+                if (!OrderOpen) OnProductClickCallback(position);
+            };
             return convertView;
         }
     }

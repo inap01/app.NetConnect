@@ -106,7 +106,6 @@
   <ItemGroup>
     <Compile Include="ApiModel\ApiUpdated.cs" />
     <Compile Include="ApiModel\ChangesRequestModel.cs" />
-    <Compile Include="ApiModel\ProductOrder.cs" />
     <Compile Include="Cache\DataContext.cs" />
     <Compile Include="Cache\DataContextFileSystemPersistence.cs" />
     <Compile Include="Cache\DataContextImages.cs" />
@@ -114,6 +113,7 @@
     <Compile Include="Cache\DataContextJSONExtension.cs" />
     <Compile Include="Controller\BaseViewController.cs" />
     <Compile Include="Controller\CateringController.cs" />
+    <Compile Include="Controller\OrderController.cs" />
     <Compile Include="Controller\SponsoringController.cs" />
     <Compile Include="Controller\ContactController.cs" />
     <Compile Include="Controller\NavigationController.cs" />
@@ -124,6 +124,7 @@
     <Compile Include="Extensions\IDeepCloneable.cs" />
     <Compile Include="InternalModels\Data.cs" />
     <Compile Include="InternalModels\IName.cs" />
+    <Compile Include="InternalModels\Order.cs" />
     <Compile Include="InternalModels\Product.cs" />
     <Compile Include="InternalModels\Settings.cs" />
     <Compile Include="InternalModels\Sponsor.cs" />

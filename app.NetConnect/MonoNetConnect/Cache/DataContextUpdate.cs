@@ -25,16 +25,25 @@ namespace MonoNetConnect.Cache
         private static String BasicAPIPath = @"http://lan-netconnect.de/_api";
         private String ExMessage(Exception ex) => String.Join("\n", ex.Message, ex.InnerException, ex.StackTrace);
 
-        private Z UpdatePostWithResult<T, Z>(T ModelToPost, String relativePath)
+        private Z UpdateImagesPost<T,Z>(T ModelToPost, String relativePath)
             where T : IApiImageModel
         {
-            Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {relativePath}");
             Dictionary<string, DateTime> images = new Dictionary<string, DateTime>();
             foreach (var x in ModelToPost.GetImages())
             {
                 images.Add(x, ModelToPost.GetLatestChange());
             }
             var content = new StringContent(JsonConvert.SerializeObject(images), Encoding.UTF8, "application/json");
+            return UpdatePostWithResult<Z>(content, relativePath);
+        }
+        public Z PostRequestWithExpectedResult<T,Z>(T ModelToPost, string relativePath)
+        {
+            StringContent content = new StringContent(JsonConvert.SerializeObject(ModelToPost),Encoding.UTF8, "application/json");
+            return UpdatePostWithResult<Z>(content, relativePath);
+        }
+        private Z UpdatePostWithResult<Z>(StringContent content, String relativePath)
+        {
+            
             HttpClient client = new HttpClient();
             
             var response = client.PostAsync(String.Join("/",BasicAPIPath,relativePath), content);
@@ -43,19 +52,16 @@ namespace MonoNetConnect.Cache
         }
         private void GenerateAndRunUpdateTasks()
         {
-            Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params");
             current.lastUpdated = DateTime.Now;
             UpdateSingleProperty<ChangesRequestModel>("Changes", typeof(ChangesRequestModel));
 
             if (Settings?.GetLatestChange().AddMinutes(2) <= Changes.Settings)
             {
-                Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params");
                 UpdateSingleProperty<Settings>("Settings", typeof(Settings));
             }
 
             if (Tournaments?.GetLatestChange().AddMinutes(2) <= Changes.Tournaments)
             {
-                Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params");
                 UpdateSingleProperty<Data<Tournament>>("Tournaments", typeof(Tournament));
             }
 
@@ -82,7 +88,6 @@ namespace MonoNetConnect.Cache
         private Boolean UpdateAsyncIfNeeded<T>(String PropertyName, Type GenericType)
             where T : IApiModels
         {
-            Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {PropertyName}");
             try
             {
                 T t = (T)Activator.CreateInstance(typeof(T));
@@ -90,14 +95,11 @@ namespace MonoNetConnect.Cache
             }
             catch(Exception ex)
             {
-                Debug.WriteLine($"Exception in {MethodBase.GetCurrentMethod().Name} with {ExMessage(ex)}");
                 return false;
             }
         }
         private T GetPropertyOfType<T>(Type t, String PropertyName)
         {
-
-            Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {PropertyName}");
             var props = this.GetType().GetProperties(System.Reflection.BindingFlags.Public | BindingFlags.Instance);
             var propertyOfTypeT = props.SingleOrDefault(x => x.Name == PropertyName);
             T value = (T)Activator.CreateInstance(t);
@@ -113,8 +115,6 @@ namespace MonoNetConnect.Cache
         private async Task<Boolean> UpdateAsync<T>(String Url, Type GenericType, String PropertyName)
             where T : IApiModels
         {
-
-            Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {PropertyName}");
             Uri path = new Uri(new Uri(BasicAPIPath), Url);
             String p = String.Join("/", BasicAPIPath, Url);
             try
@@ -135,7 +135,6 @@ namespace MonoNetConnect.Cache
             }
             catch(Exception ex)
             {
-                Debug.WriteLine($"Exception in {MethodBase.GetCurrentMethod().Name} with {ExMessage(ex)}");
                 return false;
             }
             return false;

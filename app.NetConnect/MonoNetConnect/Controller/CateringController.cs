@@ -26,10 +26,23 @@ namespace MonoNetConnect.Controller
         {
 
         }
-        public async Task<Boolean> OrderProduct(Product p)
+        public void AddProductToOrder(Product p)
         {
-
-            return true;
+            dataContext.CurrentOrder.Products.Add(p);
+        }
+        public void AddProductToOrder(Product p, int count)
+        {
+            dataContext.CurrentOrder.Products.Add(new OrderProduct()
+            {
+                Attributes = p.Attributes,
+                Price = p.Price,
+                Count = count,
+                ID = p.ID
+            });
+        }
+        public void RemoveProductFromOrder(Product p)
+        {
+            dataContext.CurrentOrder.Products.RemoveAll(x => x.ID == p.ID);
         }
         public void OrderDialog(Int32 ind)
         {

@@ -17,13 +17,20 @@ namespace MonoNetConnect
 {
     public abstract partial class BaseProperties
     {
+        [JsonProperty("ID")]
         public Int32 ID { get; set; }
+        [JsonProperty("latest_change")]
         protected DateTime LatestChange { get; set; } = DateTime.MinValue;
 
         public DateTime GetLatestChange()
         {
             return this.LatestChange;
         }
+    }
+    public class BasicAPIModel
+    {
+        [JsonProperty("status")]
+        public StatusModel Status { get; set; }
     }
     public class BasicAPIModel<T>
     {

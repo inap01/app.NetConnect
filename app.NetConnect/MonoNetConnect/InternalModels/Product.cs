@@ -28,6 +28,8 @@ namespace MonoNetConnect.InternalModels
         public String Description { get; set; } = "";
         [JsonProperty("price")]
         public Decimal Price { get; set; }
+        [JsonProperty("single_choice")]
+        public Boolean SingleChoice { get; set; }
         [ApiPropertyName("Image")]
         [JsonProperty("image")]
         public String ImageName { get; set; }
@@ -53,7 +55,6 @@ namespace MonoNetConnect.InternalModels
         {
             return ImageName;
         }
-
         public Product DeepClone()
         {
             return new Product()

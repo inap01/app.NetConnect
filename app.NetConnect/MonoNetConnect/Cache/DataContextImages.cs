@@ -45,7 +45,7 @@ namespace MonoNetConnect.Cache
 
             System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {fileName}");
             var model = ((T)Activator.CreateInstance(typeof(T)));
-            String _url = String.Join("/", BasicAPIPath, ApiImagesPath ,fileName);
+            String _url = fileName;
             Uri url = new Uri(_url);
             using (WebClient client = new WebClient())
             {
