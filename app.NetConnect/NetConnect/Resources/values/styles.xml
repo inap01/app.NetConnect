@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <style name="RedCheckbox">
+    <item name="android:colorAccent">@color/NetConnBlue</item>
+    <item name="android:textColorSecondary">#1C2F2F</item>
+  </style>
+</resources>

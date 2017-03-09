@@ -28,24 +28,23 @@ namespace MonoNetConnect.Cache
     public partial class DataContext
     {
         List<ISubscriber> subscriber = new List<ISubscriber>();
-        private readonly string Token = Convert.ToBase64String(Encoding.UTF8.GetBytes("984825f8-8ac0-4748-8fe4-502f462fdf85"));
+        internal readonly string Token = Convert.ToBase64String(Encoding.UTF8.GetBytes("984825f8-8ac0-4748-8fe4-502f462fdf85"));
         private Dictionary<Activity, Action> ActivityCallBackFunctions { get; set; }
         private DateTime? lastUpdated = DateTime.MinValue;
         private Boolean _isInitialLoad { get; set; } = true;
         private String ApiImagesPath = "images";
         private String ApiImageUpdateRequest = "api.php/app/ImageUpdates";
-        private String DataContextFilePath { get; set; }
+        private static String DataContextFilePath { get; set; }
         private static DataContext current = null;
-
+        public Boolean isLoggedIn { get; set; }
         internal Order CurrentOrder { get; set; } = new Order();
-
-        
         public ChangesRequestModel Changes { get; set; }
         public Data<Tournament> Tournaments { get; set; } = new Data<Tournament>();
         public User User { get; set; } = new User();
         public Settings Settings { get; set; } = new Settings();
         public Data<Sponsor> Sponsors { get; set; } = new Data<Sponsor>();
         public Data<Product> Products { get; set; } = new Data<Product>();
+        public Data<Seat> Seating { get; set; } = new Data<Seat>();
 
         private DataContext()
         {
@@ -73,15 +72,10 @@ namespace MonoNetConnect.Cache
         }
         public static void InitializeDataContext(String path)
         {
-            if (current != null)
+            DataContext.DataContextFilePath = Path.Combine(path, "datacontext.json");
+            if (File.Exists(DataContext.DataContextFilePath))
             {
-                if (current?.DataContextFilePath != null)
-                {
-                    if (File.Exists(current.DataContextFilePath))
-                    {
-                        current.LoadDataContextFromFile();
-                    }
-                }
+                DataContext.LoadDataContextFromFile();
             }
             else
             {
@@ -90,10 +84,11 @@ namespace MonoNetConnect.Cache
             if (current?.lastUpdated?.AddMinutes(2) <= DateTime.Now)
             {
                 current.MyDirPath = path;
-                current.UpdateDataContext();
+                current.UpdateDataContext().ContinueWith((Task t) =>
+                {
+                    current._isInitialLoad = false;
+                });
             }
-            current._isInitialLoad = false;
-            //current.SaveDataContext();
         }
         public Boolean UpdateSingleProperty<T>(String PropertyName, Type propType)
             where T : IApiModels
@@ -109,6 +104,10 @@ namespace MonoNetConnect.Cache
             var task = Task.Factory.StartNew(() => GenerateAndRunUpdateTasks());
             await task;
             Notify();
+            lock (current)
+            {
+                DataContext.SaveDataContext();
+            }
         }
 
         /// <summary>

@@ -19,8 +19,8 @@ namespace MonoNetConnect
     {
         [JsonProperty("ID")]
         public Int32 ID { get; set; }
-        [JsonProperty("latest_change")]
-        protected DateTime LatestChange { get; set; } = DateTime.MinValue;
+        [JsonProperty("last_change")]
+        protected virtual DateTime LatestChange { get; set; } = DateTime.MinValue;
 
         public DateTime GetLatestChange()
         {

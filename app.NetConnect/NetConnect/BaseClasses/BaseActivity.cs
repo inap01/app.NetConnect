@@ -21,12 +21,15 @@ using NetConnect.Activities;
 using static Android.App.ActionBar;
 using MonoNetConnect.Cache;
 using System.Reflection;
+using Android.Graphics.Drawables;
 
 namespace NetConnect
 {
+    [Activity(Theme = "@android:style/Theme.Material")]
     public abstract class BaseActivity<T,Z> : FragmentActivity, INavigationController, ISubscriber
         where T : IBaseViewController where Z : BaseViewController<T>
     {
+        int menuItemId;
         #region Navigation Properties
         List<TextView> NavEntries { get; set; } = new List<TextView>();
         protected DrawerLayout mDrawerLayout;
@@ -34,7 +37,11 @@ namespace NetConnect
         #endregion
         #region Shared Properties
         protected String NavTitle { get; set; }
-        protected Boolean isLoggedIn { get; set; } = true;
+        private Boolean IsLoggedIn { get
+            {
+                return Controller.IsLoggedIn();
+            }
+        }
         public Action TopRightIconAction = () =>
         {
 
@@ -56,7 +63,7 @@ namespace NetConnect
         protected List<String> Entries
         {
             get; set;
-        } = new List<string>(new String[] { "Home", "Catering", "Sponsoren", "Tournament", "Kontakt" });
+        } = new List<string>(new String[] { "Home", "Catering", "Sponsoren", "Tournament", "Kontakt", "Login" });
 
         #endregion        
         protected override void OnCreate(Bundle savedInstanceState)
@@ -66,14 +73,33 @@ namespace NetConnect
             SetUpMethod();
             DataContext d = DataContext.GetDataContext();
             d.Attach(this);
+            ColorDrawable ActionBarColor = new ColorDrawable(Resources.GetColor(Resource.Color.NetConnBlue));
+            ActionBar.SetBackgroundDrawable(ActionBarColor);
+            SetActivityTitle();
+        }
+        public void SetMenuIconID(int id)
+        {
+            menuItemId = id;
+        }
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            return base.OnCreateOptionsMenu(menu);
         }
         public void ListItemClicked(int id)
         {
             string key = Entries[id];
             Type t = nameMap[key];
-            StartActivity(typeof(OverviewActivity));
-            Intent i = new Intent(this, t);
-            StartActivity(i);
+            ListItemClicked(t);
+        }
+        public void ListItemClicked(Type type)
+        {
+            if (this.GetType() != type)
+            {
+                Intent i = new Intent(this, type);
+                StartActivity(i);
+            }
+            else
+                NavBarOpenClose(true);
         }
         protected override void OnDestroy()
         {
@@ -87,20 +113,43 @@ namespace NetConnect
             SetUpNavigationMenu();
         }
         #region Navigation Methods and Setup
-
         private void SetUpNavigationMenu()
         {
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            Title = NavTitle;            
-            this.ActionBar.SetDisplayHomeAsUpEnabled(true);
-            this.ActionBar.SetHomeButtonEnabled(true);
+            Title = NavTitle;
+            if (GetType() != typeof(LoginActivity))
+            {
+                this.ActionBar.SetDisplayHomeAsUpEnabled(true);
+                this.ActionBar.SetHomeButtonEnabled(true);
+            }
+            else
+            {
+                this.ActionBar.SetDisplayHomeAsUpEnabled(false);
+                this.ActionBar.SetHomeButtonEnabled(false);
+            }
             mDrawerToggle = new Android.Support.V7.App.ActionBarDrawerToggle(this, mDrawerLayout,
                 Resource.String.drawerOpen,
                 Resource.String.drawerClosed);
+            
+            mDrawerToggle.DrawerArrowDrawable.Color = Android.Graphics.Color.White;            
             mDrawerLayout.AddDrawerListener(mDrawerToggle);
             ListView list = FindViewById<ListView>(Resource.Id.NavbarListView);
-            NavAdapter adap = new NavAdapter(this,nameMap);
+            var nMap = new Dictionary<string, Type>();
+
+            foreach(var name in Entries)
+            {
+                nMap.Add(name, nameMap[name]);
+            }
+            NavAdapter adap = new NavAdapter(this, nMap);
             list.Adapter = adap;
+
+            BindUserData();
+
+        }
+
+        private void BindUserData()
+        {
+
         }
         protected void SetInnerLayout(int id)
         {
@@ -117,6 +166,11 @@ namespace NetConnect
         {
             return this._controller;
         }
+        public override void StartActivity(Intent intent)
+        {
+            NavBarOpenClose(true);
+            base.StartActivity(intent);
+        }
         private void populateNameMap()
         {
             nameMap = new Dictionary<string, Type>();
@@ -126,6 +180,8 @@ namespace NetConnect
             nameMap.Add(Entries[2], typeof(SponsoringActivity));
             nameMap.Add(Entries[3], typeof(TournamentActivity));
             nameMap.Add(Entries[4], typeof(ContactActivity));
+            nameMap.Add(Entries[5], typeof(LoginActivity));
+            nameMap.Add("Order", typeof(OrderActivity));
         }
 
         protected void SetUpNavClick()
@@ -142,7 +198,8 @@ namespace NetConnect
             switch (item.ItemId)
             {
                 case Resource.Id.home:
-                    NavBarOpenClose();
+                    if(GetType() != typeof(LoginActivity))
+                        NavBarOpenClose();
                     break;
                 case Resource.Id.openProfile:
                     TopRightIconAction();
@@ -154,12 +211,22 @@ namespace NetConnect
             return true;
         }
 
-        private void NavBarOpenClose()
+        private void NavBarOpenClose(bool? closeMenu = null)
         {
-            if (mDrawerLayout.IsDrawerOpen((int)GravityFlags.Left))
-                mDrawerLayout.CloseDrawer((int)GravityFlags.Left);
+            if (closeMenu == null)
+            {
+                if (mDrawerLayout.IsDrawerOpen((int)GravityFlags.Left))
+                    mDrawerLayout.CloseDrawer((int)GravityFlags.Left);
+                else
+                    mDrawerLayout.OpenDrawer((int)GravityFlags.Left);
+            }
             else
-                mDrawerLayout.OpenDrawer((int)GravityFlags.Left);
+            {
+                if(closeMenu == true)
+                    mDrawerLayout.CloseDrawer((int)GravityFlags.Left);
+                else
+                    mDrawerLayout.OpenDrawer((int)GravityFlags.Left);
+            }
         }
 
         protected override void OnPostCreate(Bundle savedInstanceState)
@@ -188,13 +255,25 @@ namespace NetConnect
             mDrawerLayout.CloseDrawer((int)GravityFlags.Left);
             Finish();
         }
-
+        public void StartActivityLogin(string activityName = null)
+        {
+            Intent i = new Intent(this, typeof(LoginActivity));
+            if(activityName != null)
+            {
+                i.PutExtra("ActivityType", activityName);
+            }
+            i.SetFlags(ActivityFlags.NoHistory);
+            StartActivity(i);
+        }
         public abstract void update();
+
+        public abstract void SetActivityTitle();
+
         public class NavAdapter : BaseAdapter<string>
         {
-            Activity _context;
+            BaseActivity<T,Z> _context;
             protected Dictionary<string, Type> _nameMap;
-            public NavAdapter(Activity context, Dictionary<string, Type> nameMap)
+            public NavAdapter(BaseActivity<T,Z> context, Dictionary<string, Type> nameMap)
             {
                 _nameMap = nameMap;
                 _context = context;
@@ -224,7 +303,8 @@ namespace NetConnect
             {
                 convertView = _context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1,parent,false);
                 ((TextView)convertView).SetText(this[position], TextView.BufferType.Normal);
-                convertView.Click += (o,e) => _context.StartActivity(_nameMap[this[position]]);
+                ((TextView)convertView).SetTextColor(Android.Graphics.Color.Black);
+                convertView.Click += (o, e) => _context.ListItemClicked(position);
                 return convertView;
             }
         }

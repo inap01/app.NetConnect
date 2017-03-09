@@ -4,4 +4,7 @@
   <color name="NetConnYellowWithAlpha">#95feda00</color>
   <color name="NetConnBlue">#128781</color>
   <color name="NetConnYellow">#feda00</color>
+  <color name="NetConnDarkYellow">#cbae00</color>
+  <color name="NetConnDarkBlue">#128781</color>
+  <color name="NetConnBrightYellow">#e1c823</color>
 </resources>

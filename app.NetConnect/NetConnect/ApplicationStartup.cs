@@ -52,7 +52,7 @@ namespace NetConnect
 
         void IActivityLifecycleCallbacks.OnActivityPaused(Activity activity)
         {
-            throw new NotImplementedException();
+            DataContext.SaveDataContext();
         }
 
         void IActivityLifecycleCallbacks.OnActivityResumed(Activity activity)

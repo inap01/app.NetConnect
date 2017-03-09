@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.percent.PercentRelativeLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:background="#30000000">
-  <TextView
-    android:layout_centerVertical="true"
-    android:id="@+id/CateringOrderListAttributeName"
-    app:layout_widthPercent="75%"
-    android:layout_height="wrap_content"
-    android:text="Test"/>
-  <CheckBox
-    android:id="@+id/checkbox"
-    android:layout_toRightOf="@id/CateringOrderListAttributeName"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_widthPercent="25%"/>
+    android:background="#20000000">
+    <TextView
+        android:layout_centerVertical="true"
+        android:id="@+id/CateringOrderListAttributeName"
+        app:layout_widthPercent="75%"
+        android:layout_marginLeft="4dp"
+        android:layout_height="wrap_content"
+        android:text="Test"
+        android:textColor="@android:color/black"/>
+    <CheckBox
+        android:theme="@style/RedCheckbox"
+        android:id="@+id/checkbox"
+        android:layout_toRightOf="@id/CateringOrderListAttributeName"
+        android:layout_height="match_parent"
+        app:layout_widthPercent="25%" />
 </android.support.percent.PercentRelativeLayout>

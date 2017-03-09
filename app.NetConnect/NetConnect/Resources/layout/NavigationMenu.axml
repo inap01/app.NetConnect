@@ -7,12 +7,12 @@
     android:layout_gravity="left">
     <android.support.percent.PercentRelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#dcdcdc">
         <RelativeLayout
             android:id="@+id/NavBarTopContainer"
             app:layout_heightPercent="30%"
-            android:layout_width="match_parent"
-            android:background="#ff0000">
+            android:layout_width="match_parent">
             <ImageView
                 android:layout_centerHorizontal="true"
                 android:id="@+id/NavImageView"
@@ -42,22 +42,32 @@
                 android:textSize="12dp"
                 android:textColor="@android:color/black" />
         </RelativeLayout>
+      <LinearLayout
+        android:layout_height="3px"
+        android:layout_width="match_parent"
+        android:background="@color/NetConnBrightYellow"
+        android:layout_below="@id/NavBarTopContainer"/>
         <LinearLayout
             android:id="@+id/NavBarContentContainer"
             app:layout_heightPercent="65%"
             android:layout_width="match_parent"
-            android:background="#0000ff"
             android:layout_below="@id/NavBarTopContainer">
             <ListView
                 android:id="@+id/NavbarListView"
                 android:layout_height="match_parent"
-                android:layout_width="match_parent" />
+                android:layout_width="match_parent"
+                android:divider="@color/NetConnBlue"
+                android:dividerHeight="1dp"/>
         </LinearLayout>
+      <LinearLayout
+        android:layout_height="4px"
+        android:layout_width="match_parent"
+        android:background="@color/NetConnBrightYellow"
+        android:layout_below="@id/NavBarContentContainer"/>
         <LinearLayout
             android:id="@+id/NavBarBotContainer"
             app:layout_heightPercent="5%"
             android:layout_width="match_parent"
-            android:background="#f0ff00"
             android:layout_below="@id/NavBarContentContainer"
             android:gravity="bottom">
             <TextView

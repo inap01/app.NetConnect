@@ -15,6 +15,7 @@ namespace MonoNetConnect.Controller
 {
     public interface IBaseViewController
     {
+        void SetActivityTitle();
     }
     public abstract class BaseViewController<T>
         where T : IBaseViewController
@@ -25,6 +26,10 @@ namespace MonoNetConnect.Controller
         {
             this._viewController = viewController;
             dataContext = DataContext.GetDataContext();
+        }
+        public bool IsLoggedIn()
+        {
+            return dataContext.isLoggedIn;
         }
     }
 }

@@ -21,7 +21,10 @@ namespace NetConnect.Activities
         {
 
         }
-
+        public override void SetActivityTitle()
+        {
+            ActionBar.Title = this.GetType().Name.Replace("Activity", "");
+        }
         public void UpdateContentList(Data<Tournament> tournaments)
         {
 

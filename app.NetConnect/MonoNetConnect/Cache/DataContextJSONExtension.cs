@@ -138,6 +138,20 @@ namespace MonoNetConnect.Cache
                 throw new Exception("JsonParseException",ex);
             }
         }
+        private T ParseStringToBasicModel<T>(String json)
+        {
+            try
+            {
+                jsonSettings.Converters.Add(new BoolConverter());
+                T newModel = JsonConvert.DeserializeObject<T>(json, jsonSettings);
+                return newModel;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("JsonParseException", ex);
+            }
+        }
+
         private T ParseObjectFromJsonWrapper<T>(String json)
         {
             T model = (T)Activator.CreateInstance(typeof(T));

@@ -17,19 +17,26 @@ namespace MonoNetConnect.Cache
 {
     public partial class DataContext
     {
-        private void SaveDataContext()
+        public static void SaveDataContext()
         {
-            DataContext copy = this;
-            var json = JsonConvert.SerializeObject(copy);
-            using (FileStream fs = new FileStream(DataContextFilePath, FileMode.CreateNew))
+            DataContext copy = DataContext.GetDataContext();
+
+            try
             {
-                var data = new UTF8Encoding(true).GetBytes(json);
-                fs.WriteAsync(data, 0, data.Length);
+                var json = JsonConvert.SerializeObject(copy);
+                File.WriteAllText(DataContextFilePath, json);
             }
+            catch(Exception ex)
+            { }
         }
-        private void LoadDataContextFromFile()
+        public static void LoadDataContextFromFile()
         {
-            current = JsonConvert.DeserializeObject<DataContext>(DataContextFilePath);
+            try
+            {
+                current = JsonConvert.DeserializeObject<DataContext>(File.ReadAllText(DataContextFilePath));
+            }
+            catch(Exception ex)
+            { }
         }
     }
 }

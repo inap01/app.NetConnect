@@ -15,6 +15,7 @@ namespace MonoNetConnect.Controller
     public interface INavigationController : IBaseViewController
     {
         void ListItemClicked(int id);
+        void ListItemClicked(Type t);
     }
     public class NavigationController : BaseViewController<INavigationController>
     {
@@ -26,6 +27,10 @@ namespace MonoNetConnect.Controller
         public void ListItemClicked(int id)
         {
             this._viewController.ListItemClicked(id);
+        }
+        public void ListItemClicked(Type t)
+        {
+            this._viewController.ListItemClicked(t);
         }
     }
 }

@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using MonoNetConnect.Cache;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace MonoNetConnect.InternalModels
 {
@@ -25,13 +26,11 @@ namespace MonoNetConnect.InternalModels
         [JsonProperty("rules")]
         public String Rules { get; set; }
         [JsonProperty("battletag")]
-        public String BattleTag { get; set; }
+        public Boolean BattleTag { get; set; }
         [JsonProperty("steam")]
-        public String Steam { get; set; }
+        public Boolean Steam { get; set; }
         [JsonProperty("lan_id")]
         public Int32 LanID { get; set; }
-        [JsonProperty("game_id")]
-        public Int32 GameID { get; set; }
         [JsonProperty("team")]
         public Int32 TeamSize { get; set; }
         [JsonProperty("link")]
@@ -44,7 +43,6 @@ namespace MonoNetConnect.InternalModels
         public List<Team> Teams { get; set; }
         [JsonProperty("player")]
         public List<Team> player { get; set; }
-
 
         public class Player : BaseProperties, IApiModels
         {
@@ -103,7 +101,7 @@ namespace MonoNetConnect.InternalModels
 
         public string ApiPath()
         {
-            return TournamentApiPath;
+            return Path.Combine(TournamentApiPath, "lan", DataContext.GetDataContext().Settings.Volume);
         }
 
         public string GetImageDirectoryPath()

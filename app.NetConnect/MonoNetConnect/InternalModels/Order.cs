@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 
 namespace MonoNetConnect.InternalModels
 {
-    public class OrderProduct : BaseProperties, IApiModels
+    public class OrderProduct : BaseProperties
     {
         [JsonProperty("attributes")]
         public List<String> Attributes { get; set; }
@@ -21,18 +21,43 @@ namespace MonoNetConnect.InternalModels
         public decimal Price { get; set; }
         [JsonProperty("count")]
         public int Count { get; set; }
+        [JsonIgnore]
+        protected override DateTime LatestChange { get; set; }
+        [JsonIgnore]
+        public string Name { get; set; }
 
+        public OrderProduct()
+        {
+
+        }
+        public OrderProduct(Product p)
+        {
+            Attributes = p.Attributes;
+            Price = p.Price;
+            Count = 1;
+            Name = p.Name;
+
+        }
         public static implicit operator OrderProduct(Product p)
         {
             return new OrderProduct
             {
+                
                 Attributes = p.Attributes,
-                ID = p.ID,
                 Price = p.Price,
-                Count = 1
+                Count = 1,
+                Name = p.Name
             };
         }
-
+        public bool Equals(Product obj)
+        {
+            bool attEqual = true;
+            if (obj.Attributes.Count == this.Attributes.Count)
+                foreach (var att in obj.Attributes)
+                    if (!this.Attributes.Contains(att))
+                        attEqual = false;
+            return (obj.Name == this.Name && attEqual);
+        }
         public string ApiPath()
         {
             return null;
@@ -48,7 +73,7 @@ namespace MonoNetConnect.InternalModels
             return false;
         }
     }
-    class Order : BaseProperties, IApiModels
+    class Order
     {
         private static String OrderApiPath = @"api.php/app/Products{/id}";
         
@@ -56,6 +81,7 @@ namespace MonoNetConnect.InternalModels
         public int UserID { get; set; }
         [JsonProperty("seat_id")]
         public int SeatID { get; set; }
+        [JsonProperty("order")]
         public List<OrderProduct> Products { get; set; } = new List<OrderProduct>();
 
         public string ApiPath()

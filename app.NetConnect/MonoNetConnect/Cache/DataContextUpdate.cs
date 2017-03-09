@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
-using Android.Content;
 using MonoNetConnect.InternalModels;
 using MonoNetConnect.ApiModel;
 using System.Threading.Tasks;
@@ -12,16 +11,12 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Reflection;
-using Android.Util;
-using Java.Security;
 
 namespace MonoNetConnect.Cache
 {
 
     public partial class DataContext
     {
-        
-        
         private static String BasicAPIPath = @"http://lan-netconnect.de/_api";
         private String ExMessage(Exception ex) => String.Join("\n", ex.Message, ex.InnerException, ex.StackTrace);
 
@@ -34,21 +29,24 @@ namespace MonoNetConnect.Cache
                 images.Add(x, ModelToPost.GetLatestChange());
             }
             var content = new StringContent(JsonConvert.SerializeObject(images), Encoding.UTF8, "application/json");
-            return UpdatePostWithResult<Z>(content, relativePath);
+            return UpdatePostWithResult<Z>(content, relativePath, null);
         }
-        public Z PostRequestWithExpectedResult<T,Z>(T ModelToPost, string relativePath)
+        public Z PostRequestWithExpectedResult<T,Z>(T ModelToPost, string relativePath, Dictionary<string,string> headers)
         {
             StringContent content = new StringContent(JsonConvert.SerializeObject(ModelToPost),Encoding.UTF8, "application/json");
-            return UpdatePostWithResult<Z>(content, relativePath);
+            return UpdatePostWithResult<Z>(content, relativePath, headers);
         }
-        private Z UpdatePostWithResult<Z>(StringContent content, String relativePath)
-        {
-            
+        private Z UpdatePostWithResult<Z>(StringContent content, String relativePath, Dictionary<string,string> headers)
+        {            
             HttpClient client = new HttpClient();
-            
+            if(headers != null)
+            {
+                client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", headers["Authorization"]);
+                client.DefaultRequestHeaders.Add("Auth-Token", headers["Auth-Token"]);
+            }
             var response = client.PostAsync(String.Join("/",BasicAPIPath,relativePath), content);
             var str = response.Result.Content.ReadAsStringAsync().Result;
-            return JsonConvert.DeserializeObject<Z>(str);
+            return ParseStringToBasicModel<Z>(str);
         }
         private void GenerateAndRunUpdateTasks()
         {
@@ -83,6 +81,10 @@ namespace MonoNetConnect.Cache
                     UpdateImageOfSingleProperty<Data<Sponsor>>(Sponsors);
                     ResolveUnreferencedImages<Data<Sponsor>>(Sponsors);
                 }
+            }
+            if (Seating?.GetLatestChange().AddMinutes(2) <= Changes.Seating)
+            {
+                UpdateSingleProperty<Data<Seat>>("Seating", typeof(Seat));
             }
         }
         private Boolean UpdateAsyncIfNeeded<T>(String PropertyName, Type GenericType)

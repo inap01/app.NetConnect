@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="#80000000">
+    android:background="#A0000000">
     <android.support.percent.PercentRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,54 +14,50 @@
             android:id="@+id/CateringOrderFragmentRelativeLayout"
             app:layout_widthPercent="80%"
             app:layout_heightPercent="40%"
-            android:background="#ff0000"
-            android:layout_centerInParent="true">
-          <TextView
-            android:id="@+id/OrderFragmentProductName"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="18dp"
-            android:textColor="@android:color/black"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
-          <TextView
-            android:id="@+id/OrderFragmentProductPrice"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="45dp"
-            android:textSize="14dp"
-            android:layout_marginLeft="10dp"
-            android:textColor="@android:color/black"
-            android:layout_alignParentLeft="true"/>
-          <TextView
-            android:id="@+id/OrderFragmentProductDesc"
-            android:layout_height="wrap_content"
-            app:layout_widthPercent="40%"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/OrderFragmentProductPrice"
-            android:textSize="14dp"
-            android:layout_marginLeft="5dp"
-            android:textColor="@android:color/black"
-            android:lines="2"
-            android:maxLines="4"
-            android:singleLine="false"
-            android:layout_alignParentLeft="true"/>
+            android:background="@android:color/white"
+            android:layout_centerInParent="true"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/OrderFragmentProductName"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="18dp"
+                android:textColor="@android:color/black"
+                android:layout_alignParentTop="true" />
+            <TextView
+                android:id="@+id/OrderFragmentProductPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="45dp"
+                android:textSize="14dp"
+                android:textColor="@android:color/black"
+                android:layout_alignParentLeft="true" />
+            <TextView
+                android:id="@+id/OrderFragmentProductDesc"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="40%"
+                android:layout_below="@+id/OrderFragmentProductPrice"
+                android:textSize="14dp"
+                android:textColor="@android:color/black"
+                android:lines="2"
+                android:maxLines="4"
+                android:singleLine="false"
+                android:layout_alignParentLeft="true" />
             <ListView
                 android:id="@+id/CateringFragmentListView"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="30dp"
+                android:layout_below="@+id/OrderFragmentProductName"
                 app:layout_widthPercent="50%"
-                app:layout_heightPercent="85%"
+                app:layout_heightPercent="60%"
                 app:layout_marginBottomPercent="5%"
                 android:choiceMode="multipleChoice" />
             <Button
                 android:id="@+id/CateringCancelButton"
+                android:background="@color/NetConnYellow"
+                android:textColor="@android:color/black"
                 app:layout_widthPercent="45%"
                 app:layout_heightPercent="15%"
                 android:text="Left Button"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:minHeight="0dp"
@@ -69,11 +65,11 @@
                 android:padding="0dp" />
             <Button
                 android:id="@+id/CateringApproveButton"
+                android:background="@color/NetConnBlue"
+                android:textColor="@android:color/white"
                 app:layout_widthPercent="45%"
                 app:layout_heightPercent="15%"
                 android:text="Right Button"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="5dp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:minHeight="0dp"

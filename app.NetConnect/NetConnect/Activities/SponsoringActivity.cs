@@ -36,7 +36,7 @@ namespace NetConnect.Activities
         }
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            if (isLoggedIn)
+            if (this.Controller.IsLoggedIn())
             {
                 MenuInflater infl = MenuInflater;
                 infl.Inflate(Resource.Menu.LoggedInProfileMenu, menu);
@@ -47,6 +47,10 @@ namespace NetConnect.Activities
         public override void update()
         {
             this.Controller.ListItems();
+        }
+        public override void SetActivityTitle()
+        {
+            ActionBar.Title = this.GetType().Name.Replace("Activity", "");
         }
         public void SetListItems(Data<Sponsor> sponsors)
         {

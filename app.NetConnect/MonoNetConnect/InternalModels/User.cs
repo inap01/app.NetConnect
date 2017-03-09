@@ -16,20 +16,24 @@ namespace MonoNetConnect.InternalModels
 {
     public class User: BaseProperties, IApiModels
     {        
-        public static String UserApiPath = @"api.php/app/User{/id}";
+        public static String UserApiPath = @"api.php/auth/Login";
 
-        [JsonProperty("FirstName")]
+        [JsonProperty("first_name")]
         public String FirstName { get; set; }
-        [JsonProperty("Token")]
-        public String Token { get; set; }
-        [JsonProperty("LastName")]
+        [JsonProperty("last_name")]
         public String LastName { get; set; }
-        [JsonProperty("Nickname")]
+        [JsonProperty("email")]
+        public String EMail { get; set; }
+        [JsonProperty("nickname")]
         public String NickName { get; set; }
-        [JsonProperty("SteamID")]
+        [JsonProperty("steam_id")]
         public String SteamID { get; set; }
-        [JsonProperty("BattleTag")]
+        [JsonProperty("battle_tag")]
         public String BattleTag { get; set; }
+        [JsonProperty("registered_since")]
+        public DateTime RegisteredSince { get; set; }
+        [JsonProperty("is_admin")]
+        public Boolean IsAdmin { get; set; }
 
         public String ApiPath()
         {

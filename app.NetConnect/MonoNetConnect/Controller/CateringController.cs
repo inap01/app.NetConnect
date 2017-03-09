@@ -28,7 +28,10 @@ namespace MonoNetConnect.Controller
         }
         public void AddProductToOrder(Product p)
         {
-            dataContext.CurrentOrder.Products.Add(p);
+            if (dataContext.CurrentOrder.Products.Where(x => x.Equals(p)).ToList().Count < 1)
+                AddProductToOrder(p,1);
+            else
+                dataContext.CurrentOrder.Products.Where(x => x.Equals(p)).FirstOrDefault().Count++;
         }
         public void AddProductToOrder(Product p, int count)
         {
@@ -37,12 +40,13 @@ namespace MonoNetConnect.Controller
                 Attributes = p.Attributes,
                 Price = p.Price,
                 Count = count,
-                ID = p.ID
+                ID = p.ID,
+                Name = p.Name
             });
         }
         public void RemoveProductFromOrder(Product p)
         {
-            dataContext.CurrentOrder.Products.RemoveAll(x => x.ID == p.ID);
+            dataContext.CurrentOrder.Products.RemoveAll(x => x.Equals(p));
         }
         public void OrderDialog(Int32 ind)
         {

@@ -18,7 +18,7 @@ namespace MonoNetConnect.InternalModels
     public class Settings : BaseProperties,IApiModels, IDeepCloneable<Settings>
     {
         private static String SettingsApiPath = @"api.php";
-        [JsonProperty("colume")]
+        [JsonProperty("volume")]
         public String Volume { get; set; }
 
         [JsonProperty("vorkasse")]
