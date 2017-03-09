@@ -290,7 +290,10 @@ namespace NetConnect.Activities
             ImageViewScaling iv = convertView.FindViewById<ImageViewScaling>(Resource.Id.CateringImage);
             TextView tv = convertView.FindViewById<TextView>(Resource.Id.CateringListItemProductName);
             string path = System.String.Join("/", _context.ApplicationInfo.DataDir, _products.GetImageDirectoryPath(), _products[position].ImageName.Split('/').Last());
-            Picasso.With(_context).Load(new File(path)).Into(iv);
+            using (File imageFile = new File(path))
+            {
+                Picasso.With(_context).Load(imageFile).Into(iv);
+            }
             convertView.Click += (o, e) =>
             {
                 if (!OrderOpen) OnProductClickCallback(position);

@@ -22,6 +22,7 @@ using static Android.App.ActionBar;
 using MonoNetConnect.Cache;
 using System.Reflection;
 using Android.Graphics.Drawables;
+using MonoNetConnect.InternalModels;
 
 namespace NetConnect
 {
@@ -143,13 +144,20 @@ namespace NetConnect
             NavAdapter adap = new NavAdapter(this, nMap);
             list.Adapter = adap;
 
-            BindUserData();
+            this.NavController.BindUserData();
 
         }
-
-        private void BindUserData()
+        void INavigationController.HideUserData()
         {
-
+            FindViewById<TextView>(Resource.Id.NavEmail).Visibility = ViewStates.Gone;
+            FindViewById<TextView>(Resource.Id.NavName).Visibility = ViewStates.Gone;
+        }
+        void INavigationController.BindUserData(User u)
+        {
+            FindViewById<TextView>(Resource.Id.NavEmail).Visibility = ViewStates.Visible;
+            FindViewById<TextView>(Resource.Id.NavName).Visibility = ViewStates.Visible;
+            FindViewById<TextView>(Resource.Id.NavEmail).Text = u.EMail;
+            FindViewById<TextView>(Resource.Id.NavName).Text = $"{u.FirstName} \"{u.NickName}\" {u.LastName}"; 
         }
         protected void SetInnerLayout(int id)
         {

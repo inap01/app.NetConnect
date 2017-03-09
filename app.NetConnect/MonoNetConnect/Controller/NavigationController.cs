@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using MonoNetConnect.InternalModels;
 
 namespace MonoNetConnect.Controller
 {
@@ -16,6 +17,8 @@ namespace MonoNetConnect.Controller
     {
         void ListItemClicked(int id);
         void ListItemClicked(Type t);
+        void BindUserData(User u);
+        void HideUserData();
     }
     public class NavigationController : BaseViewController<INavigationController>
     {
@@ -23,6 +26,13 @@ namespace MonoNetConnect.Controller
             :base(viewController)
         {
 
+        }
+        public void BindUserData()
+        {
+            if (IsLoggedIn())
+                _viewController.BindUserData(dataContext.User);
+            else
+                _viewController.HideUserData();
         }
         public void ListItemClicked(int id)
         {

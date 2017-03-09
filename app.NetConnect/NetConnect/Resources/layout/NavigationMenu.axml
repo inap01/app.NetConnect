@@ -27,7 +27,7 @@
                 android:layout_above="@+id/NavEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Joachim &quot;Redan&quot; Gotzes"
+                android:text=""
                 android:textSize="16dp"
                 android:textColor="@android:color/black" />
             <TextView
@@ -38,15 +38,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="4dp"
-                android:text="joachimgotzes@gmail.com"
+                android:text=""
                 android:textSize="12dp"
                 android:textColor="@android:color/black" />
         </RelativeLayout>
-      <LinearLayout
-        android:layout_height="3px"
-        android:layout_width="match_parent"
-        android:background="@color/NetConnBrightYellow"
-        android:layout_below="@id/NavBarTopContainer"/>
+        <LinearLayout
+            android:layout_height="3px"
+            android:layout_width="match_parent"
+            android:background="@color/NetConnBrightYellow"
+            android:layout_below="@id/NavBarTopContainer" />
         <LinearLayout
             android:id="@+id/NavBarContentContainer"
             app:layout_heightPercent="65%"
@@ -57,13 +57,13 @@
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:divider="@color/NetConnBlue"
-                android:dividerHeight="1dp"/>
+                android:dividerHeight="1dp" />
         </LinearLayout>
-      <LinearLayout
-        android:layout_height="4px"
-        android:layout_width="match_parent"
-        android:background="@color/NetConnBrightYellow"
-        android:layout_below="@id/NavBarContentContainer"/>
+        <LinearLayout
+            android:layout_height="4px"
+            android:layout_width="match_parent"
+            android:background="@color/NetConnBrightYellow"
+            android:layout_below="@id/NavBarContentContainer" />
         <LinearLayout
             android:id="@+id/NavBarBotContainer"
             app:layout_heightPercent="5%"
