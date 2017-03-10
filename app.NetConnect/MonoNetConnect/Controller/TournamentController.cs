@@ -16,6 +16,7 @@ namespace MonoNetConnect.Controller
     public interface ITournamentController : IBaseViewController
     {
         void UpdateContentList(Data<Tournament> tournaments);
+        void SetUpUi(string vol);
     }
     public class TournamentController : BaseViewController<ITournamentController>
     {
@@ -27,6 +28,10 @@ namespace MonoNetConnect.Controller
         public void UpdateReceived()
         {
             _viewController.UpdateContentList(dataContext.Tournaments);
+        }
+        public void setUpUi()
+        {
+            _viewController.SetUpUi(dataContext.Settings.Volume);
         }
     }
 }

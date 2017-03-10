@@ -196,11 +196,6 @@ namespace NetConnect
         {
             
         }
-        protected void StartActivityWrapper(Type t)
-        {
-            Intent i = new Intent(this, t);
-            StartActivity(i);
-        }
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             switch (item.ItemId)

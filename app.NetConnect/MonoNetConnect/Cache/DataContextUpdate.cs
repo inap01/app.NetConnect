@@ -39,14 +39,22 @@ namespace MonoNetConnect.Cache
         private Z UpdatePostWithResult<Z>(StringContent content, String relativePath, Dictionary<string,string> headers)
         {            
             HttpClient client = new HttpClient();
-            if(headers != null)
+            try
             {
-                client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", headers["Authorization"]);
-                client.DefaultRequestHeaders.Add("Auth-Token", headers["Auth-Token"]);
+                if(headers != null)
+                {
+                    client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", headers["Authorization"]);
+                    client.DefaultRequestHeaders.Add("Auth-Token", headers["Auth-Token"]);
+                }
+                var response = client.PostAsync(String.Join("/",BasicAPIPath,relativePath), content);
+                var str = response.Result.Content.ReadAsStringAsync().Result;
+                return ParseStringToBasicModel<Z>(str);
             }
-            var response = client.PostAsync(String.Join("/",BasicAPIPath,relativePath), content);
-            var str = response.Result.Content.ReadAsStringAsync().Result;
-            return ParseStringToBasicModel<Z>(str);
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
         }
         private void GenerateAndRunUpdateTasks()
         {

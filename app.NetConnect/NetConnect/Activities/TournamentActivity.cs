@@ -19,7 +19,7 @@ namespace NetConnect.Activities
     {
         public override void update()
         {
-
+            this.Controller.setUpUi();
         }
         public override void SetActivityTitle()
         {
@@ -33,8 +33,16 @@ namespace NetConnect.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             SetContentView(Resource.Layout.ActivityNavigationLayout);
+            SetInnerLayout(Resource.Layout.TournamentLayout);
+            this.NavController = new NavigationController(this);
+            this.Controller = new TournamentController(this);
             base.OnCreate(savedInstanceState);
+            this.Controller.setUpUi();
+        }
 
+        public void SetUpUi(string vol)
+        {
+            FindViewById<TextView>(Resource.Id.TournamentTitleVol).Text = GetString(Resource.String.netcon_Tournament_TitleText).Replace("#", vol);
         }
     }
 }

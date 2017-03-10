@@ -4,6 +4,9 @@
   <string name="ApplicationName">NetConnect</string>
   <string name="drawerOpen">Open</string>
   <string name="drawerClosed">Closed</string>
+
+  <string name="netcon_Tournament_TitleText">Turniere der Playground vol. #</string>
+  
   
   <!-- IMPRESSUM -->
   <string name="netcon_Impressum_Angaben_Title">Anschrift</string>

@@ -5,4 +5,7 @@
   <dimen name="netcon_listView_Header_Height">32dp</dimen>
   <dimen name="netcon_listView_Header_Text">22dp</dimen>
   <dimen name="netcon_listView_Content_Text">14dp</dimen>
+  
+  <!-- Header TextSize -->
+  <dimen name="netcon_tournamentHeader_textsize">30sp</dimen>
 </resources>

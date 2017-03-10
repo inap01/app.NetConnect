@@ -13,6 +13,7 @@ using MonoNetConnect.Controller;
 using MonoNetConnect.InternalModels;
 using Android.Text;
 using Android.Text.Style;
+using Android.Content.Res;
 
 namespace NetConnect.Activities
 {
@@ -41,6 +42,7 @@ namespace NetConnect.Activities
         {
             list = FindViewById<ListView>(Resource.Id.OrderingListView);
             Controller.PopulateListView();
+            Controller.PopulateRadioButtonGrid();
             var btn = FindViewById<Button>(Resource.Id.OrderButton);
             btn.Click += (o, e) =>
             {
@@ -52,20 +54,34 @@ namespace NetConnect.Activities
         {
             adapter = new OrderAdapter(this, products);
             list.Adapter = adapter;
-        }
-
-        public Boolean OpenCancelDialogForResult()
-        {
-            Action<object, DialogClickEventArgs> cancel;
-            AlertDialog.Builder b = new AlertDialog.Builder(this);
-            var dialog = b.Create();
-
-
-            return true;
-        }
+        }        
         public override void SetActivityTitle()
         {
             ActionBar.Title = this.GetType().Name.Replace("Activity", "");
+        }
+
+        public void PopulateRadioButtonGrid(List<int> seatNumbers)
+        {
+            FindViewById<RadioGroup>(Resource.Id.OrderRadioBox).RemoveAllViews();
+            bool first = true;
+            foreach(var seat in seatNumbers)
+            {
+                RadioButton rB = new RadioButton(this);
+                if (first)
+                    rB.Checked = true;
+                rB.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
+                rB.Text = seat.ToString();
+                rB.SetTextColor(Android.Graphics.Color.Black);
+                rB.ButtonTintList = ColorStateList.ValueOf(Android.Graphics.Color.Navy);
+                FindViewById<RadioGroup>(Resource.Id.OrderRadioBox).AddView(rB);
+                first = false;
+            }
+        }
+        public int GetSelectedSeat()
+        {
+            var group = FindViewById<RadioGroup>(Resource.Id.OrderRadioBox);
+            int id = group.CheckedRadioButtonId;
+            return Convert.ToInt32(((RadioButton)(group.GetChildAt(id))).Text);
         }
     }
 

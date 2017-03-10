@@ -16,12 +16,21 @@ namespace MonoNetConnect.Controller
     public interface IOrderController : IBaseViewController
     {
         void PopulateListView(List<OrderProduct> list);
+        void PopulateRadioButtonGrid(List<int> seatNumbers);
+        int GetSelectedSeat();
     }
+    
     public class OrderController : BaseViewController<IOrderController>
     {
         public OrderController(IOrderController viewController)
             : base(viewController)
         {
+        }
+        public void PopulateRadioButtonGrid()
+        {
+            var x1 = dataContext.Seating.Where(x => x.UserID == dataContext.User.ID);
+            var x2 = x1.Select(x => x.ID);
+            this._viewController.PopulateRadioButtonGrid(dataContext.Seating.Where(x => x.UserID == dataContext.User.ID).Select(x => x.ID).ToList());
         }
         public Boolean DecrementPartialOrder(int id)
         {
@@ -58,6 +67,8 @@ namespace MonoNetConnect.Controller
         }
         public Boolean Order()
         {
+            dataContext.CurrentOrder.UserID = dataContext.User.ID;
+            dataContext.CurrentOrder.SeatID = this._viewController.GetSelectedSeat();
             dataContext.PostRequestWithExpectedResult<Order, BasicAPIModel>(dataContext.CurrentOrder, dataContext.CurrentOrder.ApiPath(), null);
             return true;
         }
