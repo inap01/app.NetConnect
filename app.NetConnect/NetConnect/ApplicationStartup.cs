@@ -47,7 +47,7 @@ namespace NetConnect
 
         void IActivityLifecycleCallbacks.OnActivityDestroyed(Activity activity)
         {
-            throw new NotImplementedException();
+            DataContext.SaveDataContext();
         }
 
         void IActivityLifecycleCallbacks.OnActivityPaused(Activity activity)
@@ -57,7 +57,7 @@ namespace NetConnect
 
         void IActivityLifecycleCallbacks.OnActivityResumed(Activity activity)
         {
-            throw new NotImplementedException();
+
         }
 
         void IActivityLifecycleCallbacks.OnActivitySaveInstanceState(Activity activity, Bundle outState)
@@ -72,7 +72,7 @@ namespace NetConnect
 
         void IActivityLifecycleCallbacks.OnActivityStopped(Activity activity)
         {
-            throw new NotImplementedException();
+            DataContext.SaveDataContext();
         }
     }
 }

@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MonoNetConnect.InternalModels;
+using MonoNetConnect.Cache;
 
 namespace MonoNetConnect.Controller
 {
@@ -35,7 +36,9 @@ namespace MonoNetConnect.Controller
             {
                 dataContext.isLoggedIn = true;
                 dataContext.User = result.Data;
+                dataContext.LatestLoginDate = DateTime.Now;
                 this._viewController.LoginSucessfull();
+                DataContext.SaveDataContext();
             }
             else
             {

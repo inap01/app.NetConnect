@@ -15,9 +15,39 @@ using System.IO;
 
 namespace MonoNetConnect.InternalModels
 {
+    public class Tournaments : BaseProperties, IApiModels
+    {
+
+        private static readonly String TournamentApiPath = @"api.php/app/Tournament/lan";
+
+        [JsonProperty("bierpong")]
+        public Tournament Bierpong { get; set; }
+        [JsonProperty("trackmania")]
+        public Tournament Trackmania { get; set; }
+        [JsonProperty("hearthstone")]
+        public Tournament Hearthstone { get; set; }
+        [JsonProperty("callofduty")]
+        public Tournament CallOfDuty { get; set; }
+        [JsonProperty("counterstrike")]
+        public Tournament Counterstrike { get; set; }
+
+        public string ApiPath()
+        {
+            return String.Join("/", TournamentApiPath, DataContext.GetDataContext().Settings.Volume);
+        }
+
+        public string GetImageDirectoryPath()
+        {
+            return "";
+        }
+
+        public bool IsClassWithImage()
+        {
+            throw new NotImplementedException();
+        }
+    }
     public class Tournament : BaseProperties, IApiModels
     {
-        private static readonly String TournamentApiPath = @"api.php/app/Tournament";
         private static readonly String IconPath = @"Images/Icons/Tournament";
         [JsonProperty("name")]
         public String Name { get; set; }
@@ -101,12 +131,12 @@ namespace MonoNetConnect.InternalModels
 
         public string ApiPath()
         {
-            return Path.Combine(TournamentApiPath, "lan", DataContext.GetDataContext().Settings.Volume);
+            return "";
         }
 
         public string GetImageDirectoryPath()
         {
-            return IconPath;
+            return "";
         }
 
         public bool IsClassWithImage()

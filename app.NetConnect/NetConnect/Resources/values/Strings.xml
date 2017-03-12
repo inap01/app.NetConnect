@@ -4,10 +4,10 @@
   <string name="ApplicationName">NetConnect</string>
   <string name="drawerOpen">Open</string>
   <string name="drawerClosed">Closed</string>
-
+  <!-- TOURNAMENT -->
   <string name="netcon_Tournament_TitleText">Turniere der Playground vol. #</string>
-  
-  
+  <!-- ORDER -->
+  <string name="netcon_Order_SitzPlatzNummern">Platznummer</string>
   <!-- IMPRESSUM -->
   <string name="netcon_Impressum_Angaben_Title">Anschrift</string>
   <string name="netcon_Impressum_Angaben_Content">Net.Connect e. V.\nDoverheide 71\n41836 Hückelhoven</string>

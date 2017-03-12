@@ -19,19 +19,28 @@ namespace NetConnect.Activities
         Action PostLoginAction = null;
         public override void update()
         {
-            
+            CheckLoginStatus();
+        }
+
+        private void CheckLoginStatus()
+        {
+            if (this.Controller.IsLoggedIn())
+            {
+                StartActivity(typeof(OverviewActivity));
+                Finish();
+            }
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            var intent = Intent.GetStringExtra("ActivityType");
-
+            var intent = Intent.GetStringExtra("ActivityType");            
             SetContentView(Resource.Layout.ActivityNavigationLayout);
             SetInnerLayout(Resource.Layout.LoginLayout);
             this.NavController = new NavigationController(this);
             this.Controller = new LoginController(this);
             WireUpClicktEvents(intent);
             base.OnCreate(savedInstanceState);
+            CheckLoginStatus();
         }
 
         private void WireUpClicktEvents(string intent)
@@ -42,9 +51,8 @@ namespace NetConnect.Activities
                 {
                     ListItemClicked(nameMap[intent]);
                 };
-                FindViewById<TextView>(Resource.Id.LoginSkipLogin).Visibility = ViewStates.Gone;
             }
-            FindViewById<TextView>(Resource.Id.LoginSkipLogin).Click += (o, e) =>
+            TopRightIconAction = () =>
             {
                 this.StartActivity(typeof(OverviewActivity));
             };
@@ -65,7 +73,15 @@ namespace NetConnect.Activities
         }
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            return false;
+            MenuInflater infl = MenuInflater;
+            infl.Inflate(Resource.Menu.LoggedInProfileMenu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+        public override bool OnPrepareOptionsMenu(IMenu menu)
+        {
+            menu.GetItem(0).SetIcon(null);
+            menu.GetItem(0).SetTitle("Skip");
+            return base.OnPrepareOptionsMenu(menu);
         }
         public void Login()
         {
@@ -84,7 +100,9 @@ namespace NetConnect.Activities
 
         public void LoginFailed()
         {
-
+            var t = Toast.MakeText(this, "Falsche Login Daten!", ToastLength.Long);
+            t.Show();
+            FindViewById<EditText>(Resource.Id.LoginPassword).Text = "";
         }        
     }
 }

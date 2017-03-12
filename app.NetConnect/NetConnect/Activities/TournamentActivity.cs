@@ -19,15 +19,47 @@ namespace NetConnect.Activities
     {
         public override void update()
         {
-            this.Controller.setUpUi();
+            this.Controller.UpdateReceived();
         }
         public override void SetActivityTitle()
         {
             ActionBar.Title = this.GetType().Name.Replace("Activity", "");
         }
-        public void UpdateContentList(Data<Tournament> tournaments)
+        public void UpdateContentList(Tournaments tournaments)
         {
+            // Bierpong
+            FindViewById<View>(Resource.Id.TournamentBierpong).FindViewById<TextView>(Resource.Id.TournamentGameRegistrations).Text = $"{tournaments.Bierpong.player.Count} Anmeldungen(en)";
+            FindViewById<View>(Resource.Id.TournamentBierpong).FindViewById<TextView>(Resource.Id.TournamentGameStyle).Text = $"{tournaments.Bierpong.Mode}";
+            FindViewById<View>(Resource.Id.TournamentBierpong).FindViewById<TextView>(Resource.Id.TournamentGameTime).Text = $"{tournaments.Bierpong.StartTime.DayOfWeek} {tournaments.Bierpong.StartTime.Hour}:{tournaments.Bierpong.StartTime.Minute}";
+            FindViewById<View>(Resource.Id.TournamentBierpong).FindViewById<TextView>(Resource.Id.TournamentGameTitle).Text = $"{tournaments.Bierpong.Name}";
 
+            //CoD4
+
+            FindViewById<View>(Resource.Id.TournamentCoD4).FindViewById<TextView>(Resource.Id.TournamentGameRegistrations).Text = $"{tournaments.CallOfDuty.player.Count} Anmeldungen(en)";
+            FindViewById<View>(Resource.Id.TournamentCoD4).FindViewById<TextView>(Resource.Id.TournamentGameStyle).Text = $"{tournaments.CallOfDuty.Mode}";
+            FindViewById<View>(Resource.Id.TournamentCoD4).FindViewById<TextView>(Resource.Id.TournamentGameTime).Text = $"{tournaments.CallOfDuty.StartTime.DayOfWeek} {tournaments.CallOfDuty.StartTime.Hour}:{tournaments.CallOfDuty.StartTime.Minute}";
+            FindViewById<View>(Resource.Id.TournamentCoD4).FindViewById<TextView>(Resource.Id.TournamentGameTitle).Text = $"{tournaments.CallOfDuty.Name}";
+
+            //Counterstrike
+
+            FindViewById<View>(Resource.Id.TournamentCSGO).FindViewById<TextView>(Resource.Id.TournamentGameRegistrations).Text = $"{tournaments.Counterstrike.player.Count} Anmeldungen(en)";
+            FindViewById<View>(Resource.Id.TournamentCSGO).FindViewById<TextView>(Resource.Id.TournamentGameStyle).Text = $"{tournaments.Counterstrike.Mode}";
+            FindViewById<View>(Resource.Id.TournamentCSGO).FindViewById<TextView>(Resource.Id.TournamentGameTime).Text = $"{tournaments.Counterstrike.StartTime.DayOfWeek} {tournaments.Counterstrike.StartTime.Hour}:{tournaments.Counterstrike.StartTime.Minute}";
+            FindViewById<View>(Resource.Id.TournamentCSGO).FindViewById<TextView>(Resource.Id.TournamentGameTitle).Text = $"{tournaments.Counterstrike.Name}";
+
+            //Counterstrike
+
+            FindViewById<View>(Resource.Id.TournamentHearthstone).FindViewById<TextView>(Resource.Id.TournamentGameRegistrations).Text = $"{tournaments.Hearthstone.player.Count} Anmeldungen(en)";
+            FindViewById<View>(Resource.Id.TournamentHearthstone).FindViewById<TextView>(Resource.Id.TournamentGameStyle).Text = $"{tournaments.Hearthstone.Mode}";
+            FindViewById<View>(Resource.Id.TournamentHearthstone).FindViewById<TextView>(Resource.Id.TournamentGameTime).Text = $"{tournaments.Hearthstone.StartTime.DayOfWeek} {tournaments.Hearthstone.StartTime.Hour}:{tournaments.Hearthstone.StartTime.Minute}";
+            FindViewById<View>(Resource.Id.TournamentHearthstone).FindViewById<TextView>(Resource.Id.TournamentGameTitle).Text = $"{tournaments.Hearthstone.Name}";
+
+            //Trackmania
+
+            FindViewById<View>(Resource.Id.TournamentTrackmania).FindViewById<TextView>(Resource.Id.TournamentGameRegistrations).Text = $"{tournaments.Trackmania.player.Count} Anmeldungen(en)";
+            FindViewById<View>(Resource.Id.TournamentTrackmania).FindViewById<TextView>(Resource.Id.TournamentGameStyle).Text = $"{tournaments.Trackmania.Mode}";
+            FindViewById<View>(Resource.Id.TournamentTrackmania).FindViewById<TextView>(Resource.Id.TournamentGameTime).Text = $"{tournaments.Trackmania.StartTime.DayOfWeek} {tournaments.Trackmania.StartTime.Hour}:{tournaments.Trackmania.StartTime.Minute}";
+            FindViewById<View>(Resource.Id.TournamentTrackmania).FindViewById<TextView>(Resource.Id.TournamentGameTitle).Text = $"{tournaments.Trackmania.Name}";
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -38,6 +70,7 @@ namespace NetConnect.Activities
             this.Controller = new TournamentController(this);
             base.OnCreate(savedInstanceState);
             this.Controller.setUpUi();
+            
         }
 
         public void SetUpUi(string vol)

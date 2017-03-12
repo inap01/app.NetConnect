@@ -78,6 +78,11 @@ namespace NetConnect
             ActionBar.SetBackgroundDrawable(ActionBarColor);
             SetActivityTitle();
         }
+        protected override void OnPause()
+        {
+            DataContext.SaveDataContext();
+            base.OnPause();
+        }
         public void SetMenuIconID(int id)
         {
             menuItemId = id;
@@ -110,6 +115,11 @@ namespace NetConnect
         }
         private void SetUpMethod()
         {
+            if (IsLoggedIn)
+            {
+                Entries.Remove("Login");
+                Entries.Add("Logout");
+            }
             setUpUI();
             SetUpNavigationMenu();
         }
@@ -168,7 +178,6 @@ namespace NetConnect
         private void setUpUI()
         {
             populateNameMap();
-            SetUpNavClick();
         }
         public Z GetController()
         {
@@ -182,20 +191,14 @@ namespace NetConnect
         private void populateNameMap()
         {
             nameMap = new Dictionary<string, Type>();
-            Type t = typeof(OverviewActivity);
             nameMap.Add(Entries[0], typeof(OverviewActivity));
             nameMap.Add(Entries[1], typeof(CateringActivity));
             nameMap.Add(Entries[2], typeof(SponsoringActivity));
             nameMap.Add(Entries[3], typeof(TournamentActivity));
             nameMap.Add(Entries[4], typeof(ContactActivity));
+            nameMap.Add("Order",    typeof(OrderActivity));
             nameMap.Add(Entries[5], typeof(LoginActivity));
-            nameMap.Add("Order", typeof(OrderActivity));
-        }
-
-        protected void SetUpNavClick()
-        {
-            
-        }
+        }        
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
@@ -213,7 +216,6 @@ namespace NetConnect
             }
             return true;
         }
-
         private void NavBarOpenClose(bool? closeMenu = null)
         {
             if (closeMenu == null)
@@ -231,7 +233,6 @@ namespace NetConnect
                     mDrawerLayout.OpenDrawer((int)GravityFlags.Left);
             }
         }
-
         protected override void OnPostCreate(Bundle savedInstanceState)
         {
             base.OnPostCreate(savedInstanceState);
@@ -247,8 +248,7 @@ namespace NetConnect
             base.OnConfigurationChanged(newConfig);
             mDrawerToggle.OnConfigurationChanged(newConfig);
         }
-        
-        public static void InitViewClick(View v, Action func)                
+        public static void InitViewClick(View v, Action func)
         {
             v.Click += (o, e) => { func(); };
         }
@@ -269,7 +269,6 @@ namespace NetConnect
             StartActivity(i);
         }
         public abstract void update();
-
         public abstract void SetActivityTitle();
 
         public class NavAdapter : BaseAdapter<string>
@@ -307,7 +306,18 @@ namespace NetConnect
                 convertView = _context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1,parent,false);
                 ((TextView)convertView).SetText(this[position], TextView.BufferType.Normal);
                 ((TextView)convertView).SetTextColor(Android.Graphics.Color.Black);
-                convertView.Click += (o, e) => _context.ListItemClicked(position);
+                if (this[position] == "Logout")
+                    convertView.Click += (o, e) =>
+                    {
+                        _context.Controller.LogoutUser();
+                        _context.Finish();
+                        if (_context.GetType() != typeof(OrderActivity))
+                            _context.StartActivity(_context.Intent);
+                        else
+                            _context.StartActivity(typeof(OverviewActivity));
+                    };
+                else
+                    convertView.Click += (o, e) => _context.ListItemClicked(position);
                 return convertView;
             }
         }

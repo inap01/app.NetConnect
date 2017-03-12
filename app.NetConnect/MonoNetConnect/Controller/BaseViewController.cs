@@ -29,7 +29,15 @@ namespace MonoNetConnect.Controller
         }
         public bool IsLoggedIn()
         {
-            return dataContext.isLoggedIn;
+            if (dataContext != null)
+                return dataContext.isLoggedIn;
+            else
+                return false;
+        }
+        public void LogoutUser()
+        {
+            dataContext.User = null;
+            dataContext.isLoggedIn = false;
         }
     }
 }

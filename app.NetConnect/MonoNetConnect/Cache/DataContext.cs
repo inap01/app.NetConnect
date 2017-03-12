@@ -16,6 +16,7 @@ using System.Threading;
 using MonoNetConnect.ApiModel;
 using Java.Security;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace MonoNetConnect.Cache
 {
@@ -27,19 +28,25 @@ namespace MonoNetConnect.Cache
     [Serializable]
     public partial class DataContext
     {
+
         List<ISubscriber> subscriber = new List<ISubscriber>();
         internal readonly string Token = Convert.ToBase64String(Encoding.UTF8.GetBytes("984825f8-8ac0-4748-8fe4-502f462fdf85"));
         private Dictionary<Activity, Action> ActivityCallBackFunctions { get; set; }
+        [JsonProperty]
         private DateTime? lastUpdated = DateTime.MinValue;
         private Boolean _isInitialLoad { get; set; } = true;
         private String ApiImagesPath = "images";
         private String ApiImageUpdateRequest = "api.php/app/ImageUpdates";
         private static String DataContextFilePath { get; set; }
         private static DataContext current = null;
+        [JsonProperty]
         public Boolean isLoggedIn { get; set; }
+        [JsonProperty]
+        public DateTime LatestLoginDate { get; set; }
+        [JsonIgnore]
         internal Order CurrentOrder { get; set; } = new Order();
         public ChangesRequestModel Changes { get; set; }
-        public Data<Tournament> Tournaments { get; set; } = new Data<Tournament>();
+        public Tournaments Tournaments { get; set; } = new Tournaments();
         public User User { get; set; } = new User();
         public Settings Settings { get; set; } = new Settings();
         public Data<Sponsor> Sponsors { get; set; } = new Data<Sponsor>();

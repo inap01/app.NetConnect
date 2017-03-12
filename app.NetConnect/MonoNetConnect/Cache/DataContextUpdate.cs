@@ -53,8 +53,7 @@ namespace MonoNetConnect.Cache
             catch(Exception ex)
             {
                 throw ex;
-            }
-            
+            }            
         }
         private void GenerateAndRunUpdateTasks()
         {
@@ -63,36 +62,76 @@ namespace MonoNetConnect.Cache
 
             if (Settings?.GetLatestChange().AddMinutes(2) <= Changes.Settings)
             {
-                UpdateSingleProperty<Settings>("Settings", typeof(Settings));
+                try
+                {
+                    UpdateSingleProperty<Settings>("Settings", typeof(Settings));
+                }
+                catch(Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} with Exception {ExMessage(ex)}");                    
+                }
             }
 
             if (Tournaments?.GetLatestChange().AddMinutes(2) <= Changes.Tournaments)
             {
-                UpdateSingleProperty<Data<Tournament>>("Tournaments", typeof(Tournament));
+                try
+                {
+                    UpdateSingleProperty<Tournaments>("Tournaments", typeof(Tournaments));
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} with Exception {ExMessage(ex)}");
+                }
             }
 
             if (Products?.GetLatestChange().AddMinutes(2) <= Changes.Products)
             {
-                bool cont = UpdateSingleProperty<Data<Product>>("Products",typeof(Product));
-                if(cont)
+                try
                 {
-                    UpdateImageOfSingleProperty<Data<Product>>(Products);
-                    ResolveUnreferencedImages<Data<Product>>(Products);
+
+
+                    bool cont = UpdateSingleProperty<Data<Product>>("Products", typeof(Product));
+                    if (cont)
+                    {
+                        UpdateImageOfSingleProperty<Data<Product>>(Products);
+                        ResolveUnreferencedImages<Data<Product>>(Products);
+                    }
+                }
+                catch(Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} with Exception {ExMessage(ex)}");
                 }
             }
 
             if (Sponsors?.GetLatestChange().AddMinutes(2) <= Changes.Settings)
             {
-                bool cont = UpdateSingleProperty<Data<Sponsor>>("Sponsors", typeof(Sponsor));
-                if (cont)
+                try
                 {
-                    UpdateImageOfSingleProperty<Data<Sponsor>>(Sponsors);
-                    ResolveUnreferencedImages<Data<Sponsor>>(Sponsors);
+
+
+                    bool cont = UpdateSingleProperty<Data<Sponsor>>("Sponsors", typeof(Sponsor));
+                    if (cont)
+                    {
+                        UpdateImageOfSingleProperty<Data<Sponsor>>(Sponsors);
+                        ResolveUnreferencedImages<Data<Sponsor>>(Sponsors);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} with Exception {ExMessage(ex)}");
                 }
             }
             if (Seating?.GetLatestChange().AddMinutes(2) <= Changes.Seating)
             {
-                UpdateSingleProperty<Data<Seat>>("Seating", typeof(Seat));
+                try
+                {
+                    UpdateSingleProperty<Data<Seat>>("Seating", typeof(Seat));
+                }
+
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} with Exception {ExMessage(ex)}");
+                }
             }
         }
         private Boolean UpdateAsyncIfNeeded<T>(String PropertyName, Type GenericType)

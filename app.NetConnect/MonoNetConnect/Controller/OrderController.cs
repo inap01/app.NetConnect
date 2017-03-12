@@ -18,6 +18,8 @@ namespace MonoNetConnect.Controller
         void PopulateListView(List<OrderProduct> list);
         void PopulateRadioButtonGrid(List<int> seatNumbers);
         int GetSelectedSeat();
+        void OrderSuccessfull();
+        void OrderFailed(String s);
     }
     
     public class OrderController : BaseViewController<IOrderController>
@@ -32,24 +34,23 @@ namespace MonoNetConnect.Controller
             var x2 = x1.Select(x => x.ID);
             this._viewController.PopulateRadioButtonGrid(dataContext.Seating.Where(x => x.UserID == dataContext.User.ID).Select(x => x.ID).ToList());
         }
-        public Boolean DecrementPartialOrder(int id)
+        public Boolean DecrementPartialOrder(OrderProduct product)
         {
-            var item = dataContext.CurrentOrder.Products.Where(x => x.ID == id)?.First();
+            var item = dataContext.CurrentOrder.Products.Where(x => x.Equals(product))?.First();
             if (dataContext.CurrentOrder.Products!= null && item.Count > 1)
             {
                 item.Count--;
                 if (item.Count == 0)
                 {
-                    RemoveItemFromOrder(id);
                     return false;
                 }
                 return true;
             }
             return false;
         }
-        public Boolean IncrementPartialOrder(int id)
+        public Boolean IncrementPartialOrder(OrderProduct product)
         {
-            var item = dataContext.CurrentOrder.Products.Where(x => x.ID == id)?.First();
+            var item = dataContext.CurrentOrder.Products.Where(x => x.Equals(product))?.First();
             if (dataContext.CurrentOrder.Products != null && item.Count > 0)
             {
                 item.Count++;
@@ -57,9 +58,9 @@ namespace MonoNetConnect.Controller
             }
             return false;
         }
-        public void RemoveItemFromOrder(int id)
+        public void RemoveItemFromOrder(OrderProduct product)
         {
-            dataContext.CurrentOrder.Products.RemoveAll(x => x.ID == id);
+            dataContext.CurrentOrder.Products.RemoveAll(x => x.Equals(product));
         }
         public void PopulateListView()
         {
@@ -69,7 +70,23 @@ namespace MonoNetConnect.Controller
         {
             dataContext.CurrentOrder.UserID = dataContext.User.ID;
             dataContext.CurrentOrder.SeatID = this._viewController.GetSelectedSeat();
-            dataContext.PostRequestWithExpectedResult<Order, BasicAPIModel>(dataContext.CurrentOrder, dataContext.CurrentOrder.ApiPath(), null);
+            try
+            {
+                var response = dataContext.PostRequestWithExpectedResult<Order, BasicAPIModel>(dataContext.CurrentOrder, dataContext.CurrentOrder.ApiPath(), null);
+                if (response.Status.State == ApiModel.StatusModel.Status.Success)
+                {
+                    dataContext.CurrentOrder = new InternalModels.Order();
+                    this._viewController.OrderSuccessfull();
+                }
+                else
+                {
+                    this._viewController.OrderFailed("Mit deiner Bestellung scheint etwas nicht zu stimmen.");
+                }
+            }
+            catch(Exception ex)
+            {
+                this._viewController.OrderFailed("Connection Error!");
+            }
             return true;
         }
     }

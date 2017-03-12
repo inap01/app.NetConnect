@@ -81,7 +81,7 @@ namespace NetConnect.Activities
             ok.Text = "Ok!";
             cancel.Text = "Abbrechen";
             tvName.Text = product.Name;
-            tvPrice.Text = product.Price.ToString() + "€";
+            tvPrice.Text = $"{product.Price.ToString()} € inkl. USt.";
             tvDesc.Text = product.Description;
             SetUpClickTouchEvents(product, orderDialog, cancel, ok, innerRoot);
             OrderAdapter = new CateringOrderAdapter(this, product.SingleChoice, product.Attributes);

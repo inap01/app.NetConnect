@@ -49,16 +49,24 @@ namespace NetConnect.Activities
                 this.Controller.Order();
             };
         }
-
+        public override void SetActivityTitle()
+        {
+            ActionBar.Title = this.GetType().Name.Replace("Activity", "");
+        }
+        public void OrderSuccessfull()
+        {
+            Toast.MakeText(this, "Bestellung erfolgt!", ToastLength.Short).Show();
+            StartActivity(typeof(CateringActivity));
+        }
+        public void OrderFailed(String message)
+        {
+            Toast.MakeText(this, message, ToastLength.Short).Show();
+        }
         public void PopulateListView(List<OrderProduct> products)
         {
             adapter = new OrderAdapter(this, products);
             list.Adapter = adapter;
         }        
-        public override void SetActivityTitle()
-        {
-            ActionBar.Title = this.GetType().Name.Replace("Activity", "");
-        }
 
         public void PopulateRadioButtonGrid(List<int> seatNumbers)
         {
@@ -67,20 +75,21 @@ namespace NetConnect.Activities
             foreach(var seat in seatNumbers)
             {
                 RadioButton rB = new RadioButton(this);
-                if (first)
-                    rB.Checked = true;
+                rB.Id = View.GenerateViewId();
                 rB.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
                 rB.Text = seat.ToString();
                 rB.SetTextColor(Android.Graphics.Color.Black);
-                rB.ButtonTintList = ColorStateList.ValueOf(Android.Graphics.Color.Navy);
+                rB.ButtonTintList = ColorStateList.ValueOf(Resources.GetColor(Resource.Color.NetConnYellow));
                 FindViewById<RadioGroup>(Resource.Id.OrderRadioBox).AddView(rB);
+                if (first)
+                    FindViewById<RadioGroup>(Resource.Id.OrderRadioBox).Check(rB.Id);
                 first = false;
             }
         }
         public int GetSelectedSeat()
         {
             var group = FindViewById<RadioGroup>(Resource.Id.OrderRadioBox);
-            int id = group.CheckedRadioButtonId;
+            int id = group.CheckedRadioButtonId-1;
             return Convert.ToInt32(((RadioButton)(group.GetChildAt(id))).Text);
         }
     }
@@ -135,12 +144,12 @@ namespace NetConnect.Activities
 
             name.Text = item.Name;
             details.Text = String.Join(",", item.Attributes);
-            price.Text = Math.Round((decimal)(item.Price * item.Count),2).ToString() + "€";
+            price.Text = $"{Math.Round((decimal)(item.Price * item.Count),2).ToString()} € inkl. USt.";
             amount.Text = item.Count.ToString();
 
             inc.Click += (o, e) =>
             {
-                if (_context.GetController().IncrementPartialOrder(item.ID))
+                if (_context.GetController().IncrementPartialOrder(item))
                 {
                     price.Text = Math.Round((decimal)(item.Price * item.Count), 2).ToString() + "€";
                     amount.Text = item.Count.ToString();
@@ -148,7 +157,7 @@ namespace NetConnect.Activities
             };
             dec.Click += (o, e) =>
             {
-                if (_context.GetController().DecrementPartialOrder(item.ID))
+                if (_context.GetController().DecrementPartialOrder(item))
                 {
                     price.Text = Math.Round((decimal)(item.Price * item.Count), 2).ToString() + "€";
                     amount.Text = item.Count.ToString();
@@ -158,7 +167,7 @@ namespace NetConnect.Activities
             };
             delete.Click += (o, e) =>
             {
-                _context.GetController().RemoveItemFromOrder(item.ID);
+                _context.GetController().RemoveItemFromOrder(item);
                 _context.GetController().PopulateListView();
 
             };

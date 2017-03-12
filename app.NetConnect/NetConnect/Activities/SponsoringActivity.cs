@@ -103,19 +103,16 @@ namespace NetConnect.Activities
             {
                 System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} drawing image {sponsors[position].Image.Split('/').Last()}");
                 convertView = context.LayoutInflater.Inflate(Resource.Layout.SponsoringListViewItem, parent, false);
-                //if (position % 2 == 1)
-                //    convertView.SetBackgroundResource(Resource.Color.NetConnBlueWithAlpha);
-                //else
-                //    convertView.SetBackgroundResource(Resource.Color.NetConnYellowWithAlpha);
-                ImageView iv = convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1);
-                //TextView tv1 = convertView.FindViewById<TextView>(Resource.Id.SponsoringSponsorName);
-                //TextView tv2 = convertView.FindViewById<TextView>(Resource.Id.SponsoringSponsorType);
-                //tv1.Text = sponsors[position].Name;
-                //tv1.SetTextColor(Android.Graphics.Color.White);
-                //tv2.Text = "Art des Sponsors";
-                //tv2.SetTextColor(Android.Graphics.Color.White);
+                convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1);
                 string path = System.String.Join("/", context.ApplicationInfo.DataDir, sponsors.GetImageDirectoryPath(), sponsors[position].Image.Split('/').Last());
-                Picasso.With(context).Load(new File(path)).Into(iv);
+                using(File imageFile = new File(path))
+                    Picasso.With(context).Load(imageFile).Into(convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1));
+                convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1).Click += (o, e) =>
+                {
+                    Intent i = new Intent(Intent.ActionView);
+                    i.SetData(Android.Net.Uri.Parse(sponsors[position].Link));
+                    context.StartActivity(i);
+                };
                 return convertView;
             }
         }
