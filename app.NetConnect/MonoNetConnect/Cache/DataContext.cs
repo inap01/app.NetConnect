@@ -83,6 +83,8 @@ namespace MonoNetConnect.Cache
             if (File.Exists(DataContext.DataContextFilePath))
             {
                 DataContext.LoadDataContextFromFile();
+                if ((DateTime.Now - DataContext.GetDataContext().LatestLoginDate).Duration().TotalHours > 72)
+                    DataContext.GetDataContext().isLoggedIn = false;
             }
             else
             {
@@ -114,7 +116,7 @@ namespace MonoNetConnect.Cache
             lock (current)
             {
                 DataContext.SaveDataContext();
-            }
+            }            
         }
 
         /// <summary>

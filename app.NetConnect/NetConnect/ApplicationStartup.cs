@@ -24,12 +24,6 @@ namespace NetConnect
         {
             AndroidEnvironment.UnhandledExceptionRaiser += HandleUndhandledExcpetions;
             DataContext.InitializeDataContext(this.ApplicationInfo.DataDir);
-            //timer = new System.Threading.Timer(
-            //    (e) =>
-            //    {
-            //        context.UpdateDataContext();
-            //    }, null, (int)TimeSpan.FromMinutes(1).TotalMilliseconds, (int)TimeSpan.FromMinutes(1).TotalMilliseconds);
-            // (int)TimeSpan.FromMinutes((DateTime.Now >= context.Settings.Start && DateTime.Now <= context.Settings.End) ? 60 : 1).TotalMilliseconds)
         }
         void HandleUndhandledExcpetions(object sender, RaiseThrowableEventArgs e)
         {

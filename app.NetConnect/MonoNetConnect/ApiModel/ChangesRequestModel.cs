@@ -21,9 +21,6 @@ namespace MonoNetConnect.ApiModel
         public DateTime Orders { get; set; }
         [JsonProperty("catering_products")]
         public DateTime Products { get; set; }
-        [JsonProperty("feedback")]
-        public DateTime Feedback { get; set; }
-        [JsonProperty("images")]
         public DateTime Images { get; set; }
         [JsonProperty("logs")]
         public DateTime Logs { get; set; }
