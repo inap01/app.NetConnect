@@ -40,27 +40,37 @@ namespace NetConnect.Activities
         Action ConfirmOrder;
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            SetContentView(Resource.Layout.ActivityNavigationLayout);
-            SetInnerLayout(Resource.Layout.CateringLayout);
             this.NavController = new NavigationController(this);
             this.Controller = new CateringController(this);
-            grid = FindViewById<GridView>(Resource.Id.CateringGridLayout);
-            root = FindViewById<RelativeLayout>(Resource.Id.CateringRoot);
-            base.OnCreate(savedInstanceState);
-            Controller.setUpUI();
-            ActionBar.Title = "Catering";
-            this.TopRightIconAction = () =>
+            SetContentView(Resource.Layout.ActivityNavigationLayout);
+            if (Controller.IsLan())
             {
-                if (this.Controller.IsLoggedIn())
-                    StartActivity(typeof(OrderActivity));
-                else
-                    this.StartActivityLogin("Order");
+                SetInnerLayout(Resource.Layout.CateringLayout);
+                grid = FindViewById<GridView>(Resource.Id.CateringGridLayout);
+                root = FindViewById<RelativeLayout>(Resource.Id.CateringRoot);
+                base.OnCreate(savedInstanceState);
+                Controller.setUpUI();
+                this.TopRightIconAction = () =>
+                {
+                    if (this.Controller.IsLoggedIn())
+                        StartActivity(typeof(OrderActivity));
+                    else
+                        this.StartActivityLogin("Order");
 
-            };
+                };
+            }
+            else
+            {
+                SetInnerLayout(Resource.Layout.CateringCurrentlyNoCatering);
+                base.OnCreate(savedInstanceState);
+            }
+            ActionBar.Title = "Catering";
+            
+
         }
         public override void SetActivityTitle()
         {
-            ActionBar.Title = this.GetType().Name.Replace("Activity", "");
+            ActionBar.Title = "Catering";
         }
         public void ShowOrderDialog(Product product)
         {
@@ -134,7 +144,10 @@ namespace NetConnect.Activities
         }
         public override bool OnPrepareOptionsMenu(IMenu menu)
         {
-            menu.GetItem(0).SetIcon(Resource.Drawable.warenkorb);
+            if (Controller.IsLan())
+                menu.GetItem(0).SetIcon(Resource.Drawable.warenkorb);
+            else
+                menu.GetItem(0).SetIcon(null);
             return base.OnPrepareOptionsMenu(menu);
         }
         public override bool DispatchTouchEvent(MotionEvent ev)
@@ -160,7 +173,10 @@ namespace NetConnect.Activities
         }
         public override void update()
         {
-            this.Controller.setUpUI();
+            if (Controller.IsLan())
+            {
+                this.Controller.setUpUI();
+            }
         }
         public void PopulateGridLayout(Data<Product> products)
         {

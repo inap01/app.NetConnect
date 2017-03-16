@@ -2,52 +2,16 @@
 <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
-    android:layout_height="120dp">
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
     <ImageView
         android:layout_width="0dp"
         android:layout_height="match_parent"
         app:layout_widthPercent="100%"
         android:id="@+id/SponsoringImage1"
-        android:background="@android:color/transparent"
-        android:layout_gravity="left"
-        android:scaleType="fitXY"/>
-    <!--<RelativeLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_widthPercent="50%"
-        android:layout_toRightOf="@id/SponsoringImage1"
-        android:id="@+id/SponsoringTextContainer"
-        android:background="@android:color/transparent"
-        android:gravity="center_horizontal">
-        <TextView
-            android:id="@+id/SponsoringSponsorName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lorem Ipsum Titel"
-            android:layout_marginTop="20dp" />
-        <TextView
-            android:id="@+id/SponsoringSponsorType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lorem Ipsum Titel"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="10dp"
-            android:layout_alignParentBottom="true" />
-    </RelativeLayout>
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        app:layout_widthPercent="10%"
-        android:layout_toRightOf="@id/SponsoringTextContainer"
-        android:id="@+id/SponsoringImage3"
-        android:background="@android:color/transparent"
-        android:gravity="center">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon"
-            android:id="@+id/SponsoringImageAction"
-            android:scaleType="fitCenter" />
-    </LinearLayout>-->
+        android:background="#90C0C0C0"
+        android:layout_gravity="left"/>
 </android.support.percent.PercentRelativeLayout>

@@ -27,6 +27,10 @@ namespace MonoNetConnect.Controller
             this._viewController = viewController;
             dataContext = DataContext.GetDataContext();
         }
+        public bool IsLan()
+        {
+            return (DateTime.Now >= dataContext.Settings.Start && DateTime.Now <= dataContext.Settings.End);
+        }
         public bool IsLoggedIn()
         {
             if (dataContext != null)

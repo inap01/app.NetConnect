@@ -50,7 +50,7 @@ namespace NetConnect.Activities
         }
         public override void SetActivityTitle()
         {
-            ActionBar.Title = this.GetType().Name.Replace("Activity", "");
+            ActionBar.Title = "Sponsoren";
         }
         public void SetListItems(Data<Sponsor> sponsors)
         {
@@ -107,6 +107,8 @@ namespace NetConnect.Activities
                 string path = System.String.Join("/", context.ApplicationInfo.DataDir, sponsors.GetImageDirectoryPath(), sponsors[position].Image.Split('/').Last());
                 using(File imageFile = new File(path))
                     Picasso.With(context).Load(imageFile).Into(convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1));
+                convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1).SetAdjustViewBounds(true);
+                convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1).SetScaleType(ImageView.ScaleType.CenterInside);
                 convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1).Click += (o, e) =>
                 {
                     Intent i = new Intent(Intent.ActionView);

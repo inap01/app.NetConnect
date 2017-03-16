@@ -51,7 +51,7 @@ namespace NetConnect.Activities
         }
         public override void SetActivityTitle()
         {
-            ActionBar.Title = this.GetType().Name.Replace("Activity", "");
+            ActionBar.Title = "Warenkorb";
         }
         public void OrderSuccessfull()
         {

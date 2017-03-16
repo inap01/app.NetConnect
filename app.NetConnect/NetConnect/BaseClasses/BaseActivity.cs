@@ -64,7 +64,7 @@ namespace NetConnect
         protected List<String> Entries
         {
             get; set;
-        } = new List<string>(new String[] { "Home", "Catering", "Sponsoren", "Tournament", "Kontakt", "Login" });
+        } = new List<string>(new String[] {"Catering", "Sponsoren", "Turniere", "Kontakt", "Login" });
 
         #endregion        
         protected override void OnCreate(Bundle savedInstanceState)
@@ -191,13 +191,12 @@ namespace NetConnect
         private void populateNameMap()
         {
             nameMap = new Dictionary<string, Type>();
-            nameMap.Add(Entries[0], typeof(OverviewActivity));
-            nameMap.Add(Entries[1], typeof(CateringActivity));
-            nameMap.Add(Entries[2], typeof(SponsoringActivity));
-            nameMap.Add(Entries[3], typeof(TournamentActivity));
-            nameMap.Add(Entries[4], typeof(ContactActivity));
+            nameMap.Add(Entries[0], typeof(CateringActivity));
+            nameMap.Add(Entries[1], typeof(SponsoringActivity));
+            nameMap.Add(Entries[2], typeof(TournamentActivity));
+            nameMap.Add(Entries[3], typeof(ContactActivity));
             nameMap.Add("Order",    typeof(OrderActivity));
-            nameMap.Add(Entries[5], typeof(LoginActivity));
+            nameMap.Add(Entries[4], typeof(LoginActivity));
         }        
         public override bool OnOptionsItemSelected(IMenuItem item)
         {

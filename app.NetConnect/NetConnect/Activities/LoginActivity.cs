@@ -26,7 +26,7 @@ namespace NetConnect.Activities
         {
             if (this.Controller.IsLoggedIn())
             {
-                StartActivity(typeof(OverviewActivity));
+                StartActivity(typeof(TournamentActivity));
                 Finish();
             }
         }
@@ -54,7 +54,7 @@ namespace NetConnect.Activities
             }
             TopRightIconAction = () =>
             {
-                this.StartActivity(typeof(OverviewActivity));
+                this.StartActivity(typeof(SponsoringActivity));
             };
             FindViewById<Button>(Resource.Id.LoginButton).Click += (o, e) =>
             {
@@ -93,7 +93,7 @@ namespace NetConnect.Activities
             var t = Toast.MakeText(this, "Login erfolgreich!", ToastLength.Long);
             t.Show();
             if (PostLoginAction == null)
-                this.NavController.ListItemClicked(typeof(OverviewActivity));
+                this.NavController.ListItemClicked(typeof(TournamentActivity));
             else
                 PostLoginAction();
         }

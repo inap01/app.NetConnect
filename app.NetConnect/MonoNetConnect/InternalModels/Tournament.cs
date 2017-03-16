@@ -71,6 +71,8 @@ namespace MonoNetConnect.InternalModels
         public DateTime StartTime { get; set; }
         [JsonProperty("teams")]
         public List<Team> Teams { get; set; }
+        [JsonProperty("participants_number")]
+        public Int32 NumberParticipants { get; set; }
         [JsonProperty("player")]
         public List<Team> player { get; set; }
 
