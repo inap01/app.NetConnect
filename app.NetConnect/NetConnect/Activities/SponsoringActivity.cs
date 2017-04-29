@@ -20,7 +20,7 @@ using System.Reflection;
 
 namespace NetConnect.Activities
 {
-    [Activity(Label = "Sponsoring", MainLauncher = false)]
+    [Activity(Label = "Sponsoring", MainLauncher = false, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class SponsoringActivity : BaseActivity<ISponsoringController, SponsoringController>, ISponsoringController
     {
         ListView list;
@@ -43,6 +43,11 @@ namespace NetConnect.Activities
                 return true;
             }
             return base.OnCreateOptionsMenu(menu);
+        }
+        public override bool OnPrepareOptionsMenu(IMenu menu)
+        {
+            menu.GetItem(0).SetIcon(null);
+            return base.OnPrepareOptionsMenu(menu);
         }
         public override void update()
         {

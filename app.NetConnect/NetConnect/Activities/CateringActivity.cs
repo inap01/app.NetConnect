@@ -23,7 +23,7 @@ using Android.Text.Style;
 
 namespace NetConnect.Activities
 {
-    [Activity(Label = "CateringActivity", MainLauncher = false)]
+    [Activity(Label = "CateringActivity", MainLauncher = false, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class CateringActivity : BaseActivity<ICateringController, CateringController>, ICateringController
     {
         

@@ -17,7 +17,7 @@ using Android.Content.Res;
 
 namespace NetConnect.Activities
 {
-    [Activity(Label = "OrderActivity")]
+    [Activity(Label = "OrderActivity", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class OrderActivity : BaseActivity<IOrderController, OrderController>, IOrderController
     {
         RelativeLayout confirmDeleteDialog;

@@ -13,7 +13,7 @@ using MonoNetConnect.Controller;
 
 namespace NetConnect.Activities
 {
-    [Activity(Label = "NetConnect", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "NetConnect", MainLauncher = true, NoHistory = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     class LoginActivity : BaseActivity<ILoginController, LoginController>, ILoginController
     {
         Action PostLoginAction = null;

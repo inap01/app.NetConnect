@@ -5,7 +5,7 @@
   <string name="drawerOpen">Open</string>
   <string name="drawerClosed">Closed</string>
   <!-- TOURNAMENT -->
-  <string name="netcon_Tournament_TitleText">Turniere der Playground vol. #</string>
+  <string name="netcon_Tournament_TitleText">Turniere der Playground Vol. #</string>
   <!-- ORDER -->
   <string name="netcon_Order_SitzPlatzNummern">Platznummer</string>
   <!-- IMPRESSUM -->
