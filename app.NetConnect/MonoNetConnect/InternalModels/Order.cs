@@ -10,21 +10,16 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
+using DataNetConnect.ViewModels.Catering;
 
 namespace MonoNetConnect.InternalModels
 {
-    public class OrderProduct : BaseProperties
+    public class OrderProduct : OrderDetailViewModel
     {
-        [JsonProperty("attributes")]
-        public List<String> Attributes { get; set; }
         [JsonIgnore]
         public decimal Price { get; set; }
-        [JsonProperty("count")]
-        public int Count { get; set; }
         [JsonIgnore]
         protected override DateTime LatestChange { get; set; }
-        [JsonIgnore]
-        public string Name { get; set; }
 
         public OrderProduct()
         {

@@ -46,23 +46,23 @@ namespace MonoNetConnect.Cache
         [JsonIgnore]
         internal Order CurrentOrder { get; set; } = new Order();
         public ChangesRequestModel Changes { get; set; }
-        public Tournaments Tournaments { get; set; } = new Tournaments();
         public User User { get; set; } = new User();
         public Settings Settings { get; set; } = new Settings();
+        public Data<Tournament> Tournaments { get; set; } = new Data<Tournament>();
         public Data<Sponsor> Sponsors { get; set; } = new Data<Sponsor>();
         public Data<Product> Products { get; set; } = new Data<Product>();
         public Data<Seat> Seating { get; set; } = new Data<Seat>();
 
         private DataContext()
         {
-            
+
         }
         private void Notify()
         {
             foreach (var sub in subscriber)
             {
                 System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} Notifying {sub}");
-                sub.update();                
+                sub.update();
             }
         }
         public void Attach(ISubscriber sub)
@@ -74,13 +74,13 @@ namespace MonoNetConnect.Cache
             subscriber.Remove(sub);
         }
         public static DataContext GetDataContext()
-        {            
+        {
             return current;
         }
         public static void InitializeDataContext(String path)
         {
             DataContext.DataContextFilePath = Path.Combine(path, "datacontext.json");
-            if (File.Exists(DataContext.DataContextFilePath))
+            if (false)//File.Exists(DataContext.DataContextFilePath))
             {
                 DataContext.LoadDataContextFromFile();
                 if ((DateTime.Now - DataContext.GetDataContext().LatestLoginDate).Duration().TotalHours > 72)
@@ -115,8 +115,8 @@ namespace MonoNetConnect.Cache
             Notify();
             lock (current)
             {
-                DataContext.SaveDataContext();
-            }            
+                //DataContext.SaveDataContext();
+            }
         }
 
         /// <summary>
@@ -130,10 +130,10 @@ namespace MonoNetConnect.Cache
             var images = UpdateImagesPost<T, List<String>>(ModelToPost, ApiImageUpdateRequest);
             DownloadImagesAsync<T>(images);
         }
-
-        public void callBackTest()
-        {
-
-        }
+        //public void UpdateImageOfSingleProperty2<T>(Data<T> ModelToPost)
+        //    where T : IApiModels
+        //{
+        //    var requiredUpdates = UpdateImagesPost2<T, Data<T>>(ModelToPost, ApiImageUpdateRequest);
+        //}
     }
 }

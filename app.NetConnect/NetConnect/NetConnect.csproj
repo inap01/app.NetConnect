@@ -50,7 +50,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
     <BundleAssemblies>False</BundleAssemblies>
@@ -60,7 +60,6 @@
     <EnableLLVM>False</EnableLLVM>
     <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
     <EnableProguard>False</EnableProguard>
-    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -144,7 +143,6 @@
     <Compile Include="Activities\TournamentActivity.cs" />
     <Compile Include="ApplicationStartup.cs" />
     <Compile Include="BaseClasses\BaseActivity.cs" />
-    <Compile Include="BaseClasses\Class1.cs" />
     <Compile Include="CustomViews\ImageViewScaling.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -199,6 +197,9 @@
     <AndroidResource Include="Resources\layout\CateringCurrentlyNoCatering.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\SponsoringSeparator.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -233,12 +234,18 @@
     <AndroidResource Include="Resources\drawable\divider.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\dimen.xml" />
+    <AndroidResource Include="Resources\values\dimen.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DataNetConnect\DataNetConnect.csproj">
+      <Project>{5918de20-1837-4860-94bd-eb75db4d466c}</Project>
+      <Name>DataNetConnect</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MonoNetConnect\MonoNetConnect.csproj">
       <Project>{9113a145-ba50-4707-9306-d48b7216aeb7}</Project>
       <Name>MonoNetConnect</Name>
@@ -301,6 +308,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Skip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\backgroundenfos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\backgroundosu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\backgroundow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.24.2.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.24.2.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

@@ -31,6 +31,17 @@ namespace MonoNetConnect.Cache
             var content = new StringContent(JsonConvert.SerializeObject(images), Encoding.UTF8, "application/json");
             return UpdatePostWithResult<Z>(content, relativePath, null);
         }
+        //private Z UpdateImagesPost2<T, Z>(Data<T> ModelToPost, String relativePath)
+        //    where T : IApiModels
+        //{
+        //    Dictionary<string, DateTime> images = new Dictionary<string, DateTime>();
+        //    foreach (var x in ModelToPost.GetImages())
+        //    {
+        //        images.Add(x, ModelToPost.GetLatestChange());
+        //    }
+        //    var content = new StringContent(JsonConvert.SerializeObject(images), Encoding.UTF8, "application/json");
+        //    return UpdatePostWithResult<Z>(content, relativePath, null);
+        //}
         public Z PostRequestWithExpectedResult<T,Z>(T ModelToPost, string relativePath, Dictionary<string,string> headers)
         {
             StringContent content = new StringContent(JsonConvert.SerializeObject(ModelToPost),Encoding.UTF8, "application/json");
@@ -76,7 +87,7 @@ namespace MonoNetConnect.Cache
             {
                 try
                 {
-                    UpdateSingleProperty<Tournaments>("Tournaments", typeof(Tournaments));
+                    UpdateSingleProperty<Data<Tournament>>("Tournaments", typeof(Tournament));
                 }
                 catch (Exception ex)
                 {
@@ -93,8 +104,9 @@ namespace MonoNetConnect.Cache
                     bool cont = UpdateSingleProperty<Data<Product>>("Products", typeof(Product));
                     if (cont)
                     {
+                        //UpdateImageOfSingleProperty2<Product>(Products);
                         UpdateImageOfSingleProperty<Data<Product>>(Products);
-                        ResolveUnreferencedImages<Data<Product>>(Products);
+                        ResolveUnreferencedImages<Product>(Products);
                     }
                 }
                 catch(Exception ex)
@@ -113,7 +125,7 @@ namespace MonoNetConnect.Cache
                     if (cont)
                     {
                         UpdateImageOfSingleProperty<Data<Sponsor>>(Sponsors);
-                        ResolveUnreferencedImages<Data<Sponsor>>(Sponsors);
+                        ResolveUnreferencedImages<Sponsor>(Sponsors);
                     }
                 }
                 catch (Exception ex)
@@ -144,6 +156,7 @@ namespace MonoNetConnect.Cache
             }
             catch(Exception ex)
             {
+                System.Diagnostics.Debug.WriteLine($"Exception in Update Async\n{ex.ToString()}");
                 return false;
             }
         }

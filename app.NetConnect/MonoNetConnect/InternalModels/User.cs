@@ -49,5 +49,14 @@ namespace MonoNetConnect.InternalModels
         {
             return false;
         }
+        public string GetLocalImageName(string FullApiPathImageName)
+        {
+            return null;
+        }
+
+        public string GetLocalImageName()
+        {
+            return null;
+        }
     }
 }

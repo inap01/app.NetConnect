@@ -12,29 +12,16 @@ using Android.Widget;
 using MonoNetConnect.Cache;
 using Newtonsoft.Json;
 using MonoNetConnect.Extensions;
+using DataNetConnect.ViewModels.Catering;
 
 namespace MonoNetConnect.InternalModels
 {
     
     [Serializable]
-    public class Product : BaseProperties, IApiModels, IHasImage, IDeepCloneable<Product>
+    public class Product : ProductViewModel, IApiModels, IHasImage, IDeepCloneable<Product>
     {
         private static String ProductImagePath = @"Images/Products";
         private static String ProductApiPath = @"api.php/app/Products{/id}";
-
-        [JsonProperty("name")]
-        public String Name { get; set; }
-        [JsonProperty("description")]
-        public String Description { get; set; } = "";
-        [JsonProperty("price")]
-        public Decimal Price { get; set; }
-        [JsonProperty("single_choice")]
-        public Boolean SingleChoice { get; set; }
-        [ApiPropertyName("Image")]
-        [JsonProperty("image")]
-        public String ImageName { get; set; }
-        [JsonProperty("attributes")]
-        public List<String> Attributes { get; set; } = new List<string>();
 
         public string ApiPath()
         {            
@@ -55,6 +42,10 @@ namespace MonoNetConnect.InternalModels
         {
             return ImageName;
         }
+        public string GetLocalImageName(string FullApiPathImageName)
+        {
+            return FullApiPathImageName.Split('/').Last();
+        }
         public Product DeepClone()
         {
             return new Product()
@@ -72,6 +63,11 @@ namespace MonoNetConnect.InternalModels
         object IDeepCloneable.DeepClone()
         {
             return this.DeepClone();
+        }
+
+        public string GetLocalImageName()
+        {
+            return GetLocalImageName(ImageName);
         }
     }
 }

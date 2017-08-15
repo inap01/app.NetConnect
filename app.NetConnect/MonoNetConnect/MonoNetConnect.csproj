@@ -114,6 +114,12 @@
   <ItemGroup>
     <Folder Include="Utility\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataNetConnect\DataNetConnect.csproj">
+      <Project>{5918de20-1837-4860-94bd-eb75db4d466c}</Project>
+      <Name>DataNetConnect</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -11,35 +11,14 @@ using Android.Views;
 using Android.Widget;
 using MonoNetConnect.Cache;
 using Newtonsoft.Json;
+using DataNetConnect.ViewModels.Partner;
 
 namespace MonoNetConnect.InternalModels
 {
-    public class Sponsor : BaseProperties, IApiModels, IHasImage
+    public class Sponsor : PartnerViewModel, IApiModels, IHasImage
     {
         private static String SponsorApiPath = @"api.php/app/Partner";
         private static String SponsorImagePath = @"Images/Sponsor";
-
-        [JsonProperty("partner_title")]
-        public String PartnerTitle { get; set; }
-        [JsonProperty("show_partner")]
-        public Boolean ShowPartner { get; set; }
-        [JsonProperty("show_frontsite")]
-        public Boolean ShowFrontsite { get; set; }
-        [JsonProperty("show_trikot")]
-        public Boolean ShowTrikot { get; set; }
-        [JsonProperty("name")]
-        public String Name { get; set; }
-        [JsonProperty("content")]
-        public String Content { get; set; }
-        [JsonProperty("link")]
-        public String Link { get; set; }
-        [ApiPropertyName("Image")]
-        [JsonProperty("image")]
-        public String Image { get; set; }
-        [JsonProperty("status")]
-        public Int32 PartnerPackID { get; set; }
-        [JsonProperty("active")]
-        public Boolean Active { get; set; }
 
         public string ApiPath()
         {
@@ -59,6 +38,16 @@ namespace MonoNetConnect.InternalModels
         public string GetImage()
         {
             return this.Image;
+        }
+        public string GetLocalImageName()
+        {
+            var splitted = Image.Split('/');
+            return splitted[splitted.Length - 2] + ".png";
+        }
+        public string GetLocalImageName(string FullApiPathImageName)
+        {
+            var splitted = FullApiPathImageName.Split('/');
+            return splitted[splitted.Length - 2] + ".png";
         }
     }
 }

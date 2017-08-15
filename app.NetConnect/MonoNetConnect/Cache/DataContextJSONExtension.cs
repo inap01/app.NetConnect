@@ -26,13 +26,16 @@ namespace MonoNetConnect.Cache
             
             public override bool CanConvert(Type objectType)
             {
-                return objectType == typeof(bool);
+                var t = objectType == typeof(bool) || objectType == typeof(bool?);
+                return t;
             }
 
             public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
             {
                 switch (reader.Value.ToString().ToLower().Trim())
                 {
+                    case "":
+                        return false;
                     //case "true":
                     //case "yes":
                     //case "y":

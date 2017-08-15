@@ -33,6 +33,7 @@ namespace NetConnect.Activities
             this.Controller = new SponsoringController(this);
             base.OnCreate(savedInstanceState);
             this.Controller.ListItems();
+            
         }
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
@@ -46,7 +47,8 @@ namespace NetConnect.Activities
         }
         public override bool OnPrepareOptionsMenu(IMenu menu)
         {
-            menu.GetItem(0).SetIcon(null);
+            if(this.Controller.IsLoggedIn())
+                menu.GetItem(0).SetIcon(null);
             return base.OnPrepareOptionsMenu(menu);
         }
         public override void update()
@@ -72,7 +74,18 @@ namespace NetConnect.Activities
         public class SponsoringAdapter : BaseAdapter<Sponsor>
         {
             Activity context;
-            private Data<Sponsor> sponsors;
+            private Data<Sponsor> _sponsors;
+            private Data<Sponsor> sponsors
+            {
+                get
+                {
+                    return _sponsors;
+                }
+                set
+                {
+                    _sponsors = value;
+                }
+            }
 
             public SponsoringAdapter(Activity _context)
                 : base()
@@ -83,7 +96,7 @@ namespace NetConnect.Activities
             public void SetSponsors(Data<Sponsor> spons)
             {
                 sponsors.Clear();
-                sponsors.AddRange(spons);
+                sponsors = spons;
             }
             public override Sponsor this[int position]
             {
@@ -94,33 +107,41 @@ namespace NetConnect.Activities
             }
             public override int Count
             {
-                get
-                {
-                    return sponsors.Count;
-                }
+                get { return sponsors.Count; }
             }
+
             public override long GetItemId(int position)
             {
                 return position;
-            }
-
+            }            
             public override View GetView(int position, View convertView, ViewGroup parent)
             {
-                System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} drawing image {sponsors[position].Image.Split('/').Last()}");
-                convertView = context.LayoutInflater.Inflate(Resource.Layout.SponsoringListViewItem, parent, false);
-                convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1);
-                string path = System.String.Join("/", context.ApplicationInfo.DataDir, sponsors.GetImageDirectoryPath(), sponsors[position].Image.Split('/').Last());
-                using(File imageFile = new File(path))
-                    Picasso.With(context).Load(imageFile).Into(convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1));
-                convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1).SetAdjustViewBounds(true);
-                convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1).SetScaleType(ImageView.ScaleType.CenterInside);
-                convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1).Click += (o, e) =>
+                var item = sponsors[position];
+                
+                if(item.Status != -1)
                 {
-                    Intent i = new Intent(Intent.ActionView);
-                    i.SetData(Android.Net.Uri.Parse(sponsors[position].Link));
-                    context.StartActivity(i);
-                };
-                return convertView;
+                    convertView = context.LayoutInflater.Inflate(Resource.Layout.SponsoringListViewItem, parent, false);
+                    convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1);
+                    string path = System.String.Join("/", context.ApplicationInfo.DataDir, sponsors.GetImageDirectoryPath(), item.GetLocalImageName());
+                    using (File imageFile = new File(path))
+                        Picasso.With(context).Load(imageFile).Into(convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1));
+                    convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1).SetAdjustViewBounds(true);
+                    convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1).SetScaleType(ImageView.ScaleType.CenterInside);
+                    convertView.FindViewById<ImageView>(Resource.Id.SponsoringImage1).Click += (o, e) =>
+                    {
+                        Intent i = new Intent(Intent.ActionView);
+                        i.SetData(Android.Net.Uri.Parse(item.Link));
+                        context.StartActivity(i);
+                    };
+                    return convertView;
+                }
+                else
+                {
+                    convertView = context.LayoutInflater.Inflate(Resource.Layout.SponsoringSeparator, parent, false);
+                    convertView.FindViewById<TextView>(Resource.Id.SponsorTypeLabel).Text = item.Name;
+                    return convertView;
+                }
+                            
             }
         }
     }

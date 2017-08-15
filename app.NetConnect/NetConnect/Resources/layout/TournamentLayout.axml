@@ -5,243 +5,274 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/landing">
-    <android.support.percent.PercentRelativeLayout
-        android:layout_centerInParent="true"
+    <Button
+        android:id="@+id/TournamentAnmeldenButton"
+        android:layout_centerHorizontal="true"
+        android:text="Anmelden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ScrollView
+        android:layout_below="@+id/TournamentAnmeldenButton"
         app:layout_widthPercent="92%"
         app:layout_heightPercent="92%"
-        android:padding="10dp"
-        android:background="#D0000000">
-        <TextView
-            android:id="@+id/TournamentTitleVol"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:layout_centerHorizontal="true"
-            android:textSize="@dimen/netcon_tournamentHeader_textsize" />
+        android:layout_centerInParent="true"
+        android:scrollbars="none"
+        android:background="#81000000"
+        android:padding="5dp">
         <RelativeLayout
-            android:id="@+id/TournamentBierpong"
-            android:layout_below="@+id/TournamentTitleVol"
             android:layout_width="match_parent"
-            app:layout_heightPercent="20%">
-            <ImageView
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/TournamentTitle"
+                android:text="HeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/netcon_tournamentHeader_textsize" />
+            <TextView
+                android:id="@+id/TournamentTitleSubHeader1"
+                android:text="HeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/TournamentTitle"
+                android:textSize="@dimen/netcon_tournamentSubHeader_textsize" />
+            <LinearLayout
+                android:id="@+id/TournamentFirstContainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/backgroundbeerpong"
-                android:background="@color/NetConnBlue" />
-            <TextView
-                android:id="@+id/TournamentGameTitle"
-                android:layout_marginLeft="4dp"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameStyle"
-                android:layout_marginLeft="4dp"
-                android:layout_below="@+id/TournamentGameTitle"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameTime"
-                android:layout_marginLeft="4dp"
-                android:layout_below="@+id/TournamentGameStyle"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameRegistrations"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-        </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/TournamentHearthstone"
-            android:layout_below="@+id/TournamentBierpong"
-            app:layout_marginTopPercent="2%"
-            app:layout_marginRightPercent="1%"
-            app:layout_widthPercent="49%"
-            app:layout_heightPercent="32%">
-            <ImageView
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/TournamentTitleSubHeader1"
+                android:weightSum="2">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/TournamentBierPong"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/backgroundbeerpong"
+                        android:background="@color/NetConnBlue" />
+                    <TextView
+                        android:id="@+id/TournamentTextBierPong"
+                        android:textColor="@android:color/white"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:maxLines="3"
+                        android:lines="3" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"                  
+                    android:layout_marginLeft="15dp">
+                    <ImageView
+                        android:id="@+id/TournamentOverwatchImage"
+                        android:layout_toRightOf="@+id/TournamentBierPong"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/backgroundbeerpong"
+                        android:background="@color/NetConnBlue"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:id="@+id/TournamentTextOverwatch"
+                        android:textColor="@android:color/white"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:maxLines="3"
+                        android:lines="3" />
+                </RelativeLayout>
+            </LinearLayout>
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/TournamentFirstImageContainer"
+                android:layout_below="@+id/TournamentFirstContainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/backgroundhearthstone"
-                android:background="@color/NetConnBlue" />
-            <TextView
-                android:id="@+id/TournamentGameTitle"
-                android:layout_marginLeft="4dp"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/TournamentOsuImage"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/backgroundbeerpong"
+                    android:background="@color/NetConnBlue"
+                    app:layout_widthPercent="100%"
+                    app:layout_aspectRatio="300%" />
+                <TextView
+                    android:id="@+id/TournamentTextOsu"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="3"
+                    android:lines="3" />
+            </android.support.percent.PercentRelativeLayout>
             <TextView
-                android:id="@+id/TournamentGameStyle"
-                android:layout_marginLeft="4dp"
-                android:layout_below="@+id/TournamentGameTitle"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:id="@+id/TournamentTitleSubHeader2"
+                android:text="HeaderText"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameTime"
-                android:layout_marginLeft="4dp"
-                android:layout_below="@+id/TournamentGameStyle"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameRegistrations"
-                android:layout_marginLeft="4dp"
-                android:layout_alignParentBottom="true"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-        </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/TournamentTrackmania"
-            android:layout_below="@+id/TournamentBierpong"
-            android:layout_toRightOf="@+id/TournamentHearthstone"
-            app:layout_marginTopPercent="2%"
-            app:layout_marginLeftPercent="1%"
-            app:layout_widthPercent="49%"
-            app:layout_heightPercent="32%">
-            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/TournamentFirstImageContainer"
+                android:textSize="@dimen/netcon_tournamentSubHeader_textsize" />
+            <LinearLayout
+                android:id="@+id/TournamentSecondContainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/backgroundtrackmania"
-                android:background="@color/NetConnBlue" />
-            <TextView
-                android:id="@+id/TournamentGameTitle"
-                android:layout_marginLeft="4dp"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameStyle"
-                android:layout_marginLeft="4dp"
-                android:layout_below="@+id/TournamentGameTitle"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameTime"
-                android:layout_marginLeft="4dp"
-                android:layout_below="@+id/TournamentGameStyle"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameRegistrations"
-                android:layout_marginLeft="4dp"
-                android:layout_alignParentBottom="true"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-        </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/TournamentCoD4"
-            android:layout_below="@+id/TournamentHearthstone"
-            app:layout_marginTopPercent="2%"
-            app:layout_marginRightPercent="1%"
-            app:layout_widthPercent="49%"
-            app:layout_heightPercent="32%">
-            <ImageView
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/TournamentTitleSubHeader2"
+                android:weightSum="2">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/TournamentCOD"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/backgroundbeerpong"
+                        android:background="@color/NetConnBlue" />
+                    <TextView
+                        android:id="@+id/TournamentTextCOD"
+                        android:textColor="@android:color/white"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:maxLines="3"
+                        android:lines="3" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="15dp">
+                    <ImageView
+                        android:id="@+id/TournamentHearthstoneImage"
+                        android:scaleType="fitXY"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/backgroundbeerpong"
+                        android:background="@color/NetConnBlue"
+                        android:layout_weight="1" />
+                  <TextView
+                        android:id="@+id/TournamentTextHearthstone"
+                        android:textColor="@android:color/white"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:maxLines="3"
+                        android:lines="3"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/TournamentSecondImageContainer"
+                android:layout_below="@+id/TournamentSecondContainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/backgroundcallofduty"
-                android:background="@color/NetConnBlue" />
-            <TextView
-                android:id="@+id/TournamentGameTitle"
-                android:layout_marginLeft="4dp"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/TournamentTrackmaniaImage"
+                    android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                    android:src="@drawable/backgroundbeerpong"
+                    android:background="@color/NetConnBlue"
+                    app:layout_widthPercent="100%"
+                    app:layout_aspectRatio="300%" />
+                <TextView
+                    android:id="@+id/TournamentTextTrackmania"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="3"
+                    android:lines="3" />
+            </android.support.percent.PercentRelativeLayout>
             <TextView
-                android:id="@+id/TournamentGameStyle"
-                android:layout_marginLeft="4dp"
-                android:layout_below="@+id/TournamentGameTitle"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:id="@+id/TournamentTitleSubHeader3"
+                android:text="HeaderText"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameTime"
-                android:layout_marginLeft="4dp"
-                android:layout_below="@+id/TournamentGameStyle"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameRegistrations"
-                android:layout_marginLeft="4dp"
-                android:layout_alignParentBottom="true"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-        </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/TournamentCSGO"
-            android:layout_below="@+id/TournamentTrackmania"
-            android:layout_toRightOf="@+id/TournamentCoD4"
-            app:layout_marginTopPercent="2%"
-            app:layout_marginLeftPercent="1%"
-            app:layout_widthPercent="49%"
-            app:layout_heightPercent="32%">
-            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/TournamentSecondImageContainer"
+                android:textSize="@dimen/netcon_tournamentSubHeader_textsize" />
+            <LinearLayout
+                android:id="@+id/TournamentThirdContainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/backgroundcounterstrike"
-                android:background="@color/NetConnBlue" />
-            <TextView
-                android:id="@+id/TournamentGameTitle"
-                android:layout_marginLeft="4dp"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameStyle"
-                android:layout_marginLeft="4dp"
-                android:layout_below="@+id/TournamentGameTitle"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/TournamentTitleSubHeader3"
+                android:weightSum="2">
+              <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/TournamentCSGO"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/backgroundbeerpong"
+                    android:background="@color/NetConnBlue"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/TournamentTextCSGO"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="3"
+                    android:lines="3" />
+              </RelativeLayout>
+              <RelativeLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameTime"
-                android:layout_marginLeft="4dp"
-                android:layout_below="@+id/TournamentGameStyle"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
-            <TextView
-                android:id="@+id/TournamentGameRegistrations"
-                android:layout_marginLeft="4dp"
-                android:layout_alignParentBottom="true"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp">
+                <ImageView
+                    android:id="@+id/TournamentEnfosImage"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/backgroundbeerpong"
+                    android:background="@color/NetConnBlue"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/TournamentTextEnfos"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="3"
+                    android:lines="3" />
+              </RelativeLayout>
+            </LinearLayout>
         </RelativeLayout>
-    </android.support.percent.PercentRelativeLayout>
+    </ScrollView>
 </android.support.percent.PercentRelativeLayout>

@@ -15,8 +15,9 @@ namespace MonoNetConnect.Controller
 {
     public interface ITournamentController : IBaseViewController
     {
-        void UpdateContentList(Tournaments tournaments);
+        void UpdateContentList(Data<Tournament> tournaments, string vol);
         void SetUpUi(string vol);
+        void WebsiteLogin();
     }
     public class TournamentController : BaseViewController<ITournamentController>
     {
@@ -25,13 +26,17 @@ namespace MonoNetConnect.Controller
         {
 
         }
+        public void LoginWebsite()
+        {
+            this._viewController.WebsiteLogin();
+        }
         public void UpdateReceived()
         {
-            _viewController.UpdateContentList(dataContext.Tournaments);
+            _viewController.UpdateContentList(dataContext.Tournaments, dataContext.Settings.Volume.ToString());
         }
         public void setUpUi()
         {
-            _viewController.SetUpUi(dataContext.Settings.Volume);
+            _viewController.SetUpUi(dataContext.Settings.Volume.ToString());
             UpdateReceived();
         }
     }

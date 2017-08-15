@@ -40,29 +40,37 @@ namespace MonoNetConnect.Cache
             images.ForEach(downloadAction);
         }
         private void DownloadImage<T>(string fileName)
-            where T : IApiModels
+            where T : IApiImageModel
         {
 
             System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {fileName}");
             var model = ((T)Activator.CreateInstance(typeof(T)));
             String _url = fileName;
-            Uri url = new Uri(_url);
-            using (WebClient client = new WebClient())
+            Uri url = null;
+            try {
+                url = new Uri(_url);
+                using (WebClient client = new WebClient())
+                {
+                    byte[] result = null;
+                    result = client.DownloadData(url.ToString());
+                    SaveImage(result, model.GetImageDirectoryPath(), model.GetLocalImageName(fileName));
+                    result = null;
+                }
+            }
+            catch(Exception ex)
             {
-                byte[] result = null;
-                result = client.DownloadData(url.ToString());
-                SaveImage(result, model.GetImageDirectoryPath(), fileName);
-                result = null;
+                System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} with Exception {ExMessage(ex)}");
             }
         }
         private void SaveImage(byte[] data, string path, string fileName)
         {
             try
             {
+                //TODO
                 System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {fileName}");
                 if (!Directory.Exists(System.IO.Path.Combine(MyDirPath, path)))
                     Directory.CreateDirectory(System.IO.Path.Combine(MyDirPath, path));                    
-                String fullPath = System.IO.Path.Combine(MyDirPath, path, fileName.Split('/').Last());
+                String fullPath = System.IO.Path.Combine(MyDirPath, path, fileName);
                 using (Stream outStream = new FileStream(fullPath, FileMode.OpenOrCreate))
                 {
                     using (Bitmap bm = BitmapFactory.DecodeByteArray(data, 0, data.Length))
@@ -76,33 +84,39 @@ namespace MonoNetConnect.Cache
                 System.Diagnostics.Debug.WriteLine($"Exception in {MethodBase.GetCurrentMethod().Name} with {ExMessage(ex)}");
             }
         }
-        private async Task ResolveUnreferencedImages<T>(T model)
+        private async Task ResolveUnreferencedImages<T>(Data<T> model)
             where T : IApiModels
         {
 
             if (model == null)
                 return;
             
-            if ((typeof(IApiImageModel)).IsAssignableFrom(typeof(T)))
+            
+            try
             {
-                try
+                var images = ((IApiImageModel)model).GetImages();
+                var files = Directory.GetFiles(String.Join("/", MyDirPath, model.GetImageDirectoryPath()));
+
+                List<String> filesToDelete = new List<string>();
+                foreach (var x in files)
                 {
-                    var images = ((IApiImageModel)model).GetImages();
-                    var files = Directory.GetFiles(String.Join("/", MyDirPath, model.GetImageDirectoryPath()));
-                    var filesToDelete = files.Where(x => !images.Any(y => x.Split('/').Last() == y.Split('/').Last())).ToList();
-                    Action<string> delete = (filename) =>
-                    {
-                        string delPath = String.Join("/", MyDirPath, model.GetImageDirectoryPath(), filename.Split('/').Last());
-                        System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {delPath}");
-                        File.Delete(delPath);
-                    };
-                    filesToDelete.ForEach(delete);
+                    if (!model.Any(y => x.Split('/').Last() == y.GetLocalImageName()))
+                        filesToDelete.Add(x);
                 }
-                catch(Exception ex)
+                //= files.Where(x => !model.Any(y => x.Split('/').Last() == y.GetLocalImageName())).ToList();
+                Action<string> delete = (filename) =>
                 {
-                    System.Diagnostics.Debug.WriteLine($"Exception in {MethodBase.GetCurrentMethod().Name} with {ExMessage(ex)}");
-                }                
+                    string delPath = String.Join("/", MyDirPath, model.GetImageDirectoryPath(), filename.Split('/').Last());
+                    System.Diagnostics.Debug.WriteLine($"Currently in Method {MethodBase.GetCurrentMethod().Name} params {delPath}");
+                    File.Delete(delPath);
+                };
+                filesToDelete.ForEach(delete);
             }
+            catch(Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Exception in {MethodBase.GetCurrentMethod().Name} with {ExMessage(ex)}");
+            }                
+            
             return;
         }
     }

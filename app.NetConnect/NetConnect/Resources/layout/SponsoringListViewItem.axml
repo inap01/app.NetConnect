@@ -2,16 +2,12 @@
 <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="8dp"
-    android:paddingTop="8dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:layout_height="wrap_content">
     <ImageView
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_widthPercent="100%"
         android:id="@+id/SponsoringImage1"
         android:background="#90C0C0C0"
-        android:layout_gravity="left"/>
+        android:layout_gravity="left" />
 </android.support.percent.PercentRelativeLayout>

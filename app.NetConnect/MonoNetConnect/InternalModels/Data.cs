@@ -15,6 +15,13 @@ namespace MonoNetConnect.InternalModels
     public class Data<T> : List<T>, IApiImageModel
         where T : IApiModels
     {
+        public Data()
+        {
+        }
+        public Data(IEnumerable<T> copy)
+        {
+            this.AddRange(copy);
+        }
         public string ApiPath()
         {
             return ((T)Activator.CreateInstance(typeof(T))).ApiPath().Replace("{/id}", "");
@@ -44,5 +51,14 @@ namespace MonoNetConnect.InternalModels
         {
             return ((T)Activator.CreateInstance(typeof(T))).IsClassWithImage();
         }
+        public string GetLocalImageName(string FullApiPathImageName)
+        {
+            return ((T)Activator.CreateInstance(typeof(T))).GetLocalImageName(FullApiPathImageName);
+        }
+        public string GetLocalImageName()
+        {
+            return ((T)Activator.CreateInstance(typeof(T))).GetLocalImageName();
+        }
     }
+    
 }

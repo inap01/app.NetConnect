@@ -18,6 +18,8 @@ namespace MonoNetConnect.InternalModels
         DateTime GetLatestChange();
         Boolean IsClassWithImage();
         string GetImageDirectoryPath();
+        string GetLocalImageName();
+        string GetLocalImageName(string imageFullPath);
     }
 
     public interface IApiImageModel : IApiModels

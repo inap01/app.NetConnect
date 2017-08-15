@@ -1766,6 +1766,9 @@ namespace NetConnect
 			// aapt resource value: 0x7f05007b
 			public const int netcon_tournamentHeader_textsize = 2131034235;
 			
+			// aapt resource value: 0x7f05007c
+			public const int netcon_tournamentSubHeader_textsize = 2131034236;
+			
 			// aapt resource value: 0x7f050050
 			public const int notification_large_icon_height = 2131034192;
 			
@@ -2047,73 +2050,82 @@ namespace NetConnect
 			public const int backgroundcounterstrike = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int backgroundhearthstone = 2130837590;
+			public const int backgroundenfos = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int backgroundtrackmania = 2130837591;
+			public const int backgroundhearthstone = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int ButtonBorderBlack = 2130837592;
+			public const int backgroundosu = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int Cross = 2130837593;
+			public const int backgroundow = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int design_fab_background = 2130837594;
+			public const int backgroundtrackmania = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int design_ic_visibility = 2130837595;
+			public const int ButtonBorderBlack = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int design_snackbar_background = 2130837596;
+			public const int Cross = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int divider = 2130837597;
+			public const int design_fab_background = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int FadingGradient = 2130837598;
+			public const int design_ic_visibility = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int ic_drawer = 2130837599;
+			public const int design_snackbar_background = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int icon = 2130837600;
+			public const int divider = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int landing = 2130837601;
+			public const int FadingGradient = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int logo = 2130837602;
+			public const int ic_drawer = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int logog = 2130837603;
+			public const int icon = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int Minus = 2130837604;
+			public const int landing = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int navigation_empty_icon = 2130837605;
-			
-			// aapt resource value: 0x7f02006c
-			public const int notification_template_icon_bg = 2130837612;
+			public const int logo = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int OpenProfilIcon = 2130837606;
+			public const int logog = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int Plus = 2130837607;
+			public const int Minus = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int seatingb = 2130837608;
+			public const int navigation_empty_icon = 2130837608;
+			
+			// aapt resource value: 0x7f02006f
+			public const int notification_template_icon_bg = 2130837615;
 			
 			// aapt resource value: 0x7f020069
-			public const int Skip = 2130837609;
+			public const int OpenProfilIcon = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int skipLogin = 2130837610;
+			public const int Plus = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int warenkorb = 2130837611;
+			public const int seatingb = 2130837611;
+			
+			// aapt resource value: 0x7f02006c
+			public const int Skip = 2130837612;
+			
+			// aapt resource value: 0x7f02006d
+			public const int skipLogin = 2130837613;
+			
+			// aapt resource value: 0x7f02006e
+			public const int warenkorb = 2130837614;
 			
 			static Drawable()
 			{
@@ -2269,6 +2281,9 @@ namespace NetConnect
 			// aapt resource value: 0x7f0600b3
 			public const int SeatingRoot = 2131099827;
 			
+			// aapt resource value: 0x7f0600bc
+			public const int SponsorTypeLabel = 2131099836;
+			
 			// aapt resource value: 0x7f0600bb
 			public const int SponsoringImage1 = 2131099835;
 			
@@ -2282,34 +2297,82 @@ namespace NetConnect
 			public const int TexField = 2131099785;
 			
 			// aapt resource value: 0x7f0600bd
-			public const int TournamentBierpong = 2131099837;
-			
-			// aapt resource value: 0x7f0600c5
-			public const int TournamentCSGO = 2131099845;
-			
-			// aapt resource value: 0x7f0600c4
-			public const int TournamentCoD4 = 2131099844;
+			public const int TournamentAnmeldenButton = 2131099837;
 			
 			// aapt resource value: 0x7f0600c1
-			public const int TournamentGameRegistrations = 2131099841;
+			public const int TournamentBierPong = 2131099841;
 			
-			// aapt resource value: 0x7f0600bf
-			public const int TournamentGameStyle = 2131099839;
+			// aapt resource value: 0x7f0600ca
+			public const int TournamentCOD = 2131099850;
+			
+			// aapt resource value: 0x7f0600d3
+			public const int TournamentCSGO = 2131099859;
+			
+			// aapt resource value: 0x7f0600d5
+			public const int TournamentEnfosImage = 2131099861;
 			
 			// aapt resource value: 0x7f0600c0
-			public const int TournamentGameTime = 2131099840;
+			public const int TournamentFirstContainer = 2131099840;
 			
-			// aapt resource value: 0x7f0600be
-			public const int TournamentGameTitle = 2131099838;
+			// aapt resource value: 0x7f0600c5
+			public const int TournamentFirstImageContainer = 2131099845;
 			
-			// aapt resource value: 0x7f0600c2
-			public const int TournamentHearthstone = 2131099842;
+			// aapt resource value: 0x7f0600cc
+			public const int TournamentHearthstoneImage = 2131099852;
 			
-			// aapt resource value: 0x7f0600bc
-			public const int TournamentTitleVol = 2131099836;
+			// aapt resource value: 0x7f0600c6
+			public const int TournamentOsuImage = 2131099846;
 			
 			// aapt resource value: 0x7f0600c3
-			public const int TournamentTrackmania = 2131099843;
+			public const int TournamentOverwatchImage = 2131099843;
+			
+			// aapt resource value: 0x7f0600c9
+			public const int TournamentSecondContainer = 2131099849;
+			
+			// aapt resource value: 0x7f0600ce
+			public const int TournamentSecondImageContainer = 2131099854;
+			
+			// aapt resource value: 0x7f0600c2
+			public const int TournamentTextBierPong = 2131099842;
+			
+			// aapt resource value: 0x7f0600cb
+			public const int TournamentTextCOD = 2131099851;
+			
+			// aapt resource value: 0x7f0600d4
+			public const int TournamentTextCSGO = 2131099860;
+			
+			// aapt resource value: 0x7f0600d6
+			public const int TournamentTextEnfos = 2131099862;
+			
+			// aapt resource value: 0x7f0600cd
+			public const int TournamentTextHearthstone = 2131099853;
+			
+			// aapt resource value: 0x7f0600c7
+			public const int TournamentTextOsu = 2131099847;
+			
+			// aapt resource value: 0x7f0600c4
+			public const int TournamentTextOverwatch = 2131099844;
+			
+			// aapt resource value: 0x7f0600d0
+			public const int TournamentTextTrackmania = 2131099856;
+			
+			// aapt resource value: 0x7f0600d2
+			public const int TournamentThirdContainer = 2131099858;
+			
+			// aapt resource value: 0x7f0600be
+			public const int TournamentTitle = 2131099838;
+			
+			// aapt resource value: 0x7f0600bf
+			public const int TournamentTitleSubHeader1 = 2131099839;
+			
+			// aapt resource value: 0x7f0600c8
+			public const int TournamentTitleSubHeader2 = 2131099848;
+			
+			// aapt resource value: 0x7f0600d1
+			public const int TournamentTitleSubHeader3 = 2131099857;
+			
+			// aapt resource value: 0x7f0600cf
+			public const int TournamentTrackmaniaImage = 2131099855;
 			
 			// aapt resource value: 0x7f060097
 			public const int action0 = 2131099799;
@@ -2545,8 +2608,8 @@ namespace NetConnect
 			// aapt resource value: 0x7f06000e
 			public const int normal = 2131099662;
 			
-			// aapt resource value: 0x7f0600c7
-			public const int openProfile = 2131099847;
+			// aapt resource value: 0x7f0600d8
+			public const int openProfile = 2131099864;
 			
 			// aapt resource value: 0x7f060035
 			public const int parallax = 2131099701;
@@ -2620,8 +2683,8 @@ namespace NetConnect
 			// aapt resource value: 0x7f06006e
 			public const int select_dialog_listview = 2131099758;
 			
-			// aapt resource value: 0x7f0600c6
-			public const int separator = 2131099846;
+			// aapt resource value: 0x7f0600d7
+			public const int separator = 2131099863;
 			
 			// aapt resource value: 0x7f060058
 			public const int shortcut = 2131099736;
@@ -2974,10 +3037,13 @@ namespace NetConnect
 			public const int SponsoringListViewItem = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int support_simple_spinner_dropdown_item = 2130903106;
+			public const int SponsoringSeparator = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int TournamentLayout = 2130903107;
+			public const int support_simple_spinner_dropdown_item = 2130903107;
+			
+			// aapt resource value: 0x7f030044
+			public const int TournamentLayout = 2130903108;
 			
 			static Layout()
 			{

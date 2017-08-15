@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetConnect", "app.NetConnect\NetConnect\NetConnect.csproj", "{290E039D-8A5E-456D-A663-47F4492DA2F0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoNetConnect", "app.NetConnect\MonoNetConnect\MonoNetConnect.csproj", "{9113A145-BA50-4707-9306-D48B7216AEB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataNetConnect", "DataNetConnect\DataNetConnect.csproj", "{5918DE20-1837-4860-94BD-EB75DB4D466C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 		{9113A145-BA50-4707-9306-D48B7216AEB7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{9113A145-BA50-4707-9306-D48B7216AEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9113A145-BA50-4707-9306-D48B7216AEB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5918DE20-1837-4860-94BD-EB75DB4D466C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5918DE20-1837-4860-94BD-EB75DB4D466C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5918DE20-1837-4860-94BD-EB75DB4D466C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5918DE20-1837-4860-94BD-EB75DB4D466C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
